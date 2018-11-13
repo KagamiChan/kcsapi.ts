@@ -7,10 +7,10 @@
   "author": "Kagami <moe.pascal@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^10.11.6",
+    "@types/node": "^10.12.6",
     "maketypes": "^1.1.2",
     "ts-node": "^7.0.1",
-    "typescript": "^3.1.2"
+    "typescript": "^3.1.6"
   },
   "dependencies": {}
 }

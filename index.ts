@@ -1,18 +1,32 @@
-import Stream from 'stream'
+import { Readable } from 'stream'
 import glob from 'glob'
 import Promise from 'bluebird'
 import fs from 'fs-extra'
 import path from 'path'
-import { json2tsMulti } from 'json-ts'
+import childProcess from 'child_process'
 
 const main = async () => {
   const files = glob.sync(path.resolve(__dirname, './source/**/*.json'))
   const data = await Promise.map(files, async (file) => {
     const json = await fs.readJSON(file)
-    return JSON.stringify(json.body)
+    return json.body
   })
-  await fs.outputJSON('./start2.json', data)
-  await fs.outputFile('./start2.ts', json2tsMulti(data, { rootName: 'start2' }))
+
+  const child = childProcess.spawn('yarn', ['quicktype', '--lang', 'ts', '--top-level', 'start2'])
+
+  let result = ''
+
+  child.stdout.on('data', (chunk) => result+= chunk)
+
+  child.stdout.on('close', () => {
+    console.log(result.toString())
+  })
+
+  const source = new Readable()
+  source._read = () => {}
+  source.push(JSON.stringify(data))
+  source.push(null)
+  source.pipe(child.stdin)
 }
 
 main()

@@ -1,6 +1,6 @@
 {
   "name": "kcsapi",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Typings for Kancolle API",
   "main": "index.ts",
   "repository": "git@github.com:KagamiChan/kcsapi.ts.git",

@@ -1,28 +1,18 @@
 import Stream from 'stream'
+import glob from 'glob'
+import Promise from 'bluebird'
+import fs from 'fs-extra'
+import path from 'path'
+import { json2tsMulti } from 'json-ts'
 
-import { StreamWriter, Emitter, NopWriter } from 'maketypes'
-
-class TextStream extends Stream.Writable {
-  text: string = ''
-
-  _write = (buf: Buffer, type: string, done: Function) => {
-    this.text += buf.toString()
-    done()
-  }
-}
-
-const makeTyping = (data: any) => {
-  const resultStream = new TextStream()
-
-  const writer = new StreamWriter(resultStream)
-  const emitter = new Emitter(writer, new NopWriter())
-  emitter.emit(data, "foo")
-  writer.close(() => {})
-  console.log(resultStream.text)
-}
-
-const main = () => {
-  makeTyping({ foo: 'bar', super: 1 })
+const main = async () => {
+  const files = glob.sync(path.resolve(__dirname, './source/**/*.json'))
+  const data = await Promise.map(files, async (file) => {
+    const json = await fs.readJSON(file)
+    return JSON.stringify(json.body)
+  })
+  await fs.outputJSON('./start2.json', data)
+  await fs.outputFile('./start2.ts', json2tsMulti(data, { rootName: 'start2' }))
 }
 
 main()

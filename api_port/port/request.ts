@@ -9,8 +9,8 @@
  * type for API request at /kcsapi/api_port/port
  */
 export interface APIPortPortRequest {
-  api_verno: string
-  api_sort_key: string
-  spi_sort_order: string
   api_port: string
+  api_sort_key: string
+  api_verno: string
+  spi_sort_order: string
 }

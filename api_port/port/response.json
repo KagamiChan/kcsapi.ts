@@ -9,16 +9,28 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "api_material": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/APIMaterial"
-          }
+        "api_basic": {
+          "$ref": "#/definitions/APIBasic"
         },
         "api_deck_port": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/APIDeckPort"
+          }
+        },
+        "api_dest_ship_slot": {
+          "type": "integer"
+        },
+        "api_log": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APILog"
+          }
+        },
+        "api_material": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIMaterial"
           }
         },
         "api_ndock": {
@@ -27,29 +39,17 @@
             "$ref": "#/definitions/APINdock"
           }
         },
-        "api_ship": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/APIShip"
-          }
-        },
-        "api_basic": {
-          "$ref": "#/definitions/APIBasic"
-        },
-        "api_log": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/APILog"
-          }
-        },
         "api_p_bgm_id": {
           "type": "integer"
         },
         "api_parallel_quest_count": {
           "type": "integer"
         },
-        "api_dest_ship_slot": {
-          "type": "integer"
+        "api_ship": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIShip"
+          }
         }
       },
       "required": [
@@ -69,59 +69,14 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "api_member_id": {
-          "type": "string"
-        },
-        "api_nickname": {
-          "type": "string"
-        },
-        "api_nickname_id": {
-          "type": "string"
-        },
         "api_active_flag": {
           "type": "integer"
-        },
-        "api_starttime": {
-          "type": "integer"
-        },
-        "api_level": {
-          "type": "integer"
-        },
-        "api_rank": {
-          "type": "integer"
-        },
-        "api_experience": {
-          "type": "integer"
-        },
-        "api_fleetname": {
-          "type": "null"
         },
         "api_comment": {
           "type": "string"
         },
         "api_comment_id": {
           "type": "string"
-        },
-        "api_max_chara": {
-          "type": "integer"
-        },
-        "api_max_slotitem": {
-          "type": "integer"
-        },
-        "api_max_kagu": {
-          "type": "integer"
-        },
-        "api_playtime": {
-          "type": "integer"
-        },
-        "api_tutorial": {
-          "type": "integer"
-        },
-        "api_furniture": {
-          "type": "array",
-          "items": {
-            "type": "integer"
-          }
         },
         "api_count_deck": {
           "type": "integer"
@@ -132,14 +87,44 @@
         "api_count_ndock": {
           "type": "integer"
         },
+        "api_experience": {
+          "type": "integer"
+        },
         "api_fcoin": {
           "type": "integer"
         },
-        "api_st_win": {
+        "api_firstflag": {
           "type": "integer"
         },
-        "api_st_lose": {
+        "api_fleetname": {
+          "type": "null"
+        },
+        "api_furniture": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_large_dock": {
           "type": "integer"
+        },
+        "api_level": {
+          "type": "integer"
+        },
+        "api_max_chara": {
+          "type": "integer"
+        },
+        "api_max_kagu": {
+          "type": "integer"
+        },
+        "api_max_slotitem": {
+          "type": "integer"
+        },
+        "api_medals": {
+          "type": "integer"
+        },
+        "api_member_id": {
+          "type": "string"
         },
         "api_ms_count": {
           "type": "integer"
@@ -147,10 +132,13 @@
         "api_ms_success": {
           "type": "integer"
         },
-        "api_pt_win": {
-          "type": "integer"
+        "api_nickname": {
+          "type": "string"
         },
-        "api_pt_lose": {
+        "api_nickname_id": {
+          "type": "string"
+        },
+        "api_playtime": {
           "type": "integer"
         },
         "api_pt_challenged": {
@@ -159,10 +147,10 @@
         "api_pt_challenged_win": {
           "type": "integer"
         },
-        "api_firstflag": {
+        "api_pt_lose": {
           "type": "integer"
         },
-        "api_tutorial_progress": {
+        "api_pt_win": {
           "type": "integer"
         },
         "api_pvp": {
@@ -171,10 +159,22 @@
             "type": "integer"
           }
         },
-        "api_medals": {
+        "api_rank": {
           "type": "integer"
         },
-        "api_large_dock": {
+        "api_st_lose": {
+          "type": "integer"
+        },
+        "api_st_win": {
+          "type": "integer"
+        },
+        "api_starttime": {
+          "type": "integer"
+        },
+        "api_tutorial": {
+          "type": "integer"
+        },
+        "api_tutorial_progress": {
           "type": "integer"
         }
       },
@@ -220,17 +220,14 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "api_member_id": {
-          "type": "integer"
+        "api_flagship": {
+          "type": "string"
         },
         "api_id": {
           "type": "integer"
         },
-        "api_name": {
-          "type": "string"
-        },
-        "api_name_id": {
-          "type": "string"
+        "api_member_id": {
+          "type": "integer"
         },
         "api_mission": {
           "type": "array",
@@ -238,7 +235,10 @@
             "type": "integer"
           }
         },
-        "api_flagship": {
+        "api_name": {
+          "type": "string"
+        },
+        "api_name_id": {
           "type": "string"
         },
         "api_ship": {
@@ -263,16 +263,16 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "api_message": {
+          "type": "string"
+        },
         "api_no": {
           "type": "integer"
-        },
-        "api_type": {
-          "type": "string"
         },
         "api_state": {
           "type": "string"
         },
-        "api_message": {
+        "api_type": {
           "type": "string"
         }
       },
@@ -288,10 +288,10 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "api_member_id": {
+        "api_id": {
           "type": "integer"
         },
-        "api_id": {
+        "api_member_id": {
           "type": "integer"
         },
         "api_value": {
@@ -309,23 +309,14 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "api_member_id": {
-          "type": "integer"
-        },
-        "api_id": {
-          "type": "integer"
-        },
-        "api_state": {
-          "type": "integer"
-        },
-        "api_ship_id": {
-          "type": "integer"
-        },
         "api_complete_time": {
           "type": "integer"
         },
         "api_complete_time_str": {
           "type": "string"
+        },
+        "api_id": {
+          "type": "integer"
         },
         "api_item1": {
           "type": "integer"
@@ -337,6 +328,15 @@
           "type": "integer"
         },
         "api_item4": {
+          "type": "integer"
+        },
+        "api_member_id": {
+          "type": "integer"
+        },
+        "api_ship_id": {
+          "type": "integer"
+        },
+        "api_state": {
           "type": "integer"
         }
       },
@@ -358,16 +358,13 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "api_id": {
+        "api_backs": {
           "type": "integer"
         },
-        "api_sortno": {
+        "api_bull": {
           "type": "integer"
         },
-        "api_ship_id": {
-          "type": "integer"
-        },
-        "api_lv": {
+        "api_cond": {
           "type": "integer"
         },
         "api_exp": {
@@ -376,32 +373,23 @@
             "type": "integer"
           }
         },
-        "api_nowhp": {
+        "api_fuel": {
           "type": "integer"
         },
-        "api_maxhp": {
+        "api_id": {
           "type": "integer"
         },
-        "api_soku": {
-          "type": "integer"
-        },
-        "api_leng": {
-          "type": "integer"
-        },
-        "api_slot": {
+        "api_kaihi": {
           "type": "array",
           "items": {
             "type": "integer"
           }
         },
-        "api_onslot": {
+        "api_karyoku": {
           "type": "array",
           "items": {
             "type": "integer"
           }
-        },
-        "api_slot_ex": {
-          "type": "integer"
         },
         "api_kyouka": {
           "type": "array",
@@ -409,19 +397,25 @@
             "type": "integer"
           }
         },
-        "api_backs": {
+        "api_leng": {
           "type": "integer"
         },
-        "api_fuel": {
+        "api_locked": {
           "type": "integer"
         },
-        "api_bull": {
+        "api_locked_equip": {
           "type": "integer"
         },
-        "api_slotnum": {
+        "api_lucky": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_lv": {
           "type": "integer"
         },
-        "api_ndock_time": {
+        "api_maxhp": {
           "type": "integer"
         },
         "api_ndock_item": {
@@ -430,13 +424,13 @@
             "type": "integer"
           }
         },
-        "api_srate": {
+        "api_ndock_time": {
           "type": "integer"
         },
-        "api_cond": {
+        "api_nowhp": {
           "type": "integer"
         },
-        "api_karyoku": {
+        "api_onslot": {
           "type": "array",
           "items": {
             "type": "integer"
@@ -448,11 +442,32 @@
             "type": "integer"
           }
         },
-        "api_taiku": {
+        "api_sakuteki": {
           "type": "array",
           "items": {
             "type": "integer"
           }
+        },
+        "api_ship_id": {
+          "type": "integer"
+        },
+        "api_slot": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_slot_ex": {
+          "type": "integer"
+        },
+        "api_slotnum": {
+          "type": "integer"
+        },
+        "api_soku": {
+          "type": "integer"
+        },
+        "api_sortno": {
+          "type": "integer"
         },
         "api_soukou": {
           "type": "array",
@@ -460,7 +475,10 @@
             "type": "integer"
           }
         },
-        "api_kaihi": {
+        "api_srate": {
+          "type": "integer"
+        },
+        "api_taiku": {
           "type": "array",
           "items": {
             "type": "integer"
@@ -471,24 +489,6 @@
           "items": {
             "type": "integer"
           }
-        },
-        "api_sakuteki": {
-          "type": "array",
-          "items": {
-            "type": "integer"
-          }
-        },
-        "api_lucky": {
-          "type": "array",
-          "items": {
-            "type": "integer"
-          }
-        },
-        "api_locked": {
-          "type": "integer"
-        },
-        "api_locked_equip": {
-          "type": "integer"
         }
       },
       "required": [

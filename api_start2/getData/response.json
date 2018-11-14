@@ -9,17 +9,14 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "api_mst_ship": {
+        "api_mst_bgm": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/APIMstShip"
+            "$ref": "#/definitions/APIMstBgm"
           }
         },
-        "api_mst_slotitem_equiptype": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/APIMstSlotitemEquiptype"
-          }
+        "api_mst_const": {
+          "$ref": "#/definitions/APIMstConst"
         },
         "api_mst_equip_exslot": {
           "type": "array",
@@ -31,78 +28,6 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/APIMstEquipExslotShip"
-          }
-        },
-        "api_mst_stype": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/APIMstStype"
-          }
-        },
-        "api_mst_slotitem": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/APIMstSlotitem"
-          }
-        },
-        "api_mst_furnituregraph": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/APIMstFurnituregraph"
-          }
-        },
-        "api_mst_useitem": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/APIMstUseitem"
-          }
-        },
-        "api_mst_payitem": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/APIMstPayitem"
-          }
-        },
-        "api_mst_item_shop": {
-          "$ref": "#/definitions/APIMstItemShop"
-        },
-        "api_mst_maparea": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/APIMstMaparea"
-          }
-        },
-        "api_mst_mapinfo": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/APIMstMapinfo"
-          }
-        },
-        "api_mst_mapbgm": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/APIMstMapbgm"
-          }
-        },
-        "api_mst_mission": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/APIMstMission"
-          }
-        },
-        "api_mst_const": {
-          "$ref": "#/definitions/APIMstConst"
-        },
-        "api_mst_shipupgrade": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/APIMstShipupgrade"
-          }
-        },
-        "api_mst_bgm": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/APIMstBgm"
           }
         },
         "api_mst_equip_ship": {
@@ -117,10 +42,85 @@
             "$ref": "#/definitions/APIMstFurniture"
           }
         },
+        "api_mst_furnituregraph": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIMstFurnituregraph"
+          }
+        },
+        "api_mst_item_shop": {
+          "$ref": "#/definitions/APIMstItemShop"
+        },
+        "api_mst_maparea": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIMstMaparea"
+          }
+        },
+        "api_mst_mapbgm": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIMstMapbgm"
+          }
+        },
+        "api_mst_mapinfo": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIMstMapinfo"
+          }
+        },
+        "api_mst_mission": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIMstMission"
+          }
+        },
+        "api_mst_payitem": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIMstPayitem"
+          }
+        },
+        "api_mst_ship": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIMstShip"
+          }
+        },
         "api_mst_shipgraph": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/APIMstShipgraph"
+          }
+        },
+        "api_mst_shipupgrade": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIMstShipupgrade"
+          }
+        },
+        "api_mst_slotitem": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIMstSlotitem"
+          }
+        },
+        "api_mst_slotitem_equiptype": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIMstSlotitemEquiptype"
+          }
+        },
+        "api_mst_stype": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIMstStype"
+          }
+        },
+        "api_mst_useitem": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIMstUseitem"
           }
         }
       },
@@ -169,10 +169,10 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "api_dpflag_quest": {
+        "api_boko_max_ships": {
           "$ref": "#/definitions/API"
         },
-        "api_boko_max_ships": {
+        "api_dpflag_quest": {
           "$ref": "#/definitions/API"
         },
         "api_parallel_quest_max": {
@@ -190,11 +190,11 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "api_string_value": {
-          "type": "string"
-        },
         "api_int_value": {
           "type": "integer"
+        },
+        "api_string_value": {
+          "type": "string"
         }
       },
       "required": [
@@ -207,14 +207,14 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "api_slotitem_id": {
-          "type": "integer"
-        },
         "api_ship_ids": {
           "type": "array",
           "items": {
             "type": "integer"
           }
+        },
+        "api_slotitem_id": {
+          "type": "integer"
         }
       },
       "required": [
@@ -227,14 +227,14 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "api_ship_id": {
-          "type": "integer"
-        },
         "api_equip_type": {
           "type": "array",
           "items": {
             "type": "integer"
           }
+        },
+        "api_ship_id": {
+          "type": "integer"
         }
       },
       "required": [
@@ -247,25 +247,25 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "api_id": {
+        "api_active_flag": {
           "type": "integer"
         },
-        "api_type": {
+        "api_description": {
+          "type": "string"
+        },
+        "api_id": {
           "type": "integer"
         },
         "api_no": {
           "type": "integer"
         },
-        "api_title": {
-          "type": "string"
-        },
-        "api_description": {
-          "type": "string"
-        },
-        "api_rarity": {
+        "api_outside_id": {
           "type": "integer"
         },
         "api_price": {
+          "type": "integer"
+        },
+        "api_rarity": {
           "type": "integer"
         },
         "api_saleflg": {
@@ -274,13 +274,13 @@
         "api_season": {
           "type": "integer"
         },
+        "api_title": {
+          "type": "string"
+        },
+        "api_type": {
+          "type": "integer"
+        },
         "api_version": {
-          "type": "integer"
-        },
-        "api_outside_id": {
-          "type": "integer"
-        },
-        "api_active_flag": {
           "type": "integer"
         }
       },
@@ -304,17 +304,17 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "api_id": {
-          "type": "integer"
+        "api_filename": {
+          "type": "string"
         },
-        "api_type": {
+        "api_id": {
           "type": "integer"
         },
         "api_no": {
           "type": "integer"
         },
-        "api_filename": {
-          "type": "string"
+        "api_type": {
+          "type": "integer"
         },
         "api_version": {
           "type": "string"
@@ -377,16 +377,13 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "api_boss_bgm": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
         "api_id": {
-          "type": "integer"
-        },
-        "api_maparea_id": {
-          "type": "integer"
-        },
-        "api_no": {
-          "type": "integer"
-        },
-        "api_moving_bgm": {
           "type": "integer"
         },
         "api_map_bgm": {
@@ -395,11 +392,14 @@
             "type": "integer"
           }
         },
-        "api_boss_bgm": {
-          "type": "array",
-          "items": {
-            "type": "integer"
-          }
+        "api_maparea_id": {
+          "type": "integer"
+        },
+        "api_moving_bgm": {
+          "type": "integer"
+        },
+        "api_no": {
+          "type": "integer"
         }
       },
       "required": [
@@ -419,21 +419,6 @@
         "api_id": {
           "type": "integer"
         },
-        "api_maparea_id": {
-          "type": "integer"
-        },
-        "api_no": {
-          "type": "integer"
-        },
-        "api_name": {
-          "type": "string"
-        },
-        "api_level": {
-          "type": "integer"
-        },
-        "api_opetext": {
-          "type": "string"
-        },
         "api_infotext": {
           "type": "string"
         },
@@ -443,8 +428,23 @@
             "type": "integer"
           }
         },
+        "api_level": {
+          "type": "integer"
+        },
+        "api_maparea_id": {
+          "type": "integer"
+        },
         "api_max_maphp": {
           "type": "null"
+        },
+        "api_name": {
+          "type": "string"
+        },
+        "api_no": {
+          "type": "integer"
+        },
+        "api_opetext": {
+          "type": "string"
         },
         "api_required_defeat_count": {
           "anyOf": [
@@ -482,11 +482,20 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "api_id": {
+        "api_deck_num": {
+          "type": "integer"
+        },
+        "api_details": {
+          "type": "string"
+        },
+        "api_difficulty": {
           "type": "integer"
         },
         "api_disp_no": {
           "type": "string"
+        },
+        "api_id": {
+          "type": "integer"
         },
         "api_maparea_id": {
           "type": "integer"
@@ -494,22 +503,16 @@
         "api_name": {
           "type": "string"
         },
-        "api_details": {
-          "type": "string"
+        "api_return_flag": {
+          "type": "integer"
         },
         "api_time": {
           "type": "integer"
         },
-        "api_deck_num": {
-          "type": "integer"
-        },
-        "api_difficulty": {
+        "api_use_bull": {
           "type": "integer"
         },
         "api_use_fuel": {
-          "type": "integer"
-        },
-        "api_use_bull": {
           "type": "integer"
         },
         "api_win_item1": {
@@ -523,9 +526,6 @@
           "items": {
             "type": "integer"
           }
-        },
-        "api_return_flag": {
-          "type": "integer"
         }
       },
       "required": [
@@ -549,20 +549,11 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "api_id": {
-          "type": "integer"
-        },
-        "api_type": {
-          "type": "integer"
-        },
-        "api_name": {
-          "type": "string"
-        },
         "api_description": {
           "type": "string"
         },
-        "api_shop_description": {
-          "type": "string"
+        "api_id": {
+          "type": "integer"
         },
         "api_item": {
           "type": "array",
@@ -570,7 +561,16 @@
             "type": "integer"
           }
         },
+        "api_name": {
+          "type": "string"
+        },
         "api_price": {
+          "type": "integer"
+        },
+        "api_shop_description": {
+          "type": "string"
+        },
+        "api_type": {
           "type": "integer"
         }
       },
@@ -589,25 +589,10 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "api_id": {
+        "api_afterbull": {
           "type": "integer"
         },
-        "api_sortno": {
-          "type": "integer"
-        },
-        "api_sort_id": {
-          "type": "integer"
-        },
-        "api_name": {
-          "type": "string"
-        },
-        "api_yomi": {
-          "type": "string"
-        },
-        "api_stype": {
-          "type": "integer"
-        },
-        "api_ctype": {
+        "api_afterfuel": {
           "type": "integer"
         },
         "api_afterlv": {
@@ -616,19 +601,58 @@
         "api_aftershipid": {
           "type": "string"
         },
-        "api_taik": {
+        "api_backs": {
+          "type": "integer"
+        },
+        "api_broken": {
           "type": "array",
           "items": {
             "type": "integer"
           }
         },
-        "api_souk": {
-          "type": "array",
-          "items": {
-            "type": "integer"
-          }
+        "api_buildtime": {
+          "type": "integer"
+        },
+        "api_bull_max": {
+          "type": "integer"
+        },
+        "api_ctype": {
+          "type": "integer"
+        },
+        "api_fuel_max": {
+          "type": "integer"
+        },
+        "api_getmes": {
+          "type": "string"
         },
         "api_houg": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_id": {
+          "type": "integer"
+        },
+        "api_leng": {
+          "type": "integer"
+        },
+        "api_luck": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_maxeq": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_name": {
+          "type": "string"
+        },
+        "api_powup": {
           "type": "array",
           "items": {
             "type": "integer"
@@ -640,74 +664,50 @@
             "type": "integer"
           }
         },
-        "api_tyku": {
-          "type": "array",
-          "items": {
-            "type": "integer"
-          }
-        },
-        "api_luck": {
-          "type": "array",
-          "items": {
-            "type": "integer"
-          }
+        "api_slot_num": {
+          "type": "integer"
         },
         "api_soku": {
           "type": "integer"
         },
-        "api_leng": {
+        "api_sort_id": {
           "type": "integer"
         },
-        "api_slot_num": {
+        "api_sortno": {
           "type": "integer"
         },
-        "api_maxeq": {
+        "api_souk": {
           "type": "array",
           "items": {
             "type": "integer"
           }
         },
-        "api_buildtime": {
+        "api_stype": {
           "type": "integer"
         },
-        "api_broken": {
+        "api_taik": {
           "type": "array",
           "items": {
             "type": "integer"
           }
-        },
-        "api_powup": {
-          "type": "array",
-          "items": {
-            "type": "integer"
-          }
-        },
-        "api_backs": {
-          "type": "integer"
-        },
-        "api_getmes": {
-          "type": "string"
-        },
-        "api_afterfuel": {
-          "type": "integer"
-        },
-        "api_afterbull": {
-          "type": "integer"
-        },
-        "api_fuel_max": {
-          "type": "integer"
-        },
-        "api_bull_max": {
-          "type": "integer"
-        },
-        "api_voicef": {
-          "type": "integer"
         },
         "api_tais": {
           "type": "array",
           "items": {
             "type": "integer"
           }
+        },
+        "api_tyku": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_voicef": {
+          "type": "integer"
+        },
+        "api_yomi": {
+          "type": "string"
         }
       },
       "required": [
@@ -726,82 +726,7 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "api_id": {
-          "type": "integer"
-        },
-        "api_sortno": {
-          "type": "integer"
-        },
-        "api_filename": {
-          "type": "string"
-        },
-        "api_version": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "api_boko_n": {
-          "type": "array",
-          "items": {
-            "type": "integer"
-          }
-        },
-        "api_boko_d": {
-          "type": "array",
-          "items": {
-            "type": "integer"
-          }
-        },
-        "api_kaisyu_n": {
-          "type": "array",
-          "items": {
-            "type": "integer"
-          }
-        },
-        "api_kaisyu_d": {
-          "type": "array",
-          "items": {
-            "type": "integer"
-          }
-        },
-        "api_kaizo_n": {
-          "type": "array",
-          "items": {
-            "type": "integer"
-          }
-        },
-        "api_kaizo_d": {
-          "type": "array",
-          "items": {
-            "type": "integer"
-          }
-        },
-        "api_map_n": {
-          "type": "array",
-          "items": {
-            "type": "integer"
-          }
-        },
-        "api_map_d": {
-          "type": "array",
-          "items": {
-            "type": "integer"
-          }
-        },
-        "api_ensyuf_n": {
-          "type": "array",
-          "items": {
-            "type": "integer"
-          }
-        },
-        "api_ensyuf_d": {
-          "type": "array",
-          "items": {
-            "type": "integer"
-          }
-        },
-        "api_ensyue_n": {
+        "api_battle_d": {
           "type": "array",
           "items": {
             "type": "integer"
@@ -813,10 +738,85 @@
             "type": "integer"
           }
         },
-        "api_battle_d": {
+        "api_boko_d": {
           "type": "array",
           "items": {
             "type": "integer"
+          }
+        },
+        "api_boko_n": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_ensyue_n": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_ensyuf_d": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_ensyuf_n": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_filename": {
+          "type": "string"
+        },
+        "api_id": {
+          "type": "integer"
+        },
+        "api_kaisyu_d": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_kaisyu_n": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_kaizo_d": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_kaizo_n": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_map_d": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_map_n": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_sortno": {
+          "type": "integer"
+        },
+        "api_version": {
+          "type": "array",
+          "items": {
+            "type": "string"
           }
         },
         "api_weda": {
@@ -859,31 +859,31 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "api_id": {
+        "api_catapult_count": {
           "type": "integer"
         },
         "api_current_ship_id": {
           "type": "integer"
         },
-        "api_original_ship_id": {
-          "type": "integer"
-        },
-        "api_upgrade_type": {
-          "type": "integer"
-        },
-        "api_upgrade_level": {
-          "type": "integer"
-        },
         "api_drawing_count": {
           "type": "integer"
         },
-        "api_catapult_count": {
+        "api_id": {
+          "type": "integer"
+        },
+        "api_original_ship_id": {
           "type": "integer"
         },
         "api_report_count": {
           "type": "integer"
         },
         "api_sortno": {
+          "type": "integer"
+        },
+        "api_upgrade_level": {
+          "type": "integer"
+        },
+        "api_upgrade_type": {
           "type": "integer"
         }
       },
@@ -904,76 +904,13 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "api_id": {
-          "type": "integer"
-        },
-        "api_sortno": {
-          "type": "integer"
-        },
-        "api_name": {
-          "type": "string"
-        },
-        "api_type": {
-          "type": "array",
-          "items": {
-            "type": "integer"
-          }
-        },
-        "api_taik": {
-          "type": "integer"
-        },
-        "api_souk": {
-          "type": "integer"
-        },
-        "api_houg": {
-          "type": "integer"
-        },
-        "api_raig": {
-          "type": "integer"
-        },
-        "api_soku": {
-          "type": "integer"
-        },
-        "api_baku": {
-          "type": "integer"
-        },
-        "api_tyku": {
-          "type": "integer"
-        },
-        "api_tais": {
-          "type": "integer"
-        },
         "api_atap": {
-          "type": "integer"
-        },
-        "api_houm": {
-          "type": "integer"
-        },
-        "api_raim": {
-          "type": "integer"
-        },
-        "api_houk": {
-          "type": "integer"
-        },
-        "api_raik": {
           "type": "integer"
         },
         "api_bakk": {
           "type": "integer"
         },
-        "api_saku": {
-          "type": "integer"
-        },
-        "api_sakb": {
-          "type": "integer"
-        },
-        "api_luck": {
-          "type": "integer"
-        },
-        "api_leng": {
-          "type": "integer"
-        },
-        "api_rare": {
+        "api_baku": {
           "type": "integer"
         },
         "api_broken": {
@@ -982,19 +919,82 @@
             "type": "integer"
           }
         },
+        "api_cost": {
+          "type": "integer"
+        },
+        "api_distance": {
+          "type": "integer"
+        },
+        "api_houg": {
+          "type": "integer"
+        },
+        "api_houk": {
+          "type": "integer"
+        },
+        "api_houm": {
+          "type": "integer"
+        },
+        "api_id": {
+          "type": "integer"
+        },
         "api_info": {
           "type": "string"
+        },
+        "api_leng": {
+          "type": "integer"
+        },
+        "api_luck": {
+          "type": "integer"
+        },
+        "api_name": {
+          "type": "string"
+        },
+        "api_raig": {
+          "type": "integer"
+        },
+        "api_raik": {
+          "type": "integer"
+        },
+        "api_raim": {
+          "type": "integer"
+        },
+        "api_rare": {
+          "type": "integer"
+        },
+        "api_sakb": {
+          "type": "integer"
+        },
+        "api_saku": {
+          "type": "integer"
+        },
+        "api_soku": {
+          "type": "integer"
+        },
+        "api_sortno": {
+          "type": "integer"
+        },
+        "api_souk": {
+          "type": "integer"
+        },
+        "api_taik": {
+          "type": "integer"
+        },
+        "api_tais": {
+          "type": "integer"
+        },
+        "api_tyku": {
+          "type": "integer"
+        },
+        "api_type": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
         },
         "api_usebull": {
           "type": "string"
         },
         "api_version": {
-          "type": "integer"
-        },
-        "api_cost": {
-          "type": "integer"
-        },
-        "api_distance": {
           "type": "integer"
         }
       },
@@ -1053,10 +1053,16 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "api_equip_type": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer"
+          }
+        },
         "api_id": {
           "type": "integer"
         },
-        "api_sortno": {
+        "api_kcnt": {
           "type": "integer"
         },
         "api_name": {
@@ -1065,14 +1071,8 @@
         "api_scnt": {
           "type": "integer"
         },
-        "api_kcnt": {
+        "api_sortno": {
           "type": "integer"
-        },
-        "api_equip_type": {
-          "type": "object",
-          "additionalProperties": {
-            "type": "integer"
-          }
         }
       },
       "required": [
@@ -1089,17 +1089,8 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "api_id": {
-          "type": "integer"
-        },
-        "api_usetype": {
-          "type": "integer"
-        },
         "api_category": {
           "type": "integer"
-        },
-        "api_name": {
-          "type": "string"
         },
         "api_description": {
           "type": "array",
@@ -1107,7 +1098,16 @@
             "type": "string"
           }
         },
+        "api_id": {
+          "type": "integer"
+        },
+        "api_name": {
+          "type": "string"
+        },
         "api_price": {
+          "type": "integer"
+        },
+        "api_usetype": {
           "type": "integer"
         }
       },

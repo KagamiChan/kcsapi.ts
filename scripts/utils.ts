@@ -20,6 +20,7 @@ export const getType = (data: any, filename: string) =>
     const bin = path.resolve(__dirname, '../node_modules/.bin/quicktype')
 
     const child = childProcess.spawn(bin, [
+      '--alphabetize-properties',
       '--no-enums',
       '--just-types',
       '--lang',
@@ -54,6 +55,7 @@ export const getSchema = (data: any, filename: string) =>
     const bin = path.resolve(__dirname, '../node_modules/.bin/quicktype')
 
     const child = childProcess.spawn(bin, [
+      '--alphabetize-properties',
       '--no-enums',
       '--lang',
       'schema',

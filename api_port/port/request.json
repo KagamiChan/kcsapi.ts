@@ -9,16 +9,16 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "api_verno": {
+        "api_port": {
           "type": "string"
         },
         "api_sort_key": {
           "type": "string"
         },
-        "spi_sort_order": {
+        "api_verno": {
           "type": "string"
         },
-        "api_port": {
+        "spi_sort_order": {
           "type": "string"
         }
       },

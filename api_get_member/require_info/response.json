@@ -12,6 +12,30 @@
         "api_basic": {
           "$ref": "#/definitions/APIBasic"
         },
+        "api_extra_supply": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_furniture": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIFurniture"
+          }
+        },
+        "api_kdock": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIKdock"
+          }
+        },
+        "api_oss_setting": {
+          "$ref": "#/definitions/APIOSSSetting"
+        },
+        "api_skin_id": {
+          "type": "integer"
+        },
         "api_slot_item": {
           "type": "array",
           "items": {
@@ -27,35 +51,11 @@
             }
           }
         },
-        "api_kdock": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/APIKdock"
-          }
-        },
         "api_useitem": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/APIUseitem"
           }
-        },
-        "api_furniture": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/APIFurniture"
-          }
-        },
-        "api_extra_supply": {
-          "type": "array",
-          "items": {
-            "type": "integer"
-          }
-        },
-        "api_oss_setting": {
-          "$ref": "#/definitions/APIOSSSetting"
-        },
-        "api_skin_id": {
-          "type": "integer"
         }
       },
       "required": [
@@ -75,10 +75,10 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "api_member_id": {
+        "api_firstflag": {
           "type": "integer"
         },
-        "api_firstflag": {
+        "api_member_id": {
           "type": "integer"
         }
       },
@@ -92,16 +92,16 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "api_id": {
-          "type": "integer"
-        },
-        "api_furniture_type": {
+        "api_furniture_id": {
           "type": "integer"
         },
         "api_furniture_no": {
           "type": "integer"
         },
-        "api_furniture_id": {
+        "api_furniture_type": {
+          "type": "integer"
+        },
+        "api_id": {
           "type": "integer"
         }
       },
@@ -117,20 +117,17 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "api_id": {
-          "type": "integer"
-        },
-        "api_state": {
-          "type": "integer"
-        },
-        "api_created_ship_id": {
-          "type": "integer"
-        },
         "api_complete_time": {
           "type": "integer"
         },
         "api_complete_time_str": {
           "type": "string"
+        },
+        "api_created_ship_id": {
+          "type": "integer"
+        },
+        "api_id": {
+          "type": "integer"
         },
         "api_item1": {
           "type": "integer"
@@ -145,6 +142,9 @@
           "type": "integer"
         },
         "api_item5": {
+          "type": "integer"
+        },
+        "api_state": {
           "type": "integer"
         }
       },
@@ -186,19 +186,19 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "api_alv": {
+          "type": "integer"
+        },
         "api_id": {
-          "type": "integer"
-        },
-        "api_slotitem_id": {
-          "type": "integer"
-        },
-        "api_locked": {
           "type": "integer"
         },
         "api_level": {
           "type": "integer"
         },
-        "api_alv": {
+        "api_locked": {
+          "type": "integer"
+        },
+        "api_slotitem_id": {
           "type": "integer"
         }
       },
@@ -214,10 +214,10 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "api_id": {
+        "api_count": {
           "type": "integer"
         },
-        "api_count": {
+        "api_id": {
           "type": "integer"
         }
       },

@@ -1,4 +1,4 @@
-export interface APIStart2GetdataResponse {
+export interface APIStart2GetDataResponse {
   api_mst_ship: APIMstShip[]
   api_mst_slotitem_equiptype: APIMstSlotitemEquiptype[]
   api_mst_equip_exslot: number[]

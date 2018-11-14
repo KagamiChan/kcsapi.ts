@@ -1,3 +1,3 @@
-export interface APIStart2GetdataRequest {
+export interface APIStart2GetDataRequest {
   api_verno: string
 }

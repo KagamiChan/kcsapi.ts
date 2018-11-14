@@ -113,6 +113,11 @@ const main = async () => {
     const [reqPath, respPath] = buildPath(packet, path.basename(file))
     const [reqSchemaPath, respSchemaPath] = buildSchemaPath(packet)
 
+    // FIXME: some requst data unexpectedly get mad
+    if (JSON.stringify(packet.postBody).includes('api_token')) {
+      return Promise.resolve()
+    }
+
     await Promise.each(
       zip([packet.postBody, packet.body], [reqPath, respPath], [reqSchemaPath, respSchemaPath]),
       async ([data, filePath, schemaPath]) => {

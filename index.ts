@@ -7,7 +7,7 @@ import childProcess from 'child_process'
 
 const main = async () => {
   const files = glob.sync(path.resolve(__dirname, './source/**/*.json'))
-  const data = await Promise.map(files, async (file) => {
+  const data = await Promise.map(files, async file => {
     const json = await fs.readJSON(file)
     return json.body
   })
@@ -16,7 +16,7 @@ const main = async () => {
 
   let result = ''
 
-  child.stdout.on('data', (chunk) => result+= chunk)
+  child.stdout.on('data', chunk => (result += chunk))
 
   child.stdout.on('close', () => {
     console.log(result.toString())

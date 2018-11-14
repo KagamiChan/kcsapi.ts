@@ -36,5 +36,9 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "lint-staged"
     }
+  },
+  "scripts": {
+    "commit": "ts-node scripts/commit",
+    "generate": "ts-node scripts/generate"
   }
 }

@@ -34,7 +34,9 @@ export const getType = (data: any, filename: string) =>
       if (code > 0) {
         reject(signal)
       }
-      resolve(prettify(copyright + '\n' + getEndPointComment(filename) + result.toString()))
+      resolve(
+        result.length ? prettify(copyright + '\n' + getEndPointComment(filename) + result) : '',
+      )
     })
     const source = new Readable()
     source._read = () => {}

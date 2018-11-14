@@ -4,14 +4,21 @@ import Promise from 'bluebird'
 import fs from 'fs-extra'
 import path from 'path'
 import childProcess from 'child_process'
-import { capitalize } from 'lodash'
+import { capitalize, groupBy, mapValues, map, entries } from 'lodash'
 import prettier from 'prettier'
 
 /* tslint:disable-next-line no-any */
 const getType = (data: any, topLevel: string) =>
   new Promise<string>((resolve, reject) => {
     const bin = path.resolve(__dirname, '../node_modules/.bin/quicktype')
-    const child = childProcess.spawn(bin, ['--just-types', '--lang', 'ts', '--top-level', topLevel])
+    const child = childProcess.spawn(bin, [
+      '--no-enums',
+      '--just-types',
+      '--lang',
+      'ts',
+      '--top-level',
+      topLevel,
+    ])
 
     let result = ''
 
@@ -32,21 +39,21 @@ const getType = (data: any, topLevel: string) =>
   })
 
 const main = async () => {
-  const files = glob.sync(path.resolve(__dirname, '../samples/**/*.json'))
+  const allFiles = glob.sync(path.resolve(__dirname, '../samples/**/*.json'))
   const sampleRoot = path.resolve(__dirname, '../samples')
-  await Promise.map(files, async file => {
-    const filename = path.resolve(
-      __dirname,
-      `../${path.relative(sampleRoot, file).replace('json', 'ts')}`,
-    )
 
+  const fileGroup = groupBy(allFiles, file =>
+    path.resolve(__dirname, `../${path.dirname(path.relative(sampleRoot, file))}.ts`),
+  )
+
+  await Promise.each(entries(fileGroup), async ([filename, files]) => {
     const topLevel = path
-      .relative(sampleRoot, file)
-      .replace('.json', '')
+      .relative(path.resolve(__dirname, '../'), filename)
+      .replace('.ts', '')
       .split(/[_\/\\]/)
       .map(capitalize)
       .join('')
-    const json = await fs.readJSON(file)
+    const json = await Promise.map(files, file => fs.readJSON(file))
     const raw = await getType(json, topLevel)
 
     const result = prettier.format(raw, {
@@ -57,7 +64,7 @@ const main = async () => {
       parser: 'typescript',
     })
 
-    await fs.outputFile(filename, result)
+    return fs.outputFile(filename, result)
   })
 }
 

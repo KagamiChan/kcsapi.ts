@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqKousyouGetshipRequestElement"
+  },
+  "definitions": {
+    "APIReqKousyouGetshipRequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_kdock_id": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_kdock_id",
+        "api_verno"
+      ],
+      "title": "APIReqKousyouGetshipRequestElement"
+    }
+  }
+}

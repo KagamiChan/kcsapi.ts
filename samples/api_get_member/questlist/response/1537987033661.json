@@ -1,0 +1,107 @@
+{
+  "api_count": 1,
+  "api_completed_kind": 1,
+  "api_page_count": 1,
+  "api_disp_page": 1,
+  "api_list": [
+    {
+      "api_no": 1,
+      "api_category": 1,
+      "api_type": 1,
+      "api_state": 1,
+      "api_title": "Tanaka",
+      "api_detail": "Tanaka",
+      "api_voice_id": 1,
+      "api_get_material": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "api_bonus_flag": 1,
+      "api_progress_flag": 1,
+      "api_invalid_flag": 1
+    },
+    {
+      "api_no": 1,
+      "api_category": 1,
+      "api_type": 1,
+      "api_state": 1,
+      "api_title": "Tanaka",
+      "api_detail": "Tanaka",
+      "api_voice_id": 1,
+      "api_get_material": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "api_bonus_flag": 1,
+      "api_progress_flag": 1,
+      "api_invalid_flag": 1
+    },
+    {
+      "api_no": 1,
+      "api_category": 1,
+      "api_type": 1,
+      "api_state": 1,
+      "api_title": "Tanaka",
+      "api_detail": "Tanaka",
+      "api_voice_id": 1,
+      "api_get_material": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "api_bonus_flag": 1,
+      "api_progress_flag": 1,
+      "api_invalid_flag": 1
+    },
+    {
+      "api_no": 1,
+      "api_category": 1,
+      "api_type": 1,
+      "api_state": 1,
+      "api_title": "Tanaka",
+      "api_detail": "Tanaka",
+      "api_voice_id": 1,
+      "api_get_material": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "api_bonus_flag": 1,
+      "api_progress_flag": 1,
+      "api_invalid_flag": 1
+    },
+    {
+      "api_no": 1,
+      "api_category": 1,
+      "api_type": 1,
+      "api_state": 1,
+      "api_title": "Tanaka",
+      "api_detail": "Tanaka",
+      "api_voice_id": 1,
+      "api_get_material": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "api_bonus_flag": 1,
+      "api_progress_flag": 1,
+      "api_invalid_flag": 1
+    }
+  ],
+  "api_exec_count": 1,
+  "api_c_list": [
+    {
+      "api_no": 1,
+      "api_state": 1,
+      "api_progress_flag": 1
+    }
+  ],
+  "api_exec_type": 1
+}

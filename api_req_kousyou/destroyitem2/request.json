@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqKousyouDestroyitem2RequestElement"
+  },
+  "definitions": {
+    "APIReqKousyouDestroyitem2RequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_slotitem_ids": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_slotitem_ids",
+        "api_verno"
+      ],
+      "title": "APIReqKousyouDestroyitem2RequestElement"
+    }
+  }
+}

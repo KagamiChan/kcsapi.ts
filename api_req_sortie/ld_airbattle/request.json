@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqSortieLdAirbattleRequestElement"
+  },
+  "definitions": {
+    "APIReqSortieLdAirbattleRequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_formation": {
+          "type": "string"
+        },
+        "api_recovery_type": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_formation",
+        "api_recovery_type",
+        "api_verno"
+      ],
+      "title": "APIReqSortieLdAirbattleRequestElement"
+    }
+  }
+}

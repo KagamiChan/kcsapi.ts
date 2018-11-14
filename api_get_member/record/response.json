@@ -1,0 +1,160 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIGetMemberRecordResponseElement"
+  },
+  "definitions": {
+    "APIGetMemberRecordResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_cmt": {
+          "type": "string"
+        },
+        "api_cmt_id": {
+          "type": "string"
+        },
+        "api_complate": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "api_deck": {
+          "type": "integer"
+        },
+        "api_experience": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_friend": {
+          "type": "integer"
+        },
+        "api_furniture": {
+          "type": "integer"
+        },
+        "api_kdoc": {
+          "type": "integer"
+        },
+        "api_large_dock": {
+          "type": "integer"
+        },
+        "api_level": {
+          "type": "integer"
+        },
+        "api_material_max": {
+          "type": "integer"
+        },
+        "api_member_id": {
+          "type": "integer"
+        },
+        "api_mission": {
+          "$ref": "#/definitions/APIMission"
+        },
+        "api_ndoc": {
+          "type": "integer"
+        },
+        "api_nickname": {
+          "type": "string"
+        },
+        "api_nickname_id": {
+          "type": "string"
+        },
+        "api_photo_url": {
+          "type": "string"
+        },
+        "api_practice": {
+          "$ref": "#/definitions/API"
+        },
+        "api_rank": {
+          "type": "integer"
+        },
+        "api_ship": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_slotitem": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_war": {
+          "$ref": "#/definitions/API"
+        }
+      },
+      "required": [
+        "api_cmt",
+        "api_cmt_id",
+        "api_complate",
+        "api_deck",
+        "api_experience",
+        "api_friend",
+        "api_furniture",
+        "api_kdoc",
+        "api_large_dock",
+        "api_level",
+        "api_material_max",
+        "api_member_id",
+        "api_mission",
+        "api_ndoc",
+        "api_nickname",
+        "api_nickname_id",
+        "api_photo_url",
+        "api_practice",
+        "api_rank",
+        "api_ship",
+        "api_slotitem",
+        "api_war"
+      ],
+      "title": "APIGetMemberRecordResponseElement"
+    },
+    "APIMission": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_count": {
+          "type": "string"
+        },
+        "api_rate": {
+          "type": "string"
+        },
+        "api_success": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_count",
+        "api_rate",
+        "api_success"
+      ],
+      "title": "APIMission"
+    },
+    "API": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_lose": {
+          "type": "string"
+        },
+        "api_rate": {
+          "type": "string"
+        },
+        "api_win": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_lose",
+        "api_rate",
+        "api_win"
+      ],
+      "title": "API"
+    }
+  }
+}

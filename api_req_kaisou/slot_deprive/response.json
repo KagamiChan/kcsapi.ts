@@ -1,0 +1,237 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqKaisouSlotDepriveResponseElement"
+  },
+  "definitions": {
+    "APIReqKaisouSlotDepriveResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_ship_data": {
+          "$ref": "#/definitions/APIShipData"
+        },
+        "api_unset_list": {
+          "$ref": "#/definitions/APIUnsetList"
+        }
+      },
+      "required": [
+        "api_ship_data"
+      ],
+      "title": "APIReqKaisouSlotDepriveResponseElement"
+    },
+    "APIShipData": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_set_ship": {
+          "$ref": "#/definitions/APISetShip"
+        },
+        "api_unset_ship": {
+          "$ref": "#/definitions/APISetShip"
+        }
+      },
+      "required": [
+        "api_set_ship",
+        "api_unset_ship"
+      ],
+      "title": "APIShipData"
+    },
+    "APISetShip": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_backs": {
+          "type": "integer"
+        },
+        "api_bull": {
+          "type": "integer"
+        },
+        "api_cond": {
+          "type": "integer"
+        },
+        "api_exp": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_fuel": {
+          "type": "integer"
+        },
+        "api_id": {
+          "type": "integer"
+        },
+        "api_kaihi": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_karyoku": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_kyouka": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_leng": {
+          "type": "integer"
+        },
+        "api_locked": {
+          "type": "integer"
+        },
+        "api_locked_equip": {
+          "type": "integer"
+        },
+        "api_lucky": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_lv": {
+          "type": "integer"
+        },
+        "api_maxhp": {
+          "type": "integer"
+        },
+        "api_ndock_item": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_ndock_time": {
+          "type": "integer"
+        },
+        "api_nowhp": {
+          "type": "integer"
+        },
+        "api_onslot": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_raisou": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_sakuteki": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_sally_area": {
+          "type": "integer"
+        },
+        "api_ship_id": {
+          "type": "integer"
+        },
+        "api_slot": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_slot_ex": {
+          "type": "integer"
+        },
+        "api_slotnum": {
+          "type": "integer"
+        },
+        "api_soku": {
+          "type": "integer"
+        },
+        "api_sortno": {
+          "type": "integer"
+        },
+        "api_soukou": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_srate": {
+          "type": "integer"
+        },
+        "api_taiku": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_taisen": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_backs",
+        "api_bull",
+        "api_cond",
+        "api_exp",
+        "api_fuel",
+        "api_id",
+        "api_kaihi",
+        "api_karyoku",
+        "api_kyouka",
+        "api_leng",
+        "api_locked",
+        "api_locked_equip",
+        "api_lucky",
+        "api_lv",
+        "api_maxhp",
+        "api_ndock_item",
+        "api_ndock_time",
+        "api_nowhp",
+        "api_onslot",
+        "api_raisou",
+        "api_sakuteki",
+        "api_ship_id",
+        "api_slot",
+        "api_slot_ex",
+        "api_slotnum",
+        "api_soku",
+        "api_sortno",
+        "api_soukou",
+        "api_srate",
+        "api_taiku",
+        "api_taisen"
+      ],
+      "title": "APISetShip"
+    },
+    "APIUnsetList": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_slot_list": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_type3No": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_slot_list",
+        "api_type3No"
+      ],
+      "title": "APIUnsetList"
+    }
+  }
+}

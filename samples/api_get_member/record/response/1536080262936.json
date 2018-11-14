@@ -1,0 +1,48 @@
+{
+  "api_member_id": 1,
+  "api_nickname": "Tanaka",
+  "api_nickname_id": "Tanaka",
+  "api_cmt": "Tanaka",
+  "api_cmt_id": "Tanaka",
+  "api_photo_url": "Tanaka",
+  "api_level": 1,
+  "api_rank": 1,
+  "api_experience": [
+    1,
+    1
+  ],
+  "api_war": {
+    "api_win": "Tanaka",
+    "api_lose": "Tanaka",
+    "api_rate": "Tanaka"
+  },
+  "api_mission": {
+    "api_count": "Tanaka",
+    "api_success": "Tanaka",
+    "api_rate": "Tanaka"
+  },
+  "api_practice": {
+    "api_win": "Tanaka",
+    "api_lose": "Tanaka",
+    "api_rate": "Tanaka"
+  },
+  "api_friend": 1,
+  "api_deck": 1,
+  "api_kdoc": 1,
+  "api_ndoc": 1,
+  "api_ship": [
+    1,
+    1
+  ],
+  "api_slotitem": [
+    1,
+    1
+  ],
+  "api_furniture": 1,
+  "api_complate": [
+    "Tanaka",
+    "Tanaka"
+  ],
+  "api_large_dock": 1,
+  "api_material_max": 1
+}

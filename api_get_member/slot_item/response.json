@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "type": "array",
+    "items": {
+      "$ref": "#/definitions/APIGetMemberSlotItemResponseElement"
+    }
+  },
+  "definitions": {
+    "APIGetMemberSlotItemResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_alv": {
+          "type": "integer"
+        },
+        "api_id": {
+          "type": "integer"
+        },
+        "api_level": {
+          "type": "integer"
+        },
+        "api_locked": {
+          "type": "integer"
+        },
+        "api_slotitem_id": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_id",
+        "api_level",
+        "api_locked",
+        "api_slotitem_id"
+      ],
+      "title": "APIGetMemberSlotItemResponseElement"
+    }
+  }
+}

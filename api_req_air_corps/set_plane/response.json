@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqAirCorpsSetPlaneResponseElement"
+  },
+  "definitions": {
+    "APIReqAirCorpsSetPlaneResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_after_bauxite": {
+          "type": "integer"
+        },
+        "api_distance": {
+          "type": "integer"
+        },
+        "api_plane_info": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIPlaneInfo"
+          }
+        }
+      },
+      "required": [
+        "api_after_bauxite",
+        "api_distance",
+        "api_plane_info"
+      ],
+      "title": "APIReqAirCorpsSetPlaneResponseElement"
+    },
+    "APIPlaneInfo": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_cond": {
+          "type": "integer"
+        },
+        "api_count": {
+          "type": "integer"
+        },
+        "api_max_count": {
+          "type": "integer"
+        },
+        "api_slotid": {
+          "type": "integer"
+        },
+        "api_squadron_id": {
+          "type": "integer"
+        },
+        "api_state": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_cond",
+        "api_count",
+        "api_max_count",
+        "api_slotid",
+        "api_squadron_id",
+        "api_state"
+      ],
+      "title": "APIPlaneInfo"
+    }
+  }
+}

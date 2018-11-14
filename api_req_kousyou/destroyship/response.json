@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqKousyouDestroyshipResponseElement"
+  },
+  "definitions": {
+    "APIReqKousyouDestroyshipResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_material": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_unset_list": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        }
+      },
+      "required": [
+        "api_material",
+        "api_unset_list"
+      ],
+      "title": "APIReqKousyouDestroyshipResponseElement"
+    }
+  }
+}

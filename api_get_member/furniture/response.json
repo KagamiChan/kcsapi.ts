@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "type": "array",
+    "items": {
+      "$ref": "#/definitions/APIGetMemberFurnitureResponseElement"
+    }
+  },
+  "definitions": {
+    "APIGetMemberFurnitureResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_furniture_id": {
+          "type": "integer"
+        },
+        "api_furniture_no": {
+          "type": "integer"
+        },
+        "api_furniture_type": {
+          "type": "integer"
+        },
+        "api_id": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_furniture_id",
+        "api_furniture_no",
+        "api_furniture_type",
+        "api_id"
+      ],
+      "title": "APIGetMemberFurnitureResponseElement"
+    }
+  }
+}

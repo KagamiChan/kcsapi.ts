@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqMissionReturnInstructionResponseElement"
+  },
+  "definitions": {
+    "APIReqMissionReturnInstructionResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_mission": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_mission"
+      ],
+      "title": "APIReqMissionReturnInstructionResponseElement"
+    }
+  }
+}

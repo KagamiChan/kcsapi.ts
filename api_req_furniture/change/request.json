@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqFurnitureChangeRequestElement"
+  },
+  "definitions": {
+    "APIReqFurnitureChangeRequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_desk": {
+          "type": "string"
+        },
+        "api_floor": {
+          "type": "string"
+        },
+        "api_season": {
+          "type": "string"
+        },
+        "api_shelf": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        },
+        "api_wallhanging": {
+          "type": "string"
+        },
+        "api_wallpaper": {
+          "type": "string"
+        },
+        "api_window": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_desk",
+        "api_floor",
+        "api_shelf",
+        "api_verno",
+        "api_wallhanging",
+        "api_wallpaper",
+        "api_window"
+      ],
+      "title": "APIReqFurnitureChangeRequestElement"
+    }
+  }
+}

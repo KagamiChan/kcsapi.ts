@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqMemberItemuseCondRequestElement"
+  },
+  "definitions": {
+    "APIReqMemberItemuseCondRequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_deck_id": {
+          "type": "string"
+        },
+        "api_use_type": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_deck_id",
+        "api_use_type",
+        "api_verno"
+      ],
+      "title": "APIReqMemberItemuseCondRequestElement"
+    }
+  }
+}

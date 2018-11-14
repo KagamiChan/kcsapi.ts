@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqPracticeBattleResultResponseElement"
+  },
+  "definitions": {
+    "APIReqPracticeBattleResultResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_enemy_info": {
+          "$ref": "#/definitions/APIEnemyInfo"
+        },
+        "api_get_base_exp": {
+          "type": "integer"
+        },
+        "api_get_exp": {
+          "type": "integer"
+        },
+        "api_get_exp_lvup": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_get_ship_exp": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_member_exp": {
+          "type": "integer"
+        },
+        "api_member_lv": {
+          "type": "integer"
+        },
+        "api_mvp": {
+          "type": "integer"
+        },
+        "api_ship_id": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_win_rank": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_enemy_info",
+        "api_get_base_exp",
+        "api_get_exp",
+        "api_get_exp_lvup",
+        "api_get_ship_exp",
+        "api_member_exp",
+        "api_member_lv",
+        "api_mvp",
+        "api_ship_id",
+        "api_win_rank"
+      ],
+      "title": "APIReqPracticeBattleResultResponseElement"
+    },
+    "APIEnemyInfo": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_deck_name": {
+          "type": "string"
+        },
+        "api_level": {
+          "type": "integer"
+        },
+        "api_rank": {
+          "type": "string"
+        },
+        "api_user_name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_deck_name",
+        "api_level",
+        "api_rank",
+        "api_user_name"
+      ],
+      "title": "APIEnemyInfo"
+    }
+  }
+}

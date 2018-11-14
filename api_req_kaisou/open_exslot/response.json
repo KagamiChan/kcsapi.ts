@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqKaisouOpenExslotResponseElement"
+  },
+  "definitions": {
+    "APIReqKaisouOpenExslotResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_result": {
+          "type": "integer"
+        },
+        "api_result_msg": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_result",
+        "api_result_msg"
+      ],
+      "title": "APIReqKaisouOpenExslotResponseElement"
+    }
+  }
+}

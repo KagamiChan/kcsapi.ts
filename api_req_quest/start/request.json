@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqQuestStartRequestElement"
+  },
+  "definitions": {
+    "APIReqQuestStartRequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_quest_id": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_quest_id",
+        "api_verno"
+      ],
+      "title": "APIReqQuestStartRequestElement"
+    }
+  }
+}

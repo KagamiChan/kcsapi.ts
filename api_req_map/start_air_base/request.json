@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqMapStartAirBaseRequestElement"
+  },
+  "definitions": {
+    "APIReqMapStartAirBaseRequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_strike_point_1": {
+          "type": "string"
+        },
+        "api_strike_point_2": {
+          "type": "string"
+        },
+        "api_strike_point_3": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_strike_point_1",
+        "api_verno"
+      ],
+      "title": "APIReqMapStartAirBaseRequestElement"
+    }
+  }
+}

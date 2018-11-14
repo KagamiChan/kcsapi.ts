@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqMissionStartRequestElement"
+  },
+  "definitions": {
+    "APIReqMissionStartRequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_deck_id": {
+          "type": "string"
+        },
+        "api_mission": {
+          "type": "string"
+        },
+        "api_mission_id": {
+          "type": "string"
+        },
+        "api_serial_cid": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_deck_id",
+        "api_mission",
+        "api_mission_id",
+        "api_serial_cid",
+        "api_verno"
+      ],
+      "title": "APIReqMissionStartRequestElement"
+    }
+  }
+}

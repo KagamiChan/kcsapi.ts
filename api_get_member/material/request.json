@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIGetMemberMaterialRequestElement"
+  },
+  "definitions": {
+    "APIGetMemberMaterialRequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_verno": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_verno"
+      ],
+      "title": "APIGetMemberMaterialRequestElement"
+    }
+  }
+}

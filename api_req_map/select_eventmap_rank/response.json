@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqMapSelectEventmapRankResponseElement"
+  },
+  "definitions": {
+    "APIReqMapSelectEventmapRankResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_maphp": {
+          "$ref": "#/definitions/APIMaphp"
+        }
+      },
+      "required": [
+        "api_maphp"
+      ],
+      "title": "APIReqMapSelectEventmapRankResponseElement"
+    },
+    "APIMaphp": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_gauge_num": {
+          "type": "integer"
+        },
+        "api_gauge_type": {
+          "$ref": "#/definitions/APIGaugeType"
+        },
+        "api_max_maphp": {
+          "type": "integer"
+        },
+        "api_now_maphp": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_gauge_num",
+        "api_gauge_type",
+        "api_max_maphp",
+        "api_now_maphp"
+      ],
+      "title": "APIMaphp"
+    },
+    "APIGaugeType": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "string"
+        }
+      ],
+      "title": "APIGaugeType"
+    }
+  }
+}

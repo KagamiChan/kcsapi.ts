@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqKousyouCreateitemRequestElement"
+  },
+  "definitions": {
+    "APIReqKousyouCreateitemRequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_item1": {
+          "type": "string"
+        },
+        "api_item2": {
+          "type": "string"
+        },
+        "api_item3": {
+          "type": "string"
+        },
+        "api_item4": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_item1",
+        "api_item2",
+        "api_item3",
+        "api_item4",
+        "api_verno"
+      ],
+      "title": "APIReqKousyouCreateitemRequestElement"
+    }
+  }
+}

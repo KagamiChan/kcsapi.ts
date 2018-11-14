@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqHenseiPresetSelectRequestElement"
+  },
+  "definitions": {
+    "APIReqHenseiPresetSelectRequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_deck_id": {
+          "type": "string"
+        },
+        "api_preset_no": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_deck_id",
+        "api_preset_no",
+        "api_verno"
+      ],
+      "title": "APIReqHenseiPresetSelectRequestElement"
+    }
+  }
+}

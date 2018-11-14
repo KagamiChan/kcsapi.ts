@@ -1,0 +1,180 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIGetMemberQuestlistResponseElement"
+  },
+  "definitions": {
+    "APIGetMemberQuestlistResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_c_list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APICList"
+          }
+        },
+        "api_completed_kind": {
+          "type": "integer"
+        },
+        "api_count": {
+          "type": "integer"
+        },
+        "api_disp_page": {
+          "type": "integer"
+        },
+        "api_exec_count": {
+          "type": "integer"
+        },
+        "api_exec_type": {
+          "type": "integer"
+        },
+        "api_list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIListElement"
+          }
+        },
+        "api_page_count": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_completed_kind",
+        "api_count",
+        "api_disp_page",
+        "api_exec_count",
+        "api_exec_type",
+        "api_list",
+        "api_page_count"
+      ],
+      "title": "APIGetMemberQuestlistResponseElement"
+    },
+    "APICList": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_no": {
+          "type": "integer"
+        },
+        "api_progress_flag": {
+          "type": "integer"
+        },
+        "api_state": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_no",
+        "api_progress_flag",
+        "api_state"
+      ],
+      "title": "APICList"
+    },
+    "APIListClass": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_bonus_flag": {
+          "type": "integer"
+        },
+        "api_category": {
+          "type": "integer"
+        },
+        "api_detail": {
+          "type": "string"
+        },
+        "api_get_material": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_invalid_flag": {
+          "type": "integer"
+        },
+        "api_lost_badges": {
+          "type": "integer"
+        },
+        "api_no": {
+          "type": "integer"
+        },
+        "api_progress_flag": {
+          "type": "integer"
+        },
+        "api_select_rewards": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/APISelectReward"
+            }
+          }
+        },
+        "api_state": {
+          "type": "integer"
+        },
+        "api_title": {
+          "type": "string"
+        },
+        "api_type": {
+          "type": "integer"
+        },
+        "api_voice_id": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_bonus_flag",
+        "api_category",
+        "api_detail",
+        "api_get_material",
+        "api_invalid_flag",
+        "api_no",
+        "api_progress_flag",
+        "api_state",
+        "api_title",
+        "api_type",
+        "api_voice_id"
+      ],
+      "title": "APIListClass"
+    },
+    "APISelectReward": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_count": {
+          "type": "integer"
+        },
+        "api_kind": {
+          "type": "integer"
+        },
+        "api_mst_id": {
+          "type": "integer"
+        },
+        "api_no": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_count",
+        "api_kind",
+        "api_mst_id",
+        "api_no"
+      ],
+      "title": "APISelectReward"
+    },
+    "APIListElement": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/APIListClass"
+        },
+        {
+          "type": "integer"
+        }
+      ],
+      "title": "APIListElement"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqMapNextRequestElement"
+  },
+  "definitions": {
+    "APIReqMapNextRequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_cell_id": {
+          "type": "string"
+        },
+        "api_recovery_type": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_recovery_type",
+        "api_verno"
+      ],
+      "title": "APIReqMapNextRequestElement"
+    }
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqBattleMidnightBattleResponseElement"
+  },
+  "definitions": {
+    "APIReqBattleMidnightBattleResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_deck_id": {
+          "type": "integer"
+        },
+        "api_eParam": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_eSlot": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_e_maxhps": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_e_nowhps": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_fParam": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_f_maxhps": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_f_nowhps": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_flare_pos": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_formation": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_hougeki": {
+          "$ref": "#/definitions/APIHougeki"
+        },
+        "api_ship_ke": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_ship_lv": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_touch_plane": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/API"
+          }
+        }
+      },
+      "required": [
+        "api_deck_id",
+        "api_eParam",
+        "api_eSlot",
+        "api_e_maxhps",
+        "api_e_nowhps",
+        "api_fParam",
+        "api_f_maxhps",
+        "api_f_nowhps",
+        "api_flare_pos",
+        "api_formation",
+        "api_hougeki",
+        "api_ship_ke",
+        "api_ship_lv",
+        "api_touch_plane"
+      ],
+      "title": "APIReqBattleMidnightBattleResponseElement"
+    },
+    "APIHougeki": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_at_eflag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_at_list": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_cl_list": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_damage": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_df_list": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_n_mother_list": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_si_list": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/API"
+            }
+          }
+        },
+        "api_sp_list": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_at_eflag",
+        "api_at_list",
+        "api_cl_list",
+        "api_damage",
+        "api_df_list",
+        "api_n_mother_list",
+        "api_si_list",
+        "api_sp_list"
+      ],
+      "title": "APIHougeki"
+    },
+    "API": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "string"
+        }
+      ],
+      "title": "API"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "type": "array",
+    "items": {
+      "$ref": "#/definitions/APIGetMemberMissionResponseElement"
+    }
+  },
+  "definitions": {
+    "APIGetMemberMissionResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_mission_id": {
+          "type": "integer"
+        },
+        "api_state": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_mission_id",
+        "api_state"
+      ],
+      "title": "APIGetMemberMissionResponseElement"
+    }
+  }
+}

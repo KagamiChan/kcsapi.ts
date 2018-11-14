@@ -1,0 +1,185 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqMapStartResponseElement"
+  },
+  "definitions": {
+    "APIReqMapStartResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_airsearch": {
+          "$ref": "#/definitions/APIAirsearch"
+        },
+        "api_bosscell_no": {
+          "type": "integer"
+        },
+        "api_bosscomp": {
+          "type": "integer"
+        },
+        "api_cell_data": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APICellDatum"
+          }
+        },
+        "api_cell_flavor": {
+          "$ref": "#/definitions/APICellFlavor"
+        },
+        "api_color_no": {
+          "type": "integer"
+        },
+        "api_event_id": {
+          "type": "integer"
+        },
+        "api_event_kind": {
+          "type": "integer"
+        },
+        "api_eventmap": {
+          "$ref": "#/definitions/APIEventmap"
+        },
+        "api_from_no": {
+          "type": "integer"
+        },
+        "api_maparea_id": {
+          "type": "integer"
+        },
+        "api_mapinfo_no": {
+          "type": "integer"
+        },
+        "api_next": {
+          "type": "integer"
+        },
+        "api_no": {
+          "type": "integer"
+        },
+        "api_rashin_flg": {
+          "type": "integer"
+        },
+        "api_rashin_id": {
+          "type": "integer"
+        },
+        "api_select_route": {
+          "$ref": "#/definitions/APISelectRoute"
+        }
+      },
+      "required": [
+        "api_airsearch",
+        "api_bosscell_no",
+        "api_bosscomp",
+        "api_cell_data",
+        "api_color_no",
+        "api_event_id",
+        "api_event_kind",
+        "api_from_no",
+        "api_maparea_id",
+        "api_mapinfo_no",
+        "api_next",
+        "api_no",
+        "api_rashin_flg",
+        "api_rashin_id"
+      ],
+      "title": "APIReqMapStartResponseElement"
+    },
+    "APIAirsearch": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_plane_type": {
+          "type": "integer"
+        },
+        "api_result": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_plane_type",
+        "api_result"
+      ],
+      "title": "APIAirsearch"
+    },
+    "APICellDatum": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_color_no": {
+          "type": "integer"
+        },
+        "api_distance": {
+          "type": "integer"
+        },
+        "api_id": {
+          "type": "integer"
+        },
+        "api_no": {
+          "type": "integer"
+        },
+        "api_passed": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_color_no",
+        "api_id",
+        "api_no",
+        "api_passed"
+      ],
+      "title": "APICellDatum"
+    },
+    "APICellFlavor": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_message": {
+          "type": "string"
+        },
+        "api_type": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_message",
+        "api_type"
+      ],
+      "title": "APICellFlavor"
+    },
+    "APIEventmap": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_dmg": {
+          "type": "integer"
+        },
+        "api_max_maphp": {
+          "type": "integer"
+        },
+        "api_now_maphp": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_dmg",
+        "api_max_maphp",
+        "api_now_maphp"
+      ],
+      "title": "APIEventmap"
+    },
+    "APISelectRoute": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_select_cells": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_select_cells"
+      ],
+      "title": "APISelectRoute"
+    }
+  }
+}

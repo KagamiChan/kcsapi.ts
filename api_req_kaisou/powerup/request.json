@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqKaisouPowerupRequestElement"
+  },
+  "definitions": {
+    "APIReqKaisouPowerupRequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_id": {
+          "type": "string"
+        },
+        "api_id_items": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_id",
+        "api_id_items",
+        "api_verno"
+      ],
+      "title": "APIReqKaisouPowerupRequestElement"
+    }
+  }
+}

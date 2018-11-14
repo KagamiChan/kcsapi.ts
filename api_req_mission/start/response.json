@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqMissionStartResponseElement"
+  },
+  "definitions": {
+    "APIReqMissionStartResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_complatetime": {
+          "type": "integer"
+        },
+        "api_complatetime_str": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_complatetime",
+        "api_complatetime_str"
+      ],
+      "title": "APIReqMissionStartResponseElement"
+    }
+  }
+}

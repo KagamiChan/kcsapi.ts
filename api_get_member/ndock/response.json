@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "type": "array",
+    "items": {
+      "$ref": "#/definitions/APIGetMemberNdockResponseElement"
+    }
+  },
+  "definitions": {
+    "APIGetMemberNdockResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_complete_time": {
+          "type": "integer"
+        },
+        "api_complete_time_str": {
+          "type": "string"
+        },
+        "api_id": {
+          "type": "integer"
+        },
+        "api_item1": {
+          "type": "integer"
+        },
+        "api_item2": {
+          "type": "integer"
+        },
+        "api_item3": {
+          "type": "integer"
+        },
+        "api_item4": {
+          "type": "integer"
+        },
+        "api_member_id": {
+          "type": "integer"
+        },
+        "api_ship_id": {
+          "type": "integer"
+        },
+        "api_state": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_complete_time",
+        "api_complete_time_str",
+        "api_id",
+        "api_item1",
+        "api_item2",
+        "api_item3",
+        "api_item4",
+        "api_member_id",
+        "api_ship_id",
+        "api_state"
+      ],
+      "title": "APIGetMemberNdockResponseElement"
+    }
+  }
+}

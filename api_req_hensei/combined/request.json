@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqHenseiCombinedRequestElement"
+  },
+  "definitions": {
+    "APIReqHenseiCombinedRequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_combined_type": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_combined_type",
+        "api_verno"
+      ],
+      "title": "APIReqHenseiCombinedRequestElement"
+    }
+  }
+}

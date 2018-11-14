@@ -1,0 +1,161 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIGetMemberMapinfoResponseElement"
+  },
+  "definitions": {
+    "APIGetMemberMapinfoResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_air_base": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIAirBase"
+          }
+        },
+        "api_map_info": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIMapInfo"
+          }
+        }
+      },
+      "required": [
+        "api_air_base",
+        "api_map_info"
+      ],
+      "title": "APIGetMemberMapinfoResponseElement"
+    },
+    "APIAirBase": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_action_kind": {
+          "type": "integer"
+        },
+        "api_area_id": {
+          "type": "integer"
+        },
+        "api_distance": {
+          "type": "integer"
+        },
+        "api_name": {
+          "type": "string"
+        },
+        "api_plane_info": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIPlaneInfo"
+          }
+        },
+        "api_rid": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_action_kind",
+        "api_area_id",
+        "api_distance",
+        "api_name",
+        "api_plane_info",
+        "api_rid"
+      ],
+      "title": "APIAirBase"
+    },
+    "APIPlaneInfo": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_cond": {
+          "type": "integer"
+        },
+        "api_count": {
+          "type": "integer"
+        },
+        "api_max_count": {
+          "type": "integer"
+        },
+        "api_slotid": {
+          "type": "integer"
+        },
+        "api_squadron_id": {
+          "type": "integer"
+        },
+        "api_state": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_slotid",
+        "api_squadron_id",
+        "api_state"
+      ],
+      "title": "APIPlaneInfo"
+    },
+    "APIMapInfo": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_air_base_decks": {
+          "type": "integer"
+        },
+        "api_cleared": {
+          "type": "integer"
+        },
+        "api_defeat_count": {
+          "type": "integer"
+        },
+        "api_eventmap": {
+          "$ref": "#/definitions/APIEventmap"
+        },
+        "api_exboss_flag": {
+          "type": "integer"
+        },
+        "api_id": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_cleared",
+        "api_exboss_flag",
+        "api_id"
+      ],
+      "title": "APIMapInfo"
+    },
+    "APIEventmap": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_gauge_num": {
+          "type": "integer"
+        },
+        "api_gauge_type": {
+          "type": "integer"
+        },
+        "api_max_maphp": {
+          "type": "integer"
+        },
+        "api_now_maphp": {
+          "type": "integer"
+        },
+        "api_selected_rank": {
+          "type": "integer"
+        },
+        "api_state": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_gauge_num",
+        "api_gauge_type",
+        "api_max_maphp",
+        "api_now_maphp",
+        "api_selected_rank",
+        "api_state"
+      ],
+      "title": "APIEventmap"
+    }
+  }
+}

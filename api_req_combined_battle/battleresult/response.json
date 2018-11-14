@@ -1,0 +1,258 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqCombinedBattleBattleresultResponseElement"
+  },
+  "definitions": {
+    "APIReqCombinedBattleBattleresultResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_dests": {
+          "type": "integer"
+        },
+        "api_destsf": {
+          "type": "integer"
+        },
+        "api_enemy_info": {
+          "$ref": "#/definitions/APIEnemyInfo"
+        },
+        "api_escape": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/APIEscape"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "api_escape_flag": {
+          "type": "integer"
+        },
+        "api_first_clear": {
+          "type": "integer"
+        },
+        "api_get_base_exp": {
+          "type": "integer"
+        },
+        "api_get_eventflag": {
+          "type": "integer"
+        },
+        "api_get_eventitem": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIGetEventitem"
+          }
+        },
+        "api_get_exmap_rate": {
+          "type": "integer"
+        },
+        "api_get_exmap_useitem_id": {
+          "type": "integer"
+        },
+        "api_get_exp": {
+          "type": "integer"
+        },
+        "api_get_exp_lvup": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_get_exp_lvup_combined": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_get_flag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_get_ship": {
+          "$ref": "#/definitions/APIGetShip"
+        },
+        "api_get_ship_exp": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_get_ship_exp_combined": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_m1": {
+          "type": "integer"
+        },
+        "api_m_suffix": {
+          "type": "string"
+        },
+        "api_member_exp": {
+          "type": "integer"
+        },
+        "api_member_lv": {
+          "type": "integer"
+        },
+        "api_mvp": {
+          "type": "integer"
+        },
+        "api_mvp_combined": {
+          "type": "integer"
+        },
+        "api_next_map_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "api_ope_suffix": {
+          "type": "string"
+        },
+        "api_quest_level": {
+          "type": "integer"
+        },
+        "api_quest_name": {
+          "type": "string"
+        },
+        "api_ship_id": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_win_rank": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_dests",
+        "api_destsf",
+        "api_enemy_info",
+        "api_escape",
+        "api_escape_flag",
+        "api_first_clear",
+        "api_get_base_exp",
+        "api_get_exmap_rate",
+        "api_get_exmap_useitem_id",
+        "api_get_exp",
+        "api_get_exp_lvup",
+        "api_get_exp_lvup_combined",
+        "api_get_flag",
+        "api_get_ship_exp",
+        "api_get_ship_exp_combined",
+        "api_member_exp",
+        "api_member_lv",
+        "api_mvp",
+        "api_mvp_combined",
+        "api_quest_level",
+        "api_quest_name",
+        "api_ship_id",
+        "api_win_rank"
+      ],
+      "title": "APIReqCombinedBattleBattleresultResponseElement"
+    },
+    "APIEnemyInfo": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_deck_name": {
+          "type": "string"
+        },
+        "api_level": {
+          "type": "string"
+        },
+        "api_rank": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_deck_name",
+        "api_level",
+        "api_rank"
+      ],
+      "title": "APIEnemyInfo"
+    },
+    "APIEscape": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_escape_idx": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_tow_idx": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_escape_idx",
+        "api_tow_idx"
+      ],
+      "title": "APIEscape"
+    },
+    "APIGetEventitem": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_id": {
+          "type": "integer"
+        },
+        "api_type": {
+          "type": "integer"
+        },
+        "api_value": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_id",
+        "api_type",
+        "api_value"
+      ],
+      "title": "APIGetEventitem"
+    },
+    "APIGetShip": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_ship_getmes": {
+          "type": "string"
+        },
+        "api_ship_id": {
+          "type": "integer"
+        },
+        "api_ship_name": {
+          "type": "string"
+        },
+        "api_ship_type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_ship_getmes",
+        "api_ship_id",
+        "api_ship_name",
+        "api_ship_type"
+      ],
+      "title": "APIGetShip"
+    }
+  }
+}

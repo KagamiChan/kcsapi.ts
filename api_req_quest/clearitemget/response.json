@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqQuestClearitemgetResponseElement"
+  },
+  "definitions": {
+    "APIReqQuestClearitemgetResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_bounus": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIBounus"
+          }
+        },
+        "api_bounus_count": {
+          "type": "integer"
+        },
+        "api_material": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_bounus",
+        "api_bounus_count",
+        "api_material"
+      ],
+      "title": "APIReqQuestClearitemgetResponseElement"
+    },
+    "APIBounus": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_count": {
+          "type": "integer"
+        },
+        "api_item": {
+          "$ref": "#/definitions/APIItem"
+        },
+        "api_type": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_count",
+        "api_item",
+        "api_type"
+      ],
+      "title": "APIBounus"
+    },
+    "APIItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_id": {
+          "type": "integer"
+        },
+        "api_id_from": {
+          "type": "integer"
+        },
+        "api_id_to": {
+          "type": "integer"
+        },
+        "api_message": {
+          "type": "string"
+        },
+        "api_name": {
+          "type": "string"
+        }
+      },
+      "required": [],
+      "title": "APIItem"
+    }
+  }
+}

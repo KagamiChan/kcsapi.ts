@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqHenseiLockRequestElement"
+  },
+  "definitions": {
+    "APIReqHenseiLockRequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_ship_id": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_ship_id",
+        "api_verno"
+      ],
+      "title": "APIReqHenseiLockRequestElement"
+    }
+  }
+}

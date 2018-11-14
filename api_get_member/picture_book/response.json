@@ -1,0 +1,138 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIGetMemberPictureBookResponseElement"
+  },
+  "definitions": {
+    "APIGetMemberPictureBookResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIList"
+          }
+        }
+      },
+      "required": [
+        "api_list"
+      ],
+      "title": "APIGetMemberPictureBookResponseElement"
+    },
+    "APIList": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_cnum": {
+          "type": "integer"
+        },
+        "api_ctype": {
+          "type": "integer"
+        },
+        "api_houg": {
+          "type": "integer"
+        },
+        "api_index_no": {
+          "type": "integer"
+        },
+        "api_kaih": {
+          "type": "integer"
+        },
+        "api_leng": {
+          "type": "integer"
+        },
+        "api_name": {
+          "type": "string"
+        },
+        "api_q_voice_info": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIQVoiceInfo"
+          }
+        },
+        "api_raig": {
+          "type": "integer"
+        },
+        "api_sinfo": {
+          "type": "string"
+        },
+        "api_souk": {
+          "type": "integer"
+        },
+        "api_state": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_stype": {
+          "type": "integer"
+        },
+        "api_table_id": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_taik": {
+          "type": "integer"
+        },
+        "api_tais": {
+          "type": "integer"
+        },
+        "api_tyku": {
+          "type": "integer"
+        },
+        "api_yomi": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_cnum",
+        "api_ctype",
+        "api_houg",
+        "api_index_no",
+        "api_kaih",
+        "api_leng",
+        "api_name",
+        "api_raig",
+        "api_sinfo",
+        "api_souk",
+        "api_state",
+        "api_stype",
+        "api_table_id",
+        "api_taik",
+        "api_tais",
+        "api_tyku",
+        "api_yomi"
+      ],
+      "title": "APIList"
+    },
+    "APIQVoiceInfo": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_icon_id": {
+          "type": "integer"
+        },
+        "api_no": {
+          "type": "integer"
+        },
+        "api_voice_id": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_icon_id",
+        "api_no",
+        "api_voice_id"
+      ],
+      "title": "APIQVoiceInfo"
+    }
+  }
+}

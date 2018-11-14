@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "type": "array",
+    "items": {
+      "$ref": "#/definitions/APIGetMemberMaterialResponseElement"
+    }
+  },
+  "definitions": {
+    "APIGetMemberMaterialResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_id": {
+          "type": "integer"
+        },
+        "api_member_id": {
+          "type": "integer"
+        },
+        "api_value": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_id",
+        "api_member_id",
+        "api_value"
+      ],
+      "title": "APIGetMemberMaterialResponseElement"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIGetMemberSortieConditionsResponseElement"
+  },
+  "definitions": {
+    "APIGetMemberSortieConditionsResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_war": {
+          "$ref": "#/definitions/APIWar"
+        }
+      },
+      "required": [
+        "api_war"
+      ],
+      "title": "APIGetMemberSortieConditionsResponseElement"
+    },
+    "APIWar": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_lose": {
+          "type": "string"
+        },
+        "api_rate": {
+          "type": "string"
+        },
+        "api_win": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_lose",
+        "api_rate",
+        "api_win"
+      ],
+      "title": "APIWar"
+    }
+  }
+}

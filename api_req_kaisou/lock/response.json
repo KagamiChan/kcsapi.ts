@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqKaisouLockResponseElement"
+  },
+  "definitions": {
+    "APIReqKaisouLockResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_locked": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_locked"
+      ],
+      "title": "APIReqKaisouLockResponseElement"
+    }
+  }
+}

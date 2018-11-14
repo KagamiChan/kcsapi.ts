@@ -1,0 +1,57 @@
+{
+  "api_ship_id": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "api_win_rank": "Tanaka",
+  "api_get_exp": 1,
+  "api_member_lv": 1,
+  "api_member_exp": 1,
+  "api_get_base_exp": 1,
+  "api_mvp": 1,
+  "api_get_ship_exp": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "api_get_exp_lvup": [
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "api_enemy_info": {
+    "api_user_name": "Tanaka",
+    "api_level": 1,
+    "api_rank": "Tanaka",
+    "api_deck_name": "Tanaka"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqMissionResultRequestElement"
+  },
+  "definitions": {
+    "APIReqMissionResultRequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_deck_id": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_deck_id",
+        "api_verno"
+      ],
+      "title": "APIReqMissionResultRequestElement"
+    }
+  }
+}

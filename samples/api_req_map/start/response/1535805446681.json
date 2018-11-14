@@ -1,0 +1,110 @@
+{
+  "api_cell_data": [
+    {
+      "api_id": 1,
+      "api_no": 1,
+      "api_color_no": 1,
+      "api_passed": 1
+    },
+    {
+      "api_id": 1,
+      "api_no": 1,
+      "api_color_no": 1,
+      "api_passed": 1
+    },
+    {
+      "api_id": 1,
+      "api_no": 1,
+      "api_color_no": 1,
+      "api_passed": 1
+    },
+    {
+      "api_id": 1,
+      "api_no": 1,
+      "api_color_no": 1,
+      "api_passed": 1
+    },
+    {
+      "api_id": 1,
+      "api_no": 1,
+      "api_color_no": 1,
+      "api_passed": 1
+    },
+    {
+      "api_id": 1,
+      "api_no": 1,
+      "api_color_no": 1,
+      "api_passed": 1
+    },
+    {
+      "api_id": 1,
+      "api_no": 1,
+      "api_color_no": 1,
+      "api_passed": 1
+    },
+    {
+      "api_id": 1,
+      "api_no": 1,
+      "api_color_no": 1,
+      "api_passed": 1
+    },
+    {
+      "api_id": 1,
+      "api_no": 1,
+      "api_color_no": 1,
+      "api_passed": 1
+    },
+    {
+      "api_id": 1,
+      "api_no": 1,
+      "api_color_no": 1,
+      "api_passed": 1
+    },
+    {
+      "api_id": 1,
+      "api_no": 1,
+      "api_color_no": 1,
+      "api_passed": 1
+    },
+    {
+      "api_id": 1,
+      "api_no": 1,
+      "api_color_no": 1,
+      "api_passed": 1
+    },
+    {
+      "api_id": 1,
+      "api_no": 1,
+      "api_color_no": 1,
+      "api_passed": 1
+    },
+    {
+      "api_id": 1,
+      "api_no": 1,
+      "api_color_no": 1,
+      "api_passed": 1
+    },
+    {
+      "api_id": 1,
+      "api_no": 1,
+      "api_color_no": 1,
+      "api_passed": 1
+    }
+  ],
+  "api_rashin_flg": 1,
+  "api_rashin_id": 1,
+  "api_maparea_id": 1,
+  "api_mapinfo_no": 1,
+  "api_no": 1,
+  "api_color_no": 1,
+  "api_event_id": 1,
+  "api_event_kind": 1,
+  "api_next": 1,
+  "api_bosscell_no": 1,
+  "api_bosscomp": 1,
+  "api_airsearch": {
+    "api_plane_type": 1,
+    "api_result": 1
+  },
+  "api_from_no": 1
+}

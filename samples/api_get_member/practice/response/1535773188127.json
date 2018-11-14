@@ -1,0 +1,72 @@
+{
+  "api_create_kind": 1,
+  "api_selected_kind": 1,
+  "api_entry_limit": 1,
+  "api_list": [
+    {
+      "api_enemy_id": 1,
+      "api_enemy_name": "Tanaka",
+      "api_enemy_name_id": "Tanaka",
+      "api_enemy_level": 1,
+      "api_enemy_rank": "Tanaka",
+      "api_enemy_flag": 1,
+      "api_enemy_flag_ship": 1,
+      "api_enemy_comment": "Tanaka",
+      "api_enemy_comment_id": "Tanaka",
+      "api_state": 1,
+      "api_medals": 1
+    },
+    {
+      "api_enemy_id": 1,
+      "api_enemy_name": "Tanaka",
+      "api_enemy_name_id": "Tanaka",
+      "api_enemy_level": 1,
+      "api_enemy_rank": "Tanaka",
+      "api_enemy_flag": 1,
+      "api_enemy_flag_ship": 1,
+      "api_enemy_comment": "Tanaka",
+      "api_enemy_comment_id": "Tanaka",
+      "api_state": 1,
+      "api_medals": 1
+    },
+    {
+      "api_enemy_id": 1,
+      "api_enemy_name": "Tanaka",
+      "api_enemy_name_id": "Tanaka",
+      "api_enemy_level": 1,
+      "api_enemy_rank": "Tanaka",
+      "api_enemy_flag": 1,
+      "api_enemy_flag_ship": 1,
+      "api_enemy_comment": "Tanaka",
+      "api_enemy_comment_id": "Tanaka",
+      "api_state": 1,
+      "api_medals": 1
+    },
+    {
+      "api_enemy_id": 1,
+      "api_enemy_name": "Tanaka",
+      "api_enemy_name_id": "Tanaka",
+      "api_enemy_level": 1,
+      "api_enemy_rank": "Tanaka",
+      "api_enemy_flag": 1,
+      "api_enemy_flag_ship": 1,
+      "api_enemy_comment": "Tanaka",
+      "api_enemy_comment_id": "Tanaka",
+      "api_state": 1,
+      "api_medals": 1
+    },
+    {
+      "api_enemy_id": 1,
+      "api_enemy_name": "Tanaka",
+      "api_enemy_name_id": "Tanaka",
+      "api_enemy_level": 1,
+      "api_enemy_rank": "Tanaka",
+      "api_enemy_flag": 1,
+      "api_enemy_flag_ship": 1,
+      "api_enemy_comment": "Tanaka",
+      "api_enemy_comment_id": "Tanaka",
+      "api_state": 1,
+      "api_medals": 1
+    }
+  ]
+}

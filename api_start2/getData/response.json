@@ -435,7 +435,14 @@
           "type": "integer"
         },
         "api_max_maphp": {
-          "type": "null"
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "api_name": {
           "type": "string"

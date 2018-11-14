@@ -1,0 +1,541 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqMapNextResponseElement"
+  },
+  "definitions": {
+    "APIReqMapNextResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_airsearch": {
+          "$ref": "#/definitions/APIAirsearch"
+        },
+        "api_bosscell_no": {
+          "type": "integer"
+        },
+        "api_bosscomp": {
+          "type": "integer"
+        },
+        "api_cell_flavor": {
+          "$ref": "#/definitions/APICellFlavor"
+        },
+        "api_color_no": {
+          "type": "integer"
+        },
+        "api_comment_kind": {
+          "type": "integer"
+        },
+        "api_destruction_battle": {
+          "$ref": "#/definitions/APIDestructionBattle"
+        },
+        "api_event_id": {
+          "type": "integer"
+        },
+        "api_event_kind": {
+          "type": "integer"
+        },
+        "api_eventmap": {
+          "$ref": "#/definitions/APIEventmap"
+        },
+        "api_get_eo_rate": {
+          "type": "integer"
+        },
+        "api_happening": {
+          "$ref": "#/definitions/APIHappening"
+        },
+        "api_itemget": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIItemget"
+          }
+        },
+        "api_itemget_eo_comment": {
+          "$ref": "#/definitions/APIItemgetEo"
+        },
+        "api_itemget_eo_result": {
+          "$ref": "#/definitions/APIItemgetEo"
+        },
+        "api_maparea_id": {
+          "type": "integer"
+        },
+        "api_mapinfo_no": {
+          "type": "integer"
+        },
+        "api_next": {
+          "type": "integer"
+        },
+        "api_no": {
+          "type": "integer"
+        },
+        "api_offshore_supply": {
+          "$ref": "#/definitions/APIOffshoreSupply"
+        },
+        "api_production_kind": {
+          "type": "integer"
+        },
+        "api_rashin_flg": {
+          "type": "integer"
+        },
+        "api_rashin_id": {
+          "type": "integer"
+        },
+        "api_ration_flag": {
+          "type": "integer"
+        },
+        "api_select_route": {
+          "$ref": "#/definitions/APISelectRoute"
+        }
+      },
+      "required": [
+        "api_airsearch",
+        "api_bosscell_no",
+        "api_bosscomp",
+        "api_color_no",
+        "api_comment_kind",
+        "api_event_id",
+        "api_event_kind",
+        "api_maparea_id",
+        "api_mapinfo_no",
+        "api_next",
+        "api_no",
+        "api_production_kind",
+        "api_rashin_flg",
+        "api_rashin_id"
+      ],
+      "title": "APIReqMapNextResponseElement"
+    },
+    "APIAirsearch": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_plane_type": {
+          "type": "integer"
+        },
+        "api_result": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_plane_type",
+        "api_result"
+      ],
+      "title": "APIAirsearch"
+    },
+    "APICellFlavor": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_message": {
+          "type": "string"
+        },
+        "api_type": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_message",
+        "api_type"
+      ],
+      "title": "APICellFlavor"
+    },
+    "APIDestructionBattle": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_air_base_attack": {
+          "$ref": "#/definitions/APIAirBaseAttack"
+        },
+        "api_eSlot": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_e_maxhps": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_e_nowhps": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_f_maxhps": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_f_nowhps": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_formation": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_lost_kind": {
+          "type": "integer"
+        },
+        "api_ship_ke": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_ship_lv": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_air_base_attack",
+        "api_eSlot",
+        "api_e_maxhps",
+        "api_e_nowhps",
+        "api_f_maxhps",
+        "api_f_nowhps",
+        "api_formation",
+        "api_lost_kind",
+        "api_ship_ke",
+        "api_ship_lv"
+      ],
+      "title": "APIDestructionBattle"
+    },
+    "APIAirBaseAttack": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_map_squadron_plane": {
+          "anyOf": [
+            {
+              "type": "object",
+              "additionalProperties": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/APIMapSquadronPlane"
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "api_plane_from": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "api_stage1": {
+          "$ref": "#/definitions/APIStage1"
+        },
+        "api_stage2": {
+          "type": "null"
+        },
+        "api_stage3": {
+          "$ref": "#/definitions/APIStage3"
+        },
+        "api_stage_flag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_map_squadron_plane",
+        "api_plane_from",
+        "api_stage1",
+        "api_stage2",
+        "api_stage3",
+        "api_stage_flag"
+      ],
+      "title": "APIAirBaseAttack"
+    },
+    "APIMapSquadronPlane": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_count": {
+          "type": "integer"
+        },
+        "api_mst_id": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_count",
+        "api_mst_id"
+      ],
+      "title": "APIMapSquadronPlane"
+    },
+    "APIStage1": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_disp_seiku": {
+          "type": "integer"
+        },
+        "api_e_count": {
+          "type": "integer"
+        },
+        "api_e_lostcount": {
+          "type": "integer"
+        },
+        "api_f_count": {
+          "type": "integer"
+        },
+        "api_f_lostcount": {
+          "type": "integer"
+        },
+        "api_touch_plane": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_disp_seiku",
+        "api_e_count",
+        "api_e_lostcount",
+        "api_f_count",
+        "api_f_lostcount",
+        "api_touch_plane"
+      ],
+      "title": "APIStage1"
+    },
+    "APIStage3": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_ebak_flag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_ecl_flag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_edam": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_erai_flag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_fbak_flag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_fcl_flag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_fdam": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_frai_flag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_ebak_flag",
+        "api_ecl_flag",
+        "api_edam",
+        "api_erai_flag",
+        "api_fbak_flag",
+        "api_fcl_flag",
+        "api_fdam",
+        "api_frai_flag"
+      ],
+      "title": "APIStage3"
+    },
+    "APIEventmap": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_dmg": {
+          "type": "integer"
+        },
+        "api_max_maphp": {
+          "type": "integer"
+        },
+        "api_now_maphp": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_dmg",
+        "api_max_maphp",
+        "api_now_maphp"
+      ],
+      "title": "APIEventmap"
+    },
+    "APIHappening": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_count": {
+          "type": "integer"
+        },
+        "api_dentan": {
+          "type": "integer"
+        },
+        "api_icon_id": {
+          "type": "integer"
+        },
+        "api_mst_id": {
+          "type": "integer"
+        },
+        "api_type": {
+          "type": "integer"
+        },
+        "api_usemst": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_count",
+        "api_dentan",
+        "api_icon_id",
+        "api_mst_id",
+        "api_type",
+        "api_usemst"
+      ],
+      "title": "APIHappening"
+    },
+    "APIItemget": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_getcount": {
+          "type": "integer"
+        },
+        "api_icon_id": {
+          "type": "integer"
+        },
+        "api_id": {
+          "type": "integer"
+        },
+        "api_name": {
+          "type": "string"
+        },
+        "api_usemst": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_getcount",
+        "api_icon_id",
+        "api_id",
+        "api_name",
+        "api_usemst"
+      ],
+      "title": "APIItemget"
+    },
+    "APIItemgetEo": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_getcount": {
+          "type": "integer"
+        },
+        "api_id": {
+          "type": "integer"
+        },
+        "api_usemst": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_getcount",
+        "api_id",
+        "api_usemst"
+      ],
+      "title": "APIItemgetEo"
+    },
+    "APIOffshoreSupply": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_given_ship": {
+          "type": "integer"
+        },
+        "api_supply_ship": {
+          "type": "integer"
+        },
+        "api_use_num": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_given_ship",
+        "api_supply_ship",
+        "api_use_num"
+      ],
+      "title": "APIOffshoreSupply"
+    },
+    "APISelectRoute": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_select_cells": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_select_cells"
+      ],
+      "title": "APISelectRoute"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqQuestClearitemgetRequestElement"
+  },
+  "definitions": {
+    "APIReqQuestClearitemgetRequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_quest_id": {
+          "type": "string"
+        },
+        "api_select_no": {
+          "type": "string"
+        },
+        "api_select_no2": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_quest_id",
+        "api_verno"
+      ],
+      "title": "APIReqQuestClearitemgetRequestElement"
+    }
+  }
+}

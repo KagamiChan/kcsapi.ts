@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqHokyuChargeResponseElement"
+  },
+  "definitions": {
+    "APIReqHokyuChargeResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_material": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_ship": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIShip"
+          }
+        },
+        "api_use_bou": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_material",
+        "api_ship",
+        "api_use_bou"
+      ],
+      "title": "APIReqHokyuChargeResponseElement"
+    },
+    "APIShip": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_bull": {
+          "type": "integer"
+        },
+        "api_fuel": {
+          "type": "integer"
+        },
+        "api_id": {
+          "type": "integer"
+        },
+        "api_onslot": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_bull",
+        "api_fuel",
+        "api_id",
+        "api_onslot"
+      ],
+      "title": "APIShip"
+    }
+  }
+}

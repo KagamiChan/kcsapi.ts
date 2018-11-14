@@ -1,0 +1,133 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqMissionResultResponseElement"
+  },
+  "definitions": {
+    "APIReqMissionResultResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_clear_result": {
+          "type": "integer"
+        },
+        "api_detail": {
+          "type": "string"
+        },
+        "api_get_exp": {
+          "type": "integer"
+        },
+        "api_get_exp_lvup": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_get_item1": {
+          "$ref": "#/definitions/APIGetItem"
+        },
+        "api_get_item2": {
+          "$ref": "#/definitions/APIGetItem"
+        },
+        "api_get_material": {
+          "$ref": "#/definitions/APIGetMaterial"
+        },
+        "api_get_ship_exp": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_maparea_name": {
+          "type": "string"
+        },
+        "api_member_exp": {
+          "type": "integer"
+        },
+        "api_member_lv": {
+          "type": "integer"
+        },
+        "api_quest_level": {
+          "type": "integer"
+        },
+        "api_quest_name": {
+          "type": "string"
+        },
+        "api_ship_id": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_useitem_flag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_clear_result",
+        "api_detail",
+        "api_get_exp",
+        "api_get_exp_lvup",
+        "api_get_material",
+        "api_get_ship_exp",
+        "api_maparea_name",
+        "api_member_exp",
+        "api_member_lv",
+        "api_quest_level",
+        "api_quest_name",
+        "api_ship_id",
+        "api_useitem_flag"
+      ],
+      "title": "APIReqMissionResultResponseElement"
+    },
+    "APIGetItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_useitem_count": {
+          "type": "integer"
+        },
+        "api_useitem_id": {
+          "type": "integer"
+        },
+        "api_useitem_name": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        }
+      },
+      "required": [
+        "api_useitem_count",
+        "api_useitem_id",
+        "api_useitem_name"
+      ],
+      "title": "APIGetItem"
+    },
+    "APIGetMaterial": {
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        {
+          "type": "integer"
+        }
+      ],
+      "title": "APIGetMaterial"
+    }
+  }
+}

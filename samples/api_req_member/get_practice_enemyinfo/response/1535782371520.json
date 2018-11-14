@@ -1,0 +1,53 @@
+{
+  "api_member_id": 1,
+  "api_nickname": "Tanaka",
+  "api_nickname_id": "Tanaka",
+  "api_cmt": "Tanaka",
+  "api_cmt_id": "Tanaka",
+  "api_level": 1,
+  "api_rank": 1,
+  "api_experience": [
+    1,
+    1
+  ],
+  "api_friend": 1,
+  "api_ship": [
+    1,
+    1
+  ],
+  "api_slotitem": [
+    1,
+    1
+  ],
+  "api_furniture": 1,
+  "api_deckname": "Tanaka",
+  "api_deckname_id": "Tanaka",
+  "api_deck": {
+    "api_ships": [
+      {
+        "api_id": 1,
+        "api_ship_id": 1,
+        "api_level": 1,
+        "api_star": 1
+      },
+      {
+        "api_id": 1,
+        "api_ship_id": 1,
+        "api_level": 1,
+        "api_star": 1
+      },
+      {
+        "api_id": 1
+      },
+      {
+        "api_id": 1
+      },
+      {
+        "api_id": 1
+      },
+      {
+        "api_id": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqKousyouDestroyitem2ResponseElement"
+  },
+  "definitions": {
+    "APIReqKousyouDestroyitem2ResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_get_material": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_get_material"
+      ],
+      "title": "APIReqKousyouDestroyitem2ResponseElement"
+    }
+  }
+}

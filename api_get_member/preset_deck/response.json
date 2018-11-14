@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIGetMemberPresetDeckResponseElement"
+  },
+  "definitions": {
+    "APIGetMemberPresetDeckResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_deck": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/APIDeck"
+          }
+        },
+        "api_max_num": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_deck",
+        "api_max_num"
+      ],
+      "title": "APIGetMemberPresetDeckResponseElement"
+    },
+    "APIDeck": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_name": {
+          "type": "string"
+        },
+        "api_name_id": {
+          "type": "string"
+        },
+        "api_preset_no": {
+          "type": "integer"
+        },
+        "api_ship": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_name",
+        "api_name_id",
+        "api_preset_no",
+        "api_ship"
+      ],
+      "title": "APIDeck"
+    }
+  }
+}

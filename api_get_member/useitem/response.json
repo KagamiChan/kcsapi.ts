@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "type": "array",
+    "items": {
+      "$ref": "#/definitions/APIGetMemberUseitemResponseElement"
+    }
+  },
+  "definitions": {
+    "APIGetMemberUseitemResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_count": {
+          "type": "integer"
+        },
+        "api_id": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_count",
+        "api_id"
+      ],
+      "title": "APIGetMemberUseitemResponseElement"
+    }
+  }
+}

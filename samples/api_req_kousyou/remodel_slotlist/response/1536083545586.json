@@ -1,0 +1,38 @@
+[
+  {
+    "api_id": 1,
+    "api_slot_id": 1,
+    "api_req_fuel": 1,
+    "api_req_bull": 1,
+    "api_req_steel": 1,
+    "api_req_bauxite": 1,
+    "api_req_buildkit": 1,
+    "api_req_remodelkit": 1,
+    "api_req_slot_id": 1,
+    "api_req_slot_num": 1
+  },
+  {
+    "api_id": 1,
+    "api_slot_id": 1,
+    "api_req_fuel": 1,
+    "api_req_bull": 1,
+    "api_req_steel": 1,
+    "api_req_bauxite": 1,
+    "api_req_buildkit": 1,
+    "api_req_remodelkit": 1,
+    "api_req_slot_id": 1,
+    "api_req_slot_num": 1
+  },
+  {
+    "api_id": 1,
+    "api_slot_id": 1,
+    "api_req_fuel": 1,
+    "api_req_bull": 1,
+    "api_req_steel": 1,
+    "api_req_bauxite": 1,
+    "api_req_buildkit": 1,
+    "api_req_remodelkit": 1,
+    "api_req_slot_id": 1,
+    "api_req_slot_num": 1
+  }
+]

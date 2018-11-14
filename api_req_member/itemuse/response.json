@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqMemberItemuseResponseElement"
+  },
+  "definitions": {
+    "APIReqMemberItemuseResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_caution_flag": {
+          "type": "integer"
+        },
+        "api_flag": {
+          "type": "integer"
+        },
+        "api_getitem": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "#/definitions/APIGetitem"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "api_material": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_caution_flag",
+        "api_flag",
+        "api_getitem"
+      ],
+      "title": "APIReqMemberItemuseResponseElement"
+    },
+    "APIGetitem": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_getcount": {
+          "type": "integer"
+        },
+        "api_mst_id": {
+          "type": "integer"
+        },
+        "api_usemst": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_getcount",
+        "api_mst_id",
+        "api_usemst"
+      ],
+      "title": "APIGetitem"
+    }
+  }
+}

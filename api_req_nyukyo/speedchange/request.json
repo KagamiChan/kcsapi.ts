@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqNyukyoSpeedchangeRequestElement"
+  },
+  "definitions": {
+    "APIReqNyukyoSpeedchangeRequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_ndock_id": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_ndock_id",
+        "api_verno"
+      ],
+      "title": "APIReqNyukyoSpeedchangeRequestElement"
+    }
+  }
+}

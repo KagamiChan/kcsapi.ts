@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqKousyouDestroyshipRequestElement"
+  },
+  "definitions": {
+    "APIReqKousyouDestroyshipRequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_ship_id": {
+          "type": "string"
+        },
+        "api_slot_dest_flag": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_ship_id",
+        "api_slot_dest_flag",
+        "api_verno"
+      ],
+      "title": "APIReqKousyouDestroyshipRequestElement"
+    }
+  }
+}

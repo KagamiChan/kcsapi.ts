@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqMemberItemuseRequestElement"
+  },
+  "definitions": {
+    "APIReqMemberItemuseRequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_exchange_type": {
+          "type": "string"
+        },
+        "api_force_flag": {
+          "type": "string"
+        },
+        "api_useitem_id": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_exchange_type",
+        "api_force_flag",
+        "api_useitem_id",
+        "api_verno"
+      ],
+      "title": "APIReqMemberItemuseRequestElement"
+    }
+  }
+}

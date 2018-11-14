@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqKousyouCreateshipSpeedchangeRequestElement"
+  },
+  "definitions": {
+    "APIReqKousyouCreateshipSpeedchangeRequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_highspeed": {
+          "type": "string"
+        },
+        "api_kdock_id": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_highspeed",
+        "api_kdock_id",
+        "api_verno"
+      ],
+      "title": "APIReqKousyouCreateshipSpeedchangeRequestElement"
+    }
+  }
+}

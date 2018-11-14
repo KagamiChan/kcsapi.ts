@@ -10,13 +10,16 @@
  */
 export interface APIPortPortResponse {
   api_basic: APIBasic
+  api_combined_flag?: number
   api_deck_port: APIDeckPort[]
   api_dest_ship_slot: number
+  api_event_object?: APIEventObject
   api_log: APILog[]
   api_material: APIMaterial[]
   api_ndock: APINdock[]
   api_p_bgm_id: number
   api_parallel_quest_count: number
+  api_plane_info?: APIPlaneInfo
   api_ship: APIShip[]
 }
 
@@ -67,6 +70,11 @@ export interface APIDeckPort {
   api_ship: number[]
 }
 
+export interface APIEventObject {
+  api_m_flag: number
+  api_m_flag2?: number
+}
+
 export interface APILog {
   api_message: string
   api_no: number
@@ -93,6 +101,16 @@ export interface APINdock {
   api_state: number
 }
 
+export interface APIPlaneInfo {
+  api_base_convert_slot?: number[]
+  api_unset_slot?: APIUnsetSlot[]
+}
+
+export interface APIUnsetSlot {
+  api_slot_list: number[]
+  api_type3No: number
+}
+
 export interface APIShip {
   api_backs: number
   api_bull: number
@@ -115,6 +133,7 @@ export interface APIShip {
   api_onslot: number[]
   api_raisou: number[]
   api_sakuteki: number[]
+  api_sally_area?: number
   api_ship_id: number
   api_slot: number[]
   api_slot_ex: number

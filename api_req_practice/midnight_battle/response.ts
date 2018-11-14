@@ -1,0 +1,37 @@
+/**
+ * kcsapi.ts - Kantai Collection API TypeScript types
+ * Copyright (c) 2018- Poi contributors.
+ *
+ * @license MIT
+ */
+
+/**
+ * type for API response at /kcsapi/api_req_practice/midnight_battle
+ */
+export interface APIReqPracticeMidnightBattleResponse {
+  api_deck_id: number
+  api_eParam: Array<number[]>
+  api_eSlot: Array<number[]>
+  api_e_maxhps: number[]
+  api_e_nowhps: number[]
+  api_fParam: Array<number[]>
+  api_f_maxhps: number[]
+  api_f_nowhps: number[]
+  api_flare_pos: number[]
+  api_formation: number[]
+  api_hougeki: APIHougeki
+  api_ship_ke: number[]
+  api_ship_lv: number[]
+  api_touch_plane: number[]
+}
+
+export interface APIHougeki {
+  api_at_eflag: number[]
+  api_at_list: number[]
+  api_cl_list: Array<number[]>
+  api_damage: Array<number[]>
+  api_df_list: Array<number[]>
+  api_n_mother_list: number[]
+  api_si_list: Array<Array<number | string>>
+  api_sp_list: number[]
+}

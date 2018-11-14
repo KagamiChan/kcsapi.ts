@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqHenseiPresetRegisterRequestElement"
+  },
+  "definitions": {
+    "APIReqHenseiPresetRegisterRequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_deck_id": {
+          "type": "string"
+        },
+        "api_name": {
+          "type": "string"
+        },
+        "api_name_id": {
+          "type": "string"
+        },
+        "api_preset_no": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_deck_id",
+        "api_name",
+        "api_name_id",
+        "api_preset_no",
+        "api_verno"
+      ],
+      "title": "APIReqHenseiPresetRegisterRequestElement"
+    }
+  }
+}

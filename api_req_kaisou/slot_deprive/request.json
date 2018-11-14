@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqKaisouSlotDepriveRequestElement"
+  },
+  "definitions": {
+    "APIReqKaisouSlotDepriveRequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_set_idx": {
+          "type": "string"
+        },
+        "api_set_ship": {
+          "type": "string"
+        },
+        "api_set_slot_kind": {
+          "type": "string"
+        },
+        "api_unset_idx": {
+          "type": "string"
+        },
+        "api_unset_ship": {
+          "type": "string"
+        },
+        "api_unset_slot_kind": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_set_idx",
+        "api_set_ship",
+        "api_set_slot_kind",
+        "api_unset_idx",
+        "api_unset_ship",
+        "api_unset_slot_kind",
+        "api_verno"
+      ],
+      "title": "APIReqKaisouSlotDepriveRequestElement"
+    }
+  }
+}

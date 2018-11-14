@@ -1,0 +1,476 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqCombinedBattleEcMidnightBattleResponseElement"
+  },
+  "definitions": {
+    "APIReqCombinedBattleEcMidnightBattleResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_active_deck": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_deck_id": {
+          "type": "integer"
+        },
+        "api_eParam": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_eParam_combined": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_eSlot": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_eSlot_combined": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_e_maxhps": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_e_maxhps_combined": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_e_nowhps": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_e_nowhps_combined": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_escape_idx": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_escape_idx_combined": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_fParam": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_fParam_combined": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_f_maxhps": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_f_maxhps_combined": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_f_nowhps": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_f_nowhps_combined": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_flare_pos": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_formation": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_friendly_battle": {
+          "$ref": "#/definitions/APIFriendlyBattle"
+        },
+        "api_friendly_info": {
+          "$ref": "#/definitions/APIFriendlyInfo"
+        },
+        "api_hougeki": {
+          "$ref": "#/definitions/APIReqCombinedBattleEcMidnightBattleResponseAPIHougeki"
+        },
+        "api_ship_ke": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_ship_ke_combined": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_ship_lv": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_ship_lv_combined": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_touch_plane": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/API"
+          }
+        }
+      },
+      "required": [
+        "api_active_deck",
+        "api_deck_id",
+        "api_eParam",
+        "api_eParam_combined",
+        "api_eSlot",
+        "api_eSlot_combined",
+        "api_e_maxhps",
+        "api_e_maxhps_combined",
+        "api_e_nowhps",
+        "api_e_nowhps_combined",
+        "api_fParam",
+        "api_fParam_combined",
+        "api_f_maxhps",
+        "api_f_maxhps_combined",
+        "api_f_nowhps",
+        "api_f_nowhps_combined",
+        "api_flare_pos",
+        "api_formation",
+        "api_hougeki",
+        "api_ship_ke",
+        "api_ship_ke_combined",
+        "api_ship_lv",
+        "api_ship_lv_combined",
+        "api_touch_plane"
+      ],
+      "title": "APIReqCombinedBattleEcMidnightBattleResponseElement"
+    },
+    "APIFriendlyBattle": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_flare_pos": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_hougeki": {
+          "$ref": "#/definitions/APIFriendlyBattleAPIHougeki"
+        }
+      },
+      "required": [
+        "api_flare_pos",
+        "api_hougeki"
+      ],
+      "title": "APIFriendlyBattle"
+    },
+    "APIFriendlyBattleAPIHougeki": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_at_eflag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_at_list": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_cl_list": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_damage": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_df_list": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_n_mother_list": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_si_list": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_sp_list": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_at_eflag",
+        "api_at_list",
+        "api_cl_list",
+        "api_damage",
+        "api_df_list",
+        "api_n_mother_list",
+        "api_si_list",
+        "api_sp_list"
+      ],
+      "title": "APIFriendlyBattleAPIHougeki"
+    },
+    "APIFriendlyInfo": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_Param": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_Slot": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_maxhps": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_nowhps": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_production_type": {
+          "type": "integer"
+        },
+        "api_ship_id": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_ship_lv": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_voice_id": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_voice_p_no": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_Param",
+        "api_Slot",
+        "api_maxhps",
+        "api_nowhps",
+        "api_production_type",
+        "api_ship_id",
+        "api_ship_lv",
+        "api_voice_id",
+        "api_voice_p_no"
+      ],
+      "title": "APIFriendlyInfo"
+    },
+    "APIReqCombinedBattleEcMidnightBattleResponseAPIHougeki": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_at_eflag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_at_list": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_cl_list": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_damage": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_df_list": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_n_mother_list": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_si_list": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/API"
+            }
+          }
+        },
+        "api_sp_list": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_at_eflag",
+        "api_at_list",
+        "api_cl_list",
+        "api_damage",
+        "api_df_list",
+        "api_n_mother_list",
+        "api_si_list",
+        "api_sp_list"
+      ],
+      "title": "APIReqCombinedBattleEcMidnightBattleResponseAPIHougeki"
+    },
+    "API": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "string"
+        }
+      ],
+      "title": "API"
+    }
+  }
+}

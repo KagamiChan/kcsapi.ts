@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqAirCorpsSetPlaneRequestElement"
+  },
+  "definitions": {
+    "APIReqAirCorpsSetPlaneRequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_area_id": {
+          "type": "string"
+        },
+        "api_base_id": {
+          "type": "string"
+        },
+        "api_item_id": {
+          "type": "string"
+        },
+        "api_squadron_id": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_area_id",
+        "api_base_id",
+        "api_item_id",
+        "api_squadron_id",
+        "api_verno"
+      ],
+      "title": "APIReqAirCorpsSetPlaneRequestElement"
+    }
+  }
+}

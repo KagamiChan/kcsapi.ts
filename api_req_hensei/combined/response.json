@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqHenseiCombinedResponseElement"
+  },
+  "definitions": {
+    "APIReqHenseiCombinedResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_combined": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_combined"
+      ],
+      "title": "APIReqHenseiCombinedResponseElement"
+    }
+  }
+}

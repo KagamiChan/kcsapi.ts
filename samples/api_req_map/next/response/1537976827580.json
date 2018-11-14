@@ -1,0 +1,30 @@
+{
+  "api_rashin_flg": 1,
+  "api_rashin_id": 1,
+  "api_maparea_id": 1,
+  "api_mapinfo_no": 1,
+  "api_no": 1,
+  "api_color_no": 1,
+  "api_event_id": 1,
+  "api_event_kind": 1,
+  "api_next": 1,
+  "api_bosscell_no": 1,
+  "api_bosscomp": 1,
+  "api_comment_kind": 1,
+  "api_production_kind": 1,
+  "api_airsearch": {
+    "api_plane_type": 1,
+    "api_result": 1
+  },
+  "api_eventmap": {
+    "api_max_maphp": 1,
+    "api_now_maphp": 1,
+    "api_dmg": 1
+  },
+  "api_ration_flag": 1,
+  "api_offshore_supply": {
+    "api_supply_ship": 1,
+    "api_given_ship": 1,
+    "api_use_num": 1
+  }
+}

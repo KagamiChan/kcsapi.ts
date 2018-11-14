@@ -12,6 +12,9 @@
         "api_basic": {
           "$ref": "#/definitions/APIBasic"
         },
+        "api_combined_flag": {
+          "type": "integer"
+        },
         "api_deck_port": {
           "type": "array",
           "items": {
@@ -20,6 +23,9 @@
         },
         "api_dest_ship_slot": {
           "type": "integer"
+        },
+        "api_event_object": {
+          "$ref": "#/definitions/APIEventObject"
         },
         "api_log": {
           "type": "array",
@@ -44,6 +50,9 @@
         },
         "api_parallel_quest_count": {
           "type": "integer"
+        },
+        "api_plane_info": {
+          "$ref": "#/definitions/APIPlaneInfo"
         },
         "api_ship": {
           "type": "array",
@@ -259,6 +268,22 @@
       ],
       "title": "APIDeckPort"
     },
+    "APIEventObject": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_m_flag": {
+          "type": "integer"
+        },
+        "api_m_flag2": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_m_flag"
+      ],
+      "title": "APIEventObject"
+    },
     "APILog": {
       "type": "object",
       "additionalProperties": false,
@@ -354,6 +379,46 @@
       ],
       "title": "APINdock"
     },
+    "APIPlaneInfo": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_base_convert_slot": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_unset_slot": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIUnsetSlot"
+          }
+        }
+      },
+      "required": [],
+      "title": "APIPlaneInfo"
+    },
+    "APIUnsetSlot": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_slot_list": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_type3No": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_slot_list",
+        "api_type3No"
+      ],
+      "title": "APIUnsetSlot"
+    },
     "APIShip": {
       "type": "object",
       "additionalProperties": false,
@@ -447,6 +512,9 @@
           "items": {
             "type": "integer"
           }
+        },
+        "api_sally_area": {
+          "type": "integer"
         },
         "api_ship_id": {
           "type": "integer"

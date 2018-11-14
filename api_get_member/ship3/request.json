@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIGetMemberShip3RequestElement"
+  },
+  "definitions": {
+    "APIGetMemberShip3RequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_shipid": {
+          "type": "string"
+        },
+        "api_sort_key": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        },
+        "spi_sort_order": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_shipid",
+        "api_sort_key",
+        "api_verno",
+        "spi_sort_order"
+      ],
+      "title": "APIGetMemberShip3RequestElement"
+    }
+  }
+}

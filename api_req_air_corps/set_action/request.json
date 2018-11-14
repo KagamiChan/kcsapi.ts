@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqAirCorpsSetActionRequestElement"
+  },
+  "definitions": {
+    "APIReqAirCorpsSetActionRequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_action_kind": {
+          "type": "string"
+        },
+        "api_area_id": {
+          "type": "string"
+        },
+        "api_base_id": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_action_kind",
+        "api_area_id",
+        "api_base_id",
+        "api_verno"
+      ],
+      "title": "APIReqAirCorpsSetActionRequestElement"
+    }
+  }
+}

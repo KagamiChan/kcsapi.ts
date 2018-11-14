@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqFurnitureBuyRequestElement"
+  },
+  "definitions": {
+    "APIReqFurnitureBuyRequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_no": {
+          "type": "string"
+        },
+        "api_type": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_no",
+        "api_type",
+        "api_verno"
+      ],
+      "title": "APIReqFurnitureBuyRequestElement"
+    }
+  }
+}

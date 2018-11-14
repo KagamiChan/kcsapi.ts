@@ -1,0 +1,22 @@
+{
+  "api_remodel_flag": 1,
+  "api_remodel_id": [
+    1,
+    1
+  ],
+  "api_after_material": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "api_voice_ship_id": 1,
+  "api_voice_id": 1,
+  "api_use_slot_id": [
+    1
+  ]
+}

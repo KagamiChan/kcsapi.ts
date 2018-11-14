@@ -1,0 +1,285 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqKousyouGetshipResponseElement"
+  },
+  "definitions": {
+    "APIReqKousyouGetshipResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_id": {
+          "type": "integer"
+        },
+        "api_kdock": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIKdock"
+          }
+        },
+        "api_ship": {
+          "$ref": "#/definitions/APIShip"
+        },
+        "api_ship_id": {
+          "type": "integer"
+        },
+        "api_slotitem": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APISlotitem"
+          }
+        }
+      },
+      "required": [
+        "api_id",
+        "api_kdock",
+        "api_ship",
+        "api_ship_id",
+        "api_slotitem"
+      ],
+      "title": "APIReqKousyouGetshipResponseElement"
+    },
+    "APIKdock": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_complete_time": {
+          "type": "integer"
+        },
+        "api_complete_time_str": {
+          "type": "string"
+        },
+        "api_created_ship_id": {
+          "type": "integer"
+        },
+        "api_id": {
+          "type": "integer"
+        },
+        "api_item1": {
+          "type": "integer"
+        },
+        "api_item2": {
+          "type": "integer"
+        },
+        "api_item3": {
+          "type": "integer"
+        },
+        "api_item4": {
+          "type": "integer"
+        },
+        "api_item5": {
+          "type": "integer"
+        },
+        "api_state": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_complete_time",
+        "api_complete_time_str",
+        "api_created_ship_id",
+        "api_id",
+        "api_item1",
+        "api_item2",
+        "api_item3",
+        "api_item4",
+        "api_item5",
+        "api_state"
+      ],
+      "title": "APIKdock"
+    },
+    "APIShip": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_backs": {
+          "type": "integer"
+        },
+        "api_bull": {
+          "type": "integer"
+        },
+        "api_cond": {
+          "type": "integer"
+        },
+        "api_exp": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_fuel": {
+          "type": "integer"
+        },
+        "api_id": {
+          "type": "integer"
+        },
+        "api_kaihi": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_karyoku": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_kyouka": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_leng": {
+          "type": "integer"
+        },
+        "api_locked": {
+          "type": "integer"
+        },
+        "api_locked_equip": {
+          "type": "integer"
+        },
+        "api_lucky": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_lv": {
+          "type": "integer"
+        },
+        "api_maxhp": {
+          "type": "integer"
+        },
+        "api_ndock_item": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_ndock_time": {
+          "type": "integer"
+        },
+        "api_nowhp": {
+          "type": "integer"
+        },
+        "api_onslot": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_raisou": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_sakuteki": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_sally_area": {
+          "type": "integer"
+        },
+        "api_ship_id": {
+          "type": "integer"
+        },
+        "api_slot": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_slot_ex": {
+          "type": "integer"
+        },
+        "api_slotnum": {
+          "type": "integer"
+        },
+        "api_soku": {
+          "type": "integer"
+        },
+        "api_sortno": {
+          "type": "integer"
+        },
+        "api_soukou": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_srate": {
+          "type": "integer"
+        },
+        "api_taiku": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_taisen": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_backs",
+        "api_bull",
+        "api_cond",
+        "api_exp",
+        "api_fuel",
+        "api_id",
+        "api_kaihi",
+        "api_karyoku",
+        "api_kyouka",
+        "api_leng",
+        "api_locked",
+        "api_locked_equip",
+        "api_lucky",
+        "api_lv",
+        "api_maxhp",
+        "api_ndock_item",
+        "api_ndock_time",
+        "api_nowhp",
+        "api_onslot",
+        "api_raisou",
+        "api_sakuteki",
+        "api_ship_id",
+        "api_slot",
+        "api_slot_ex",
+        "api_slotnum",
+        "api_soku",
+        "api_sortno",
+        "api_soukou",
+        "api_srate",
+        "api_taiku",
+        "api_taisen"
+      ],
+      "title": "APIShip"
+    },
+    "APISlotitem": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_id": {
+          "type": "integer"
+        },
+        "api_slotitem_id": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_id",
+        "api_slotitem_id"
+      ],
+      "title": "APISlotitem"
+    }
+  }
+}

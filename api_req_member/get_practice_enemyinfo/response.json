@@ -1,0 +1,125 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqMemberGetPracticeEnemyinfoResponseElement"
+  },
+  "definitions": {
+    "APIReqMemberGetPracticeEnemyinfoResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_cmt": {
+          "type": "string"
+        },
+        "api_cmt_id": {
+          "type": "string"
+        },
+        "api_deck": {
+          "$ref": "#/definitions/APIDeck"
+        },
+        "api_deckname": {
+          "type": "string"
+        },
+        "api_deckname_id": {
+          "type": "string"
+        },
+        "api_experience": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_friend": {
+          "type": "integer"
+        },
+        "api_furniture": {
+          "type": "integer"
+        },
+        "api_level": {
+          "type": "integer"
+        },
+        "api_member_id": {
+          "type": "integer"
+        },
+        "api_nickname": {
+          "type": "string"
+        },
+        "api_nickname_id": {
+          "type": "string"
+        },
+        "api_rank": {
+          "type": "integer"
+        },
+        "api_ship": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_slotitem": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_cmt",
+        "api_cmt_id",
+        "api_deck",
+        "api_deckname",
+        "api_deckname_id",
+        "api_experience",
+        "api_friend",
+        "api_furniture",
+        "api_level",
+        "api_member_id",
+        "api_nickname",
+        "api_nickname_id",
+        "api_rank",
+        "api_ship",
+        "api_slotitem"
+      ],
+      "title": "APIReqMemberGetPracticeEnemyinfoResponseElement"
+    },
+    "APIDeck": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_ships": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIShip"
+          }
+        }
+      },
+      "required": [
+        "api_ships"
+      ],
+      "title": "APIDeck"
+    },
+    "APIShip": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_id": {
+          "type": "integer"
+        },
+        "api_level": {
+          "type": "integer"
+        },
+        "api_ship_id": {
+          "type": "integer"
+        },
+        "api_star": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_id"
+      ],
+      "title": "APIShip"
+    }
+  }
+}

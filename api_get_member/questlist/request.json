@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIGetMemberQuestlistRequestElement"
+  },
+  "definitions": {
+    "APIGetMemberQuestlistRequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_page_no": {
+          "type": "string"
+        },
+        "api_tab_id": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_page_no",
+        "api_tab_id",
+        "api_verno"
+      ],
+      "title": "APIGetMemberQuestlistRequestElement"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqKaisouSlotsetRequestElement"
+  },
+  "definitions": {
+    "APIReqKaisouSlotsetRequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_id": {
+          "type": "string"
+        },
+        "api_item_id": {
+          "type": "string"
+        },
+        "api_slot_idx": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_id",
+        "api_item_id",
+        "api_slot_idx",
+        "api_verno"
+      ],
+      "title": "APIReqKaisouSlotsetRequestElement"
+    }
+  }
+}

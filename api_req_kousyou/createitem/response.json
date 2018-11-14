@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqKousyouCreateitemResponseElement"
+  },
+  "definitions": {
+    "APIReqKousyouCreateitemResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_create_flag": {
+          "type": "integer"
+        },
+        "api_fdata": {
+          "type": "string"
+        },
+        "api_material": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_shizai_flag": {
+          "type": "integer"
+        },
+        "api_slot_item": {
+          "$ref": "#/definitions/APISlotItem"
+        },
+        "api_type3": {
+          "type": "integer"
+        },
+        "api_unsetslot": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_create_flag",
+        "api_material",
+        "api_shizai_flag"
+      ],
+      "title": "APIReqKousyouCreateitemResponseElement"
+    },
+    "APISlotItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_id": {
+          "type": "integer"
+        },
+        "api_slotitem_id": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_id",
+        "api_slotitem_id"
+      ],
+      "title": "APISlotItem"
+    }
+  }
+}

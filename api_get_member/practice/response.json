@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIGetMemberPracticeResponseElement"
+  },
+  "definitions": {
+    "APIGetMemberPracticeResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_create_kind": {
+          "type": "integer"
+        },
+        "api_entry_limit": {
+          "type": "integer"
+        },
+        "api_list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIList"
+          }
+        },
+        "api_selected_kind": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_create_kind",
+        "api_list",
+        "api_selected_kind"
+      ],
+      "title": "APIGetMemberPracticeResponseElement"
+    },
+    "APIList": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_enemy_comment": {
+          "type": "string"
+        },
+        "api_enemy_comment_id": {
+          "type": "string"
+        },
+        "api_enemy_flag": {
+          "type": "integer"
+        },
+        "api_enemy_flag_ship": {
+          "type": "integer"
+        },
+        "api_enemy_id": {
+          "type": "integer"
+        },
+        "api_enemy_level": {
+          "type": "integer"
+        },
+        "api_enemy_name": {
+          "type": "string"
+        },
+        "api_enemy_name_id": {
+          "type": "string"
+        },
+        "api_enemy_rank": {
+          "type": "string"
+        },
+        "api_medals": {
+          "type": "integer"
+        },
+        "api_state": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_enemy_comment",
+        "api_enemy_comment_id",
+        "api_enemy_flag",
+        "api_enemy_flag_ship",
+        "api_enemy_id",
+        "api_enemy_level",
+        "api_enemy_name",
+        "api_enemy_name_id",
+        "api_enemy_rank",
+        "api_medals",
+        "api_state"
+      ],
+      "title": "APIList"
+    }
+  }
+}

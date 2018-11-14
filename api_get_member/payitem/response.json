@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIGetMemberPayitemResponseUnion"
+  },
+  "definitions": {
+    "APIGetMemberPayitemResponseSuccess": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_count": {
+          "type": "integer"
+        },
+        "api_description": {
+          "type": "string"
+        },
+        "api_name": {
+          "type": "string"
+        },
+        "api_payitem_id": {
+          "type": "string"
+        },
+        "api_price": {
+          "type": "integer"
+        },
+        "api_type": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_count",
+        "api_description",
+        "api_name",
+        "api_payitem_id",
+        "api_price",
+        "api_type"
+      ],
+      "title": "PurpleAPIGetMemberPayitemResponse"
+    },
+    "APIGetMemberPayitemResponseFail": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_data": {
+          "type": "null"
+        },
+        "api_result": {
+          "type": "integer"
+        },
+        "api_result_msg": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_data",
+        "api_result",
+        "api_result_msg"
+      ],
+      "title": "FluffyAPIGetMemberPayitemResponse"
+    },
+    "APIGetMemberPayitemResponseUnion": {
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PurpleAPIGetMemberPayitemResponse"
+          }
+        },
+        {
+          "$ref": "#/definitions/FluffyAPIGetMemberPayitemResponse"
+        }
+      ],
+      "title": "APIGetMemberPayitemResponseUnion"
+    }
+  }
+}

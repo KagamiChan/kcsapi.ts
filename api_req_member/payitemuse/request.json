@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqMemberPayitemuseRequestElement"
+  },
+  "definitions": {
+    "APIReqMemberPayitemuseRequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_force_flag": {
+          "type": "string"
+        },
+        "api_payitem_id": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_force_flag",
+        "api_payitem_id",
+        "api_verno"
+      ],
+      "title": "APIReqMemberPayitemuseRequestElement"
+    }
+  }
+}

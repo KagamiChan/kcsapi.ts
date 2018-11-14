@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIGetMemberShipDeckRequestElement"
+  },
+  "definitions": {
+    "APIGetMemberShipDeckRequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_deck_rid": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_deck_rid",
+        "api_verno"
+      ],
+      "title": "APIGetMemberShipDeckRequestElement"
+    }
+  }
+}

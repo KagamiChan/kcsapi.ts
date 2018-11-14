@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqKousyouRemodelSlotResponseElement"
+  },
+  "definitions": {
+    "APIReqKousyouRemodelSlotResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_after_material": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_after_slot": {
+          "$ref": "#/definitions/APIAfterSlot"
+        },
+        "api_remodel_flag": {
+          "type": "integer"
+        },
+        "api_remodel_id": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_use_slot_id": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_voice_id": {
+          "type": "integer"
+        },
+        "api_voice_ship_id": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_after_material",
+        "api_remodel_flag",
+        "api_remodel_id",
+        "api_voice_id",
+        "api_voice_ship_id"
+      ],
+      "title": "APIReqKousyouRemodelSlotResponseElement"
+    },
+    "APIAfterSlot": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_id": {
+          "type": "integer"
+        },
+        "api_level": {
+          "type": "integer"
+        },
+        "api_locked": {
+          "type": "integer"
+        },
+        "api_slotitem_id": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_id",
+        "api_level",
+        "api_locked",
+        "api_slotitem_id"
+      ],
+      "title": "APIAfterSlot"
+    }
+  }
+}

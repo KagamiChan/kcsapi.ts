@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqMemberPayitemuseResponseElement"
+  },
+  "definitions": {
+    "APIReqMemberPayitemuseResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_caution_flag": {
+          "type": "integer"
+        },
+        "api_flag": {
+          "type": "integer"
+        },
+        "api_max_chara": {
+          "type": "integer"
+        },
+        "api_max_slotitem": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_caution_flag"
+      ],
+      "title": "APIReqMemberPayitemuseResponseElement"
+    }
+  }
+}

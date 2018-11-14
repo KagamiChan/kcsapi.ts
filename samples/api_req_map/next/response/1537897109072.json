@@ -1,0 +1,207 @@
+{
+  "api_rashin_flg": 1,
+  "api_rashin_id": 1,
+  "api_maparea_id": 1,
+  "api_mapinfo_no": 1,
+  "api_no": 1,
+  "api_color_no": 1,
+  "api_event_id": 1,
+  "api_event_kind": 1,
+  "api_next": 1,
+  "api_bosscell_no": 1,
+  "api_bosscomp": 1,
+  "api_comment_kind": 1,
+  "api_production_kind": 1,
+  "api_airsearch": {
+    "api_plane_type": 1,
+    "api_result": 1
+  },
+  "api_eventmap": {
+    "api_max_maphp": 1,
+    "api_now_maphp": 1,
+    "api_dmg": 1
+  },
+  "api_select_route": {
+    "api_select_cells": [
+      1,
+      1
+    ]
+  },
+  "api_destruction_battle": {
+    "api_formation": [
+      1,
+      1,
+      1
+    ],
+    "api_ship_ke": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "api_ship_lv": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "api_e_nowhps": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "api_e_maxhps": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "api_eSlot": [
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "api_f_nowhps": [
+      1,
+      1,
+      1
+    ],
+    "api_f_maxhps": [
+      1,
+      1,
+      1
+    ],
+    "api_air_base_attack": {
+      "api_stage_flag": [
+        1,
+        1,
+        1
+      ],
+      "api_plane_from": [
+        null,
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "api_map_squadron_plane": null,
+      "api_stage1": {
+        "api_f_count": 1,
+        "api_f_lostcount": 1,
+        "api_e_count": 1,
+        "api_e_lostcount": 1,
+        "api_disp_seiku": 1,
+        "api_touch_plane": [
+          1,
+          1
+        ]
+      },
+      "api_stage2": null,
+      "api_stage3": {
+        "api_frai_flag": [
+          1,
+          1,
+          1
+        ],
+        "api_erai_flag": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "api_fbak_flag": [
+          1,
+          1,
+          1
+        ],
+        "api_ebak_flag": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "api_fcl_flag": [
+          1,
+          1,
+          1
+        ],
+        "api_ecl_flag": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "api_fdam": [
+          1,
+          1,
+          1
+        ],
+        "api_edam": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    "api_lost_kind": 1
+  }
+}

@@ -49,8 +49,9 @@ Examples:
 
 ## Limitations
 
-- **Important** If top level shape is array, the infered interface will be of its element's shape
-- Some API type missing due to inference failure. Corresponding json schema might be available, however
+- **Important** If top level shape is array, the infered interface will be of its element's shape.
+- Some API type missing due to inference failure. Corresponding json schema might be available, however.
+- Ranking / score API is removed because it is encrypted
 
 ## Details
 

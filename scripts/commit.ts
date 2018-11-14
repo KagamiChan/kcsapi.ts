@@ -25,12 +25,11 @@ import assert from 'assert'
 import { PoiPacket } from './types'
 
 /**
- * recusively replaces api_member_id in given data
+ * recusively replaces information in given data
  * @param data any
- * @param key used for mapValues method in recursion
  */
 /* tslint:disable-next-line no-any */
-const anonymize = (data: any, key?: string): any => {
+const anonymize = (data: any): any => {
   if (isArray(data)) {
     return map(data, anonymize)
   }

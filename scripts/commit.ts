@@ -8,8 +8,9 @@ import fs from 'fs-extra'
 import glob from 'glob'
 import path from 'path'
 import Promise from 'bluebird'
-import { cloneDeep, set, map, get, mapValues, isArray, isObject, isString } from 'lodash'
+import { cloneDeep, set, map, get, mapValues, isArray, isObject, isString, isNumber } from 'lodash'
 import faker from 'faker'
+import assert from 'assert'
 
 import { PoiPacket } from './types'
 
@@ -19,46 +20,45 @@ import { PoiPacket } from './types'
  * @param key used for mapValues method in recursion
  */
 /* tslint:disable-next-line no-any */
-const replaceMemberId = (data: any, key?: string): any => {
-  if (key === 'api_member_id') {
-    return isString(data) ? String(faker.random.number()) : faker.random.number()
+const recursiveReplaceId = (data: any, keys: string[] = []) => {
+  /* tslint:disable-next-line no-any */
+  const recursive = (data: any, key?: string): any => {
+    if (['api_member_id'].concat(keys).includes(key as string)) {
+      assert.ok(
+        isString(data) || isNumber(data),
+        'api_member_id or api_id value should be string or number',
+      )
+      return isString(data) ? String(faker.random.number()) : faker.random.number()
+    }
+    if (isArray(data)) {
+      return map(data, recursive)
+    }
+    if (isObject(data)) {
+      return mapValues(data, recursive)
+    }
+    return data
   }
-  if (isArray(data)) {
-    return map(data, replaceMemberId)
-  }
-  if (isObject(data)) {
-    return mapValues(data, replaceMemberId)
-  }
-  return data
-}
 
-/* tslint:disable-next-line no-any */
-const replaceApiId = (data: {}): {} => ({
-  ...data,
-  api_id: isString(data) ? String(faker.random.number()) : faker.random.number(),
-})
+  return recursive(data)
+}
 
 const anonymize = (data: PoiPacket): PoiPacket => {
   let packet = cloneDeep(data)
 
-  packet = replaceMemberId(packet)
-
   switch (packet.path) {
     case '/kcsapi/api_get_member/require_info':
-      set(
-        packet,
-        ['body', 'api_slot_item'],
-        map(packet.body.api_slot_item, item => replaceApiId(item)),
-      )
+      packet = recursiveReplaceId(packet, ['api_id'])
       break
     case '/kcsapi/api_port/port':
+      packet = recursiveReplaceId(packet, ['api_id'])
       set(packet, ['postBody', 'api_port'], String(faker.random.number()))
-      set(packet, ['body', 'api_ship'], map(packet.body.api_ship, s => replaceApiId(s)))
       set(packet, ['body', 'api_basic', 'api_nickname'], faker.random.word())
       set(packet, ['body', 'api_basic', 'api_nickname_id'], String(faker.random.number()))
       set(packet, ['body', 'api_basic', 'api_comment'], faker.random.word())
       set(packet, ['body', 'api_basic', 'api_comment_id'], String(faker.random.number()))
+      break
     default:
+      packet = recursiveReplaceId(packet)
   }
 
   return packet

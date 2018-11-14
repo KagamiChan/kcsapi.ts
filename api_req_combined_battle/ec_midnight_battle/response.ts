@@ -11,18 +11,18 @@
 export interface APIReqCombinedBattleEcMidnightBattleResponse {
   api_active_deck: number[]
   api_deck_id: number
-  api_eParam: Array<number[]>
-  api_eParam_combined: Array<number[]>
-  api_eSlot: Array<number[]>
-  api_eSlot_combined: Array<number[]>
+  api_eParam: number[][]
+  api_eParam_combined: number[][]
+  api_eSlot: number[][]
+  api_eSlot_combined: number[][]
   api_e_maxhps: number[]
   api_e_maxhps_combined: number[]
   api_e_nowhps: number[]
   api_e_nowhps_combined: number[]
   api_escape_idx?: number[]
   api_escape_idx_combined?: number[]
-  api_fParam: Array<number[]>
-  api_fParam_combined: Array<number[]>
+  api_fParam: number[][]
+  api_fParam_combined: number[][]
   api_f_maxhps: number[]
   api_f_maxhps_combined: number[]
   api_f_nowhps: number[]
@@ -47,17 +47,17 @@ export interface APIFriendlyBattle {
 export interface APIFriendlyBattleAPIHougeki {
   api_at_eflag: number[]
   api_at_list: number[]
-  api_cl_list: Array<number[]>
-  api_damage: Array<number[]>
-  api_df_list: Array<number[]>
+  api_cl_list: number[][]
+  api_damage: number[][]
+  api_df_list: number[][]
   api_n_mother_list: number[]
-  api_si_list: Array<number[]>
+  api_si_list: number[][]
   api_sp_list: number[]
 }
 
 export interface APIFriendlyInfo {
-  api_Param: Array<number[]>
-  api_Slot: Array<number[]>
+  api_Param: number[][]
+  api_Slot: number[][]
   api_maxhps: number[]
   api_nowhps: number[]
   api_production_type: number
@@ -70,9 +70,9 @@ export interface APIFriendlyInfo {
 export interface APIReqCombinedBattleEcMidnightBattleResponseAPIHougeki {
   api_at_eflag: number[]
   api_at_list: number[]
-  api_cl_list: Array<number[]>
-  api_damage: Array<number[]>
-  api_df_list: Array<number[]>
+  api_cl_list: number[][]
+  api_damage: number[][]
+  api_df_list: number[][]
   api_n_mother_list: number[]
   api_si_list: Array<Array<number | string>>
   api_sp_list: number[]

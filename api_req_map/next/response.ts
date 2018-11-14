@@ -48,7 +48,7 @@ export interface APICellFlavor {
 
 export interface APIDestructionBattle {
   api_air_base_attack: APIAirBaseAttack
-  api_eSlot: Array<number[]>
+  api_eSlot: number[][]
   api_e_maxhps: number[]
   api_e_nowhps: number[]
   api_f_maxhps: number[]

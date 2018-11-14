@@ -10,11 +10,11 @@
  */
 export interface APIReqBattleMidnightBattleResponse {
   api_deck_id: number
-  api_eParam: Array<number[]>
-  api_eSlot: Array<number[]>
+  api_eParam: number[][]
+  api_eSlot: number[][]
   api_e_maxhps: number[]
   api_e_nowhps: number[]
-  api_fParam: Array<number[]>
+  api_fParam: number[][]
   api_f_maxhps: number[]
   api_f_nowhps: number[]
   api_flare_pos: number[]
@@ -28,9 +28,9 @@ export interface APIReqBattleMidnightBattleResponse {
 export interface APIHougeki {
   api_at_eflag: number[]
   api_at_list: number[]
-  api_cl_list: Array<number[]>
-  api_damage: Array<number[]>
-  api_df_list: Array<number[]>
+  api_cl_list: number[][]
+  api_damage: number[][]
+  api_df_list: number[][]
   api_n_mother_list: number[]
   api_si_list: Array<Array<number | string>>
   api_sp_list: number[]

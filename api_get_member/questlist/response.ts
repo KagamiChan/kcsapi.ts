@@ -34,7 +34,7 @@ export interface APIListClass {
   api_lost_badges?: number
   api_no: number
   api_progress_flag: number
-  api_select_rewards?: Array<APISelectReward[]>
+  api_select_rewards?: APISelectReward[][]
   api_state: number
   api_title: string
   api_type: number

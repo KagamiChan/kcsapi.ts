@@ -21,8 +21,8 @@ export interface APIReqCombinedBattleBattleresultResponse {
   api_get_exmap_rate: number
   api_get_exmap_useitem_id: number
   api_get_exp: number
-  api_get_exp_lvup: Array<number[]>
-  api_get_exp_lvup_combined: Array<number[]>
+  api_get_exp_lvup: number[][]
+  api_get_exp_lvup_combined: number[][]
   api_get_flag: number[]
   api_get_ship?: APIGetShip
   api_get_ship_exp: number[]

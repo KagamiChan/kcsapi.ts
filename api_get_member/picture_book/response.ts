@@ -24,7 +24,7 @@ export interface APIList {
   api_raig: number
   api_sinfo: string
   api_souk: number
-  api_state: Array<number[]>
+  api_state: number[][]
   api_stype: number
   api_table_id: number[]
   api_taik: number

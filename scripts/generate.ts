@@ -16,15 +16,10 @@ import path from 'path'
 import { groupBy, map, entries } from 'lodash'
 
 import { copyright } from './comments'
-import { getTopLevel, getType, prettify } from './utils'
+import { getTopLevel, getType, prettify, getSampleList } from './utils'
 
 const main = async () => {
-  const allFiles = glob.sync(path.resolve(__dirname, '../samples/**/*.json'))
-  const sampleRoot = path.resolve(__dirname, '../samples')
-
-  const fileGroup = groupBy(allFiles, file =>
-    path.resolve(__dirname, `../${path.dirname(path.relative(sampleRoot, file))}.ts`),
-  )
+  const fileGroup = await getSampleList()
 
   await Promise.each(entries(fileGroup), async ([filename, files]) => {
     const json = await Promise.map(files, file => fs.readJSON(file))

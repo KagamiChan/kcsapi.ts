@@ -3,6 +3,9 @@ import Promise from 'bluebird'
 import path from 'path'
 import childProcess from 'child_process'
 import prettier from 'prettier'
+import glob from 'glob'
+import { groupBy } from 'lodash'
+
 import { copyright, getEndPointComment } from './comments'
 
 /**
@@ -68,3 +71,12 @@ export const prettify = (content: string) =>
     printWidth: 100,
     parser: 'typescript',
   })
+
+export const getSampleList = async () => {
+  const allFiles = glob.sync(path.resolve(__dirname, '../samples/**/*.json'))
+  const sampleRoot = path.resolve(__dirname, '../samples')
+
+  return groupBy<string>(allFiles, file =>
+    path.resolve(__dirname, `../${path.dirname(path.relative(sampleRoot, file))}.ts`),
+  )
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqMemberGetIncentiveResponseElement"
+  },
+  "definitions": {
+    "APIReqMemberGetIncentiveResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_count": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_count"
+      ],
+      "title": "APIReqMemberGetIncentiveResponseElement"
+    }
+  }
+}

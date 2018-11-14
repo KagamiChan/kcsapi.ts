@@ -43,6 +43,39 @@ export const getType = (data: any, filename: string) =>
   })
 
 /**
+ * Feeds sample data to spawned quicktype and generate json schemas
+ * @param data sample data for generation
+ * @param topLevel top level interface name
+ */
+/* tslint:disable-next-line no-any */
+export const getSchema = (data: any, filename: string) =>
+  new Promise<string>((resolve, reject) => {
+    const topLevel = getTopLevel(filename)
+    const bin = path.resolve(__dirname, '../node_modules/.bin/quicktype')
+
+    const child = childProcess.spawn(bin, [
+      '--no-enums',
+      '--lang',
+      'schema',
+      '--top-level',
+      topLevel,
+    ])
+    let result = ''
+    child.stdout.on('data', chunk => (result += chunk))
+    child.on('close', (code, signal) => {
+      if (code > 0) {
+        reject(signal)
+      }
+      resolve(result.toString())
+    })
+    const source = new Readable()
+    source._read = () => {}
+    source.push(JSON.stringify(data))
+    source.push(null)
+    source.pipe(child.stdin)
+  })
+
+/**
  * Turns first character to upper case
  * @param content string to capitalize
  */

@@ -1,0 +1,231 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIGetMemberRequireInfoResponseElement"
+  },
+  "definitions": {
+    "APIGetMemberRequireInfoResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_basic": {
+          "$ref": "#/definitions/APIBasic"
+        },
+        "api_slot_item": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APISlotItem"
+          }
+        },
+        "api_unsetslot": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_kdock": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIKdock"
+          }
+        },
+        "api_useitem": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIUseitem"
+          }
+        },
+        "api_furniture": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIFurniture"
+          }
+        },
+        "api_extra_supply": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_oss_setting": {
+          "$ref": "#/definitions/APIOSSSetting"
+        },
+        "api_skin_id": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_basic",
+        "api_extra_supply",
+        "api_furniture",
+        "api_kdock",
+        "api_oss_setting",
+        "api_skin_id",
+        "api_slot_item",
+        "api_unsetslot",
+        "api_useitem"
+      ],
+      "title": "APIGetMemberRequireInfoResponseElement"
+    },
+    "APIBasic": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_member_id": {
+          "type": "integer"
+        },
+        "api_firstflag": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_firstflag",
+        "api_member_id"
+      ],
+      "title": "APIBasic"
+    },
+    "APIFurniture": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_id": {
+          "type": "integer"
+        },
+        "api_furniture_type": {
+          "type": "integer"
+        },
+        "api_furniture_no": {
+          "type": "integer"
+        },
+        "api_furniture_id": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_furniture_id",
+        "api_furniture_no",
+        "api_furniture_type",
+        "api_id"
+      ],
+      "title": "APIFurniture"
+    },
+    "APIKdock": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_id": {
+          "type": "integer"
+        },
+        "api_state": {
+          "type": "integer"
+        },
+        "api_created_ship_id": {
+          "type": "integer"
+        },
+        "api_complete_time": {
+          "type": "integer"
+        },
+        "api_complete_time_str": {
+          "type": "string"
+        },
+        "api_item1": {
+          "type": "integer"
+        },
+        "api_item2": {
+          "type": "integer"
+        },
+        "api_item3": {
+          "type": "integer"
+        },
+        "api_item4": {
+          "type": "integer"
+        },
+        "api_item5": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_complete_time",
+        "api_complete_time_str",
+        "api_created_ship_id",
+        "api_id",
+        "api_item1",
+        "api_item2",
+        "api_item3",
+        "api_item4",
+        "api_item5",
+        "api_state"
+      ],
+      "title": "APIKdock"
+    },
+    "APIOSSSetting": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_language_type": {
+          "type": "integer"
+        },
+        "api_oss_items": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_language_type",
+        "api_oss_items"
+      ],
+      "title": "APIOSSSetting"
+    },
+    "APISlotItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_id": {
+          "type": "integer"
+        },
+        "api_slotitem_id": {
+          "type": "integer"
+        },
+        "api_locked": {
+          "type": "integer"
+        },
+        "api_level": {
+          "type": "integer"
+        },
+        "api_alv": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_id",
+        "api_level",
+        "api_locked",
+        "api_slotitem_id"
+      ],
+      "title": "APISlotItem"
+    },
+    "APIUseitem": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_id": {
+          "type": "integer"
+        },
+        "api_count": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_count",
+        "api_id"
+      ],
+      "title": "APIUseitem"
+    }
+  }
+}

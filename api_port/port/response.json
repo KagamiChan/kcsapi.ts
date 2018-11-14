@@ -1,0 +1,530 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIPortPortResponseElement"
+  },
+  "definitions": {
+    "APIPortPortResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_material": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIMaterial"
+          }
+        },
+        "api_deck_port": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIDeckPort"
+          }
+        },
+        "api_ndock": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APINdock"
+          }
+        },
+        "api_ship": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIShip"
+          }
+        },
+        "api_basic": {
+          "$ref": "#/definitions/APIBasic"
+        },
+        "api_log": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APILog"
+          }
+        },
+        "api_p_bgm_id": {
+          "type": "integer"
+        },
+        "api_parallel_quest_count": {
+          "type": "integer"
+        },
+        "api_dest_ship_slot": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_basic",
+        "api_deck_port",
+        "api_dest_ship_slot",
+        "api_log",
+        "api_material",
+        "api_ndock",
+        "api_p_bgm_id",
+        "api_parallel_quest_count",
+        "api_ship"
+      ],
+      "title": "APIPortPortResponseElement"
+    },
+    "APIBasic": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_member_id": {
+          "type": "string"
+        },
+        "api_nickname": {
+          "type": "string"
+        },
+        "api_nickname_id": {
+          "type": "string"
+        },
+        "api_active_flag": {
+          "type": "integer"
+        },
+        "api_starttime": {
+          "type": "integer"
+        },
+        "api_level": {
+          "type": "integer"
+        },
+        "api_rank": {
+          "type": "integer"
+        },
+        "api_experience": {
+          "type": "integer"
+        },
+        "api_fleetname": {
+          "type": "null"
+        },
+        "api_comment": {
+          "type": "string"
+        },
+        "api_comment_id": {
+          "type": "string"
+        },
+        "api_max_chara": {
+          "type": "integer"
+        },
+        "api_max_slotitem": {
+          "type": "integer"
+        },
+        "api_max_kagu": {
+          "type": "integer"
+        },
+        "api_playtime": {
+          "type": "integer"
+        },
+        "api_tutorial": {
+          "type": "integer"
+        },
+        "api_furniture": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_count_deck": {
+          "type": "integer"
+        },
+        "api_count_kdock": {
+          "type": "integer"
+        },
+        "api_count_ndock": {
+          "type": "integer"
+        },
+        "api_fcoin": {
+          "type": "integer"
+        },
+        "api_st_win": {
+          "type": "integer"
+        },
+        "api_st_lose": {
+          "type": "integer"
+        },
+        "api_ms_count": {
+          "type": "integer"
+        },
+        "api_ms_success": {
+          "type": "integer"
+        },
+        "api_pt_win": {
+          "type": "integer"
+        },
+        "api_pt_lose": {
+          "type": "integer"
+        },
+        "api_pt_challenged": {
+          "type": "integer"
+        },
+        "api_pt_challenged_win": {
+          "type": "integer"
+        },
+        "api_firstflag": {
+          "type": "integer"
+        },
+        "api_tutorial_progress": {
+          "type": "integer"
+        },
+        "api_pvp": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_medals": {
+          "type": "integer"
+        },
+        "api_large_dock": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_active_flag",
+        "api_comment",
+        "api_comment_id",
+        "api_count_deck",
+        "api_count_kdock",
+        "api_count_ndock",
+        "api_experience",
+        "api_fcoin",
+        "api_firstflag",
+        "api_fleetname",
+        "api_furniture",
+        "api_large_dock",
+        "api_level",
+        "api_max_chara",
+        "api_max_kagu",
+        "api_max_slotitem",
+        "api_medals",
+        "api_member_id",
+        "api_ms_count",
+        "api_ms_success",
+        "api_nickname",
+        "api_nickname_id",
+        "api_playtime",
+        "api_pt_challenged",
+        "api_pt_challenged_win",
+        "api_pt_lose",
+        "api_pt_win",
+        "api_pvp",
+        "api_rank",
+        "api_st_lose",
+        "api_st_win",
+        "api_starttime",
+        "api_tutorial",
+        "api_tutorial_progress"
+      ],
+      "title": "APIBasic"
+    },
+    "APIDeckPort": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_member_id": {
+          "type": "integer"
+        },
+        "api_id": {
+          "type": "integer"
+        },
+        "api_name": {
+          "type": "string"
+        },
+        "api_name_id": {
+          "type": "string"
+        },
+        "api_mission": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_flagship": {
+          "type": "string"
+        },
+        "api_ship": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_flagship",
+        "api_id",
+        "api_member_id",
+        "api_mission",
+        "api_name",
+        "api_name_id",
+        "api_ship"
+      ],
+      "title": "APIDeckPort"
+    },
+    "APILog": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_no": {
+          "type": "integer"
+        },
+        "api_type": {
+          "type": "string"
+        },
+        "api_state": {
+          "type": "string"
+        },
+        "api_message": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_message",
+        "api_no",
+        "api_state",
+        "api_type"
+      ],
+      "title": "APILog"
+    },
+    "APIMaterial": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_member_id": {
+          "type": "integer"
+        },
+        "api_id": {
+          "type": "integer"
+        },
+        "api_value": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_id",
+        "api_member_id",
+        "api_value"
+      ],
+      "title": "APIMaterial"
+    },
+    "APINdock": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_member_id": {
+          "type": "integer"
+        },
+        "api_id": {
+          "type": "integer"
+        },
+        "api_state": {
+          "type": "integer"
+        },
+        "api_ship_id": {
+          "type": "integer"
+        },
+        "api_complete_time": {
+          "type": "integer"
+        },
+        "api_complete_time_str": {
+          "type": "string"
+        },
+        "api_item1": {
+          "type": "integer"
+        },
+        "api_item2": {
+          "type": "integer"
+        },
+        "api_item3": {
+          "type": "integer"
+        },
+        "api_item4": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_complete_time",
+        "api_complete_time_str",
+        "api_id",
+        "api_item1",
+        "api_item2",
+        "api_item3",
+        "api_item4",
+        "api_member_id",
+        "api_ship_id",
+        "api_state"
+      ],
+      "title": "APINdock"
+    },
+    "APIShip": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_id": {
+          "type": "integer"
+        },
+        "api_sortno": {
+          "type": "integer"
+        },
+        "api_ship_id": {
+          "type": "integer"
+        },
+        "api_lv": {
+          "type": "integer"
+        },
+        "api_exp": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_nowhp": {
+          "type": "integer"
+        },
+        "api_maxhp": {
+          "type": "integer"
+        },
+        "api_soku": {
+          "type": "integer"
+        },
+        "api_leng": {
+          "type": "integer"
+        },
+        "api_slot": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_onslot": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_slot_ex": {
+          "type": "integer"
+        },
+        "api_kyouka": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_backs": {
+          "type": "integer"
+        },
+        "api_fuel": {
+          "type": "integer"
+        },
+        "api_bull": {
+          "type": "integer"
+        },
+        "api_slotnum": {
+          "type": "integer"
+        },
+        "api_ndock_time": {
+          "type": "integer"
+        },
+        "api_ndock_item": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_srate": {
+          "type": "integer"
+        },
+        "api_cond": {
+          "type": "integer"
+        },
+        "api_karyoku": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_raisou": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_taiku": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_soukou": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_kaihi": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_taisen": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_sakuteki": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_lucky": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_locked": {
+          "type": "integer"
+        },
+        "api_locked_equip": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_backs",
+        "api_bull",
+        "api_cond",
+        "api_exp",
+        "api_fuel",
+        "api_id",
+        "api_kaihi",
+        "api_karyoku",
+        "api_kyouka",
+        "api_leng",
+        "api_locked",
+        "api_locked_equip",
+        "api_lucky",
+        "api_lv",
+        "api_maxhp",
+        "api_ndock_item",
+        "api_ndock_time",
+        "api_nowhp",
+        "api_onslot",
+        "api_raisou",
+        "api_sakuteki",
+        "api_ship_id",
+        "api_slot",
+        "api_slot_ex",
+        "api_slotnum",
+        "api_soku",
+        "api_sortno",
+        "api_soukou",
+        "api_srate",
+        "api_taiku",
+        "api_taisen"
+      ],
+      "title": "APIShip"
+    }
+  }
+}

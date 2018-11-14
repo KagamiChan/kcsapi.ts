@@ -1,0 +1,1125 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIStart2GetDataResponseElement"
+  },
+  "definitions": {
+    "APIStart2GetDataResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_mst_ship": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIMstShip"
+          }
+        },
+        "api_mst_slotitem_equiptype": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIMstSlotitemEquiptype"
+          }
+        },
+        "api_mst_equip_exslot": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_mst_equip_exslot_ship": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIMstEquipExslotShip"
+          }
+        },
+        "api_mst_stype": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIMstStype"
+          }
+        },
+        "api_mst_slotitem": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIMstSlotitem"
+          }
+        },
+        "api_mst_furnituregraph": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIMstFurnituregraph"
+          }
+        },
+        "api_mst_useitem": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIMstUseitem"
+          }
+        },
+        "api_mst_payitem": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIMstPayitem"
+          }
+        },
+        "api_mst_item_shop": {
+          "$ref": "#/definitions/APIMstItemShop"
+        },
+        "api_mst_maparea": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIMstMaparea"
+          }
+        },
+        "api_mst_mapinfo": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIMstMapinfo"
+          }
+        },
+        "api_mst_mapbgm": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIMstMapbgm"
+          }
+        },
+        "api_mst_mission": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIMstMission"
+          }
+        },
+        "api_mst_const": {
+          "$ref": "#/definitions/APIMstConst"
+        },
+        "api_mst_shipupgrade": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIMstShipupgrade"
+          }
+        },
+        "api_mst_bgm": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIMstBgm"
+          }
+        },
+        "api_mst_equip_ship": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIMstEquipShip"
+          }
+        },
+        "api_mst_furniture": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIMstFurniture"
+          }
+        },
+        "api_mst_shipgraph": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIMstShipgraph"
+          }
+        }
+      },
+      "required": [
+        "api_mst_bgm",
+        "api_mst_const",
+        "api_mst_equip_exslot",
+        "api_mst_equip_exslot_ship",
+        "api_mst_equip_ship",
+        "api_mst_furniture",
+        "api_mst_furnituregraph",
+        "api_mst_item_shop",
+        "api_mst_maparea",
+        "api_mst_mapbgm",
+        "api_mst_mapinfo",
+        "api_mst_mission",
+        "api_mst_payitem",
+        "api_mst_ship",
+        "api_mst_shipgraph",
+        "api_mst_shipupgrade",
+        "api_mst_slotitem",
+        "api_mst_slotitem_equiptype",
+        "api_mst_stype",
+        "api_mst_useitem"
+      ],
+      "title": "APIStart2GetDataResponseElement"
+    },
+    "APIMstBgm": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_id": {
+          "type": "integer"
+        },
+        "api_name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_id",
+        "api_name"
+      ],
+      "title": "APIMstBgm"
+    },
+    "APIMstConst": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_dpflag_quest": {
+          "$ref": "#/definitions/API"
+        },
+        "api_boko_max_ships": {
+          "$ref": "#/definitions/API"
+        },
+        "api_parallel_quest_max": {
+          "$ref": "#/definitions/API"
+        }
+      },
+      "required": [
+        "api_boko_max_ships",
+        "api_dpflag_quest",
+        "api_parallel_quest_max"
+      ],
+      "title": "APIMstConst"
+    },
+    "API": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_string_value": {
+          "type": "string"
+        },
+        "api_int_value": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_int_value",
+        "api_string_value"
+      ],
+      "title": "API"
+    },
+    "APIMstEquipExslotShip": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_slotitem_id": {
+          "type": "integer"
+        },
+        "api_ship_ids": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_ship_ids",
+        "api_slotitem_id"
+      ],
+      "title": "APIMstEquipExslotShip"
+    },
+    "APIMstEquipShip": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_ship_id": {
+          "type": "integer"
+        },
+        "api_equip_type": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_equip_type",
+        "api_ship_id"
+      ],
+      "title": "APIMstEquipShip"
+    },
+    "APIMstFurniture": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_id": {
+          "type": "integer"
+        },
+        "api_type": {
+          "type": "integer"
+        },
+        "api_no": {
+          "type": "integer"
+        },
+        "api_title": {
+          "type": "string"
+        },
+        "api_description": {
+          "type": "string"
+        },
+        "api_rarity": {
+          "type": "integer"
+        },
+        "api_price": {
+          "type": "integer"
+        },
+        "api_saleflg": {
+          "type": "integer"
+        },
+        "api_season": {
+          "type": "integer"
+        },
+        "api_version": {
+          "type": "integer"
+        },
+        "api_outside_id": {
+          "type": "integer"
+        },
+        "api_active_flag": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_active_flag",
+        "api_description",
+        "api_id",
+        "api_no",
+        "api_outside_id",
+        "api_price",
+        "api_rarity",
+        "api_saleflg",
+        "api_season",
+        "api_title",
+        "api_type",
+        "api_version"
+      ],
+      "title": "APIMstFurniture"
+    },
+    "APIMstFurnituregraph": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_id": {
+          "type": "integer"
+        },
+        "api_type": {
+          "type": "integer"
+        },
+        "api_no": {
+          "type": "integer"
+        },
+        "api_filename": {
+          "type": "string"
+        },
+        "api_version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_filename",
+        "api_id",
+        "api_no",
+        "api_type",
+        "api_version"
+      ],
+      "title": "APIMstFurnituregraph"
+    },
+    "APIMstItemShop": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_cabinet_1": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_cabinet_2": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_cabinet_1",
+        "api_cabinet_2"
+      ],
+      "title": "APIMstItemShop"
+    },
+    "APIMstMaparea": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_id": {
+          "type": "integer"
+        },
+        "api_name": {
+          "type": "string"
+        },
+        "api_type": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_id",
+        "api_name",
+        "api_type"
+      ],
+      "title": "APIMstMaparea"
+    },
+    "APIMstMapbgm": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_id": {
+          "type": "integer"
+        },
+        "api_maparea_id": {
+          "type": "integer"
+        },
+        "api_no": {
+          "type": "integer"
+        },
+        "api_moving_bgm": {
+          "type": "integer"
+        },
+        "api_map_bgm": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_boss_bgm": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_boss_bgm",
+        "api_id",
+        "api_map_bgm",
+        "api_maparea_id",
+        "api_moving_bgm",
+        "api_no"
+      ],
+      "title": "APIMstMapbgm"
+    },
+    "APIMstMapinfo": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_id": {
+          "type": "integer"
+        },
+        "api_maparea_id": {
+          "type": "integer"
+        },
+        "api_no": {
+          "type": "integer"
+        },
+        "api_name": {
+          "type": "string"
+        },
+        "api_level": {
+          "type": "integer"
+        },
+        "api_opetext": {
+          "type": "string"
+        },
+        "api_infotext": {
+          "type": "string"
+        },
+        "api_item": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_max_maphp": {
+          "type": "null"
+        },
+        "api_required_defeat_count": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "api_sally_flag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_id",
+        "api_infotext",
+        "api_item",
+        "api_level",
+        "api_maparea_id",
+        "api_max_maphp",
+        "api_name",
+        "api_no",
+        "api_opetext",
+        "api_required_defeat_count",
+        "api_sally_flag"
+      ],
+      "title": "APIMstMapinfo"
+    },
+    "APIMstMission": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_id": {
+          "type": "integer"
+        },
+        "api_disp_no": {
+          "type": "string"
+        },
+        "api_maparea_id": {
+          "type": "integer"
+        },
+        "api_name": {
+          "type": "string"
+        },
+        "api_details": {
+          "type": "string"
+        },
+        "api_time": {
+          "type": "integer"
+        },
+        "api_deck_num": {
+          "type": "integer"
+        },
+        "api_difficulty": {
+          "type": "integer"
+        },
+        "api_use_fuel": {
+          "type": "integer"
+        },
+        "api_use_bull": {
+          "type": "integer"
+        },
+        "api_win_item1": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_win_item2": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_return_flag": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_deck_num",
+        "api_details",
+        "api_difficulty",
+        "api_disp_no",
+        "api_id",
+        "api_maparea_id",
+        "api_name",
+        "api_return_flag",
+        "api_time",
+        "api_use_bull",
+        "api_use_fuel",
+        "api_win_item1",
+        "api_win_item2"
+      ],
+      "title": "APIMstMission"
+    },
+    "APIMstPayitem": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_id": {
+          "type": "integer"
+        },
+        "api_type": {
+          "type": "integer"
+        },
+        "api_name": {
+          "type": "string"
+        },
+        "api_description": {
+          "type": "string"
+        },
+        "api_shop_description": {
+          "type": "string"
+        },
+        "api_item": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_price": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_description",
+        "api_id",
+        "api_item",
+        "api_name",
+        "api_price",
+        "api_shop_description",
+        "api_type"
+      ],
+      "title": "APIMstPayitem"
+    },
+    "APIMstShip": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_id": {
+          "type": "integer"
+        },
+        "api_sortno": {
+          "type": "integer"
+        },
+        "api_sort_id": {
+          "type": "integer"
+        },
+        "api_name": {
+          "type": "string"
+        },
+        "api_yomi": {
+          "type": "string"
+        },
+        "api_stype": {
+          "type": "integer"
+        },
+        "api_ctype": {
+          "type": "integer"
+        },
+        "api_afterlv": {
+          "type": "integer"
+        },
+        "api_aftershipid": {
+          "type": "string"
+        },
+        "api_taik": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_souk": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_houg": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_raig": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_tyku": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_luck": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_soku": {
+          "type": "integer"
+        },
+        "api_leng": {
+          "type": "integer"
+        },
+        "api_slot_num": {
+          "type": "integer"
+        },
+        "api_maxeq": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_buildtime": {
+          "type": "integer"
+        },
+        "api_broken": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_powup": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_backs": {
+          "type": "integer"
+        },
+        "api_getmes": {
+          "type": "string"
+        },
+        "api_afterfuel": {
+          "type": "integer"
+        },
+        "api_afterbull": {
+          "type": "integer"
+        },
+        "api_fuel_max": {
+          "type": "integer"
+        },
+        "api_bull_max": {
+          "type": "integer"
+        },
+        "api_voicef": {
+          "type": "integer"
+        },
+        "api_tais": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_ctype",
+        "api_id",
+        "api_name",
+        "api_slot_num",
+        "api_soku",
+        "api_sort_id",
+        "api_stype",
+        "api_yomi"
+      ],
+      "title": "APIMstShip"
+    },
+    "APIMstShipgraph": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_id": {
+          "type": "integer"
+        },
+        "api_sortno": {
+          "type": "integer"
+        },
+        "api_filename": {
+          "type": "string"
+        },
+        "api_version": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "api_boko_n": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_boko_d": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_kaisyu_n": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_kaisyu_d": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_kaizo_n": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_kaizo_d": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_map_n": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_map_d": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_ensyuf_n": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_ensyuf_d": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_ensyue_n": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_battle_n": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_battle_d": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_weda": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_wedb": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_battle_d",
+        "api_battle_n",
+        "api_boko_d",
+        "api_boko_n",
+        "api_ensyue_n",
+        "api_ensyuf_d",
+        "api_ensyuf_n",
+        "api_filename",
+        "api_id",
+        "api_kaisyu_d",
+        "api_kaisyu_n",
+        "api_kaizo_d",
+        "api_kaizo_n",
+        "api_map_d",
+        "api_map_n",
+        "api_sortno",
+        "api_version",
+        "api_weda",
+        "api_wedb"
+      ],
+      "title": "APIMstShipgraph"
+    },
+    "APIMstShipupgrade": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_id": {
+          "type": "integer"
+        },
+        "api_current_ship_id": {
+          "type": "integer"
+        },
+        "api_original_ship_id": {
+          "type": "integer"
+        },
+        "api_upgrade_type": {
+          "type": "integer"
+        },
+        "api_upgrade_level": {
+          "type": "integer"
+        },
+        "api_drawing_count": {
+          "type": "integer"
+        },
+        "api_catapult_count": {
+          "type": "integer"
+        },
+        "api_report_count": {
+          "type": "integer"
+        },
+        "api_sortno": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_catapult_count",
+        "api_current_ship_id",
+        "api_drawing_count",
+        "api_id",
+        "api_original_ship_id",
+        "api_report_count",
+        "api_sortno",
+        "api_upgrade_level",
+        "api_upgrade_type"
+      ],
+      "title": "APIMstShipupgrade"
+    },
+    "APIMstSlotitem": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_id": {
+          "type": "integer"
+        },
+        "api_sortno": {
+          "type": "integer"
+        },
+        "api_name": {
+          "type": "string"
+        },
+        "api_type": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_taik": {
+          "type": "integer"
+        },
+        "api_souk": {
+          "type": "integer"
+        },
+        "api_houg": {
+          "type": "integer"
+        },
+        "api_raig": {
+          "type": "integer"
+        },
+        "api_soku": {
+          "type": "integer"
+        },
+        "api_baku": {
+          "type": "integer"
+        },
+        "api_tyku": {
+          "type": "integer"
+        },
+        "api_tais": {
+          "type": "integer"
+        },
+        "api_atap": {
+          "type": "integer"
+        },
+        "api_houm": {
+          "type": "integer"
+        },
+        "api_raim": {
+          "type": "integer"
+        },
+        "api_houk": {
+          "type": "integer"
+        },
+        "api_raik": {
+          "type": "integer"
+        },
+        "api_bakk": {
+          "type": "integer"
+        },
+        "api_saku": {
+          "type": "integer"
+        },
+        "api_sakb": {
+          "type": "integer"
+        },
+        "api_luck": {
+          "type": "integer"
+        },
+        "api_leng": {
+          "type": "integer"
+        },
+        "api_rare": {
+          "type": "integer"
+        },
+        "api_broken": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_info": {
+          "type": "string"
+        },
+        "api_usebull": {
+          "type": "string"
+        },
+        "api_version": {
+          "type": "integer"
+        },
+        "api_cost": {
+          "type": "integer"
+        },
+        "api_distance": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_atap",
+        "api_bakk",
+        "api_baku",
+        "api_broken",
+        "api_houg",
+        "api_houk",
+        "api_houm",
+        "api_id",
+        "api_info",
+        "api_leng",
+        "api_luck",
+        "api_name",
+        "api_raig",
+        "api_raik",
+        "api_raim",
+        "api_rare",
+        "api_sakb",
+        "api_saku",
+        "api_soku",
+        "api_sortno",
+        "api_souk",
+        "api_taik",
+        "api_tais",
+        "api_tyku",
+        "api_type",
+        "api_usebull"
+      ],
+      "title": "APIMstSlotitem"
+    },
+    "APIMstSlotitemEquiptype": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_id": {
+          "type": "integer"
+        },
+        "api_name": {
+          "type": "string"
+        },
+        "api_show_flg": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_id",
+        "api_name",
+        "api_show_flg"
+      ],
+      "title": "APIMstSlotitemEquiptype"
+    },
+    "APIMstStype": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_id": {
+          "type": "integer"
+        },
+        "api_sortno": {
+          "type": "integer"
+        },
+        "api_name": {
+          "type": "string"
+        },
+        "api_scnt": {
+          "type": "integer"
+        },
+        "api_kcnt": {
+          "type": "integer"
+        },
+        "api_equip_type": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_equip_type",
+        "api_id",
+        "api_kcnt",
+        "api_name",
+        "api_scnt",
+        "api_sortno"
+      ],
+      "title": "APIMstStype"
+    },
+    "APIMstUseitem": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_id": {
+          "type": "integer"
+        },
+        "api_usetype": {
+          "type": "integer"
+        },
+        "api_category": {
+          "type": "integer"
+        },
+        "api_name": {
+          "type": "string"
+        },
+        "api_description": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "api_price": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_category",
+        "api_description",
+        "api_id",
+        "api_name",
+        "api_price",
+        "api_usetype"
+      ],
+      "title": "APIMstUseitem"
+    }
+  }
+}

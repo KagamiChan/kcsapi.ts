@@ -1,6 +1,7 @@
 {
   "extends": ["gts/tslint.json", "tslint-plugin-prettier", "tslint-config-prettier"],
   "rules": {
-    "prettier": true
+    "prettier": true,
+    "no-console": [true, "log", "error"]
   }
 }

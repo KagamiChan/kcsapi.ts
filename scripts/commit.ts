@@ -116,7 +116,7 @@ const main = async () => {
       async ([data, filePath, schemaPath]) => {
         if (!schemas[schemaPath!]) {
           // unknown endpoint, add to staging, and temporarily create schema
-          console.log(chalk.green(`${file} is a new comer, staging`))
+          console.info(chalk.green(`${file} is a new comer, staging`))
 
           staging[filePath!] = data
           const schema = await getSchema(data, filePath!)
@@ -132,12 +132,11 @@ const main = async () => {
           const valid = ajv.validate(schema, [data])
 
           if (valid) {
-            console.log(`${file} complies with current type, skipping`)
+            console.info(`${file} complies with current type, skipping`)
             return Promise.resolve()
           }
 
-          console.log(filePath, schemaPath)
-          console.log(chalk.green(`${file} has different type, staging`))
+          console.info(chalk.green(`${file} has different type, staging`))
           // incoming file does not comply with current schema, add to staging, and temporarily update schema
           staging[filePath!] = data
 
@@ -147,11 +146,11 @@ const main = async () => {
 
           const json = await Promise.map(existings, f => fs.readJSON(f))
           const newSchema = await getSchema(json.concat(data), schemaPath!)
-          console.log(chalk.green(`${schemaPath} schema temperarily updates`))
+          console.info(chalk.green(`${schemaPath} schema temperarily updates`))
           ajv.removeSchema(schema)
           schemas[schemaPath!] = JSON.parse(newSchema)
         } catch (e) {
-          console.log(e)
+          console.info(e)
           process.exitCode = 1
         }
       },
@@ -159,7 +158,7 @@ const main = async () => {
   })
 
   if (Object.keys(staging).length) {
-    console.log(chalk.yellow('commiting'))
+    console.info(chalk.yellow('commiting'))
   }
   return Promise.map(Object.keys(staging), f => fs.outputJSON(f, staging[f], { spaces: 2 }))
 }

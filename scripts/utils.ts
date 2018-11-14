@@ -52,6 +52,7 @@ export const getType = (data: any, filename: string) =>
 export const getSchema = (data: any, filename: string) =>
   new Promise<string>((resolve, reject) => {
     const topLevel = getTopLevel(filename)
+    console.log(topLevel)
     const bin = path.resolve(__dirname, '../node_modules/.bin/quicktype')
 
     const child = childProcess.spawn(bin, [
@@ -92,7 +93,7 @@ const capitalize = (content: string) =>
 export const getTopLevel = (filename: string) =>
   path
     .relative(path.resolve(__dirname, '../'), filename)
-    .replace('.ts', '')
+    .replace(path.extname(filename), '')
     .split(/[_\/\\]/)
     .map(capitalize)
     .join('')

@@ -20,6 +20,7 @@
     "@types/lodash": "^4.14.118",
     "@types/node": "^10.12.6",
     "@types/prettier": "^1.13.2",
+    "ajv": "^6.5.5",
     "bluebird": "^3.5.3",
     "chalk": "^2.4.1",
     "fs-extra": "^7.0.1",

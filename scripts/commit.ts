@@ -23,14 +23,19 @@ import {
   isString,
   isNumber,
   isNull,
-  entries,
   fromPairs,
+  zip,
 } from 'lodash'
 import assert from 'assert'
 import chalk from 'chalk'
+import Ajv from 'ajv'
 
 import { PoiPacket } from './types'
-import { getType, getSampleList } from './utils'
+import { getType, getSchema } from './utils'
+
+const draft06Schema = require('ajv/lib/refs/json-schema-draft-06.json')
+const ajv = new Ajv({ validateSchema: false, addUsedSchema: false })
+ajv.addMetaSchema(draft06Schema)
 
 /**
  * recusively replaces information in given data
@@ -57,7 +62,7 @@ const anonymize = (data: any): any => {
 /**
  * builds path to save in samples folder
  * @param data poi packet
- * @returns [requestPath, responsePath]
+ * @returns [reqPath, respPath]
  */
 const buildPath = (data: PoiPacket, basename: string): string[] => [
   path.resolve(__dirname, '../samples', data.path.replace('/kcsapi/', ''), 'request', basename),
@@ -65,13 +70,13 @@ const buildPath = (data: PoiPacket, basename: string): string[] => [
 ]
 
 /**
- * builds existing type path in samples folder
+ * builds schema path in samples folder
  * @param data poi packet
  * @returns [requestTypePath, responseTypePath]
  */
-const buildTypePath = (data: PoiPacket): string[] => [
-  path.resolve(__dirname, '../', data.path.replace('/kcsapi/', ''), 'request.ts'),
-  path.resolve(__dirname, '../', data.path.replace('/kcsapi/', ''), 'response.ts'),
+const buildSchemaPath = (data: PoiPacket): string[] => [
+  path.resolve(__dirname, '../', data.path.replace('/kcsapi/', ''), 'request.json'),
+  path.resolve(__dirname, '../', data.path.replace('/kcsapi/', ''), 'response.json'),
 ]
 
 /* tslint:disable-next-line no-any */
@@ -85,42 +90,78 @@ const diffInType = async (data: any, typePath: string) => {
 const main = async () => {
   const files = glob.sync(path.resolve(__dirname, '../staging/**/*.json'))
 
-  const sampleGroup = await getSampleList()
+  const allschemas = glob.sync(path.resolve(__dirname, '../api_*/**/*.json'))
 
-  const existingSamples = await Promise.map(entries(sampleGroup), async ([f, files]) => {
-    const json = await Promise.map(files, file => fs.readJSON(file))
+  const schemas = fromPairs(
+    await Promise.map(allschemas, async file => {
+      const schema = await fs.readJSON(file)
 
-    return [f, json]
-  })
+      return [file, schema]
+    }),
+  )
 
-  const samples = fromPairs(existingSamples)
+  const staging: { [key: string]: {} } = {}
 
-  await Promise.map(files, async file => {
+  await Promise.each(files, async file => {
     const packet: PoiPacket = await fs.readJSON(file)
 
     packet.body = anonymize(packet.body)
     packet.postBody = anonymize(packet.postBody)
 
-    const [requestPath, responsePath] = buildPath(packet, path.basename(file))
-    const [requestTypePath, responseTypePath] = buildTypePath(packet)
+    const [reqPath, respPath] = buildPath(packet, path.basename(file))
+    const [reqSchemaPath, respSchemaPath] = buildSchemaPath(packet)
 
-    const candidateRequests = [...(samples[requestTypePath] || []), packet.postBody]
-    const candidateResponses = [...(samples[responseTypePath] || []), packet.body]
+    await Promise.each(
+      zip([packet.postBody, packet.body], [reqPath, respPath], [reqSchemaPath, respSchemaPath]),
+      async ([data, filePath, schemaPath]) => {
+        if (!schemas[schemaPath!]) {
+          // unknown endpoint, add to staging, and temporarily create schema
+          console.log(chalk.green(`${file} is a new comer, staging`))
 
-    if (
-      (await diffInType(candidateRequests, requestTypePath)) ||
-      (await diffInType(candidateResponses, responseTypePath))
-    ) {
-      console.log(chalk.green(`${file} has different type, saving for further processing`))
-      return Promise.all([
-        fs.outputJSON(requestPath, packet.postBody, { spaces: 2 }),
-        fs.outputJSON(responsePath, packet.body, { spaces: 2 }),
-      ])
-    }
+          staging[filePath!] = data
+          const schema = await getSchema(data, filePath!)
+          schemas[schemaPath!] = schema
 
-    console.log(chalk.blue(`${file} complies with current type, skipping`))
-    return Promise.resolve()
+          return Promise.resolve()
+        }
+
+        try {
+          const schema = schemas[schemaPath!]
+
+          // since we generate schema using arrays of data, we should also feed an array
+          const valid = ajv.validate(schema, [data])
+
+          if (valid) {
+            console.log(`${file} complies with current type, skipping`)
+            return Promise.resolve()
+          }
+
+          console.log(filePath, schemaPath)
+          console.log(chalk.green(`${file} has different type, staging`))
+          // incoming file does not comply with current schema, add to staging, and temporarily update schema
+          staging[filePath!] = data
+
+          const existings = glob.sync(
+            path.resolve(__dirname, '../samples', packet.path.replace('/kcsapi/', ''), '*.json'),
+          )
+
+          const json = await Promise.map(existings, f => fs.readJSON(f))
+          const newSchema = await getSchema(json.concat(data), schemaPath!)
+          console.log(chalk.green(`${schemaPath} schema temperarily updates`))
+          ajv.removeSchema(schema)
+          schemas[schemaPath!] = JSON.parse(newSchema)
+        } catch (e) {
+          console.log(e)
+          process.exitCode = 1
+        }
+      },
+    )
   })
+
+  if (Object.keys(staging).length) {
+    console.log(chalk.yellow('commiting'))
+  }
+  return Promise.map(Object.keys(staging), f => fs.outputJSON(f, staging[f], { spaces: 2 }))
 }
 
 main()

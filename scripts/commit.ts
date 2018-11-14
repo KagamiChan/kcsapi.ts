@@ -4,12 +4,22 @@
  * They are saved to correct path in samples folder after being anonymized
  */
 
-import fs from 'fs-extra'
+import fs, { WriteOptions } from 'fs-extra'
 import glob from 'glob'
 import path from 'path'
 import Promise from 'bluebird'
-import { cloneDeep, set, map, get, mapValues, isArray, isObject, isString, isNumber } from 'lodash'
-import faker from 'faker'
+import {
+  cloneDeep,
+  set,
+  map,
+  get,
+  mapValues,
+  isArray,
+  isObject,
+  isString,
+  isNumber,
+  isNull,
+} from 'lodash'
 import assert from 'assert'
 
 import { PoiPacket } from './types'
@@ -20,48 +30,21 @@ import { PoiPacket } from './types'
  * @param key used for mapValues method in recursion
  */
 /* tslint:disable-next-line no-any */
-const recursiveReplaceId = (data: any, keys: string[] = []) => {
-  /* tslint:disable-next-line no-any */
-  const recursive = (data: any, key?: string): any => {
-    if (['api_member_id'].concat(keys).includes(key as string)) {
-      assert.ok(
-        isString(data) || isNumber(data),
-        'api_member_id or api_id value should be string or number',
-      )
-      return isString(data) ? String(faker.random.number()) : faker.random.number()
-    }
-    if (isArray(data)) {
-      return map(data, recursive)
-    }
-    if (isObject(data)) {
-      return mapValues(data, recursive)
-    }
-    return data
+const anonymize = (data: any, key?: string): any => {
+  if (isArray(data)) {
+    return map(data, anonymize)
   }
-
-  return recursive(data)
-}
-
-const anonymize = (data: PoiPacket): PoiPacket => {
-  let packet = cloneDeep(data)
-
-  switch (packet.path) {
-    case '/kcsapi/api_get_member/require_info':
-      packet = recursiveReplaceId(packet, ['api_id'])
-      break
-    case '/kcsapi/api_port/port':
-      packet = recursiveReplaceId(packet, ['api_id'])
-      set(packet, ['postBody', 'api_port'], String(faker.random.number()))
-      set(packet, ['body', 'api_basic', 'api_nickname'], faker.random.word())
-      set(packet, ['body', 'api_basic', 'api_nickname_id'], String(faker.random.number()))
-      set(packet, ['body', 'api_basic', 'api_comment'], faker.random.word())
-      set(packet, ['body', 'api_basic', 'api_comment_id'], String(faker.random.number()))
-      break
-    default:
-      packet = recursiveReplaceId(packet)
+  if (isObject(data)) {
+    return mapValues(data, anonymize)
   }
-
-  return packet
+  if (isString(data)) {
+    return 'Tanaka'
+  }
+  if (isNumber(data)) {
+    return 1
+  }
+  assert.ok(isNull(data))
+  return null
 }
 
 /**
@@ -69,10 +52,28 @@ const anonymize = (data: PoiPacket): PoiPacket => {
  * @param data poi packet
  * @returns [requestPath, responsePath]
  */
-const buildPath = (data: PoiPacket): string[] => [
-  path.resolve(__dirname, '../samples', data.path.replace('/kcsapi/', ''), 'request.json'),
-  path.resolve(__dirname, '../samples', data.path.replace('/kcsapi/', ''), 'response.json'),
+const buildPath = (data: PoiPacket, basename: string): string[] => [
+  path.resolve(__dirname, '../samples', data.path.replace('/kcsapi/', ''), 'request', basename),
+  path.resolve(__dirname, '../samples', data.path.replace('/kcsapi/', ''), 'response', basename),
 ]
+
+/**
+ * access before output json
+ * @param file path
+ * @param data json serializable data
+ * @param options fs.outputJSON options
+ */
+/* tslint:disable-next-line no-any */
+const accessAndOutputJson = async (file: string, data: any, options?: WriteOptions) => {
+  const exists = await fs.pathExists(file)
+
+  if (exists) {
+    console.info(file, 'exists, skipping')
+    return fs.outputJSON(file, data, options)
+  } else {
+    return fs.outputJSON(file, data, options)
+  }
+}
 
 const main = async () => {
   const files = glob.sync(path.resolve(__dirname, '../staging/**/*.json'))
@@ -80,13 +81,14 @@ const main = async () => {
   await Promise.map(files, async file => {
     const packet: PoiPacket = await fs.readJSON(file)
 
-    const data = anonymize(packet)
+    packet.body = anonymize(packet.body)
+    packet.postBody = anonymize(packet.postBody)
 
-    const [requestPath, responsePath] = buildPath(data)
+    const [requestPath, responsePath] = buildPath(packet, path.basename(file))
 
     return Promise.all([
-      fs.outputJSON(requestPath, data.postBody, { spaces: 2 }),
-      fs.outputJSON(responsePath, data.body, { spaces: 2 }),
+      accessAndOutputJson(requestPath, packet.postBody, { spaces: 2 }),
+      accessAndOutputJson(responsePath, packet.body, { spaces: 2 }),
     ])
   })
 }

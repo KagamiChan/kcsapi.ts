@@ -57,24 +57,6 @@ const buildPath = (data: PoiPacket, basename: string): string[] => [
   path.resolve(__dirname, '../samples', data.path.replace('/kcsapi/', ''), 'response', basename),
 ]
 
-/**
- * access before output json
- * @param file path
- * @param data json serializable data
- * @param options fs.outputJSON options
- */
-/* tslint:disable-next-line no-any */
-const accessAndOutputJson = async (file: string, data: any, options?: WriteOptions) => {
-  const exists = await fs.pathExists(file)
-
-  if (exists) {
-    console.info(file, 'exists, skipping')
-    return fs.outputJSON(file, data, options)
-  } else {
-    return fs.outputJSON(file, data, options)
-  }
-}
-
 const main = async () => {
   const files = glob.sync(path.resolve(__dirname, '../staging/**/*.json'))
 
@@ -87,8 +69,8 @@ const main = async () => {
     const [requestPath, responsePath] = buildPath(packet, path.basename(file))
 
     return Promise.all([
-      accessAndOutputJson(requestPath, packet.postBody, { spaces: 2 }),
-      accessAndOutputJson(responsePath, packet.body, { spaces: 2 }),
+      fs.outputJSON(requestPath, packet.postBody, { spaces: 2 }),
+      fs.outputJSON(responsePath, packet.body, { spaces: 2 }),
     ])
   })
 }

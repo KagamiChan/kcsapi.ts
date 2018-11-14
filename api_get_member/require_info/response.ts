@@ -1,3 +1,10 @@
+/**
+ * kcsapi.ts - Kantai Collection API TypeScript types
+ * Copyright (c) 2018- Poi contributors.
+ *
+ * @license MIT
+ */
+
 export interface APIGetMemberRequireInfoResponse {
   api_basic: APIBasic
   api_slot_item: APISlotItem[]

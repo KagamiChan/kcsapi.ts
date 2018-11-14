@@ -1,3 +1,10 @@
+/**
+ * kcsapi.ts - Kantai Collection API TypeScript types
+ * Copyright (c) 2018- Poi contributors.
+ *
+ * @license MIT
+ */
+
 export interface APIStart2GetDataResponse {
   api_mst_ship: APIMstShip[]
   api_mst_slotitem_equiptype: APIMstSlotitemEquiptype[]

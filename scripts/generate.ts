@@ -1,3 +1,14 @@
+/**
+ * kcsapi.ts - Kantai Collection API TypeScript types
+ * Copyright (c) 2018- Poi contributors.
+ *
+ * @license MIT
+ */
+
+/**
+ * Generates types from sample files
+ */
+
 import { Readable } from 'stream'
 import glob from 'glob'
 import Promise from 'bluebird'
@@ -6,6 +17,8 @@ import path from 'path'
 import childProcess from 'child_process'
 import { groupBy, map, entries } from 'lodash'
 import prettier from 'prettier'
+
+import { copyright } from './copyright'
 
 /**
  * Feeds sample data to spawned quicktype and generate types
@@ -85,7 +98,7 @@ const main = async () => {
     const json = await Promise.map(files, file => fs.readJSON(file))
     const raw = await getType(json, topLevel)
 
-    const result = prettify(raw)
+    const result = prettify(copyright + '\n' + raw)
 
     return fs.outputFile(filename, result)
   })
@@ -96,7 +109,7 @@ const main = async () => {
     return `export { ${topLevel} } from './${relative}'`
   }).join('\n')
 
-  await fs.outputFile(path.resolve(__dirname, '../index.ts'), prettify(index))
+  await fs.outputFile(path.resolve(__dirname, '../index.ts'), prettify(copyright + '\n' + index))
 }
 
 main()

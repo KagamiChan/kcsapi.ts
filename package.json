@@ -1,7 +1,8 @@
 {
   "name": "kcsapi",
   "version": "0.0.0",
-  "description": "Typings for Kancolle API",
+  "description": "Kantai Collection API TypeScript types",
+  "keywords": ["Kancolle", "Kantai Collection", "TypeScript"],
   "main": "index.ts",
   "repository": "git@github.com:KagamiChan/kcsapi.ts.git",
   "author": "Kagami <moe.pascal@gmail.com>",

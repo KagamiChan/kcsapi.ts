@@ -1,4 +1,11 @@
 /**
+ * kcsapi.ts - Kantai Collection API TypeScript types
+ * Copyright (c) 2018- Poi contributors.
+ *
+ * @license MIT
+ */
+
+/**
  * This script is to process and move json files into samples folder
  * All json files are put into staging folder at first
  * They are saved to correct path in samples folder after being anonymized

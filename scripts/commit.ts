@@ -15,18 +15,7 @@ import fs, { WriteOptions } from 'fs-extra'
 import glob from 'glob'
 import path from 'path'
 import Promise from 'bluebird'
-import {
-  cloneDeep,
-  set,
-  map,
-  get,
-  mapValues,
-  isArray,
-  isObject,
-  isString,
-  isNumber,
-  isNull,
-} from 'lodash'
+import { map, mapValues, isArray, isObject, isString, isNumber, isNull } from 'lodash'
 import assert from 'assert'
 
 import { PoiPacket } from './types'

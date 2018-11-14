@@ -102,6 +102,8 @@ const main = async () => {
 
   const staging: { [key: string]: {} } = {}
 
+  const schemaToFilePaths: { [key: string]: string[] } = {}
+
   await Promise.each(files, async file => {
     const packet: PoiPacket = await fs.readJSON(file)
 
@@ -116,11 +118,13 @@ const main = async () => {
       async ([data, filePath, schemaPath]) => {
         if (!schemas[schemaPath!]) {
           // unknown endpoint, add to staging, and temporarily create schema
-          console.info(chalk.green(`${file} is a new comer, staging`))
+          console.info(chalk.green(`${schemaPath} is a new comer, staging`))
 
           staging[filePath!] = data
-          const schema = await getSchema(data, filePath!)
-          schemas[schemaPath!] = schema
+          const schema = await getSchema([data], filePath!)
+          schemas[schemaPath!] = JSON.parse(schema)
+
+          schemaToFilePaths[schemaPath!] = (schemaToFilePaths[schemaPath!] || []).concat(filePath!)
 
           return Promise.resolve()
         }
@@ -132,11 +136,11 @@ const main = async () => {
           const valid = ajv.validate(schema, [data])
 
           if (valid) {
-            console.info(`${file} complies with current type, skipping`)
+            console.info(`${schemaPath} complies with current type, skipping`)
             return Promise.resolve()
           }
 
-          console.info(chalk.green(`${file} has different type, staging`))
+          console.info(chalk.green(`${schemaPath} has different type, staging`))
           // incoming file does not comply with current schema, add to staging, and temporarily update schema
           staging[filePath!] = data
 
@@ -144,11 +148,17 @@ const main = async () => {
             path.resolve(__dirname, '../samples', packet.path.replace('/kcsapi/', ''), '*.json'),
           )
 
+          const incomings = map(schemaToFilePaths[schemaPath!], fp => staging[fp])
+
           const json = await Promise.map(existings, f => fs.readJSON(f))
-          const newSchema = await getSchema(json.concat(data), schemaPath!)
+          const newSchema = await getSchema([json, data, ...incomings], schemaPath!)
+
           console.info(chalk.green(`${schemaPath} schema temperarily updates`))
+
           ajv.removeSchema(schema)
           schemas[schemaPath!] = JSON.parse(newSchema)
+
+          schemaToFilePaths[schemaPath!] = (schemaToFilePaths[schemaPath!] || []).concat(filePath!)
         } catch (e) {
           console.info(e)
           process.exitCode = 1

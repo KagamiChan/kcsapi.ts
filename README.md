@@ -47,6 +47,11 @@ Examples:
 | `/kcsapi/api_req_member/get_incentive` | `APIReqMemberGetIncentiveRequest` | `APIReqMemberGetIncentiveResponse` |
 | `/kcsapi/api_start2/getData`           | `APIStart2GetDataRequest`         | `APIStart2GetDataResponse`         |
 
+## Limitations
+
+- **Important** If top level shape is array, the infered interface will be of its element's shape
+- Some API type missing due to inference failure. Corresponding json schema might be available, however
+
 ## Details
 
 ### How are types generated

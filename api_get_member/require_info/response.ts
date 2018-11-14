@@ -5,6 +5,9 @@
  * @license MIT
  */
 
+/**
+ * type for API response at /kcsapi/api_get_member/require_info
+ */
 export interface APIGetMemberRequireInfoResponse {
   api_basic: APIBasic
   api_slot_item: APISlotItem[]

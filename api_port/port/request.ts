@@ -5,6 +5,9 @@
  * @license MIT
  */
 
+/**
+ * type for API request at /kcsapi/api_port/port
+ */
 export interface APIPortPortRequest {
   api_verno: string
   api_sort_key: string

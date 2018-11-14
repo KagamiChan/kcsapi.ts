@@ -5,6 +5,9 @@
  * @license MIT
  */
 
+/**
+ * type for API request at /kcsapi/api_req_member/get_incentive
+ */
 export interface APIReqMemberGetIncentiveRequest {
   api_verno: string
 }

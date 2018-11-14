@@ -5,6 +5,9 @@
  * @license MIT
  */
 
+/**
+ * type for API request at /kcsapi/api_get_member/require_info
+ */
 export interface APIGetMemberRequireInfoRequest {
   api_verno: string
 }

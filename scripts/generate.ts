@@ -18,7 +18,7 @@ import childProcess from 'child_process'
 import { groupBy, map, entries } from 'lodash'
 import prettier from 'prettier'
 
-import { copyright } from './copyright'
+import { copyright, getEndPointComment } from './comments'
 
 /**
  * Feeds sample data to spawned quicktype and generate types
@@ -98,7 +98,7 @@ const main = async () => {
     const json = await Promise.map(files, file => fs.readJSON(file))
     const raw = await getType(json, topLevel)
 
-    const result = prettify(copyright + '\n' + raw)
+    const result = prettify(copyright + '\n' + getEndPointComment(filename) + raw)
 
     return fs.outputFile(filename, result)
   })

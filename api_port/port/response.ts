@@ -5,6 +5,9 @@
  * @license MIT
  */
 
+/**
+ * type for API response at /kcsapi/api_port/port
+ */
 export interface APIPortPortResponse {
   api_material: APIMaterial[]
   api_deck_port: APIDeckPort[]

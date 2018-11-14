@@ -5,6 +5,9 @@
  * @license MIT
  */
 
+/**
+ * type for API request at /kcsapi/api_start2/getData
+ */
 export interface APIStart2GetDataRequest {
   api_verno: string
 }

@@ -5,6 +5,9 @@
  * @license MIT
  */
 
+/**
+ * type for API response at /kcsapi/api_req_member/get_incentive
+ */
 export interface APIReqMemberGetIncentiveResponse {
   api_count: number
 }

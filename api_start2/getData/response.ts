@@ -5,6 +5,9 @@
  * @license MIT
  */
 
+/**
+ * type for API response at /kcsapi/api_start2/getData
+ */
 export interface APIStart2GetDataResponse {
   api_mst_ship: APIMstShip[]
   api_mst_slotitem_equiptype: APIMstSlotitemEquiptype[]

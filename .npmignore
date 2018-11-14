@@ -4,3 +4,5 @@ scripts/
 tsconfig.json
 tslint.json
 yarn.lock
+staging/
+*.log

@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqPracticeChangeMatchingKindResponseElement"
+  },
+  "definitions": {
+    "APIReqPracticeChangeMatchingKindResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_update_flag": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_update_flag"
+      ],
+      "title": "APIReqPracticeChangeMatchingKindResponseElement"
+    }
+  }
+}

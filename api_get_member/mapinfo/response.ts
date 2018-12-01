@@ -16,10 +16,15 @@ export interface APIGetMemberMapinfoResponse {
 export interface APIAirBase {
   api_action_kind: number
   api_area_id: number
-  api_distance: number
+  api_distance: APIDistanceClass | number
   api_name: string
   api_plane_info: APIPlaneInfo[]
   api_rid: number
+}
+
+export interface APIDistanceClass {
+  api_base: number
+  api_bonus: number
 }
 
 export interface APIPlaneInfo {
@@ -36,8 +41,11 @@ export interface APIMapInfo {
   api_cleared: number
   api_defeat_count?: number
   api_eventmap?: APIEventmap
-  api_exboss_flag: number
+  api_exboss_flag?: number
+  api_gauge_num?: number
+  api_gauge_type?: number
   api_id: number
+  api_required_defeat_count?: number
 }
 
 export interface APIEventmap {

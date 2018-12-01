@@ -213,6 +213,12 @@ export { APIReqPracticeBattleResultRequest } from './api_req_practice/battle_res
 export { APIReqPracticeBattleResultResponse } from './api_req_practice/battle_result/response'
 export { APIReqPracticeBattleRequest } from './api_req_practice/battle/request'
 export { APIReqPracticeBattleResponse } from './api_req_practice/battle/response'
+export {
+  APIReqPracticeChangeMatchingKindRequest,
+} from './api_req_practice/change_matching_kind/request'
+export {
+  APIReqPracticeChangeMatchingKindResponse,
+} from './api_req_practice/change_matching_kind/response'
 export { APIReqPracticeMidnightBattleRequest } from './api_req_practice/midnight_battle/request'
 export { APIReqPracticeMidnightBattleResponse } from './api_req_practice/midnight_battle/response'
 export { APIReqQuestClearitemgetRequest } from './api_req_quest/clearitemget/request'

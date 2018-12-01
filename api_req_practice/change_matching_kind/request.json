@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqPracticeChangeMatchingKindRequestElement"
+  },
+  "definitions": {
+    "APIReqPracticeChangeMatchingKindRequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_selected_kind": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_selected_kind",
+        "api_verno"
+      ],
+      "title": "APIReqPracticeChangeMatchingKindRequestElement"
+    }
+  }
+}

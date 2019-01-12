@@ -64,7 +64,7 @@ export interface APIAirBaseAttack {
   api_plane_from: Array<number[] | null>
   api_stage1: APIStage1
   api_stage2: null
-  api_stage3: APIStage3
+  api_stage3: APIStage3 | null
   api_stage_flag: number[]
 }
 

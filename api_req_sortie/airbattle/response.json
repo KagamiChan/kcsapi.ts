@@ -162,7 +162,14 @@
           "$ref": "#/definitions/APIStage1"
         },
         "api_stage2": {
-          "$ref": "#/definitions/APIStage2"
+          "anyOf": [
+            {
+              "$ref": "#/definitions/APIStage2"
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "api_stage3": {
           "anyOf": [

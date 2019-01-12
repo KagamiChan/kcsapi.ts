@@ -15,6 +15,8 @@ export interface APIReqCombinedBattleBattleWaterResponse {
   api_eSlot: number[][]
   api_e_maxhps: number[]
   api_e_nowhps: number[]
+  api_escape_idx?: number[]
+  api_escape_idx_combined?: number[]
   api_fParam: number[][]
   api_fParam_combined: number[][]
   api_f_maxhps: number[]
@@ -22,8 +24,8 @@ export interface APIReqCombinedBattleBattleWaterResponse {
   api_f_nowhps: number[]
   api_f_nowhps_combined: number[]
   api_formation: number[]
-  api_hougeki1?: APIHougeki
-  api_hougeki2?: APIHougeki
+  api_hougeki1?: APIHougeki | null
+  api_hougeki2?: APIHougeki | null
   api_hougeki3?: APIHougeki
   api_hourai_flag: number[]
   api_kouku: APIKouku
@@ -38,15 +40,15 @@ export interface APIReqCombinedBattleBattleWaterResponse {
   api_ship_lv: number[]
   api_stage_flag: number[]
   api_support_flag: number
-  api_support_info: null
+  api_support_info: APISupportInfo | null
 }
 
 export interface APIAirBaseAttack {
   api_base_id: number
-  api_plane_from: null[]
+  api_plane_from: Array<number[] | null>
   api_squadron_plane: APISquadronPlane[]
   api_stage1: APIStage1
-  api_stage2: APIStage2
+  api_stage2: APIStage
   api_stage3: APIAirBaseAttackAPIStage3
   api_stage_flag: number[]
 }
@@ -65,11 +67,18 @@ export interface APIStage1 {
   api_touch_plane: number[]
 }
 
-export interface APIStage2 {
+export interface APIStage {
+  api_air_fire?: APIAirFire
   api_e_count: number
   api_e_lostcount: number
   api_f_count: number
   api_f_lostcount: number
+}
+
+export interface APIAirFire {
+  api_idx: number
+  api_kind: number
+  api_use_items: number[]
 }
 
 export interface APIAirBaseAttackAPIStage3 {
@@ -92,9 +101,9 @@ export interface APIHougeki {
 export interface APIKouku {
   api_plane_from: Array<number[] | null>
   api_stage1: APIStage1
-  api_stage2: APIStage2
-  api_stage3: APIKoukuAPIStage3
-  api_stage3_combined: APIStage3Combined
+  api_stage2: APIStage | null
+  api_stage3: APIKoukuAPIStage3 | null
+  api_stage3_combined: APIStage3Combined | null
 }
 
 export interface APIKoukuAPIStage3 {
@@ -134,4 +143,33 @@ export interface APIOpeningTaisen {
   api_damage: number[][]
   api_df_list: number[][]
   api_si_list: string[][]
+}
+
+export interface APISupportInfo {
+  api_support_airatack: APISupportAiratack | null
+  api_support_hourai: APISupportHourai | null
+}
+
+export interface APISupportAiratack {
+  api_deck_id: number
+  api_plane_from: Array<number[] | null>
+  api_ship_id: number[]
+  api_stage1: APIStage
+  api_stage2: APIStage2
+  api_stage3: APIAirBaseAttackAPIStage3
+  api_stage_flag: number[]
+  api_undressing_flag: number[]
+}
+
+export interface APIStage2 {
+  api_f_count: number
+  api_f_lostcount: number
+}
+
+export interface APISupportHourai {
+  api_cl_list: number[]
+  api_damage: number[]
+  api_deck_id: number
+  api_ship_id: number[]
+  api_undressing_flag: number[]
 }

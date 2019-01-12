@@ -48,7 +48,6 @@
       },
       "required": [
         "api_count",
-        "api_item",
         "api_type"
       ],
       "title": "APIBounus"

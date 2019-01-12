@@ -259,7 +259,14 @@
           "type": "null"
         },
         "api_stage3": {
-          "$ref": "#/definitions/APIStage3"
+          "anyOf": [
+            {
+              "$ref": "#/definitions/APIStage3"
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "api_stage_flag": {
           "type": "array",

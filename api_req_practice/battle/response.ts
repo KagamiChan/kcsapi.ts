@@ -54,10 +54,17 @@ export interface APIInjectionKouku {
 }
 
 export interface APIStage {
+  api_air_fire?: APIAirFire
   api_e_count: number
   api_e_lostcount: number
   api_f_count: number
   api_f_lostcount: number
+}
+
+export interface APIAirFire {
+  api_idx: number
+  api_kind: number
+  api_use_items: number[]
 }
 
 export interface APIStage3 {

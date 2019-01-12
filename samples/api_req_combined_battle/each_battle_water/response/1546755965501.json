@@ -1,0 +1,1764 @@
+{
+  "api_deck_id": 1,
+  "api_formation": [
+    1,
+    1,
+    1
+  ],
+  "api_f_nowhps": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "api_f_maxhps": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "api_f_nowhps_combined": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "api_f_maxhps_combined": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "api_fParam": [
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1
+    ]
+  ],
+  "api_fParam_combined": [
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1
+    ]
+  ],
+  "api_ship_ke": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "api_ship_lv": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "api_ship_ke_combined": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "api_ship_lv_combined": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "api_e_nowhps": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "api_e_maxhps": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "api_e_nowhps_combined": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "api_e_maxhps_combined": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "api_eSlot": [
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  ],
+  "api_eSlot_combined": [
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  ],
+  "api_eParam": [
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1
+    ]
+  ],
+  "api_eParam_combined": [
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1
+    ]
+  ],
+  "api_flavor_info": [
+    {
+      "api_boss_ship_id": "Tanaka",
+      "api_type": "Tanaka",
+      "api_voice_id": "Tanaka",
+      "api_class_name": "Tanaka",
+      "api_ship_name": "Tanaka",
+      "api_message": "Tanaka",
+      "api_pos_x": "Tanaka",
+      "api_pos_y": "Tanaka",
+      "api_data": "Tanaka"
+    },
+    {
+      "api_boss_ship_id": "Tanaka",
+      "api_type": "Tanaka",
+      "api_voice_id": "Tanaka",
+      "api_class_name": "Tanaka",
+      "api_ship_name": "Tanaka",
+      "api_message": "Tanaka",
+      "api_pos_x": "Tanaka",
+      "api_pos_y": "Tanaka",
+      "api_data": "Tanaka"
+    }
+  ],
+  "api_midnight_flag": 1,
+  "api_search": [
+    1,
+    1
+  ],
+  "api_air_base_attack": [
+    {
+      "api_base_id": 1,
+      "api_stage_flag": [
+        1,
+        1,
+        1
+      ],
+      "api_plane_from": [
+        null,
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "api_squadron_plane": [
+        {
+          "api_mst_id": 1,
+          "api_count": 1
+        },
+        {
+          "api_mst_id": 1,
+          "api_count": 1
+        },
+        {
+          "api_mst_id": 1,
+          "api_count": 1
+        },
+        {
+          "api_mst_id": 1,
+          "api_count": 1
+        }
+      ],
+      "api_stage1": {
+        "api_f_count": 1,
+        "api_f_lostcount": 1,
+        "api_e_count": 1,
+        "api_e_lostcount": 1,
+        "api_disp_seiku": 1,
+        "api_touch_plane": [
+          1,
+          1
+        ]
+      },
+      "api_stage2": {
+        "api_f_count": 1,
+        "api_f_lostcount": 1,
+        "api_e_count": 1,
+        "api_e_lostcount": 1
+      },
+      "api_stage3": {
+        "api_erai_flag": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "api_ebak_flag": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "api_ecl_flag": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "api_edam": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "api_stage3_combined": {
+        "api_erai_flag": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "api_ebak_flag": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "api_ecl_flag": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "api_edam": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "api_base_id": 1,
+      "api_stage_flag": [
+        1,
+        1,
+        1
+      ],
+      "api_plane_from": [
+        null,
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "api_squadron_plane": [
+        {
+          "api_mst_id": 1,
+          "api_count": 1
+        },
+        {
+          "api_mst_id": 1,
+          "api_count": 1
+        },
+        {
+          "api_mst_id": 1,
+          "api_count": 1
+        },
+        {
+          "api_mst_id": 1,
+          "api_count": 1
+        }
+      ],
+      "api_stage1": {
+        "api_f_count": 1,
+        "api_f_lostcount": 1,
+        "api_e_count": 1,
+        "api_e_lostcount": 1,
+        "api_disp_seiku": 1,
+        "api_touch_plane": [
+          1,
+          1
+        ]
+      },
+      "api_stage2": {
+        "api_f_count": 1,
+        "api_f_lostcount": 1,
+        "api_e_count": 1,
+        "api_e_lostcount": 1
+      },
+      "api_stage3": {
+        "api_erai_flag": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "api_ebak_flag": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "api_ecl_flag": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "api_edam": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "api_stage3_combined": {
+        "api_erai_flag": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "api_ebak_flag": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "api_ecl_flag": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "api_edam": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "api_base_id": 1,
+      "api_stage_flag": [
+        1,
+        1,
+        1
+      ],
+      "api_plane_from": [
+        null,
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "api_squadron_plane": [
+        {
+          "api_mst_id": 1,
+          "api_count": 1
+        },
+        {
+          "api_mst_id": 1,
+          "api_count": 1
+        },
+        {
+          "api_mst_id": 1,
+          "api_count": 1
+        },
+        {
+          "api_mst_id": 1,
+          "api_count": 1
+        }
+      ],
+      "api_stage1": {
+        "api_f_count": 1,
+        "api_f_lostcount": 1,
+        "api_e_count": 1,
+        "api_e_lostcount": 1,
+        "api_disp_seiku": 1,
+        "api_touch_plane": [
+          1,
+          1
+        ]
+      },
+      "api_stage2": {
+        "api_f_count": 1,
+        "api_f_lostcount": 1,
+        "api_e_count": 1,
+        "api_e_lostcount": 1
+      },
+      "api_stage3": {
+        "api_erai_flag": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "api_ebak_flag": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "api_ecl_flag": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "api_edam": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "api_stage3_combined": {
+        "api_erai_flag": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "api_ebak_flag": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "api_ecl_flag": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "api_edam": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "api_base_id": 1,
+      "api_stage_flag": [
+        1,
+        1,
+        1
+      ],
+      "api_plane_from": [
+        null,
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "api_squadron_plane": [
+        {
+          "api_mst_id": 1,
+          "api_count": 1
+        },
+        {
+          "api_mst_id": 1,
+          "api_count": 1
+        },
+        {
+          "api_mst_id": 1,
+          "api_count": 1
+        },
+        {
+          "api_mst_id": 1,
+          "api_count": 1
+        }
+      ],
+      "api_stage1": {
+        "api_f_count": 1,
+        "api_f_lostcount": 1,
+        "api_e_count": 1,
+        "api_e_lostcount": 1,
+        "api_disp_seiku": 1,
+        "api_touch_plane": [
+          1,
+          1
+        ]
+      },
+      "api_stage2": {
+        "api_f_count": 1,
+        "api_f_lostcount": 1,
+        "api_e_count": 1,
+        "api_e_lostcount": 1
+      },
+      "api_stage3": {
+        "api_erai_flag": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "api_ebak_flag": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "api_ecl_flag": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "api_edam": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "api_stage3_combined": {
+        "api_erai_flag": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "api_ebak_flag": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "api_ecl_flag": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "api_edam": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    }
+  ],
+  "api_stage_flag": [
+    1,
+    1,
+    1
+  ],
+  "api_kouku": {
+    "api_plane_from": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "api_stage1": {
+      "api_f_count": 1,
+      "api_f_lostcount": 1,
+      "api_e_count": 1,
+      "api_e_lostcount": 1,
+      "api_disp_seiku": 1,
+      "api_touch_plane": [
+        1,
+        1
+      ]
+    },
+    "api_stage2": {
+      "api_f_count": 1,
+      "api_f_lostcount": 1,
+      "api_e_count": 1,
+      "api_e_lostcount": 1
+    },
+    "api_stage3": {
+      "api_frai_flag": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "api_erai_flag": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "api_fbak_flag": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "api_ebak_flag": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "api_fcl_flag": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "api_ecl_flag": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "api_fdam": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "api_edam": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "api_stage3_combined": {
+      "api_frai_flag": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "api_erai_flag": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "api_fbak_flag": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "api_ebak_flag": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "api_fcl_flag": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "api_ecl_flag": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "api_fdam": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "api_edam": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "api_support_flag": 1,
+  "api_support_info": null,
+  "api_opening_taisen_flag": 1,
+  "api_opening_taisen": null,
+  "api_opening_flag": 1,
+  "api_opening_atack": {
+    "api_frai": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "api_fcl": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "api_fdam": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "api_fydam": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "api_erai": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "api_ecl": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "api_edam": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "api_eydam": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "api_hourai_flag": [
+    1,
+    1,
+    1,
+    1
+  ],
+  "api_hougeki1": {
+    "api_at_eflag": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "api_at_list": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "api_at_type": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "api_df_list": [
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ]
+    ],
+    "api_si_list": [
+      [
+        "Tanaka",
+        "Tanaka",
+        "Tanaka"
+      ],
+      [
+        1
+      ],
+      [
+        "Tanaka",
+        "Tanaka"
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ]
+    ],
+    "api_cl_list": [
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ]
+    ],
+    "api_damage": [
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ]
+    ]
+  },
+  "api_hougeki2": {
+    "api_at_eflag": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "api_at_list": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "api_at_type": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "api_df_list": [
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ]
+    ],
+    "api_si_list": [
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        "Tanaka",
+        "Tanaka"
+      ],
+      [
+        1
+      ],
+      [
+        "Tanaka",
+        "Tanaka",
+        "Tanaka"
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ]
+    ],
+    "api_cl_list": [
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ]
+    ],
+    "api_damage": [
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ]
+    ]
+  },
+  "api_hougeki3": {
+    "api_at_eflag": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "api_at_list": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "api_at_type": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "api_df_list": [
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ]
+    ],
+    "api_si_list": [
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ]
+    ],
+    "api_cl_list": [
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ]
+    ],
+    "api_damage": [
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ]
+    ]
+  },
+  "api_raigeki": {
+    "api_frai": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "api_fcl": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "api_fdam": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "api_fydam": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "api_erai": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "api_ecl": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "api_edam": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "api_eydam": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  }
+}

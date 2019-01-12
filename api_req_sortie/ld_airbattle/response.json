@@ -9,6 +9,12 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "api_air_base_attack": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIAirBaseAttack"
+          }
+        },
         "api_deck_id": {
           "type": "integer"
         },
@@ -119,36 +125,92 @@
       ],
       "title": "APIReqSortieLdAirbattleResponseElement"
     },
-    "APIKouku": {
+    "APIAirBaseAttack": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "api_base_id": {
+          "type": "integer"
+        },
         "api_plane_from": {
           "type": "array",
           "items": {
-            "type": "array",
-            "items": {
-              "type": "integer"
-            }
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "api_squadron_plane": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APISquadronPlane"
           }
         },
         "api_stage1": {
           "$ref": "#/definitions/APIStage1"
         },
         "api_stage2": {
-          "$ref": "#/definitions/APIStage2"
+          "anyOf": [
+            {
+              "$ref": "#/definitions/APIStage2"
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "api_stage3": {
-          "$ref": "#/definitions/APIStage3"
+          "anyOf": [
+            {
+              "$ref": "#/definitions/APIAirBaseAttackAPIStage3"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "api_stage_flag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
         }
       },
       "required": [
+        "api_base_id",
         "api_plane_from",
+        "api_squadron_plane",
         "api_stage1",
         "api_stage2",
-        "api_stage3"
+        "api_stage3",
+        "api_stage_flag"
       ],
-      "title": "APIKouku"
+      "title": "APIAirBaseAttack"
+    },
+    "APISquadronPlane": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_count": {
+          "type": "integer"
+        },
+        "api_mst_id": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_count",
+        "api_mst_id"
+      ],
+      "title": "APISquadronPlane"
     },
     "APIStage1": {
       "type": "object",
@@ -190,6 +252,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "api_air_fire": {
+          "$ref": "#/definitions/APIAirFire"
+        },
         "api_e_count": {
           "type": "integer"
         },
@@ -211,7 +276,113 @@
       ],
       "title": "APIStage2"
     },
-    "APIStage3": {
+    "APIAirFire": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_idx": {
+          "type": "integer"
+        },
+        "api_kind": {
+          "type": "integer"
+        },
+        "api_use_items": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_idx",
+        "api_kind",
+        "api_use_items"
+      ],
+      "title": "APIAirFire"
+    },
+    "APIAirBaseAttackAPIStage3": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_ebak_flag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_ecl_flag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_edam": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_erai_flag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_ebak_flag",
+        "api_ecl_flag",
+        "api_edam",
+        "api_erai_flag"
+      ],
+      "title": "APIAirBaseAttackAPIStage3"
+    },
+    "APIKouku": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_plane_from": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "api_stage1": {
+          "$ref": "#/definitions/APIStage1"
+        },
+        "api_stage2": {
+          "$ref": "#/definitions/APIStage2"
+        },
+        "api_stage3": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/APIKoukuAPIStage3"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "api_plane_from",
+        "api_stage1",
+        "api_stage2",
+        "api_stage3"
+      ],
+      "title": "APIKouku"
+    },
+    "APIKoukuAPIStage3": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -274,7 +445,7 @@
         "api_fdam",
         "api_frai_flag"
       ],
-      "title": "APIStage3"
+      "title": "APIKoukuAPIStage3"
     }
   }
 }

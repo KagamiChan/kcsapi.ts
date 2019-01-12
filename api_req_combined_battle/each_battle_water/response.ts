@@ -9,7 +9,7 @@
  * type for API response at /kcsapi/api_req_combined_battle/each_battle_water
  */
 export interface APIReqCombinedBattleEachBattleWaterResponse {
-  api_air_base_attack: APIAirBaseAttack[]
+  api_air_base_attack?: APIAirBaseAttack[]
   api_deck_id: number
   api_eParam: number[][]
   api_eParam_combined: number[][]
@@ -29,7 +29,7 @@ export interface APIReqCombinedBattleEachBattleWaterResponse {
   api_formation: number[]
   api_hougeki1: APIHougeki
   api_hougeki2: APIHougeki
-  api_hougeki3?: APIHougeki3
+  api_hougeki3?: APIHougeki
   api_hourai_flag: number[]
   api_kouku: APIKouku
   api_midnight_flag: number
@@ -54,9 +54,9 @@ export interface APIAirBaseAttack {
   api_plane_from: Array<number[] | null>
   api_squadron_plane: APISquadronPlane[]
   api_stage1: APIStage1
-  api_stage2: APIStage2
-  api_stage3: APIAirBaseAttackAPIStage3
-  api_stage3_combined: APIAirBaseAttackAPIStage3
+  api_stage2: APIStage2 | null
+  api_stage3: APIAirBaseAttackAPIStage3 | null
+  api_stage3_combined: APIAirBaseAttackAPIStage3 | null
   api_stage_flag: number[]
 }
 
@@ -117,22 +117,12 @@ export interface APIHougeki {
   api_si_list: Array<Array<number | string>>
 }
 
-export interface APIHougeki3 {
-  api_at_eflag: number[]
-  api_at_list: number[]
-  api_at_type: number[]
-  api_cl_list: number[][]
-  api_damage: number[][]
-  api_df_list: number[][]
-  api_si_list: number[][]
-}
-
 export interface APIKouku {
   api_plane_from: number[][]
   api_stage1: APIStage1
   api_stage2: APIStage2
-  api_stage3: APIKoukuAPIStage3
-  api_stage3_combined: APIKoukuAPIStage3
+  api_stage3: APIKoukuAPIStage3 | null
+  api_stage3_combined: APIKoukuAPIStage3 | null
 }
 
 export interface APIKoukuAPIStage3 {

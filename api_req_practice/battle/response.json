@@ -304,6 +304,30 @@
       ],
       "title": "APIInjectionKouku"
     },
+    "APIAirFire": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_idx": {
+          "type": "integer"
+        },
+        "api_kind": {
+          "type": "integer"
+        },
+        "api_use_items": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_idx",
+        "api_kind",
+        "api_use_items"
+      ],
+      "title": "APIAirFire"
+    },
     "APIKouku": {
       "type": "object",
       "additionalProperties": false,
@@ -396,6 +420,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "api_air_fire": {
+          "$ref": "#/definitions/APIAirFire"
+        },
         "api_e_count": {
           "type": "integer"
         },

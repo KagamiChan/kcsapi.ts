@@ -19,6 +19,7 @@ export interface APIReqKousyouRemodelSlotResponse {
 }
 
 export interface APIAfterSlot {
+  api_alv?: number
   api_id: number
   api_level: number
   api_locked: number

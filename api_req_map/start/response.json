@@ -42,6 +42,9 @@
         "api_from_no": {
           "type": "integer"
         },
+        "api_happening": {
+          "$ref": "#/definitions/APIHappening"
+        },
         "api_maparea_id": {
           "type": "integer"
         },
@@ -164,6 +167,39 @@
         "api_now_maphp"
       ],
       "title": "APIEventmap"
+    },
+    "APIHappening": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_count": {
+          "type": "integer"
+        },
+        "api_dentan": {
+          "type": "integer"
+        },
+        "api_icon_id": {
+          "type": "integer"
+        },
+        "api_mst_id": {
+          "type": "integer"
+        },
+        "api_type": {
+          "type": "integer"
+        },
+        "api_usemst": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_count",
+        "api_dentan",
+        "api_icon_id",
+        "api_mst_id",
+        "api_type",
+        "api_usemst"
+      ],
+      "title": "APIHappening"
     },
     "APISelectRoute": {
       "type": "object",

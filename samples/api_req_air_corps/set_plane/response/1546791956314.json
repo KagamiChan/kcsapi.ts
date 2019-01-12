@@ -1,0 +1,13 @@
+{
+  "api_distance": {
+    "api_base": 1,
+    "api_bonus": 1
+  },
+  "api_plane_info": [
+    {
+      "api_squadron_id": 1,
+      "api_state": 1,
+      "api_slotid": 1
+    }
+  ]
+}

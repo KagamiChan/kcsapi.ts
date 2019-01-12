@@ -1,7 +1,4 @@
 {
-  "api_after_fuel": 1,
-  "api_after_bauxite": 1,
-  "api_distance": 1,
   "api_plane_info": [
     {
       "api_squadron_id": 1,
@@ -11,5 +8,10 @@
       "api_max_count": 1,
       "api_cond": 1
     }
-  ]
+  ],
+  "api_after_bauxite": 1,
+  "api_distance": {
+    "api_base": 1,
+    "api_bonus": 1
+  }
 }

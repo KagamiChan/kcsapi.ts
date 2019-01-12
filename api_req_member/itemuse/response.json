@@ -52,6 +52,9 @@
         "api_mst_id": {
           "type": "integer"
         },
+        "api_slotitem": {
+          "$ref": "#/definitions/APISlotitem"
+        },
         "api_usemst": {
           "type": "integer"
         }
@@ -62,6 +65,31 @@
         "api_usemst"
       ],
       "title": "APIGetitem"
+    },
+    "APISlotitem": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_id": {
+          "type": "integer"
+        },
+        "api_level": {
+          "type": "integer"
+        },
+        "api_locked": {
+          "type": "integer"
+        },
+        "api_slotitem_id": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_id",
+        "api_level",
+        "api_locked",
+        "api_slotitem_id"
+      ],
+      "title": "APISlotitem"
     }
   }
 }

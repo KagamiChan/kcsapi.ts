@@ -1,0 +1,13 @@
+{
+  "api_maphp": {
+    "api_now_maphp": 1,
+    "api_max_maphp": 1,
+    "api_gauge_type": 1,
+    "api_gauge_num": 1
+  },
+  "api_sally_flag": [
+    1,
+    1,
+    1
+  ]
+}

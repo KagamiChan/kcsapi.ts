@@ -11,6 +11,12 @@
       "properties": {
         "api_maphp": {
           "$ref": "#/definitions/APIMaphp"
+        },
+        "api_sally_flag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
         }
       },
       "required": [

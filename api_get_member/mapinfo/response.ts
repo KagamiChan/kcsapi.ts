@@ -16,13 +16,13 @@ export interface APIGetMemberMapinfoResponse {
 export interface APIAirBase {
   api_action_kind: number
   api_area_id: number
-  api_distance: APIDistanceClass | number
+  api_distance: APIDistance
   api_name: string
   api_plane_info: APIPlaneInfo[]
   api_rid: number
 }
 
-export interface APIDistanceClass {
+export interface APIDistance {
   api_base: number
   api_bonus: number
 }
@@ -41,18 +41,16 @@ export interface APIMapInfo {
   api_cleared: number
   api_defeat_count?: number
   api_eventmap?: APIEventmap
-  api_exboss_flag?: number
   api_gauge_num?: number
   api_gauge_type?: number
   api_id: number
   api_required_defeat_count?: number
+  api_sally_flag?: number[]
 }
 
 export interface APIEventmap {
-  api_gauge_num: number
-  api_gauge_type: number
-  api_max_maphp: number
-  api_now_maphp: number
+  api_max_maphp?: number
+  api_now_maphp?: number
   api_selected_rank: number
   api_state: number
 }

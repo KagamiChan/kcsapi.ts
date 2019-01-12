@@ -10,6 +10,7 @@
  */
 export interface APIReqMapSelectEventmapRankResponse {
   api_maphp: APIMaphp
+  api_sally_flag?: number[]
 }
 
 export interface APIMaphp {

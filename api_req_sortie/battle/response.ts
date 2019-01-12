@@ -46,7 +46,7 @@ export interface APIAirBaseAttack {
   api_squadron_plane: APISquadronPlane[]
   api_stage1: APIStage1
   api_stage2: APIStage
-  api_stage3: APIAirBaseAttackAPIStage3
+  api_stage3: APIAirBaseAttackAPIStage3 | null
   api_stage_flag: number[]
 }
 

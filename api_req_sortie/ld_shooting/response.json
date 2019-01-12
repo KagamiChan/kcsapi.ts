@@ -1,0 +1,179 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqSortieLdShootingResponseElement"
+  },
+  "definitions": {
+    "APIReqSortieLdShootingResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_deck_id": {
+          "type": "integer"
+        },
+        "api_eParam": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_eSlot": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_e_maxhps": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_e_nowhps": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_fParam": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_f_maxhps": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_f_nowhps": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_formation": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_hougeki1": {
+          "$ref": "#/definitions/APIHougeki1"
+        },
+        "api_midnight_flag": {
+          "type": "integer"
+        },
+        "api_ship_ke": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_ship_lv": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_deck_id",
+        "api_eParam",
+        "api_eSlot",
+        "api_e_maxhps",
+        "api_e_nowhps",
+        "api_fParam",
+        "api_f_maxhps",
+        "api_f_nowhps",
+        "api_formation",
+        "api_hougeki1",
+        "api_midnight_flag",
+        "api_ship_ke",
+        "api_ship_lv"
+      ],
+      "title": "APIReqSortieLdShootingResponseElement"
+    },
+    "APIHougeki1": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_at_eflag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_at_list": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_at_type": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_cl_list": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_damage": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_df_list": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_si_list": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        }
+      },
+      "required": [
+        "api_at_eflag",
+        "api_at_list",
+        "api_at_type",
+        "api_cl_list",
+        "api_damage",
+        "api_df_list",
+        "api_si_list"
+      ],
+      "title": "APIHougeki1"
+    }
+  }
+}

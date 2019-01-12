@@ -39,7 +39,7 @@
           "type": "integer"
         },
         "api_distance": {
-          "$ref": "#/definitions/APIDistanceUnion"
+          "$ref": "#/definitions/APIDistance"
         },
         "api_name": {
           "type": "string"
@@ -64,7 +64,7 @@
       ],
       "title": "APIAirBase"
     },
-    "APIDistanceClass": {
+    "APIDistance": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -79,7 +79,7 @@
         "api_base",
         "api_bonus"
       ],
-      "title": "APIDistanceClass"
+      "title": "APIDistance"
     },
     "APIPlaneInfo": {
       "type": "object",
@@ -127,9 +127,6 @@
         "api_eventmap": {
           "$ref": "#/definitions/APIEventmap"
         },
-        "api_exboss_flag": {
-          "type": "integer"
-        },
         "api_gauge_num": {
           "type": "integer"
         },
@@ -141,6 +138,12 @@
         },
         "api_required_defeat_count": {
           "type": "integer"
+        },
+        "api_sally_flag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
         }
       },
       "required": [
@@ -153,12 +156,6 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "api_gauge_num": {
-          "type": "integer"
-        },
-        "api_gauge_type": {
-          "type": "integer"
-        },
         "api_max_maphp": {
           "type": "integer"
         },
@@ -173,25 +170,10 @@
         }
       },
       "required": [
-        "api_gauge_num",
-        "api_gauge_type",
-        "api_max_maphp",
-        "api_now_maphp",
         "api_selected_rank",
         "api_state"
       ],
       "title": "APIEventmap"
-    },
-    "APIDistanceUnion": {
-      "anyOf": [
-        {
-          "$ref": "#/definitions/APIDistanceClass"
-        },
-        {
-          "type": "integer"
-        }
-      ],
-      "title": "APIDistanceUnion"
     }
   }
 }

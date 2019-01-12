@@ -48,6 +48,18 @@
             "type": "integer"
           }
         },
+        "api_escape_idx": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_escape_idx_combined": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
         "api_fParam": {
           "type": "array",
           "items": {
@@ -278,10 +290,24 @@
           "$ref": "#/definitions/APIStage2"
         },
         "api_stage3": {
-          "$ref": "#/definitions/APIStage3"
+          "anyOf": [
+            {
+              "$ref": "#/definitions/APIStage3"
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "api_stage3_combined": {
-          "$ref": "#/definitions/APIStage3Combined"
+          "anyOf": [
+            {
+              "$ref": "#/definitions/APIStage3Combined"
+            },
+            {
+              "type": "null"
+            }
+          ]
         }
       },
       "required": [

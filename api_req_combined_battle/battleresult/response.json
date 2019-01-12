@@ -215,6 +215,9 @@
         "api_id": {
           "type": "integer"
         },
+        "api_slot_level": {
+          "type": "integer"
+        },
         "api_type": {
           "type": "integer"
         },

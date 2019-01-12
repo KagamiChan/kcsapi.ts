@@ -11,12 +11,43 @@
       "properties": {
         "api_count": {
           "type": "integer"
+        },
+        "api_item": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIItem"
+          }
         }
       },
       "required": [
         "api_count"
       ],
       "title": "APIReqMemberGetIncentiveResponseElement"
+    },
+    "APIItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_getmes": {
+          "type": "string"
+        },
+        "api_mode": {
+          "type": "integer"
+        },
+        "api_mst_id": {
+          "type": "integer"
+        },
+        "api_type": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_getmes",
+        "api_mode",
+        "api_mst_id",
+        "api_type"
+      ],
+      "title": "APIItem"
     }
   }
 }

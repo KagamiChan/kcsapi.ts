@@ -15,6 +15,8 @@ export interface APIReqCombinedBattleLdAirbattleResponse {
   api_eSlot: number[][]
   api_e_maxhps: number[]
   api_e_nowhps: number[]
+  api_escape_idx?: number[]
+  api_escape_idx_combined?: number[]
   api_fParam: number[][]
   api_fParam_combined: number[][]
   api_f_maxhps: number[]
@@ -58,8 +60,8 @@ export interface APIKouku {
   api_plane_from: number[][]
   api_stage1: APIStage1
   api_stage2: APIStage2
-  api_stage3: APIStage3
-  api_stage3_combined: APIStage3Combined
+  api_stage3: APIStage3 | null
+  api_stage3_combined: APIStage3Combined | null
 }
 
 export interface APIStage2 {

@@ -16,7 +16,7 @@ export interface APIReqQuestClearitemgetResponse {
 
 export interface APIBounus {
   api_count: number
-  api_item: APIItem
+  api_item?: APIItem
   api_type: number
 }
 

@@ -259,7 +259,14 @@
           "$ref": "#/definitions/APIStage"
         },
         "api_stage3": {
-          "$ref": "#/definitions/APIAirBaseAttackAPIStage3"
+          "anyOf": [
+            {
+              "$ref": "#/definitions/APIAirBaseAttackAPIStage3"
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "api_stage_flag": {
           "type": "array",

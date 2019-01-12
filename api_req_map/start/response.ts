@@ -19,6 +19,7 @@ export interface APIReqMapStartResponse {
   api_event_kind: number
   api_eventmap?: APIEventmap
   api_from_no: number
+  api_happening?: APIHappening
   api_maparea_id: number
   api_mapinfo_no: number
   api_next: number
@@ -50,6 +51,15 @@ export interface APIEventmap {
   api_dmg: number
   api_max_maphp: number
   api_now_maphp: number
+}
+
+export interface APIHappening {
+  api_count: number
+  api_dentan: number
+  api_icon_id: number
+  api_mst_id: number
+  api_type: number
+  api_usemst: number
 }
 
 export interface APISelectRoute {

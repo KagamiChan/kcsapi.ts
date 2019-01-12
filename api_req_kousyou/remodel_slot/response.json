@@ -53,6 +53,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "api_alv": {
+          "type": "integer"
+        },
         "api_id": {
           "type": "integer"
         },

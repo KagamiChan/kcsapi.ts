@@ -11,8 +11,13 @@
 export interface APIReqAirCorpsSupplyResponse {
   api_after_bauxite: number
   api_after_fuel: number
-  api_distance: number
+  api_distance: APIDistance
   api_plane_info: APIPlaneInfo[]
+}
+
+export interface APIDistance {
+  api_base: number
+  api_bonus: number
 }
 
 export interface APIPlaneInfo {

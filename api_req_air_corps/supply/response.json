@@ -16,7 +16,7 @@
           "type": "integer"
         },
         "api_distance": {
-          "type": "integer"
+          "$ref": "#/definitions/APIDistance"
         },
         "api_plane_info": {
           "type": "array",
@@ -32,6 +32,23 @@
         "api_plane_info"
       ],
       "title": "APIReqAirCorpsSupplyResponseElement"
+    },
+    "APIDistance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_base": {
+          "type": "integer"
+        },
+        "api_bonus": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_base",
+        "api_bonus"
+      ],
+      "title": "APIDistance"
     },
     "APIPlaneInfo": {
       "type": "object",

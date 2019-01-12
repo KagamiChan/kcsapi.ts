@@ -18,5 +18,13 @@ export interface APIReqMemberItemuseResponse {
 export interface APIGetitem {
   api_getcount: number
   api_mst_id: number
+  api_slotitem?: APISlotitem
   api_usemst: number
+}
+
+export interface APISlotitem {
+  api_id: number
+  api_level: number
+  api_locked: number
+  api_slotitem_id: number
 }

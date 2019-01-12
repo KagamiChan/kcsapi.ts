@@ -23,7 +23,6 @@
         }
       },
       "required": [
-        "api_strike_point_1",
         "api_verno"
       ],
       "title": "APIReqMapStartAirBaseRequestElement"

@@ -54,6 +54,7 @@ export interface APIEscape {
 
 export interface APIGetEventitem {
   api_id: number
+  api_slot_level?: number
   api_type: number
   api_value: number
 }

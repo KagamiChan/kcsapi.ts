@@ -23,11 +23,6 @@ export { APIGetMemberMissionRequest } from './api_get_member/mission/request'
 export { APIGetMemberMissionResponse } from './api_get_member/mission/response'
 export { APIGetMemberNdockRequest } from './api_get_member/ndock/request'
 export { APIGetMemberNdockResponse } from './api_get_member/ndock/response'
-export { APIGetMemberPayitemRequest } from './api_get_member/payitem/request'
-export {
-  APIGetMemberPayitemResponseSuccess,
-  APIGetMemberPayitemResponseFail,
-} from './api_get_member/payitem/response'
 export { APIGetMemberPictureBookRequest } from './api_get_member/picture_book/request'
 export { APIGetMemberPictureBookResponse } from './api_get_member/picture_book/response'
 export { APIGetMemberPracticeRequest } from './api_get_member/practice/request'
@@ -63,6 +58,12 @@ export { APIReqAirCorpsSupplyRequest } from './api_req_air_corps/supply/request'
 export { APIReqAirCorpsSupplyResponse } from './api_req_air_corps/supply/response'
 export { APIReqBattleMidnightBattleRequest } from './api_req_battle_midnight/battle/request'
 export { APIReqBattleMidnightBattleResponse } from './api_req_battle_midnight/battle/response'
+export {
+  APIReqBattleMidnightSpMidnightRequest,
+} from './api_req_battle_midnight/sp_midnight/request'
+export {
+  APIReqBattleMidnightSpMidnightResponse,
+} from './api_req_battle_midnight/sp_midnight/response'
 export {
   APIReqCombinedBattleBattleWaterRequest,
 } from './api_req_combined_battle/battle_water/request'
@@ -196,7 +197,7 @@ export { APIReqMemberItemuseRequest } from './api_req_member/itemuse/request'
 export { APIReqMemberItemuseResponse } from './api_req_member/itemuse/response'
 export { APIReqMemberPayitemuseRequest } from './api_req_member/payitemuse/request'
 export { APIReqMemberPayitemuseResponse } from './api_req_member/payitemuse/response'
-export { APIReqMemberSetOSSConditionResponse } from './api_req_member/set_oss_condition/response'
+export { APIReqMemberSetOssConditionResponse } from './api_req_member/set_oss_condition/response'
 export { APIReqMissionResultRequest } from './api_req_mission/result/request'
 export { APIReqMissionResultResponse } from './api_req_mission/result/response'
 export { APIReqMissionReturnInstructionRequest } from './api_req_mission/return_instruction/request'
@@ -234,5 +235,7 @@ export { APIReqSortieBattleResponse } from './api_req_sortie/battle/response'
 export { APIReqSortieBattleresultResponse } from './api_req_sortie/battleresult/response'
 export { APIReqSortieLdAirbattleRequest } from './api_req_sortie/ld_airbattle/request'
 export { APIReqSortieLdAirbattleResponse } from './api_req_sortie/ld_airbattle/response'
+export { APIReqSortieLdShootingRequest } from './api_req_sortie/ld_shooting/request'
+export { APIReqSortieLdShootingResponse } from './api_req_sortie/ld_shooting/response'
 export { APIStart2GetDataRequest } from './api_start2/getData/request'
 export { APIStart2GetDataResponse } from './api_start2/getData/response'

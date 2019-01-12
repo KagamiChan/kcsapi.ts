@@ -1,0 +1,17 @@
+{
+  "api_caution_flag": 1,
+  "api_flag": 1,
+  "api_getitem": [
+    {
+      "api_usemst": 1,
+      "api_mst_id": 1,
+      "api_getcount": 1,
+      "api_slotitem": {
+        "api_id": 1,
+        "api_slotitem_id": 1,
+        "api_locked": 1,
+        "api_level": 1
+      }
+    }
+  ]
+}

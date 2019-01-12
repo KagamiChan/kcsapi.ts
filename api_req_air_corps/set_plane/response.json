@@ -13,7 +13,7 @@
           "type": "integer"
         },
         "api_distance": {
-          "type": "integer"
+          "$ref": "#/definitions/APIDistance"
         },
         "api_plane_info": {
           "type": "array",
@@ -23,11 +23,27 @@
         }
       },
       "required": [
-        "api_after_bauxite",
         "api_distance",
         "api_plane_info"
       ],
       "title": "APIReqAirCorpsSetPlaneResponseElement"
+    },
+    "APIDistance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_base": {
+          "type": "integer"
+        },
+        "api_bonus": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_base",
+        "api_bonus"
+      ],
+      "title": "APIDistance"
     },
     "APIPlaneInfo": {
       "type": "object",
@@ -53,9 +69,6 @@
         }
       },
       "required": [
-        "api_cond",
-        "api_count",
-        "api_max_count",
         "api_slotid",
         "api_squadron_id",
         "api_state"

@@ -141,7 +141,6 @@ const main = async () => {
           const valid = ajv.validate(schema, [data])
 
           if (valid) {
-            console.info(`${schemaPath} complies with current type, skipping`)
             return Promise.resolve()
           }
 

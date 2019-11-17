@@ -18,21 +18,21 @@ export interface APIReqCombinedBattleBattleresultResponse {
   api_get_base_exp: number
   api_get_eventflag?: number
   api_get_eventitem?: APIGetEventitem[]
-  api_get_exmap_rate: number
-  api_get_exmap_useitem_id: number
+  api_get_exmap_rate: number | string
+  api_get_exmap_useitem_id: number | string
   api_get_exp: number
   api_get_exp_lvup: number[][]
-  api_get_exp_lvup_combined: number[][]
+  api_get_exp_lvup_combined: number[][] | null
   api_get_flag: number[]
   api_get_ship?: APIGetShip
   api_get_ship_exp: number[]
-  api_get_ship_exp_combined: number[]
+  api_get_ship_exp_combined: number[] | null
   api_m1?: number
   api_m_suffix?: string
   api_member_exp: number
   api_member_lv: number
   api_mvp: number
-  api_mvp_combined: number
+  api_mvp_combined: number | null
   api_next_map_ids?: string[]
   api_ope_suffix?: string
   api_quest_level: number

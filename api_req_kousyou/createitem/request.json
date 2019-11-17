@@ -21,6 +21,9 @@
         "api_item4": {
           "type": "string"
         },
+        "api_multiple_flag": {
+          "type": "string"
+        },
         "api_verno": {
           "type": "string"
         }

@@ -96,7 +96,7 @@
         "api_touch_plane": {
           "type": "array",
           "items": {
-            "type": "integer"
+            "$ref": "#/definitions/API"
           }
         }
       },
@@ -173,7 +173,7 @@
           "items": {
             "type": "array",
             "items": {
-              "$ref": "#/definitions/APISiList"
+              "$ref": "#/definitions/API"
             }
           }
         },
@@ -196,7 +196,7 @@
       ],
       "title": "APIHougeki"
     },
-    "APISiList": {
+    "API": {
       "anyOf": [
         {
           "type": "integer"
@@ -205,7 +205,7 @@
           "type": "string"
         }
       ],
-      "title": "APISiList"
+      "title": "API"
     }
   }
 }

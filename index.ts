@@ -59,10 +59,10 @@ export { APIReqAirCorpsSupplyResponse } from './api_req_air_corps/supply/respons
 export { APIReqBattleMidnightBattleRequest } from './api_req_battle_midnight/battle/request'
 export { APIReqBattleMidnightBattleResponse } from './api_req_battle_midnight/battle/response'
 export {
-  APIReqBattleMidnightSpMidnightRequest,
+  APIReqBattleMidnightSPMidnightRequest,
 } from './api_req_battle_midnight/sp_midnight/request'
 export {
-  APIReqBattleMidnightSpMidnightResponse,
+  APIReqBattleMidnightSPMidnightResponse,
 } from './api_req_battle_midnight/sp_midnight/response'
 export {
   APIReqCombinedBattleBattleWaterRequest,
@@ -87,6 +87,8 @@ export {
 export {
   APIReqCombinedBattleEachBattleResponse,
 } from './api_req_combined_battle/each_battle/response'
+export { APIReqCombinedBattleEcBattleRequest } from './api_req_combined_battle/ec_battle/request'
+export { APIReqCombinedBattleEcBattleResponse } from './api_req_combined_battle/ec_battle/response'
 export {
   APIReqCombinedBattleEcMidnightBattleRequest,
 } from './api_req_combined_battle/ec_midnight_battle/request'
@@ -197,7 +199,13 @@ export { APIReqMemberItemuseRequest } from './api_req_member/itemuse/request'
 export { APIReqMemberItemuseResponse } from './api_req_member/itemuse/response'
 export { APIReqMemberPayitemuseRequest } from './api_req_member/payitemuse/request'
 export { APIReqMemberPayitemuseResponse } from './api_req_member/payitemuse/response'
-export { APIReqMemberSetOssConditionResponse } from './api_req_member/set_oss_condition/response'
+export {
+  APIReqMemberSetFlagshipPositionRequest,
+} from './api_req_member/set_flagship_position/request'
+export {
+  APIReqMemberSetFlagshipPositionResponse,
+} from './api_req_member/set_flagship_position/response'
+export { APIReqMemberSetOSSConditionResponse } from './api_req_member/set_oss_condition/response'
 export { APIReqMissionResultRequest } from './api_req_mission/result/request'
 export { APIReqMissionResultResponse } from './api_req_mission/result/response'
 export { APIReqMissionReturnInstructionRequest } from './api_req_mission/return_instruction/request'

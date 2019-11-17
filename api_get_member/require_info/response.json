@@ -33,6 +33,9 @@
         "api_oss_setting": {
           "$ref": "#/definitions/APIOSSSetting"
         },
+        "api_position_id": {
+          "type": "integer"
+        },
         "api_skin_id": {
           "type": "integer"
         },

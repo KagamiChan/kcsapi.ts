@@ -115,6 +115,7 @@ export interface APIMstMapinfo {
 }
 
 export interface APIMstMission {
+  api_damage_type?: number
   api_deck_num: number
   api_details: string
   api_difficulty: number
@@ -122,12 +123,15 @@ export interface APIMstMission {
   api_id: number
   api_maparea_id: number
   api_name: string
+  api_reset_type?: number
   api_return_flag: number
+  api_sample_fleet?: number[]
   api_time: number
   api_use_bull: number
   api_use_fuel: number
   api_win_item1: number[]
   api_win_item2: number[]
+  api_win_mat_level?: number[]
 }
 
 export interface APIMstPayitem {
@@ -174,28 +178,30 @@ export interface APIMstShip {
 }
 
 export interface APIMstShipgraph {
-  api_battle_d: number[]
-  api_battle_n: number[]
-  api_boko_d: number[]
-  api_boko_n: number[]
-  api_ensyue_n: number[]
-  api_ensyuf_d: number[]
-  api_ensyuf_n: number[]
+  api_battle_d?: number[]
+  api_battle_n?: number[]
+  api_boko_d?: number[]
+  api_boko_n?: number[]
+  api_ensyue_n?: number[]
+  api_ensyuf_d?: number[]
+  api_ensyuf_n?: number[]
   api_filename: string
   api_id: number
-  api_kaisyu_d: number[]
-  api_kaisyu_n: number[]
-  api_kaizo_d: number[]
-  api_kaizo_n: number[]
-  api_map_d: number[]
-  api_map_n: number[]
-  api_sortno: number
+  api_kaisyu_d?: number[]
+  api_kaisyu_n?: number[]
+  api_kaizo_d?: number[]
+  api_kaizo_n?: number[]
+  api_map_d?: number[]
+  api_map_n?: number[]
+  api_pa?: number[]
+  api_sortno?: number
   api_version: string[]
-  api_weda: number[]
-  api_wedb: number[]
+  api_weda?: number[]
+  api_wedb?: number[]
 }
 
 export interface APIMstShipupgrade {
+  api_aviation_mat_count?: number
   api_catapult_count: number
   api_current_ship_id: number
   api_drawing_count: number
@@ -218,7 +224,7 @@ export interface APIMstSlotitem {
   api_houk: number
   api_houm: number
   api_id: number
-  api_info: string
+  api_info?: string
   api_leng: number
   api_luck: number
   api_name: string

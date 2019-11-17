@@ -23,7 +23,7 @@ export interface APIReqBattleMidnightSPMidnightResponse {
   api_n_support_flag: number
   api_ship_ke: number[]
   api_ship_lv: number[]
-  api_touch_plane: number[]
+  api_touch_plane: Array<number | string>
 }
 
 export interface APIHougeki {

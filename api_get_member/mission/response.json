@@ -2,13 +2,10 @@
   "$schema": "http://json-schema.org/draft-06/schema#",
   "type": "array",
   "items": {
-    "type": "array",
-    "items": {
-      "$ref": "#/definitions/APIGetMemberMissionResponseElement"
-    }
+    "$ref": "#/definitions/APIGetMemberMissionResponseElement"
   },
   "definitions": {
-    "APIGetMemberMissionResponseElement": {
+    "API": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -22,6 +19,43 @@
       "required": [
         "api_mission_id",
         "api_state"
+      ],
+      "title": "API"
+    },
+    "APIGetMemberMissionResponseClass": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_limit_time": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_list_items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/API"
+          }
+        }
+      },
+      "required": [
+        "api_limit_time",
+        "api_list_items"
+      ],
+      "title": "APIGetMemberMissionResponseClass"
+    },
+    "APIGetMemberMissionResponseElement": {
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/API"
+          }
+        },
+        {
+          "$ref": "#/definitions/APIGetMemberMissionResponseClass"
+        }
       ],
       "title": "APIGetMemberMissionResponseElement"
     }

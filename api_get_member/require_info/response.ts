@@ -14,6 +14,7 @@ export interface APIGetMemberRequireInfoResponse {
   api_furniture: APIFurniture[]
   api_kdock: APIKdock[]
   api_oss_setting: APIOSSSetting
+  api_position_id?: number
   api_skin_id: number
   api_slot_item: APISlotItem[]
   api_unsetslot: { [key: string]: number[] }

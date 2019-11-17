@@ -55,6 +55,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "api_c_flag": {
+          "type": "integer"
+        },
         "api_no": {
           "type": "integer"
         },

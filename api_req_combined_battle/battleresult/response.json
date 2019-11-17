@@ -47,10 +47,10 @@
           }
         },
         "api_get_exmap_rate": {
-          "type": "integer"
+          "$ref": "#/definitions/APIGetExmap"
         },
         "api_get_exmap_useitem_id": {
-          "type": "integer"
+          "$ref": "#/definitions/APIGetExmap"
         },
         "api_get_exp": {
           "type": "integer"
@@ -65,13 +65,20 @@
           }
         },
         "api_get_exp_lvup_combined": {
-          "type": "array",
-          "items": {
-            "type": "array",
-            "items": {
-              "type": "integer"
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              }
+            },
+            {
+              "type": "null"
             }
-          }
+          ]
         },
         "api_get_flag": {
           "type": "array",
@@ -89,10 +96,17 @@
           }
         },
         "api_get_ship_exp_combined": {
-          "type": "array",
-          "items": {
-            "type": "integer"
-          }
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "api_m1": {
           "type": "integer"
@@ -110,7 +124,14 @@
           "type": "integer"
         },
         "api_mvp_combined": {
-          "type": "integer"
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "api_next_map_ids": {
           "type": "array",
@@ -256,6 +277,17 @@
         "api_ship_type"
       ],
       "title": "APIGetShip"
+    },
+    "APIGetExmap": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "string"
+        }
+      ],
+      "title": "APIGetExmap"
     }
   }
 }

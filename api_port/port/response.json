@@ -12,6 +12,9 @@
         "api_basic": {
           "$ref": "#/definitions/APIBasic"
         },
+        "api_c_flag": {
+          "type": "integer"
+        },
         "api_combined_flag": {
           "type": "integer"
         },

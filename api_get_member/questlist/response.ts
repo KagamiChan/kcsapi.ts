@@ -20,6 +20,7 @@ export interface APIGetMemberQuestlistResponse {
 }
 
 export interface APICList {
+  api_c_flag?: number
   api_no: number
   api_progress_flag: number
   api_state: number

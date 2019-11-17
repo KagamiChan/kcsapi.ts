@@ -12,8 +12,11 @@
         "api_create_flag": {
           "type": "integer"
         },
-        "api_fdata": {
-          "type": "string"
+        "api_get_items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIGetItem"
+          }
         },
         "api_material": {
           "type": "array",
@@ -21,30 +24,29 @@
             "type": "integer"
           }
         },
-        "api_shizai_flag": {
-          "type": "integer"
-        },
-        "api_slot_item": {
-          "$ref": "#/definitions/APISlotItem"
-        },
-        "api_type3": {
-          "type": "integer"
-        },
-        "api_unsetslot": {
-          "type": "array",
-          "items": {
-            "type": "integer"
-          }
+        "api_unset_items": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/APIUnsetItem"
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
         }
       },
       "required": [
         "api_create_flag",
+        "api_get_items",
         "api_material",
-        "api_shizai_flag"
+        "api_unset_items"
       ],
       "title": "APIReqKousyouCreateitemResponseElement"
     },
-    "APISlotItem": {
+    "APIGetItem": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -59,7 +61,27 @@
         "api_id",
         "api_slotitem_id"
       ],
-      "title": "APISlotItem"
+      "title": "APIGetItem"
+    },
+    "APIUnsetItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_slot_list": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_type3": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_slot_list",
+        "api_type3"
+      ],
+      "title": "APIUnsetItem"
     }
   }
 }

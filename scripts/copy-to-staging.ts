@@ -5,7 +5,7 @@ import { get } from 'lodash'
 import path from 'path'
 import mm from 'micromatch'
 
-const limit = +new Date('2018.12.3')
+const limit = +new Date('2019.10.1')
 
 const main = async () => {
   // FIXME: use given path

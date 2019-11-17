@@ -489,6 +489,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "api_damage_type": {
+          "type": "integer"
+        },
         "api_deck_num": {
           "type": "integer"
         },
@@ -510,8 +513,17 @@
         "api_name": {
           "type": "string"
         },
+        "api_reset_type": {
+          "type": "integer"
+        },
         "api_return_flag": {
           "type": "integer"
+        },
+        "api_sample_fleet": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
         },
         "api_time": {
           "type": "integer"
@@ -529,6 +541,12 @@
           }
         },
         "api_win_item2": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_win_mat_level": {
           "type": "array",
           "items": {
             "type": "integer"
@@ -817,6 +835,12 @@
             "type": "integer"
           }
         },
+        "api_pa": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
         "api_sortno": {
           "type": "integer"
         },
@@ -840,25 +864,9 @@
         }
       },
       "required": [
-        "api_battle_d",
-        "api_battle_n",
-        "api_boko_d",
-        "api_boko_n",
-        "api_ensyue_n",
-        "api_ensyuf_d",
-        "api_ensyuf_n",
         "api_filename",
         "api_id",
-        "api_kaisyu_d",
-        "api_kaisyu_n",
-        "api_kaizo_d",
-        "api_kaizo_n",
-        "api_map_d",
-        "api_map_n",
-        "api_sortno",
-        "api_version",
-        "api_weda",
-        "api_wedb"
+        "api_version"
       ],
       "title": "APIMstShipgraph"
     },
@@ -866,6 +874,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "api_aviation_mat_count": {
+          "type": "integer"
+        },
         "api_catapult_count": {
           "type": "integer"
         },
@@ -1014,7 +1025,6 @@
         "api_houk",
         "api_houm",
         "api_id",
-        "api_info",
         "api_leng",
         "api_luck",
         "api_name",

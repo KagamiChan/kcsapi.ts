@@ -10,6 +10,7 @@
  */
 export interface APIPortPortResponse {
   api_basic: APIBasic
+  api_c_flag?: number
   api_combined_flag?: number
   api_deck_port: APIDeckPort[]
   api_dest_ship_slot: number

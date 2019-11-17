@@ -13,5 +13,6 @@ export interface APIReqKousyouCreateitemRequest {
   api_item2: string
   api_item3: string
   api_item4: string
+  api_multiple_flag?: string
   api_verno: string
 }

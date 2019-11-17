@@ -10,15 +10,17 @@
  */
 export interface APIReqKousyouCreateitemResponse {
   api_create_flag: number
-  api_fdata?: string
+  api_get_items: APIGetItem[]
   api_material: number[]
-  api_shizai_flag: number
-  api_slot_item?: APISlotItem
-  api_type3?: number
-  api_unsetslot?: number[]
+  api_unset_items: APIUnsetItem[] | null
 }
 
-export interface APISlotItem {
+export interface APIGetItem {
   api_id: number
   api_slotitem_id: number
+}
+
+export interface APIUnsetItem {
+  api_slot_list: number[]
+  api_type3: number
 }

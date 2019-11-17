@@ -58,61 +58,27 @@ export { APIReqAirCorpsSupplyRequest } from './api_req_air_corps/supply/request'
 export { APIReqAirCorpsSupplyResponse } from './api_req_air_corps/supply/response'
 export { APIReqBattleMidnightBattleRequest } from './api_req_battle_midnight/battle/request'
 export { APIReqBattleMidnightBattleResponse } from './api_req_battle_midnight/battle/response'
-export {
-  APIReqBattleMidnightSPMidnightRequest,
-} from './api_req_battle_midnight/sp_midnight/request'
-export {
-  APIReqBattleMidnightSPMidnightResponse,
-} from './api_req_battle_midnight/sp_midnight/response'
-export {
-  APIReqCombinedBattleBattleWaterRequest,
-} from './api_req_combined_battle/battle_water/request'
-export {
-  APIReqCombinedBattleBattleWaterResponse,
-} from './api_req_combined_battle/battle_water/response'
+export { APIReqBattleMidnightSPMidnightRequest } from './api_req_battle_midnight/sp_midnight/request'
+export { APIReqBattleMidnightSPMidnightResponse } from './api_req_battle_midnight/sp_midnight/response'
+export { APIReqCombinedBattleBattleWaterRequest } from './api_req_combined_battle/battle_water/request'
+export { APIReqCombinedBattleBattleWaterResponse } from './api_req_combined_battle/battle_water/response'
 export { APIReqCombinedBattleBattleRequest } from './api_req_combined_battle/battle/request'
 export { APIReqCombinedBattleBattleResponse } from './api_req_combined_battle/battle/response'
-export {
-  APIReqCombinedBattleBattleresultResponse,
-} from './api_req_combined_battle/battleresult/response'
-export {
-  APIReqCombinedBattleEachBattleWaterRequest,
-} from './api_req_combined_battle/each_battle_water/request'
-export {
-  APIReqCombinedBattleEachBattleWaterResponse,
-} from './api_req_combined_battle/each_battle_water/response'
-export {
-  APIReqCombinedBattleEachBattleRequest,
-} from './api_req_combined_battle/each_battle/request'
-export {
-  APIReqCombinedBattleEachBattleResponse,
-} from './api_req_combined_battle/each_battle/response'
+export { APIReqCombinedBattleBattleresultResponse } from './api_req_combined_battle/battleresult/response'
+export { APIReqCombinedBattleEachBattleWaterRequest } from './api_req_combined_battle/each_battle_water/request'
+export { APIReqCombinedBattleEachBattleWaterResponse } from './api_req_combined_battle/each_battle_water/response'
+export { APIReqCombinedBattleEachBattleRequest } from './api_req_combined_battle/each_battle/request'
+export { APIReqCombinedBattleEachBattleResponse } from './api_req_combined_battle/each_battle/response'
 export { APIReqCombinedBattleEcBattleRequest } from './api_req_combined_battle/ec_battle/request'
 export { APIReqCombinedBattleEcBattleResponse } from './api_req_combined_battle/ec_battle/response'
-export {
-  APIReqCombinedBattleEcMidnightBattleRequest,
-} from './api_req_combined_battle/ec_midnight_battle/request'
-export {
-  APIReqCombinedBattleEcMidnightBattleResponse,
-} from './api_req_combined_battle/ec_midnight_battle/response'
-export {
-  APIReqCombinedBattleGobackPortRequest,
-} from './api_req_combined_battle/goback_port/request'
-export {
-  APIReqCombinedBattleGobackPortResponse,
-} from './api_req_combined_battle/goback_port/response'
-export {
-  APIReqCombinedBattleLdAirbattleRequest,
-} from './api_req_combined_battle/ld_airbattle/request'
-export {
-  APIReqCombinedBattleLdAirbattleResponse,
-} from './api_req_combined_battle/ld_airbattle/response'
-export {
-  APIReqCombinedBattleMidnightBattleRequest,
-} from './api_req_combined_battle/midnight_battle/request'
-export {
-  APIReqCombinedBattleMidnightBattleResponse,
-} from './api_req_combined_battle/midnight_battle/response'
+export { APIReqCombinedBattleEcMidnightBattleRequest } from './api_req_combined_battle/ec_midnight_battle/request'
+export { APIReqCombinedBattleEcMidnightBattleResponse } from './api_req_combined_battle/ec_midnight_battle/response'
+export { APIReqCombinedBattleGobackPortRequest } from './api_req_combined_battle/goback_port/request'
+export { APIReqCombinedBattleGobackPortResponse } from './api_req_combined_battle/goback_port/response'
+export { APIReqCombinedBattleLdAirbattleRequest } from './api_req_combined_battle/ld_airbattle/request'
+export { APIReqCombinedBattleLdAirbattleResponse } from './api_req_combined_battle/ld_airbattle/response'
+export { APIReqCombinedBattleMidnightBattleRequest } from './api_req_combined_battle/midnight_battle/request'
+export { APIReqCombinedBattleMidnightBattleResponse } from './api_req_combined_battle/midnight_battle/response'
 export { APIReqFurnitureBuyRequest } from './api_req_furniture/buy/request'
 export { APIReqFurnitureBuyResponse } from './api_req_furniture/buy/response'
 export { APIReqFurnitureChangeRequest } from './api_req_furniture/change/request'
@@ -144,9 +110,7 @@ export { APIReqKaisouRemodelingResponse } from './api_req_kaisou/remodeling/resp
 export { APIReqKaisouSlotDepriveRequest } from './api_req_kaisou/slot_deprive/request'
 export { APIReqKaisouSlotDepriveResponse } from './api_req_kaisou/slot_deprive/response'
 export { APIReqKaisouSlotExchangeIndexRequest } from './api_req_kaisou/slot_exchange_index/request'
-export {
-  APIReqKaisouSlotExchangeIndexResponse,
-} from './api_req_kaisou/slot_exchange_index/response'
+export { APIReqKaisouSlotExchangeIndexResponse } from './api_req_kaisou/slot_exchange_index/response'
 export { APIReqKaisouSlotsetExRequest } from './api_req_kaisou/slotset_ex/request'
 export { APIReqKaisouSlotsetExResponse } from './api_req_kaisou/slotset_ex/response'
 export { APIReqKaisouSlotsetRequest } from './api_req_kaisou/slotset/request'
@@ -155,12 +119,8 @@ export { APIReqKaisouUnsetslotAllRequest } from './api_req_kaisou/unsetslot_all/
 export { APIReqKaisouUnsetslotAllResponse } from './api_req_kaisou/unsetslot_all/response'
 export { APIReqKousyouCreateitemRequest } from './api_req_kousyou/createitem/request'
 export { APIReqKousyouCreateitemResponse } from './api_req_kousyou/createitem/response'
-export {
-  APIReqKousyouCreateshipSpeedchangeRequest,
-} from './api_req_kousyou/createship_speedchange/request'
-export {
-  APIReqKousyouCreateshipSpeedchangeResponse,
-} from './api_req_kousyou/createship_speedchange/response'
+export { APIReqKousyouCreateshipSpeedchangeRequest } from './api_req_kousyou/createship_speedchange/request'
+export { APIReqKousyouCreateshipSpeedchangeResponse } from './api_req_kousyou/createship_speedchange/response'
 export { APIReqKousyouCreateshipResponse } from './api_req_kousyou/createship/response'
 export { APIReqKousyouDestroyitem2Request } from './api_req_kousyou/destroyitem2/request'
 export { APIReqKousyouDestroyitem2Response } from './api_req_kousyou/destroyitem2/response'
@@ -170,12 +130,8 @@ export { APIReqKousyouGetshipRequest } from './api_req_kousyou/getship/request'
 export { APIReqKousyouGetshipResponse } from './api_req_kousyou/getship/response'
 export { APIReqKousyouRemodelSlotRequest } from './api_req_kousyou/remodel_slot/request'
 export { APIReqKousyouRemodelSlotResponse } from './api_req_kousyou/remodel_slot/response'
-export {
-  APIReqKousyouRemodelSlotlistDetailRequest,
-} from './api_req_kousyou/remodel_slotlist_detail/request'
-export {
-  APIReqKousyouRemodelSlotlistDetailResponse,
-} from './api_req_kousyou/remodel_slotlist_detail/response'
+export { APIReqKousyouRemodelSlotlistDetailRequest } from './api_req_kousyou/remodel_slotlist_detail/request'
+export { APIReqKousyouRemodelSlotlistDetailResponse } from './api_req_kousyou/remodel_slotlist_detail/response'
 export { APIReqKousyouRemodelSlotlistRequest } from './api_req_kousyou/remodel_slotlist/request'
 export { APIReqMapNextRequest } from './api_req_map/next/request'
 export { APIReqMapNextResponse } from './api_req_map/next/response'
@@ -187,31 +143,21 @@ export { APIReqMapStartRequest } from './api_req_map/start/request'
 export { APIReqMapStartResponse } from './api_req_map/start/response'
 export { APIReqMemberGetIncentiveRequest } from './api_req_member/get_incentive/request'
 export { APIReqMemberGetIncentiveResponse } from './api_req_member/get_incentive/response'
-export {
-  APIReqMemberGetPracticeEnemyinfoRequest,
-} from './api_req_member/get_practice_enemyinfo/request'
-export {
-  APIReqMemberGetPracticeEnemyinfoResponse,
-} from './api_req_member/get_practice_enemyinfo/response'
+export { APIReqMemberGetPracticeEnemyinfoRequest } from './api_req_member/get_practice_enemyinfo/request'
+export { APIReqMemberGetPracticeEnemyinfoResponse } from './api_req_member/get_practice_enemyinfo/response'
 export { APIReqMemberItemuseCondRequest } from './api_req_member/itemuse_cond/request'
 export { APIReqMemberItemuseCondResponse } from './api_req_member/itemuse_cond/response'
 export { APIReqMemberItemuseRequest } from './api_req_member/itemuse/request'
 export { APIReqMemberItemuseResponse } from './api_req_member/itemuse/response'
 export { APIReqMemberPayitemuseRequest } from './api_req_member/payitemuse/request'
 export { APIReqMemberPayitemuseResponse } from './api_req_member/payitemuse/response'
-export {
-  APIReqMemberSetFlagshipPositionRequest,
-} from './api_req_member/set_flagship_position/request'
-export {
-  APIReqMemberSetFlagshipPositionResponse,
-} from './api_req_member/set_flagship_position/response'
+export { APIReqMemberSetFlagshipPositionRequest } from './api_req_member/set_flagship_position/request'
+export { APIReqMemberSetFlagshipPositionResponse } from './api_req_member/set_flagship_position/response'
 export { APIReqMemberSetOSSConditionResponse } from './api_req_member/set_oss_condition/response'
 export { APIReqMissionResultRequest } from './api_req_mission/result/request'
 export { APIReqMissionResultResponse } from './api_req_mission/result/response'
 export { APIReqMissionReturnInstructionRequest } from './api_req_mission/return_instruction/request'
-export {
-  APIReqMissionReturnInstructionResponse,
-} from './api_req_mission/return_instruction/response'
+export { APIReqMissionReturnInstructionResponse } from './api_req_mission/return_instruction/response'
 export { APIReqMissionStartRequest } from './api_req_mission/start/request'
 export { APIReqMissionStartResponse } from './api_req_mission/start/response'
 export { APIReqNyukyoSpeedchangeRequest } from './api_req_nyukyo/speedchange/request'
@@ -222,12 +168,8 @@ export { APIReqPracticeBattleResultRequest } from './api_req_practice/battle_res
 export { APIReqPracticeBattleResultResponse } from './api_req_practice/battle_result/response'
 export { APIReqPracticeBattleRequest } from './api_req_practice/battle/request'
 export { APIReqPracticeBattleResponse } from './api_req_practice/battle/response'
-export {
-  APIReqPracticeChangeMatchingKindRequest,
-} from './api_req_practice/change_matching_kind/request'
-export {
-  APIReqPracticeChangeMatchingKindResponse,
-} from './api_req_practice/change_matching_kind/response'
+export { APIReqPracticeChangeMatchingKindRequest } from './api_req_practice/change_matching_kind/request'
+export { APIReqPracticeChangeMatchingKindResponse } from './api_req_practice/change_matching_kind/response'
 export { APIReqPracticeMidnightBattleRequest } from './api_req_practice/midnight_battle/request'
 export { APIReqPracticeMidnightBattleResponse } from './api_req_practice/midnight_battle/response'
 export { APIReqQuestClearitemgetRequest } from './api_req_quest/clearitemget/request'

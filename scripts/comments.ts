@@ -18,7 +18,7 @@ export const copyright = `
 
 const root = path.resolve(__dirname, '../')
 
-export const getEndPointComment = (filename: string) => `
+export const getEndPointComment = (filename: string): string => `
 /**
  * type for API ${path.basename(filename).replace('.ts', '')} at /kcsapi/${path.relative(
   root,

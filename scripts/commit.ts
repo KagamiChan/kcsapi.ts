@@ -11,10 +11,10 @@
  * They are saved to correct path in samples folder after being anonymized
  */
 
-import fs, { WriteOptions } from 'fs-extra'
+import fs from 'fs-extra'
 import glob from 'glob'
 import path from 'path'
-import Promise from 'bluebird'
+import bluebird from 'bluebird'
 import {
   map,
   mapValues,
@@ -29,11 +29,11 @@ import {
 import assert from 'assert'
 import chalk from 'chalk'
 import Ajv from 'ajv'
+import draft06Schema from 'ajv/lib/refs/json-schema-draft-06.json'
 
 import { PoiPacket } from './types'
 import { getType, getSchema } from './utils'
 
-const draft06Schema = require('ajv/lib/refs/json-schema-draft-06.json')
 const ajv = new Ajv({ validateSchema: false, addUsedSchema: false })
 ajv.addMetaSchema(draft06Schema)
 
@@ -79,21 +79,20 @@ const buildSchemaPath = (data: PoiPacket): string[] => [
   path.resolve(__dirname, '../', data.path.replace('/kcsapi/', ''), 'response.json'),
 ]
 
-/* tslint:disable-next-line no-any */
-const diffInType = async (data: any, typePath: string) => {
+const diffInType = async (data: any, typePath: string): Promise<boolean> => {
   const incoming = await getType(data, typePath)
   const existing = await fs.readFile(typePath, 'utf8')
 
   return incoming !== existing
 }
 
-const main = async () => {
+const main = async (): Promise<void | void[]> => {
   const files = glob.sync(path.resolve(__dirname, '../staging/**/*.json'))
 
   const allschemas = glob.sync(path.resolve(__dirname, '../api_*/**/*.json'))
 
   const schemas = fromPairs(
-    await Promise.map(allschemas, async file => {
+    await bluebird.map(allschemas, async file => {
       const schema = await fs.readJSON(file)
 
       return [file, schema]
@@ -104,7 +103,7 @@ const main = async () => {
 
   const schemaToFilePaths: { [key: string]: string[] } = {}
 
-  await Promise.each(files, async file => {
+  await bluebird.each(files, async file => {
     const packet: PoiPacket = await fs.readJSON(file)
 
     packet.body = anonymize(packet.body)
@@ -115,10 +114,10 @@ const main = async () => {
 
     // FIXME: some requst data unexpectedly get mad
     if (JSON.stringify(packet.postBody).includes('api_token')) {
-      return Promise.resolve()
+      return bluebird.resolve()
     }
 
-    await Promise.each(
+    return bluebird.each(
       zip([packet.postBody, packet.body], [reqPath, respPath], [reqSchemaPath, respSchemaPath]),
       async ([data, filePath, schemaPath]) => {
         if (!schemas[schemaPath!]) {
@@ -131,7 +130,7 @@ const main = async () => {
 
           schemaToFilePaths[schemaPath!] = (schemaToFilePaths[schemaPath!] || []).concat(filePath!)
 
-          return Promise.resolve()
+          return bluebird.resolve()
         }
 
         try {
@@ -141,7 +140,7 @@ const main = async () => {
           const valid = ajv.validate(schema, [data])
 
           if (valid) {
-            return Promise.resolve()
+            return bluebird.resolve()
           }
 
           console.info(chalk.green(`${schemaPath} has different type, staging`))
@@ -154,7 +153,7 @@ const main = async () => {
 
           const incomings = map(schemaToFilePaths[schemaPath!], fp => staging[fp])
 
-          const json = await Promise.map(existings, f => fs.readJSON(f))
+          const json = await bluebird.map(existings, f => fs.readJSON(f))
           const newSchema = await getSchema([json, data, ...incomings], schemaPath!)
 
           console.info(chalk.green(`${schemaPath} schema temperarily updates`))
@@ -163,9 +162,12 @@ const main = async () => {
           schemas[schemaPath!] = JSON.parse(newSchema)
 
           schemaToFilePaths[schemaPath!] = (schemaToFilePaths[schemaPath!] || []).concat(filePath!)
+
+          return bluebird.resolve()
         } catch (e) {
           console.info(e)
           process.exitCode = 1
+          return bluebird.resolve()
         }
       },
     )
@@ -174,7 +176,7 @@ const main = async () => {
   if (Object.keys(staging).length) {
     console.info(chalk.yellow('commiting'))
   }
-  return Promise.map(Object.keys(staging), f => fs.outputJSON(f, staging[f], { spaces: 2 }))
+  return bluebird.map(Object.keys(staging), f => fs.outputJSON(f, staging[f], { spaces: 2 }))
 }
 
 main()

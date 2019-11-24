@@ -9,7 +9,7 @@
  * Generates types from sample files
  */
 
-import Promise from 'bluebird'
+import bluebird from 'bluebird'
 import fs from 'fs-extra'
 import path from 'path'
 import { compact, map, entries } from 'lodash'
@@ -17,13 +17,13 @@ import { compact, map, entries } from 'lodash'
 import { copyright } from './comments'
 import { getTopLevel, getType, prettify, getSampleList, getSchema } from './utils'
 
-const main = async () => {
-  const fileGroup = await getSampleList()
+const main = async (): Promise<void> => {
+  const fileGroup = getSampleList()
 
   const ignoreList: string[] = []
 
-  await Promise.map(entries(fileGroup), async ([filename, files]) => {
-    const json = await Promise.map(files, file => fs.readJSON(file))
+  await bluebird.map(entries(fileGroup), async ([filename, files]) => {
+    const json = await bluebird.map(files, file => fs.readJSON(file))
     const result = await getType(json, filename)
 
     const schema = await getSchema(json, filename)
@@ -32,8 +32,8 @@ const main = async () => {
       ignoreList.push(filename)
     }
 
-    return Promise.all([
-      result ? fs.outputFile(filename, result) : Promise.resolve(),
+    return bluebird.all([
+      result ? fs.outputFile(filename, result) : bluebird.resolve(),
       fs.outputJSON(filename.replace(/\.ts$/, '.json'), JSON.parse(schema), { spaces: 2 }),
     ])
   })
@@ -49,7 +49,7 @@ const main = async () => {
     }),
   ).join('\n')
 
-  await fs.outputFile(path.resolve(__dirname, '../index.ts'), prettify(copyright + '\n' + index))
+  await fs.outputFile(path.resolve(__dirname, '../index.ts'), prettify(`${copyright}\n${index}`))
 }
 
 main()

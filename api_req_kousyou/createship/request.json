@@ -2,10 +2,53 @@
   "$schema": "http://json-schema.org/draft-06/schema#",
   "type": "array",
   "items": {
-    "type": "object",
-    "additionalProperties": {
-      "type": "string"
-    }
+    "$ref": "#/definitions/APIReqKousyouCreateshipRequestElement"
   },
-  "definitions": {}
+  "definitions": {
+    "APIReqKousyouCreateshipRequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_highspeed": {
+          "type": "string"
+        },
+        "api_item1": {
+          "type": "string"
+        },
+        "api_item2": {
+          "type": "string"
+        },
+        "api_item3": {
+          "type": "string"
+        },
+        "api_item4": {
+          "type": "string"
+        },
+        "api_item5": {
+          "type": "string"
+        },
+        "api_kdock_id": {
+          "type": "string"
+        },
+        "api_large_flag": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_highspeed",
+        "api_item1",
+        "api_item2",
+        "api_item3",
+        "api_item4",
+        "api_item5",
+        "api_kdock_id",
+        "api_large_flag",
+        "api_verno"
+      ],
+      "title": "APIReqKousyouCreateshipRequestElement"
+    }
+  }
 }

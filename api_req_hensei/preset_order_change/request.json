@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqHenseiPresetOrderChangeRequestElement"
+  },
+  "definitions": {
+    "APIReqHenseiPresetOrderChangeRequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_preset_from": {
+          "type": "string"
+        },
+        "api_preset_to": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_preset_from",
+        "api_preset_to",
+        "api_verno"
+      ],
+      "title": "APIReqHenseiPresetOrderChangeRequestElement"
+    }
+  }
+}

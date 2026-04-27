@@ -12,11 +12,9 @@ export interface APIStart2GetDataResponse {
   api_mst_bgm: APIMstBgm[]
   api_mst_const: APIMstConst
   api_mst_equip_exslot: number[]
-  api_mst_equip_exslot_ship:
-    | APIMstEquipExslotShipElement[]
-    | { [key: string]: APIMstEquipExslotShipValue }
-  api_mst_equip_limit_exslot?: { [key: string]: number[] }
-  api_mst_equip_ship: APIMstEquipShipElement[] | { [key: string]: APIMstEquipShipValue }
+  api_mst_equip_exslot_ship: { [key: string]: APIMstEquipExslotShip }
+  api_mst_equip_limit_exslot: { [key: string]: number[] }
+  api_mst_equip_ship: { [key: string]: APIMstEquipShip }
   api_mst_furniture: APIMstFurniture[]
   api_mst_furnituregraph: APIMstFurnituregraph[]
   api_mst_item_shop: APIMstItemShop
@@ -50,30 +48,20 @@ export interface API {
   api_string_value: string
 }
 
-export interface APIMstEquipExslotShipElement {
-  api_ship_ids: number[]
-  api_slotitem_id: number
-}
-
-export interface APIMstEquipExslotShipValue {
+export interface APIMstEquipExslotShip {
   api_ctypes: { [key: string]: number } | null
   api_req_level: number
   api_ship_ids: { [key: string]: number } | null
   api_stypes: { [key: string]: number } | null
 }
 
-export interface APIMstEquipShipElement {
-  api_equip_type: number[]
-  api_ship_id: number
-}
-
-export interface APIMstEquipShipValue {
+export interface APIMstEquipShip {
   api_equip_type: { [key: string]: number[] | null }
 }
 
 export interface APIMstFurniture {
   api_active_flag: number
-  api_bgm_id?: number
+  api_bgm_id: number
   api_description: string
   api_id: number
   api_no: number
@@ -81,7 +69,6 @@ export interface APIMstFurniture {
   api_price: number
   api_rarity: number
   api_saleflg: number
-  api_season?: number
   api_title: string
   api_type: number
   api_version: number
@@ -121,7 +108,7 @@ export interface APIMstMapinfo {
   api_item: number[]
   api_level: number
   api_maparea_id: number
-  api_max_maphp: number | null
+  api_max_maphp: null
   api_name: string
   api_no: number
   api_opetext: string
@@ -130,7 +117,7 @@ export interface APIMstMapinfo {
 }
 
 export interface APIMstMission {
-  api_damage_type?: number
+  api_damage_type: number
   api_deck_num: number
   api_details: string
   api_difficulty: number
@@ -138,15 +125,15 @@ export interface APIMstMission {
   api_id: number
   api_maparea_id: number
   api_name: string
-  api_reset_type?: number
+  api_reset_type: number
   api_return_flag: number
-  api_sample_fleet?: number[]
+  api_sample_fleet: number[]
   api_time: number
   api_use_bull: number
   api_use_fuel: number
   api_win_item1: number[]
   api_win_item2: number[]
-  api_win_mat_level?: number[]
+  api_win_mat_level: number[]
 }
 
 export interface APIMstPayitem {
@@ -230,7 +217,6 @@ export interface APIMstSlotitem {
   api_houk: number
   api_houm: number
   api_id: number
-  api_info?: string
   api_leng: number
   api_luck: number
   api_name: string

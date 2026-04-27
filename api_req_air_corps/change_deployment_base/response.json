@@ -1,0 +1,99 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqAirCorpsChangeDeploymentBaseResponseElement"
+  },
+  "definitions": {
+    "APIReqAirCorpsChangeDeploymentBaseResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_base_items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIBaseItem"
+          }
+        }
+      },
+      "required": [
+        "api_base_items"
+      ],
+      "title": "APIReqAirCorpsChangeDeploymentBaseResponseElement"
+    },
+    "APIBaseItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_distance": {
+          "$ref": "#/definitions/APIDistance"
+        },
+        "api_plane_info": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIPlaneInfo"
+          }
+        },
+        "api_rid": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_distance",
+        "api_plane_info",
+        "api_rid"
+      ],
+      "title": "APIBaseItem"
+    },
+    "APIDistance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_base": {
+          "type": "integer"
+        },
+        "api_bonus": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_base",
+        "api_bonus"
+      ],
+      "title": "APIDistance"
+    },
+    "APIPlaneInfo": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_cond": {
+          "type": "integer"
+        },
+        "api_count": {
+          "type": "integer"
+        },
+        "api_max_count": {
+          "type": "integer"
+        },
+        "api_slotid": {
+          "type": "integer"
+        },
+        "api_squadron_id": {
+          "type": "integer"
+        },
+        "api_state": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_cond",
+        "api_count",
+        "api_max_count",
+        "api_slotid",
+        "api_squadron_id",
+        "api_state"
+      ],
+      "title": "APIPlaneInfo"
+    }
+  }
+}

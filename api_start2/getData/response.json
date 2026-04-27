@@ -25,7 +25,10 @@
           }
         },
         "api_mst_equip_exslot_ship": {
-          "$ref": "#/definitions/APIMstEquipExslotShipUnion"
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/APIMstEquipExslotShip"
+          }
         },
         "api_mst_equip_limit_exslot": {
           "type": "object",
@@ -37,7 +40,10 @@
           }
         },
         "api_mst_equip_ship": {
-          "$ref": "#/definitions/APIMstEquipShipUnion"
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/APIMstEquipShip"
+          }
         },
         "api_mst_furniture": {
           "type": "array",
@@ -135,6 +141,7 @@
         "api_mst_const",
         "api_mst_equip_exslot",
         "api_mst_equip_exslot_ship",
+        "api_mst_equip_limit_exslot",
         "api_mst_equip_ship",
         "api_mst_furniture",
         "api_mst_furnituregraph",
@@ -209,27 +216,7 @@
       ],
       "title": "API"
     },
-    "APIMstEquipExslotShipElement": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "api_ship_ids": {
-          "type": "array",
-          "items": {
-            "type": "integer"
-          }
-        },
-        "api_slotitem_id": {
-          "type": "integer"
-        }
-      },
-      "required": [
-        "api_ship_ids",
-        "api_slotitem_id"
-      ],
-      "title": "APIMstEquipExslotShipElement"
-    },
-    "APIMstEquipExslotShipValue": {
+    "APIMstEquipExslotShip": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -282,29 +269,9 @@
         "api_ship_ids",
         "api_stypes"
       ],
-      "title": "APIMstEquipExslotShipValue"
+      "title": "APIMstEquipExslotShip"
     },
-    "APIMstEquipShipElement": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "api_equip_type": {
-          "type": "array",
-          "items": {
-            "type": "integer"
-          }
-        },
-        "api_ship_id": {
-          "type": "integer"
-        }
-      },
-      "required": [
-        "api_equip_type",
-        "api_ship_id"
-      ],
-      "title": "APIMstEquipShipElement"
-    },
-    "APIMstEquipShipValue": {
+    "APIMstEquipShip": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -328,7 +295,7 @@
       "required": [
         "api_equip_type"
       ],
-      "title": "APIMstEquipShipValue"
+      "title": "APIMstEquipShip"
     },
     "APIMstFurniture": {
       "type": "object",
@@ -361,9 +328,6 @@
         "api_saleflg": {
           "type": "integer"
         },
-        "api_season": {
-          "type": "integer"
-        },
         "api_title": {
           "type": "string"
         },
@@ -376,6 +340,7 @@
       },
       "required": [
         "api_active_flag",
+        "api_bgm_id",
         "api_description",
         "api_id",
         "api_no",
@@ -524,14 +489,7 @@
           "type": "integer"
         },
         "api_max_maphp": {
-          "anyOf": [
-            {
-              "type": "integer"
-            },
-            {
-              "type": "null"
-            }
-          ]
+          "type": "null"
         },
         "api_name": {
           "type": "string"
@@ -643,6 +601,7 @@
         }
       },
       "required": [
+        "api_damage_type",
         "api_deck_num",
         "api_details",
         "api_difficulty",
@@ -650,12 +609,15 @@
         "api_id",
         "api_maparea_id",
         "api_name",
+        "api_reset_type",
         "api_return_flag",
+        "api_sample_fleet",
         "api_time",
         "api_use_bull",
         "api_use_fuel",
         "api_win_item1",
-        "api_win_item2"
+        "api_win_item2",
+        "api_win_mat_level"
       ],
       "title": "APIMstMission"
     },
@@ -1017,9 +979,6 @@
         "api_id": {
           "type": "integer"
         },
-        "api_info": {
-          "type": "string"
-        },
         "api_leng": {
           "type": "integer"
         },
@@ -1199,40 +1158,6 @@
         "api_usetype"
       ],
       "title": "APIMstUseitem"
-    },
-    "APIMstEquipExslotShipUnion": {
-      "anyOf": [
-        {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/APIMstEquipExslotShipElement"
-          }
-        },
-        {
-          "type": "object",
-          "additionalProperties": {
-            "$ref": "#/definitions/APIMstEquipExslotShipValue"
-          }
-        }
-      ],
-      "title": "APIMstEquipExslotShipUnion"
-    },
-    "APIMstEquipShipUnion": {
-      "anyOf": [
-        {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/APIMstEquipShipElement"
-          }
-        },
-        {
-          "type": "object",
-          "additionalProperties": {
-            "$ref": "#/definitions/APIMstEquipShipValue"
-          }
-        }
-      ],
-      "title": "APIMstEquipShipUnion"
     }
   }
 }

@@ -24,7 +24,7 @@ const main = async (): Promise<void> => {
 
   await bluebird.map(entries(fileGroup), async ([filename, files]) => {
     const json = await bluebird.map(files, file => fs.readJSON(file))
-    const result = await getType(json, filename)
+    const result = (await getType(json, filename)) || (await getType(json, filename, true))
 
     const schema = await getSchema(json, filename)
 

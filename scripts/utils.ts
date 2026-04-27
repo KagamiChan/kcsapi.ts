@@ -60,13 +60,12 @@ export const prettify = (content: string): string =>
  * @param topLevel top level interface name
  */
 /* tslint:disable-next-line no-any */
-export const getType = (data: any, filename: string): Promise<string> =>
+export const getType = (data: any, filename: string, noMaps = false): Promise<string> =>
   new Promise<string>((resolve, reject) => {
     const topLevel = getTopLevel(filename)
     const quicktypeCli = getQuicktypeCli()
 
-    const child = childProcess.spawn(process.execPath, [
-      quicktypeCli,
+    const args = [
       '--alphabetize-properties',
       '--no-enums',
       '--just-types',
@@ -74,7 +73,12 @@ export const getType = (data: any, filename: string): Promise<string> =>
       'ts',
       '--top-level',
       topLevel,
-    ])
+    ]
+    if (noMaps) {
+      args.push('--no-maps')
+    }
+
+    const child = childProcess.spawn(process.execPath, [quicktypeCli, ...args])
     let result = ''
     let error = ''
     child.stdout.on('data', chunk => {

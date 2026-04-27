@@ -25,7 +25,7 @@ export interface APIStart2GetDataResponse {
   api_mst_payitem: APIMstPayitem[]
   api_mst_ship: APIMstShip[]
   api_mst_shipgraph: APIMstShipgraph[]
-  api_mst_shipupgrade: { [key: string]: number }[]
+  api_mst_shipupgrade: APIMstShipupgrade[]
   api_mst_slotitem: APIMstSlotitem[]
   api_mst_slotitem_equiptype: APIMstSlotitemEquiptype[]
   api_mst_stype: APIMstStype[]
@@ -204,6 +204,22 @@ export interface APIMstShipgraph {
   api_wedb?: number[]
   api_wedc?: number[]
   api_wedd?: number[]
+}
+
+export interface APIMstShipupgrade {
+  api_arms_mat_count: number
+  api_aviation_mat_count: number
+  api_boiler_count?: number
+  api_catapult_count: number
+  api_current_ship_id: number
+  api_drawing_count: number
+  api_id: number
+  api_original_ship_id: number
+  api_report_count: number
+  api_sortno: number
+  api_tech_count: number
+  api_upgrade_level: number
+  api_upgrade_type: number
 }
 
 export interface APIMstSlotitem {

@@ -25,6 +25,27 @@ const acronymMap: { [key: string]: string } = {
 
 const capitalizeSegment = (content: string): string => acronymMap[content] || capitalize(content)
 
+/* tslint:disable-next-line @typescript-eslint/no-explicit-any */
+const addSentinel = (data: any): any => {
+  if (Array.isArray(data)) {
+    return data.map(addSentinel)
+  }
+  if (data !== null && typeof data === 'object') {
+    const keys = Object.keys(data)
+    const processed = Object.fromEntries(Object.entries(data).map(([k, v]) => [k, addSentinel(v)]))
+    if (keys.length >= 2 && keys.length < 20 && !keys.every(k => /^\d+$/.test(k))) {
+      const nonNullValues: unknown[] = Object.values(data).filter(v => v !== null)
+      if (nonNullValues.length > 0) {
+        if (nonNullValues.every(v => typeof v === typeof nonNullValues[0])) {
+          return { ...processed, __sentinel: 'Tanaka' }
+        }
+      }
+    }
+    return processed
+  }
+  return data
+}
+
 const retainTopLevelName = (content: string, topLevel: string): string => {
   if (new RegExp(`\\bexport interface ${topLevel}\\b`).test(content)) {
     return content
@@ -59,7 +80,7 @@ export const prettify = (content: string): string =>
  * @param data sample data for generation
  * @param topLevel top level interface name
  */
-/* tslint:disable-next-line no-any */
+/* tslint:disable-next-line @typescript-eslint/no-explicit-any */
 export const getType = (data: any, filename: string, noMaps = false): Promise<string> =>
   new Promise<string>((resolve, reject) => {
     const topLevel = getTopLevel(filename)
@@ -95,7 +116,8 @@ export const getType = (data: any, filename: string, noMaps = false): Promise<st
         )
         return
       }
-      const normalizedResult = retainTopLevelName(result, topLevel)
+      const stripped = result.replace(/^ *__sentinel\??: .*\r?\n/gm, '')
+      const normalizedResult = retainTopLevelName(stripped, topLevel)
 
       resolve(
         normalizedResult.length
@@ -105,7 +127,7 @@ export const getType = (data: any, filename: string, noMaps = false): Promise<st
     })
     const source = new Readable()
     source._read = (): void => {} // eslint-disable-line @typescript-eslint/unbound-method, no-underscore-dangle
-    source.push(JSON.stringify(data))
+    source.push(JSON.stringify(addSentinel(data)))
     source.push(null)
     source.pipe(child.stdin)
   })
@@ -115,7 +137,7 @@ export const getType = (data: any, filename: string, noMaps = false): Promise<st
  * @param data sample data for generation
  * @param topLevel top level interface name
  */
-/* tslint:disable-next-line no-any */
+/* tslint:disable-next-line @typescript-eslint/no-explicit-any */
 export const getSchema = (data: any, filename: string): Promise<string> =>
   new Promise<string>((resolve, reject) => {
     const topLevel = getTopLevel(filename)

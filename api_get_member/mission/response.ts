@@ -13,7 +13,7 @@ export interface API {
   api_state: number
 }
 
-export interface APIGetMemberMissionResponseClass {
+export interface APIGetMemberMissionResponse {
   api_limit_time: number[]
   api_list_items: API[]
 }

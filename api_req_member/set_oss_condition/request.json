@@ -2,57 +2,10 @@
   "$schema": "http://json-schema.org/draft-06/schema#",
   "type": "array",
   "items": {
-    "$ref": "#/definitions/APIReqMemberSetOSSConditionRequestElement"
-  },
-  "definitions": {
-    "APIReqMemberSetOSSConditionRequestElement": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "api_language_type": {
-          "type": "string"
-        },
-        "api_oss_items[0]": {
-          "type": "string"
-        },
-        "api_oss_items[1]": {
-          "type": "string"
-        },
-        "api_oss_items[2]": {
-          "type": "string"
-        },
-        "api_oss_items[3]": {
-          "type": "string"
-        },
-        "api_oss_items[4]": {
-          "type": "string"
-        },
-        "api_oss_items[5]": {
-          "type": "string"
-        },
-        "api_oss_items[6]": {
-          "type": "string"
-        },
-        "api_oss_items[7]": {
-          "type": "string"
-        },
-        "api_verno": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "api_language_type",
-        "api_oss_items[0]",
-        "api_oss_items[1]",
-        "api_oss_items[2]",
-        "api_oss_items[3]",
-        "api_oss_items[4]",
-        "api_oss_items[5]",
-        "api_oss_items[6]",
-        "api_oss_items[7]",
-        "api_verno"
-      ],
-      "title": "APIReqMemberSetOSSConditionRequestElement"
+    "type": "object",
+    "additionalProperties": {
+      "type": "string"
     }
-  }
+  },
+  "definitions": {}
 }

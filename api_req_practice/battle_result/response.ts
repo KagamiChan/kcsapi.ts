@@ -12,7 +12,7 @@ export interface APIReqPracticeBattleResultResponse {
   api_enemy_info: APIEnemyInfo
   api_get_base_exp: number
   api_get_exp: number
-  api_get_exp_lvup: Array<number[]>
+  api_get_exp_lvup: number[][]
   api_get_ship_exp: number[]
   api_member_exp: number
   api_member_lv: number

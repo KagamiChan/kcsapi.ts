@@ -2,61 +2,10 @@
   "$schema": "http://json-schema.org/draft-06/schema#",
   "type": "array",
   "items": {
-    "$ref": "#/definitions/APIReqSortieBattleresultRequestElement"
-  },
-  "definitions": {
-    "APIReqSortieBattleresultRequestElement": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "api_btime": {
-          "type": "string"
-        },
-        "api_l_value3[0]": {
-          "type": "string"
-        },
-        "api_l_value3[1]": {
-          "type": "string"
-        },
-        "api_l_value3[2]": {
-          "type": "string"
-        },
-        "api_l_value3[3]": {
-          "type": "string"
-        },
-        "api_l_value3[4]": {
-          "type": "string"
-        },
-        "api_l_value3[5]": {
-          "type": "string"
-        },
-        "api_l_value[0]": {
-          "type": "string"
-        },
-        "api_l_value[1]": {
-          "type": "string"
-        },
-        "api_l_value[2]": {
-          "type": "string"
-        },
-        "api_l_value[3]": {
-          "type": "string"
-        },
-        "api_l_value[4]": {
-          "type": "string"
-        },
-        "api_l_value[5]": {
-          "type": "string"
-        },
-        "api_verno": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "api_btime",
-        "api_verno"
-      ],
-      "title": "APIReqSortieBattleresultRequestElement"
+    "type": "object",
+    "additionalProperties": {
+      "type": "string"
     }
-  }
+  },
+  "definitions": {}
 }

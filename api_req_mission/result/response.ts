@@ -12,7 +12,7 @@ export interface APIReqMissionResultResponse {
   api_clear_result: number
   api_detail: string
   api_get_exp: number
-  api_get_exp_lvup: Array<number[]>
+  api_get_exp_lvup: number[][]
   api_get_item1?: APIGetItem
   api_get_item2?: APIGetItem
   api_get_material: number[] | number

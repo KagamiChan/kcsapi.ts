@@ -31,7 +31,7 @@ export interface APIReqSortieAirbattleResponse {
 }
 
 export interface APIKouku {
-  api_plane_from: Array<number[] | null>
+  api_plane_from: (number[] | null)[]
   api_stage1: APIStage1
   api_stage2: APIStage2 | null
   api_stage3: APIStage3 | null

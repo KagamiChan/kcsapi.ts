@@ -55,7 +55,7 @@ export interface APIReqCombinedBattleEachBattleResponse {
 
 export interface APIAirBaseAttack {
   api_base_id: number
-  api_plane_from: Array<number[] | null>
+  api_plane_from: (number[] | null)[]
   api_squadron_plane: APIAirBaseDatumElement[]
   api_stage1: APIStage1
   api_stage2: APIStage | null
@@ -127,11 +127,11 @@ export interface APIHougeki {
   api_cl_list: number[][]
   api_damage: number[][]
   api_df_list: number[][]
-  api_si_list: Array<Array<number | string>>
+  api_si_list: (number | string)[][]
 }
 
 export interface APIInjectionKouku {
-  api_plane_from: Array<number[] | null>
+  api_plane_from: (number[] | null)[]
   api_stage1: APIStage
   api_stage2: APIStage
   api_stage3: APIInjectionKoukuAPIStage3
@@ -150,7 +150,7 @@ export interface APIInjectionKoukuAPIStage3 {
 }
 
 export interface APIKouku {
-  api_plane_from: Array<number[] | null>
+  api_plane_from: (number[] | null)[]
   api_stage1: APIStage1
   api_stage2: APIStage
   api_stage3: APIInjectionKoukuAPIStage3

@@ -18,11 +18,11 @@ export const copyright = `
 
 const root = path.resolve(__dirname, '../')
 
+const getAPIPath = (filename: string): string =>
+  path.relative(root, path.dirname(filename)).replace(/\\/g, '/')
+
 export const getEndPointComment = (filename: string): string => `
 /**
- * type for API ${path.basename(filename).replace('.ts', '')} at /kcsapi/${path.relative(
-  root,
-  path.dirname(filename),
-)}
+ * type for API ${path.basename(filename).replace('.ts', '')} at /kcsapi/${getAPIPath(filename)}
  */
 `

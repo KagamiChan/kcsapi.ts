@@ -36,7 +36,7 @@ export interface APIReqCombinedBattleEcMidnightBattleResponse {
   api_ship_ke_combined: number[]
   api_ship_lv: number[]
   api_ship_lv_combined: number[]
-  api_touch_plane: Array<number | string>
+  api_touch_plane: (number | string)[]
 }
 
 export interface APIFriendlyBattle {
@@ -74,6 +74,6 @@ export interface APIReqCombinedBattleEcMidnightBattleResponseAPIHougeki {
   api_damage: number[][]
   api_df_list: number[][]
   api_n_mother_list: number[]
-  api_si_list: Array<Array<number | string>>
+  api_si_list: (number | string)[][]
   api_sp_list: number[]
 }

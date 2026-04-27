@@ -33,7 +33,7 @@ export interface APIReqSortieBattleresultResponse {
   api_member_exp: number
   api_member_lv: number
   api_mvp: number
-  api_next_map_ids?: Array<number | string>
+  api_next_map_ids?: (number | string)[]
   api_quest_level: number
   api_quest_name: string
   api_ship_id: number[]

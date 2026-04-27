@@ -16,6 +16,7 @@ module.exports = {
     'no-console': ['error', { allow: ['info', 'error', 'warn'] }],
     'import/no-extraneous-dependencies': 'off',
     '@typescript-eslint/camelcase': ['error', { properties: 'never' }],
+    '@typescript-eslint/array-type': ['error', { default: 'array' }],
     'prettier/prettier': 'error',
   },
 }

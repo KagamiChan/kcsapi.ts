@@ -50,7 +50,7 @@ export interface APICellFlavor {
 
 export interface APIDestructionBattle {
   api_air_base_attack: APIAirBaseAttack
-  api_eSlot: Array<number[]>
+  api_eSlot: number[][]
   api_e_maxhps: number[]
   api_e_nowhps: number[]
   api_f_maxhps: number[]
@@ -63,7 +63,7 @@ export interface APIDestructionBattle {
 
 export interface APIAirBaseAttack {
   api_map_squadron_plane: { [key: string]: APIMapSquadronPlane[] } | null
-  api_plane_from: Array<number[] | null>
+  api_plane_from: (number[] | null)[]
   api_stage1: APIStage1
   api_stage2: null
   api_stage3: APIStage3 | null

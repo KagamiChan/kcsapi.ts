@@ -7,12 +7,31 @@ import { groupBy, Dictionary } from 'lodash'
 
 import { copyright, getEndPointComment } from './comments'
 
+const getQuicktypeCli = (): string =>
+  path.resolve(__dirname, '../node_modules/quicktype/dist/cli/index.js')
+
 /**
  * Turns first character to upper case
  * @param content string to capitalize
  */
 const capitalize = (content: string): string =>
   `${content[0].toUpperCase()}${content.slice(1, content.length)}`
+
+const acronymMap: { [key: string]: string } = {
+  api: 'API',
+  oss: 'OSS',
+  sp: 'SP',
+}
+
+const capitalizeSegment = (content: string): string => acronymMap[content] || capitalize(content)
+
+const retainTopLevelName = (content: string, topLevel: string): string => {
+  if (new RegExp(`\\bexport interface ${topLevel}\\b`).test(content)) {
+    return content
+  }
+
+  return content.split(`${topLevel}Class`).join(topLevel)
+}
 
 /**
  * Derives top level interface name from file path
@@ -23,9 +42,8 @@ export const getTopLevel = (filename: string): string =>
     .relative(path.resolve(__dirname, '../'), filename)
     .replace(path.extname(filename), '')
     .split(/[_/\\]/)
-    .map(capitalize)
+    .map(capitalizeSegment)
     .join('')
-    .replace('Api', 'API')
 
 export const prettify = (content: string): string =>
   prettier.format(content, {
@@ -45,9 +63,10 @@ export const prettify = (content: string): string =>
 export const getType = (data: any, filename: string): Promise<string> =>
   new Promise<string>((resolve, reject) => {
     const topLevel = getTopLevel(filename)
-    const bin = path.resolve(__dirname, '../node_modules/.bin/quicktype')
+    const quicktypeCli = getQuicktypeCli()
 
-    const child = childProcess.spawn(bin, [
+    const child = childProcess.spawn(process.execPath, [
+      quicktypeCli,
       '--alphabetize-properties',
       '--no-enums',
       '--just-types',
@@ -57,15 +76,27 @@ export const getType = (data: any, filename: string): Promise<string> =>
       topLevel,
     ])
     let result = ''
+    let error = ''
     child.stdout.on('data', chunk => {
       result += chunk
     })
+    child.stderr.on('data', chunk => {
+      error += chunk
+    })
+    child.on('error', reject)
     child.on('close', (code, signal) => {
       if (code > 0) {
-        reject(signal)
+        reject(
+          new Error(error || `quicktype exited with code ${code}${signal ? ` (${signal})` : ''}`),
+        )
+        return
       }
+      const normalizedResult = retainTopLevelName(result, topLevel)
+
       resolve(
-        result.length ? prettify(`${copyright}\n${getEndPointComment(filename)}${result}`) : '',
+        normalizedResult.length
+          ? prettify(`${copyright}\n${getEndPointComment(filename)}${normalizedResult}`)
+          : '',
       )
     })
     const source = new Readable()
@@ -84,9 +115,10 @@ export const getType = (data: any, filename: string): Promise<string> =>
 export const getSchema = (data: any, filename: string): Promise<string> =>
   new Promise<string>((resolve, reject) => {
     const topLevel = getTopLevel(filename)
-    const bin = path.resolve(__dirname, '../node_modules/.bin/quicktype')
+    const quicktypeCli = getQuicktypeCli()
 
-    const child = childProcess.spawn(bin, [
+    const child = childProcess.spawn(process.execPath, [
+      quicktypeCli,
       '--alphabetize-properties',
       '--no-enums',
       '--lang',
@@ -95,12 +127,20 @@ export const getSchema = (data: any, filename: string): Promise<string> =>
       topLevel,
     ])
     let result = ''
+    let error = ''
     child.stdout.on('data', chunk => {
       result += chunk
     })
+    child.stderr.on('data', chunk => {
+      error += chunk
+    })
+    child.on('error', reject)
     child.on('close', (code, signal) => {
       if (code > 0) {
-        reject(signal)
+        reject(
+          new Error(error || `quicktype exited with code ${code}${signal ? ` (${signal})` : ''}`),
+        )
+        return
       }
       resolve(result.toString())
     })

@@ -15,7 +15,7 @@ export interface APIGetMemberQuestlistResponse {
   api_disp_page: number
   api_exec_count: number
   api_exec_type: number
-  api_list: Array<APIListClass | number>
+  api_list: (APIListClass | number)[]
   api_page_count: number
 }
 

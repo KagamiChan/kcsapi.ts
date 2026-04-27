@@ -2,10 +2,97 @@
   "$schema": "http://json-schema.org/draft-06/schema#",
   "type": "array",
   "items": {
-    "type": "object",
-    "additionalProperties": {
-      "type": "string"
-    }
+    "$ref": "#/definitions/APIReqCombinedBattleBattleresultRequestElement"
   },
-  "definitions": {}
+  "definitions": {
+    "APIReqCombinedBattleBattleresultRequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_btime": {
+          "type": "string"
+        },
+        "api_l_value2[0]": {
+          "type": "string"
+        },
+        "api_l_value2[1]": {
+          "type": "string"
+        },
+        "api_l_value2[2]": {
+          "type": "string"
+        },
+        "api_l_value2[3]": {
+          "type": "string"
+        },
+        "api_l_value2[4]": {
+          "type": "string"
+        },
+        "api_l_value2[5]": {
+          "type": "string"
+        },
+        "api_l_value3[0]": {
+          "type": "string"
+        },
+        "api_l_value3[1]": {
+          "type": "string"
+        },
+        "api_l_value3[2]": {
+          "type": "string"
+        },
+        "api_l_value3[3]": {
+          "type": "string"
+        },
+        "api_l_value3[4]": {
+          "type": "string"
+        },
+        "api_l_value3[5]": {
+          "type": "string"
+        },
+        "api_l_value[0]": {
+          "type": "string"
+        },
+        "api_l_value[1]": {
+          "type": "string"
+        },
+        "api_l_value[2]": {
+          "type": "string"
+        },
+        "api_l_value[3]": {
+          "type": "string"
+        },
+        "api_l_value[4]": {
+          "type": "string"
+        },
+        "api_l_value[5]": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_btime",
+        "api_l_value2[0]",
+        "api_l_value2[1]",
+        "api_l_value2[2]",
+        "api_l_value2[3]",
+        "api_l_value2[4]",
+        "api_l_value2[5]",
+        "api_l_value3[0]",
+        "api_l_value3[1]",
+        "api_l_value3[2]",
+        "api_l_value3[3]",
+        "api_l_value3[4]",
+        "api_l_value3[5]",
+        "api_l_value[0]",
+        "api_l_value[1]",
+        "api_l_value[2]",
+        "api_l_value[3]",
+        "api_l_value[4]",
+        "api_l_value[5]",
+        "api_verno"
+      ],
+      "title": "APIReqCombinedBattleBattleresultRequestElement"
+    }
+  }
 }

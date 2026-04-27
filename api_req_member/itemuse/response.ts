@@ -11,7 +11,7 @@
 export interface APIReqMemberItemuseResponse {
   api_caution_flag: number
   api_flag: number
-  api_getitem: Array<APIGetitem | null>
+  api_getitem: (APIGetitem | null)[]
   api_material?: number[]
 }
 

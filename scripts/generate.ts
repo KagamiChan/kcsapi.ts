@@ -44,7 +44,10 @@ const main = async (): Promise<void> => {
         return ''
       }
       const topLevel = getTopLevel(filename)
-      const relative = path.relative(path.resolve(__dirname, '../'), filename).replace('.ts', '')
+      const relative = path
+        .relative(path.resolve(__dirname, '../'), filename)
+        .replace(/\\/g, '/')
+        .replace('.ts', '')
       return `export { ${topLevel} } from './${relative}'`
     }),
   ).join('\n')

@@ -31,7 +31,7 @@ export interface APIList {
   api_sinfo?: string
   api_soku?: number
   api_souk: number
-  api_state: Array<number[] | number>
+  api_state: (number[] | number)[]
   api_stype?: number
   api_table_id: number[]
   api_taik?: number

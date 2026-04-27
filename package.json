@@ -1,6 +1,6 @@
 {
   "name": "kcsapi",
-  "version": "1.260427.1",
+  "version": "1.260428.0",
   "description": "Kantai Collection API TypeScript types",
   "keywords": [
     "Kancolle",

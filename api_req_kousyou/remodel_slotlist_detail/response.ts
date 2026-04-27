@@ -16,4 +16,8 @@ export interface APIReqKousyouRemodelSlotlistDetailResponse {
   api_req_remodelkit: number
   api_req_slot_id: number
   api_req_slot_num: number
+  api_req_useitem_id?: number
+  api_req_useitem_id2?: number
+  api_req_useitem_num?: number
+  api_req_useitem_num2?: number
 }

@@ -1,0 +1,9 @@
+{
+  "api_req_buildkit": 1,
+  "api_req_remodelkit": 1,
+  "api_certain_buildkit": 1,
+  "api_certain_remodelkit": 1,
+  "api_req_slot_id": 1,
+  "api_req_slot_num": 1,
+  "api_change_flag": 1
+}

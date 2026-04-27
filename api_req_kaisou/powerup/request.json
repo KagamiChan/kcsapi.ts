@@ -15,6 +15,12 @@
         "api_id_items": {
           "type": "string"
         },
+        "api_limited_feed_type": {
+          "type": "string"
+        },
+        "api_slot_dest_flag": {
+          "type": "string"
+        },
         "api_verno": {
           "type": "string"
         }

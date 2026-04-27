@@ -9,6 +9,7 @@
  * type for API request at /kcsapi/api_req_furniture/change
  */
 export interface APIReqFurnitureChangeRequest {
+  api_bgm_id?: string
   api_desk: string
   api_floor: string
   api_season?: string

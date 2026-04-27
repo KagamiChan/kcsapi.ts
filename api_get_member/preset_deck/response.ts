@@ -14,6 +14,7 @@ export interface APIGetMemberPresetDeckResponse {
 }
 
 export interface APIDeck {
+  api_lock_flag?: number
   api_name: string
   api_name_id: string
   api_preset_no: number

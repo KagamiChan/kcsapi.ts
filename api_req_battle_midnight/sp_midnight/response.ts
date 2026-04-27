@@ -9,6 +9,8 @@
  * type for API response at /kcsapi/api_req_battle_midnight/sp_midnight
  */
 export interface APIReqBattleMidnightSPMidnightResponse {
+  api_atoll_cell?: number
+  api_balloon_cell?: number
   api_deck_id: number
   api_eParam: number[][]
   api_eSlot: number[][]
@@ -23,6 +25,7 @@ export interface APIReqBattleMidnightSPMidnightResponse {
   api_n_support_flag: number
   api_ship_ke: number[]
   api_ship_lv: number[]
+  api_smoke_type?: number
   api_touch_plane: (number | string)[]
 }
 

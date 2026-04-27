@@ -132,6 +132,12 @@
             "type": "integer"
           }
         },
+        "api_sp_effect_items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APISPEffectItem"
+          }
+        },
         "api_srate": {
           "type": "integer"
         },
@@ -170,7 +176,6 @@
         "api_onslot",
         "api_raisou",
         "api_sakuteki",
-        "api_sally_area",
         "api_ship_id",
         "api_slot",
         "api_slot_ex",
@@ -183,6 +188,31 @@
         "api_taisen"
       ],
       "title": "APIGetMemberShip2ResponseElement"
+    },
+    "APISPEffectItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_houg": {
+          "type": "integer"
+        },
+        "api_kaih": {
+          "type": "integer"
+        },
+        "api_kind": {
+          "type": "integer"
+        },
+        "api_raig": {
+          "type": "integer"
+        },
+        "api_souk": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_kind"
+      ],
+      "title": "APISPEffectItem"
     }
   }
 }

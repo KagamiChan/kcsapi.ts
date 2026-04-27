@@ -9,6 +9,8 @@
  * type for API response at /kcsapi/api_req_sortie/airbattle
  */
 export interface APIReqSortieAirbattleResponse {
+  api_atoll_cell?: number
+  api_balloon_cell?: number
   api_deck_id: number
   api_eParam: number[][]
   api_eSlot: number[][]
@@ -24,6 +26,7 @@ export interface APIReqSortieAirbattleResponse {
   api_search: number[]
   api_ship_ke: number[]
   api_ship_lv: number[]
+  api_smoke_type?: number
   api_stage_flag: number[]
   api_stage_flag2: number[]
   api_support_flag: number
@@ -61,10 +64,12 @@ export interface APIAirFire {
 }
 
 export interface APIStage3 {
+  api_e_sp_list?: null[]
   api_ebak_flag: number[]
   api_ecl_flag: number[]
   api_edam: number[]
   api_erai_flag: number[]
+  api_f_sp_list?: null[]
   api_fbak_flag: number[]
   api_fcl_flag: number[]
   api_fdam: number[]

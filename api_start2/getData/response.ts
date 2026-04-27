@@ -12,8 +12,11 @@ export interface APIStart2GetDataResponse {
   api_mst_bgm: APIMstBgm[]
   api_mst_const: APIMstConst
   api_mst_equip_exslot: number[]
-  api_mst_equip_exslot_ship: APIMstEquipExslotShip[]
-  api_mst_equip_ship: APIMstEquipShip[]
+  api_mst_equip_exslot_ship:
+    | APIMstEquipExslotShipElement[]
+    | { [key: string]: APIMstEquipExslotShipValue }
+  api_mst_equip_limit_exslot?: { [key: string]: number[] }
+  api_mst_equip_ship: APIMstEquipShipElement[] | { [key: string]: APIMstEquipShipValue }
   api_mst_furniture: APIMstFurniture[]
   api_mst_furnituregraph: APIMstFurnituregraph[]
   api_mst_item_shop: APIMstItemShop
@@ -24,7 +27,7 @@ export interface APIStart2GetDataResponse {
   api_mst_payitem: APIMstPayitem[]
   api_mst_ship: APIMstShip[]
   api_mst_shipgraph: APIMstShipgraph[]
-  api_mst_shipupgrade: APIMstShipupgrade[]
+  api_mst_shipupgrade: { [key: string]: number }[]
   api_mst_slotitem: APIMstSlotitem[]
   api_mst_slotitem_equiptype: APIMstSlotitemEquiptype[]
   api_mst_stype: APIMstStype[]
@@ -47,18 +50,30 @@ export interface API {
   api_string_value: string
 }
 
-export interface APIMstEquipExslotShip {
+export interface APIMstEquipExslotShipElement {
   api_ship_ids: number[]
   api_slotitem_id: number
 }
 
-export interface APIMstEquipShip {
+export interface APIMstEquipExslotShipValue {
+  api_ctypes: { [key: string]: number } | null
+  api_req_level: number
+  api_ship_ids: { [key: string]: number } | null
+  api_stypes: { [key: string]: number } | null
+}
+
+export interface APIMstEquipShipElement {
   api_equip_type: number[]
   api_ship_id: number
 }
 
+export interface APIMstEquipShipValue {
+  api_equip_type: { [key: string]: number[] | null }
+}
+
 export interface APIMstFurniture {
   api_active_flag: number
+  api_bgm_id?: number
   api_description: string
   api_id: number
   api_no: number
@@ -66,7 +81,7 @@ export interface APIMstFurniture {
   api_price: number
   api_rarity: number
   api_saleflg: number
-  api_season: number
+  api_season?: number
   api_title: string
   api_type: number
   api_version: number
@@ -194,23 +209,14 @@ export interface APIMstShipgraph {
   api_map_d?: number[]
   api_map_n?: number[]
   api_pa?: number[]
+  api_pab?: number[]
   api_sortno?: number
+  api_sp_flag?: number
   api_version: string[]
   api_weda?: number[]
   api_wedb?: number[]
-}
-
-export interface APIMstShipupgrade {
-  api_aviation_mat_count?: number
-  api_catapult_count: number
-  api_current_ship_id: number
-  api_drawing_count: number
-  api_id: number
-  api_original_ship_id: number
-  api_report_count: number
-  api_sortno: number
-  api_upgrade_level: number
-  api_upgrade_type: number
+  api_wedc?: number[]
+  api_wedd?: number[]
 }
 
 export interface APIMstSlotitem {

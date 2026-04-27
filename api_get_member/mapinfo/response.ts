@@ -10,6 +10,7 @@
  */
 export interface APIGetMemberMapinfoResponse {
   api_air_base: APIAirBase[]
+  api_air_base_expanded_info?: APIAirBaseExpandedInfo[]
   api_map_info: APIMapInfo[]
 }
 
@@ -34,6 +35,11 @@ export interface APIPlaneInfo {
   api_slotid: number
   api_squadron_id: number
   api_state: number
+}
+
+export interface APIAirBaseExpandedInfo {
+  api_area_id: number
+  api_maintenance_level: number
 }
 
 export interface APIMapInfo {

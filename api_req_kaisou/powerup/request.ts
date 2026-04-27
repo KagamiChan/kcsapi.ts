@@ -11,5 +11,7 @@
 export interface APIReqKaisouPowerupRequest {
   api_id: string
   api_id_items: string
+  api_limited_feed_type?: string
+  api_slot_dest_flag?: string
   api_verno: string
 }

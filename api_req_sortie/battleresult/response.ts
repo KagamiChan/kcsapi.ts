@@ -12,7 +12,7 @@ export interface APIReqSortieBattleresultResponse {
   api_dests: number
   api_destsf: number
   api_enemy_info: APIEnemyInfo
-  api_escape: null
+  api_escape: APIEscape | null
   api_escape_flag: number
   api_first_clear: number
   api_get_base_exp: number
@@ -44,6 +44,11 @@ export interface APIEnemyInfo {
   api_deck_name: string
   api_level: string
   api_rank: string
+}
+
+export interface APIEscape {
+  api_escape_idx: number[]
+  api_escape_type: number
 }
 
 export interface APIGetEventitem {

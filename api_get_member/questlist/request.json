@@ -20,7 +20,6 @@
         }
       },
       "required": [
-        "api_page_no",
         "api_tab_id",
         "api_verno"
       ],

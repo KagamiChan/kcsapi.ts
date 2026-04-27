@@ -56,6 +56,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "api_getmes": {
+          "type": "string"
+        },
         "api_id": {
           "type": "integer"
         },
@@ -70,6 +73,12 @@
         },
         "api_name": {
           "type": "string"
+        },
+        "api_ship_id": {
+          "type": "integer"
+        },
+        "api_slotitem_level": {
+          "type": "integer"
         }
       },
       "required": [],

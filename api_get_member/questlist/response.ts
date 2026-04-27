@@ -12,11 +12,11 @@ export interface APIGetMemberQuestlistResponse {
   api_c_list?: APICList[]
   api_completed_kind: number
   api_count: number
-  api_disp_page: number
+  api_disp_page?: number
   api_exec_count: number
   api_exec_type: number
-  api_list: (APIListClass | number)[]
-  api_page_count: number
+  api_list: (APIListClass | number)[] | null
+  api_page_count?: number
 }
 
 export interface APICList {
@@ -32,6 +32,7 @@ export interface APIListClass {
   api_detail: string
   api_get_material: number[]
   api_invalid_flag: number
+  api_label_type?: number
   api_lost_badges?: number
   api_no: number
   api_progress_flag: number
@@ -47,4 +48,5 @@ export interface APISelectReward {
   api_kind: number
   api_mst_id: number
   api_no: number
+  api_slotitem_level?: number
 }

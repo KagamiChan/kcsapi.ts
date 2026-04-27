@@ -19,7 +19,14 @@
           "$ref": "#/definitions/APIEnemyInfo"
         },
         "api_escape": {
-          "type": "null"
+          "anyOf": [
+            {
+              "$ref": "#/definitions/APIEscape"
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "api_escape_flag": {
           "type": "integer"
@@ -163,6 +170,26 @@
         "api_rank"
       ],
       "title": "APIEnemyInfo"
+    },
+    "APIEscape": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_escape_idx": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_escape_type": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_escape_idx",
+        "api_escape_type"
+      ],
+      "title": "APIEscape"
     },
     "APIGetEventitem": {
       "type": "object",

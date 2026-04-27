@@ -9,6 +9,7 @@
  * type for API response at /kcsapi/api_get_member/record
  */
 export interface APIGetMemberRecordResponse {
+  api_air_base_expanded_info?: APIAirBaseExpandedInfo[]
   api_cmt: string
   api_cmt_id: string
   api_complate: string[]
@@ -31,6 +32,11 @@ export interface APIGetMemberRecordResponse {
   api_ship: number[]
   api_slotitem: number[]
   api_war: API
+}
+
+export interface APIAirBaseExpandedInfo {
+  api_area_id: number
+  api_maintenance_level: number
 }
 
 export interface APIMission {

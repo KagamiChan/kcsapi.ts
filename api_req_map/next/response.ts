@@ -22,7 +22,7 @@ export interface APIReqMapNextResponse {
   api_eventmap?: APIEventmap
   api_get_eo_rate?: number
   api_happening?: APIHappening
-  api_itemget?: APIItemget[]
+  api_itemget?: APIItemgetElement[] | APIItemgetElement
   api_itemget_eo_comment?: APIItemgetEo
   api_itemget_eo_result?: APIItemgetEo
   api_limit_state?: number
@@ -115,7 +115,7 @@ export interface APIHappening {
   api_usemst: number
 }
 
-export interface APIItemget {
+export interface APIItemgetElement {
   api_getcount: number
   api_icon_id: number
   api_id: number

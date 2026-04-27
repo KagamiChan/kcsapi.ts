@@ -51,6 +51,12 @@
         "api_happening": {
           "$ref": "#/definitions/APIHappening"
         },
+        "api_itemget": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIItemget"
+          }
+        },
         "api_limit_state": {
           "type": "integer"
         },
@@ -229,6 +235,35 @@
         "api_usemst"
       ],
       "title": "APIHappening"
+    },
+    "APIItemget": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_getcount": {
+          "type": "integer"
+        },
+        "api_icon_id": {
+          "type": "integer"
+        },
+        "api_id": {
+          "type": "integer"
+        },
+        "api_name": {
+          "type": "string"
+        },
+        "api_usemst": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_getcount",
+        "api_icon_id",
+        "api_id",
+        "api_name",
+        "api_usemst"
+      ],
+      "title": "APIItemget"
     },
     "APISelectRoute": {
       "type": "object",

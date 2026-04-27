@@ -26,8 +26,7 @@
         }
       },
       "required": [
-        "api_material",
-        "api_unset_list"
+        "api_material"
       ],
       "title": "APIReqKousyouDestroyshipResponseElement"
     }

@@ -15,6 +15,12 @@
         "api_c_flag": {
           "type": "integer"
         },
+        "api_c_flags": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
         "api_combined_flag": {
           "type": "integer"
         },
@@ -29,6 +35,9 @@
         },
         "api_event_object": {
           "$ref": "#/definitions/APIEventObject"
+        },
+        "api_furniture_affect_items": {
+          "$ref": "#/definitions/APIFurnitureAffectItems"
         },
         "api_log": {
           "type": "array",
@@ -282,10 +291,34 @@
           "type": "integer"
         }
       },
-      "required": [
-        "api_m_flag"
-      ],
+      "required": [],
       "title": "APIEventObject"
+    },
+    "APIFurnitureAffectItems": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_payitem_dict": {
+          "$ref": "#/definitions/APIPayitemDict"
+        }
+      },
+      "required": [
+        "api_payitem_dict"
+      ],
+      "title": "APIFurnitureAffectItems"
+    },
+    "APIPayitemDict": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "21": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "21"
+      ],
+      "title": "APIPayitemDict"
     },
     "APILog": {
       "type": "object",
@@ -546,6 +579,12 @@
             "type": "integer"
           }
         },
+        "api_sp_effect_items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APISPEffectItem"
+          }
+        },
         "api_srate": {
           "type": "integer"
         },
@@ -596,6 +635,31 @@
         "api_taisen"
       ],
       "title": "APIShip"
+    },
+    "APISPEffectItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_houg": {
+          "type": "integer"
+        },
+        "api_kaih": {
+          "type": "integer"
+        },
+        "api_kind": {
+          "type": "integer"
+        },
+        "api_raig": {
+          "type": "integer"
+        },
+        "api_souk": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_kind"
+      ],
+      "title": "APISPEffectItem"
     }
   }
 }

@@ -21,9 +21,12 @@ export interface APIBounus {
 }
 
 export interface APIItem {
+  api_getmes?: string
   api_id?: number
   api_id_from?: number
   api_id_to?: number
   api_message?: string
   api_name?: string
+  api_ship_id?: number
+  api_slotitem_level?: number
 }

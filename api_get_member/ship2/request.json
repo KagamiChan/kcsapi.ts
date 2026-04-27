@@ -9,6 +9,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "api_shipid": {
+          "type": "string"
+        },
         "api_sort_key": {
           "type": "string"
         },

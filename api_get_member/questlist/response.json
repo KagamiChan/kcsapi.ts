@@ -31,10 +31,17 @@
           "type": "integer"
         },
         "api_list": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/APIListElement"
-          }
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/APIListElement"
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "api_page_count": {
           "type": "integer"
@@ -43,11 +50,9 @@
       "required": [
         "api_completed_kind",
         "api_count",
-        "api_disp_page",
         "api_exec_count",
         "api_exec_type",
-        "api_list",
-        "api_page_count"
+        "api_list"
       ],
       "title": "APIGetMemberQuestlistResponseElement"
     },
@@ -95,6 +100,9 @@
           }
         },
         "api_invalid_flag": {
+          "type": "integer"
+        },
+        "api_label_type": {
           "type": "integer"
         },
         "api_lost_badges": {
@@ -157,6 +165,9 @@
           "type": "integer"
         },
         "api_no": {
+          "type": "integer"
+        },
+        "api_slotitem_level": {
           "type": "integer"
         }
       },

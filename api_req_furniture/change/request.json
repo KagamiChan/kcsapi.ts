@@ -9,6 +9,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "api_bgm_id": {
+          "type": "string"
+        },
         "api_desk": {
           "type": "string"
         },

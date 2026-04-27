@@ -1,0 +1,58 @@
+{
+  "api_ship_id": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "api_clear_result": 1,
+  "api_get_exp": 1,
+  "api_member_lv": 1,
+  "api_member_exp": 1,
+  "api_get_ship_exp": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "api_get_exp_lvup": [
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "api_maparea_name": "Tanaka",
+  "api_detail": "Tanaka",
+  "api_quest_name": "Tanaka",
+  "api_quest_level": 1,
+  "api_get_material": 1,
+  "api_useitem_flag": [
+    1,
+    1
+  ]
+}

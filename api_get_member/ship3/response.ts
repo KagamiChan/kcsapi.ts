@@ -54,7 +54,16 @@ export interface APIShipDatum {
   api_soku: number
   api_sortno: number
   api_soukou: number[]
+  api_sp_effect_items?: APISPEffectItem[]
   api_srate: number
   api_taiku: number[]
   api_taisen: number[]
+}
+
+export interface APISPEffectItem {
+  api_houg?: number
+  api_kaih?: number
+  api_kind: number
+  api_raig?: number
+  api_souk?: number
 }

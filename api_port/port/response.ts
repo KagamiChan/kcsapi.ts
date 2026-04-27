@@ -11,10 +11,12 @@
 export interface APIPortPortResponse {
   api_basic: APIBasic
   api_c_flag?: number
+  api_c_flags?: number[]
   api_combined_flag?: number
   api_deck_port: APIDeckPort[]
   api_dest_ship_slot: number
   api_event_object?: APIEventObject
+  api_furniture_affect_items?: APIFurnitureAffectItems
   api_log: APILog[]
   api_material: APIMaterial[]
   api_ndock: APINdock[]
@@ -72,8 +74,16 @@ export interface APIDeckPort {
 }
 
 export interface APIEventObject {
-  api_m_flag: number
+  api_m_flag?: number
   api_m_flag2?: number
+}
+
+export interface APIFurnitureAffectItems {
+  api_payitem_dict: APIPayitemDict
+}
+
+export interface APIPayitemDict {
+  '21': number
 }
 
 export interface APILog {
@@ -142,7 +152,16 @@ export interface APIShip {
   api_soku: number
   api_sortno: number
   api_soukou: number[]
+  api_sp_effect_items?: APISPEffectItem[]
   api_srate: number
   api_taiku: number[]
   api_taisen: number[]
+}
+
+export interface APISPEffectItem {
+  api_houg?: number
+  api_kaih?: number
+  api_kind: number
+  api_raig?: number
+  api_souk?: number
 }

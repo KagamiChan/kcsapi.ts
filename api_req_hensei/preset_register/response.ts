@@ -9,6 +9,7 @@
  * type for API response at /kcsapi/api_req_hensei/preset_register
  */
 export interface APIReqHenseiPresetRegisterResponse {
+  api_lock_flag?: number
   api_name: string
   api_name_id: string
   api_preset_no: number

@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIGetMemberPresetDevItemsResponseElement"
+  },
+  "definitions": {
+    "APIGetMemberPresetDevItemsResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_max_num": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_max_num"
+      ],
+      "title": "APIGetMemberPresetDevItemsResponseElement"
+    }
+  }
+}

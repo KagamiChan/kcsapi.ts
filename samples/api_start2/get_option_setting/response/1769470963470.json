@@ -1,0 +1,10 @@
+{
+  "api_skin_id": 1,
+  "api_volume_setting": {
+    "api_be_left": 1,
+    "api_duty": 1,
+    "api_bgm": 1,
+    "api_se": 1,
+    "api_voice": 1
+  }
+}

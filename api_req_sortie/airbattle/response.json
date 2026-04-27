@@ -9,6 +9,12 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "api_atoll_cell": {
+          "type": "integer"
+        },
+        "api_balloon_cell": {
+          "type": "integer"
+        },
         "api_deck_id": {
           "type": "integer"
         },
@@ -95,6 +101,9 @@
           "items": {
             "type": "integer"
           }
+        },
+        "api_smoke_type": {
+          "type": "integer"
         },
         "api_stage_flag": {
           "type": "array",
@@ -282,6 +291,12 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "api_e_sp_list": {
+          "type": "array",
+          "items": {
+            "type": "null"
+          }
+        },
         "api_ebak_flag": {
           "type": "array",
           "items": {
@@ -304,6 +319,12 @@
           "type": "array",
           "items": {
             "type": "integer"
+          }
+        },
+        "api_f_sp_list": {
+          "type": "array",
+          "items": {
+            "type": "null"
           }
         },
         "api_fbak_flag": {

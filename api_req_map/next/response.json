@@ -52,10 +52,7 @@
           "$ref": "#/definitions/APIHappening"
         },
         "api_itemget": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/APIItemget"
-          }
+          "$ref": "#/definitions/APIItemgetUnion"
         },
         "api_itemget_eo_comment": {
           "$ref": "#/definitions/APIItemgetEo"
@@ -486,7 +483,7 @@
       ],
       "title": "APIHappening"
     },
-    "APIItemget": {
+    "APIItemgetElement": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -513,7 +510,7 @@
         "api_name",
         "api_usemst"
       ],
-      "title": "APIItemget"
+      "title": "APIItemgetElement"
     },
     "APIItemgetEo": {
       "type": "object",
@@ -572,6 +569,20 @@
         "api_select_cells"
       ],
       "title": "APISelectRoute"
+    },
+    "APIItemgetUnion": {
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIItemgetElement"
+          }
+        },
+        {
+          "$ref": "#/definitions/APIItemgetElement"
+        }
+      ],
+      "title": "APIItemgetUnion"
     }
   }
 }

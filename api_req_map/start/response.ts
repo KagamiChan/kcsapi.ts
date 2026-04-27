@@ -21,6 +21,7 @@ export interface APIReqMapStartResponse {
   api_eventmap?: APIEventmap
   api_from_no: number
   api_happening?: APIHappening
+  api_itemget?: APIItemget[]
   api_limit_state?: number
   api_maparea_id: number
   api_mapinfo_no: number
@@ -66,6 +67,14 @@ export interface APIHappening {
   api_icon_id: number
   api_mst_id: number
   api_type: number
+  api_usemst: number
+}
+
+export interface APIItemget {
+  api_getcount: number
+  api_icon_id: number
+  api_id: number
+  api_name: string
   api_usemst: number
 }
 

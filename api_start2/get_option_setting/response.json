@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIStart2GetOptionSettingResponseElement"
+  },
+  "definitions": {
+    "APIStart2GetOptionSettingResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_skin_id": {
+          "type": "integer"
+        },
+        "api_volume_setting": {
+          "$ref": "#/definitions/APIVolumeSetting"
+        }
+      },
+      "required": [
+        "api_skin_id",
+        "api_volume_setting"
+      ],
+      "title": "APIStart2GetOptionSettingResponseElement"
+    },
+    "APIVolumeSetting": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_be_left": {
+          "type": "integer"
+        },
+        "api_bgm": {
+          "type": "integer"
+        },
+        "api_duty": {
+          "type": "integer"
+        },
+        "api_se": {
+          "type": "integer"
+        },
+        "api_voice": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_be_left",
+        "api_bgm",
+        "api_duty",
+        "api_se",
+        "api_voice"
+      ],
+      "title": "APIVolumeSetting"
+    }
+  }
+}

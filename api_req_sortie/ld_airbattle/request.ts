@@ -11,5 +11,6 @@
 export interface APIReqSortieLdAirbattleRequest {
   api_formation: string
   api_recovery_type: string
+  api_start?: string
   api_verno: string
 }

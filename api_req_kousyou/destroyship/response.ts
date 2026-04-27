@@ -10,5 +10,5 @@
  */
 export interface APIReqKousyouDestroyshipResponse {
   api_material: number[]
-  api_unset_list: { [key: string]: number[] }
+  api_unset_list?: { [key: string]: number[] }
 }

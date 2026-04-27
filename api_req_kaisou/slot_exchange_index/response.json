@@ -143,6 +143,12 @@
             "type": "integer"
           }
         },
+        "api_sp_effect_items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APISPEffectItem"
+          }
+        },
         "api_srate": {
           "type": "integer"
         },
@@ -193,6 +199,27 @@
         "api_taisen"
       ],
       "title": "APIShipData"
+    },
+    "APISPEffectItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_kind": {
+          "type": "integer"
+        },
+        "api_raig": {
+          "type": "integer"
+        },
+        "api_souk": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_kind",
+        "api_raig",
+        "api_souk"
+      ],
+      "title": "APISPEffectItem"
     }
   }
 }

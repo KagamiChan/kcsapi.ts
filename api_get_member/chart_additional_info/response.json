@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIGetMemberChartAdditionalInfoResponseElement"
+  },
+  "definitions": {
+    "APIGetMemberChartAdditionalInfoResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_deck_param": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIDeckParam"
+          }
+        }
+      },
+      "required": [
+        "api_deck_param"
+      ],
+      "title": "APIGetMemberChartAdditionalInfoResponseElement"
+    },
+    "APIDeckParam": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_seiku_value": {
+          "type": "integer"
+        },
+        "api_tp_value": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_seiku_value",
+        "api_tp_value"
+      ],
+      "title": "APIDeckParam"
+    }
+  }
+}

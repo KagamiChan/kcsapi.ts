@@ -15,6 +15,12 @@
             "$ref": "#/definitions/APIAirBase"
           }
         },
+        "api_air_base_expanded_info": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIAirBaseExpandedInfo"
+          }
+        },
         "api_map_info": {
           "type": "array",
           "items": {
@@ -110,6 +116,23 @@
         "api_state"
       ],
       "title": "APIPlaneInfo"
+    },
+    "APIAirBaseExpandedInfo": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_area_id": {
+          "type": "integer"
+        },
+        "api_maintenance_level": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_area_id",
+        "api_maintenance_level"
+      ],
+      "title": "APIAirBaseExpandedInfo"
     },
     "APIMapInfo": {
       "type": "object",

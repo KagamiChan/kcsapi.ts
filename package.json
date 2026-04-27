@@ -52,6 +52,7 @@
     }
   },
   "scripts": {
+    "copy": "ts-node scripts/copy-to-staging",
     "commit": "ts-node scripts/commit",
     "generate": "ts-node scripts/generate"
   }

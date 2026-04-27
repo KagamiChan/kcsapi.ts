@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIPortAirCorpsCondRecoveryWithTimerResponseElement"
+  },
+  "definitions": {
+    "APIPortAirCorpsCondRecoveryWithTimerResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_distance": {
+          "$ref": "#/definitions/APIDistance"
+        },
+        "api_plane_info": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIPlaneInfo"
+          }
+        },
+        "api_result": {
+          "type": "integer"
+        },
+        "api_result_msg": {
+          "type": "string"
+        }
+      },
+      "required": [],
+      "title": "APIPortAirCorpsCondRecoveryWithTimerResponseElement"
+    },
+    "APIDistance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_base": {
+          "type": "integer"
+        },
+        "api_bonus": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_base",
+        "api_bonus"
+      ],
+      "title": "APIDistance"
+    },
+    "APIPlaneInfo": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_cond": {
+          "type": "integer"
+        },
+        "api_count": {
+          "type": "integer"
+        },
+        "api_max_count": {
+          "type": "integer"
+        },
+        "api_slotid": {
+          "type": "integer"
+        },
+        "api_squadron_id": {
+          "type": "integer"
+        },
+        "api_state": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_cond",
+        "api_count",
+        "api_max_count",
+        "api_slotid",
+        "api_squadron_id",
+        "api_state"
+      ],
+      "title": "APIPlaneInfo"
+    }
+  }
+}

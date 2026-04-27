@@ -11,11 +11,11 @@
 export interface APIReqSortieLdAirbattleResponse {
   api_air_base_attack?: APIAirBaseAttack[]
   api_deck_id: number
-  api_eParam: number[][]
-  api_eSlot: number[][]
+  api_eParam: Array<number[]>
+  api_eSlot: Array<number[]>
   api_e_maxhps: number[]
   api_e_nowhps: number[]
-  api_fParam: number[][]
+  api_fParam: Array<number[]>
   api_f_maxhps: number[]
   api_f_nowhps: number[]
   api_formation: number[]

@@ -11,15 +11,15 @@
 export interface APIReqCombinedBattleEcBattleResponse {
   api_air_base_attack: APIAirBaseAttack[]
   api_deck_id: number
-  api_eParam: number[][]
-  api_eParam_combined: number[][]
-  api_eSlot: number[][]
-  api_eSlot_combined: number[][]
+  api_eParam: Array<number[]>
+  api_eParam_combined: Array<number[]>
+  api_eSlot: Array<number[]>
+  api_eSlot_combined: Array<number[]>
   api_e_maxhps: number[]
   api_e_maxhps_combined: number[]
   api_e_nowhps: number[]
   api_e_nowhps_combined: number[]
-  api_fParam: number[][]
+  api_fParam: Array<number[]>
   api_f_maxhps: number[]
   api_f_nowhps: number[]
   api_formation: number[]
@@ -94,14 +94,14 @@ export interface APIHougeki {
   api_at_eflag: number[]
   api_at_list: number[]
   api_at_type: number[]
-  api_cl_list: number[][]
-  api_damage: number[][]
-  api_df_list: number[][]
+  api_cl_list: Array<number[]>
+  api_damage: Array<number[]>
+  api_df_list: Array<number[]>
   api_si_list: Array<Array<number | string>>
 }
 
 export interface APIKouku {
-  api_plane_from: number[][]
+  api_plane_from: Array<number[]>
   api_stage1: APIStage1
   api_stage2: APIStage2
   api_stage3: APIKoukuAPIStage3

@@ -16,6 +16,7 @@ export interface APIReqMapNextResponse {
   api_color_no: number
   api_comment_kind: number
   api_destruction_battle?: APIDestructionBattle
+  api_e_deck_info?: APIEDeckInfo[]
   api_event_id: number
   api_event_kind: number
   api_eventmap?: APIEventmap
@@ -24,6 +25,7 @@ export interface APIReqMapNextResponse {
   api_itemget?: APIItemget[]
   api_itemget_eo_comment?: APIItemgetEo
   api_itemget_eo_result?: APIItemgetEo
+  api_limit_state?: number
   api_maparea_id: number
   api_mapinfo_no: number
   api_next: number
@@ -48,7 +50,7 @@ export interface APICellFlavor {
 
 export interface APIDestructionBattle {
   api_air_base_attack: APIAirBaseAttack
-  api_eSlot: number[][]
+  api_eSlot: Array<number[]>
   api_e_maxhps: number[]
   api_e_nowhps: number[]
   api_f_maxhps: number[]
@@ -91,6 +93,11 @@ export interface APIStage3 {
   api_fcl_flag: number[]
   api_fdam: number[]
   api_frai_flag: number[]
+}
+
+export interface APIEDeckInfo {
+  api_kind: number
+  api_ship_ids: number[]
 }
 
 export interface APIEventmap {

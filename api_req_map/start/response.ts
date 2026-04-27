@@ -15,11 +15,13 @@ export interface APIReqMapStartResponse {
   api_cell_data: APICellDatum[]
   api_cell_flavor?: APICellFlavor
   api_color_no: number
+  api_e_deck_info?: APIEDeckInfo[]
   api_event_id: number
   api_event_kind: number
   api_eventmap?: APIEventmap
   api_from_no: number
   api_happening?: APIHappening
+  api_limit_state?: number
   api_maparea_id: number
   api_mapinfo_no: number
   api_next: number
@@ -45,6 +47,11 @@ export interface APICellDatum {
 export interface APICellFlavor {
   api_message: string
   api_type: number
+}
+
+export interface APIEDeckInfo {
+  api_kind: number
+  api_ship_ids: number[]
 }
 
 export interface APIEventmap {

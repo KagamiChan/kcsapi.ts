@@ -30,6 +30,12 @@
         "api_color_no": {
           "type": "integer"
         },
+        "api_e_deck_info": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIEDeckInfo"
+          }
+        },
         "api_event_id": {
           "type": "integer"
         },
@@ -44,6 +50,9 @@
         },
         "api_happening": {
           "$ref": "#/definitions/APIHappening"
+        },
+        "api_limit_state": {
+          "type": "integer"
         },
         "api_maparea_id": {
           "type": "integer"
@@ -146,6 +155,26 @@
         "api_type"
       ],
       "title": "APICellFlavor"
+    },
+    "APIEDeckInfo": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_kind": {
+          "type": "integer"
+        },
+        "api_ship_ids": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_kind",
+        "api_ship_ids"
+      ],
+      "title": "APIEDeckInfo"
     },
     "APIEventmap": {
       "type": "object",

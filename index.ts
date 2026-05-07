@@ -145,6 +145,8 @@ export { APIReqKousyouDestroyshipRequest } from './api_req_kousyou/destroyship/r
 export { APIReqKousyouDestroyshipResponse } from './api_req_kousyou/destroyship/response'
 export { APIReqKousyouGetshipRequest } from './api_req_kousyou/getship/request'
 export { APIReqKousyouGetshipResponse } from './api_req_kousyou/getship/response'
+export { APIReqKousyouRemodelSlotRecoverRequest } from './api_req_kousyou/remodel_slot_recover/request'
+export { APIReqKousyouRemodelSlotRecoverResponse } from './api_req_kousyou/remodel_slot_recover/response'
 export { APIReqKousyouRemodelSlotRequest } from './api_req_kousyou/remodel_slot/request'
 export { APIReqKousyouRemodelSlotResponse } from './api_req_kousyou/remodel_slot/response'
 export { APIReqKousyouRemodelSlotlistDetailRequest } from './api_req_kousyou/remodel_slotlist_detail/request'

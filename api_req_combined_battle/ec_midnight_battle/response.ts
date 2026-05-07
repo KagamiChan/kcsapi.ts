@@ -10,6 +10,8 @@
  */
 export interface APIReqCombinedBattleEcMidnightBattleResponse {
   api_active_deck: number[]
+  api_atoll_cell?: number
+  api_balloon_cell?: number
   api_deck_id: number
   api_eParam: number[][]
   api_eParam_combined: number[][]
@@ -36,6 +38,7 @@ export interface APIReqCombinedBattleEcMidnightBattleResponse {
   api_ship_ke_combined: number[]
   api_ship_lv: number[]
   api_ship_lv_combined: number[]
+  api_smoke_type?: number
   api_touch_plane: (number | string)[]
 }
 

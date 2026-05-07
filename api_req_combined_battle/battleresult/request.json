@@ -48,6 +48,24 @@
         "api_l_value3[5]": {
           "type": "string"
         },
+        "api_l_value4[0]": {
+          "type": "string"
+        },
+        "api_l_value4[1]": {
+          "type": "string"
+        },
+        "api_l_value4[2]": {
+          "type": "string"
+        },
+        "api_l_value4[3]": {
+          "type": "string"
+        },
+        "api_l_value4[4]": {
+          "type": "string"
+        },
+        "api_l_value4[5]": {
+          "type": "string"
+        },
         "api_l_value[0]": {
           "type": "string"
         },
@@ -72,12 +90,6 @@
       },
       "required": [
         "api_btime",
-        "api_l_value2[0]",
-        "api_l_value2[1]",
-        "api_l_value2[2]",
-        "api_l_value2[3]",
-        "api_l_value2[4]",
-        "api_l_value2[5]",
         "api_l_value3[0]",
         "api_l_value3[1]",
         "api_l_value3[2]",

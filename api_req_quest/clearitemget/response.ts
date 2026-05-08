@@ -9,12 +9,12 @@
  * type for API response at /kcsapi/api_req_quest/clearitemget
  */
 export interface APIReqQuestClearitemgetResponse {
-  api_bounus: APIBounus[]
+  api_bounus: APIBounu[]
   api_bounus_count: number
   api_material: number[]
 }
 
-export interface APIBounus {
+export interface APIBounu {
   api_count: number
   api_item?: APIItem
   api_type: number

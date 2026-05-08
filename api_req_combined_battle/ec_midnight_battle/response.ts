@@ -33,7 +33,7 @@ export interface APIReqCombinedBattleEcMidnightBattleResponse {
   api_formation: number[]
   api_friendly_battle?: APIFriendlyBattle
   api_friendly_info?: APIFriendlyInfo
-  api_hougeki: APIReqCombinedBattleEcMidnightBattleResponseAPIHougeki
+  api_hougeki: APIHougeki
   api_ship_ke: number[]
   api_ship_ke_combined: number[]
   api_ship_lv: number[]
@@ -70,7 +70,7 @@ export interface APIFriendlyInfo {
   api_voice_p_no: number[]
 }
 
-export interface APIReqCombinedBattleEcMidnightBattleResponseAPIHougeki {
+export interface APIHougeki {
   api_at_eflag: number[]
   api_at_list: number[]
   api_cl_list: number[][]

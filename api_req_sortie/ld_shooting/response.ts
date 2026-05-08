@@ -18,13 +18,13 @@ export interface APIReqSortieLdShootingResponse {
   api_f_maxhps: number[]
   api_f_nowhps: number[]
   api_formation: number[]
-  api_hougeki1: APIHougeki1
+  api_hougeki1: APIHougeki
   api_midnight_flag: number
   api_ship_ke: number[]
   api_ship_lv: number[]
 }
 
-export interface APIHougeki1 {
+export interface APIHougeki {
   api_at_eflag: number[]
   api_at_list: number[]
   api_at_type: number[]

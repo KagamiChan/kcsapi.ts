@@ -9,11 +9,11 @@
  * type for API response at /kcsapi/api_get_member/ship_deck
  */
 export interface APIGetMemberShipDeckResponse {
-  api_deck_data: APIDeckDatum[]
-  api_ship_data: APIShipDatum[]
+  api_deck_data: APIDeckData[]
+  api_ship_data: APIShipData[]
 }
 
-export interface APIDeckDatum {
+export interface APIDeckData {
   api_flagship: string
   api_id: number
   api_member_id: number
@@ -23,7 +23,7 @@ export interface APIDeckDatum {
   api_ship: number[]
 }
 
-export interface APIShipDatum {
+export interface APIShipData {
   api_backs: number
   api_bull: number
   api_cond: number

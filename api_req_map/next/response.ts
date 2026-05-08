@@ -22,9 +22,9 @@ export interface APIReqMapNextResponse {
   api_eventmap?: APIEventmap
   api_get_eo_rate?: number
   api_happening?: APIHappening
-  api_itemget?: APIItemgetElement[] | APIItemgetElement
-  api_itemget_eo_comment?: APIItemgetEo
-  api_itemget_eo_result?: APIItemgetEo
+  api_itemget?: APIItemget[] | APIItemget
+  api_itemget_eo_comment?: APIItemgetEoResult
+  api_itemget_eo_result?: APIItemgetEoResult
   api_limit_state?: number
   api_maparea_id: number
   api_mapinfo_no: number
@@ -64,7 +64,7 @@ export interface APIDestructionBattle {
 export interface APIAirBaseAttack {
   api_map_squadron_plane: { [key: string]: APIMapSquadronPlane[] } | null
   api_plane_from: (number[] | null)[]
-  api_stage1: APIStage1
+  api_stage1: APIStage
   api_stage2: null
   api_stage3: APIStage3 | null
   api_stage_flag: number[]
@@ -75,7 +75,7 @@ export interface APIMapSquadronPlane {
   api_mst_id: number
 }
 
-export interface APIStage1 {
+export interface APIStage {
   api_disp_seiku: number
   api_e_count: number
   api_e_lostcount: number
@@ -117,7 +117,7 @@ export interface APIHappening {
   api_usemst: number
 }
 
-export interface APIItemgetElement {
+export interface APIItemget {
   api_getcount: number
   api_icon_id: number
   api_id: number
@@ -125,7 +125,7 @@ export interface APIItemgetElement {
   api_usemst: number
 }
 
-export interface APIItemgetEo {
+export interface APIItemgetEoResult {
   api_getcount: number
   api_id: number
   api_usemst: number

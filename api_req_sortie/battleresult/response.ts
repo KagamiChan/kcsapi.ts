@@ -26,7 +26,7 @@ export interface APIReqSortieBattleresultResponse {
   api_get_ship?: APIGetShip
   api_get_ship_exp: number[]
   api_get_useitem?: APIGetUseitem
-  api_landing_hp?: APILandingHP
+  api_landing_hp?: APILandingHp
   api_m1?: number
   api_m_suffix?: string
   api_mapcell_incentive: number
@@ -69,7 +69,7 @@ export interface APIGetUseitem {
   api_useitem_name: string
 }
 
-export interface APILandingHP {
+export interface APILandingHp {
   api_max_hp: string
   api_now_hp: string
   api_sub_value: number | string

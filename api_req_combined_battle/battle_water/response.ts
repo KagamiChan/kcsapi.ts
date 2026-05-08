@@ -30,11 +30,11 @@ export interface APIReqCombinedBattleBattleWaterResponse {
   api_hourai_flag: number[]
   api_kouku: APIKouku
   api_midnight_flag: number
-  api_opening_atack: API | null
+  api_opening_atack: APIRaigeki | null
   api_opening_flag: number
   api_opening_taisen: APIOpeningTaisen | null
   api_opening_taisen_flag: number
-  api_raigeki?: API
+  api_raigeki?: APIRaigeki
   api_search: number[]
   api_ship_ke: number[]
   api_ship_lv: number[]
@@ -49,7 +49,7 @@ export interface APIAirBaseAttack {
   api_squadron_plane: APISquadronPlane[]
   api_stage1: APIStage1
   api_stage2: APIStage
-  api_stage3: APIAirBaseAttackAPIStage3
+  api_stage3: APIAirBaseAttackAPIStage
   api_stage_flag: number[]
 }
 
@@ -81,7 +81,7 @@ export interface APIAirFire {
   api_use_items: number[]
 }
 
-export interface APIAirBaseAttackAPIStage3 {
+export interface APIAirBaseAttackAPIStage {
   api_ebak_flag: number[]
   api_ecl_flag: number[]
   api_edam: number[]
@@ -102,11 +102,11 @@ export interface APIKouku {
   api_plane_from: (number[] | null)[]
   api_stage1: APIStage1
   api_stage2: APIStage | null
-  api_stage3: APIKoukuAPIStage3 | null
+  api_stage3: APIKoukuAPIStage | null
   api_stage3_combined: APIStage3Combined | null
 }
 
-export interface APIKoukuAPIStage3 {
+export interface APIKoukuAPIStage {
   api_ebak_flag: number[]
   api_ecl_flag: number[]
   api_edam: number[]
@@ -124,7 +124,7 @@ export interface APIStage3Combined {
   api_frai_flag: number[]
 }
 
-export interface API {
+export interface APIRaigeki {
   api_ecl: number[]
   api_edam: number[]
   api_erai: number[]
@@ -156,7 +156,7 @@ export interface APISupportAiratack {
   api_ship_id: number[]
   api_stage1: APIStage
   api_stage2: APIStage2
-  api_stage3: APIAirBaseAttackAPIStage3
+  api_stage3: APIAirBaseAttackAPIStage
   api_stage_flag: number[]
   api_undressing_flag: number[]
 }

@@ -38,12 +38,12 @@ export interface APIMstBgm {
 }
 
 export interface APIMstConst {
-  api_boko_max_ships: API
-  api_dpflag_quest: API
-  api_parallel_quest_max: API
+  api_boko_max_ships: APIDpflagQuest
+  api_dpflag_quest: APIDpflagQuest
+  api_parallel_quest_max: APIDpflagQuest
 }
 
-export interface API {
+export interface APIDpflagQuest {
   api_int_value: number
   api_string_value: string
 }

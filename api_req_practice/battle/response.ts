@@ -21,8 +21,8 @@ export interface APIReqPracticeBattleResponse {
   api_f_maxhps: number[]
   api_f_nowhps: number[]
   api_formation: number[]
-  api_hougeki1: API | null
-  api_hougeki2: API | null
+  api_hougeki1: APIHougeki | null
+  api_hougeki2: APIHougeki | null
   api_hougeki3: null
   api_hourai_flag: number[]
   api_injection_kouku?: APIInjectionKouku
@@ -30,7 +30,7 @@ export interface APIReqPracticeBattleResponse {
   api_midnight_flag: number
   api_opening_atack: APIOpeningAtack | null
   api_opening_flag: number
-  api_opening_taisen: API | null
+  api_opening_taisen: APIHougeki | null
   api_opening_taisen_flag: number
   api_raigeki: APIRaigeki | null
   api_search: number[]
@@ -40,7 +40,7 @@ export interface APIReqPracticeBattleResponse {
   api_stage_flag: number[]
 }
 
-export interface API {
+export interface APIHougeki {
   api_at_eflag: number[]
   api_at_list: number[]
   api_at_type: number[]

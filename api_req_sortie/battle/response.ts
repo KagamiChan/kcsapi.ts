@@ -23,8 +23,8 @@ export interface APIReqSortieBattleResponse {
   api_f_nowhps: number[]
   api_flavor_info?: APIFlavorInfo[]
   api_formation: number[]
-  api_hougeki1: API | null
-  api_hougeki2: API | null
+  api_hougeki1: APIHougeki | null
+  api_hougeki2: APIHougeki | null
   api_hougeki3: null
   api_hourai_flag: number[]
   api_injection_kouku?: APIInjectionKouku
@@ -32,7 +32,7 @@ export interface APIReqSortieBattleResponse {
   api_midnight_flag: number
   api_opening_atack: APIOpeningAtack | null
   api_opening_flag: number
-  api_opening_taisen: API | null
+  api_opening_taisen: APIHougeki | null
   api_opening_taisen_flag: number
   api_raigeki: APIRaigeki | null
   api_search: number[]
@@ -50,7 +50,7 @@ export interface APIAirBaseAttack {
   api_squadron_plane: APISquadronPlane[]
   api_stage1: APIStage1
   api_stage2: APIStage
-  api_stage3: APIAirBaseAttackAPIStage3 | null
+  api_stage3: APIAirBaseAttackAPIStage | null
   api_stage_flag: number[]
 }
 
@@ -82,7 +82,7 @@ export interface APIAirFire {
   api_use_items: number[]
 }
 
-export interface APIAirBaseAttackAPIStage3 {
+export interface APIAirBaseAttackAPIStage {
   api_e_sp_list?: null[]
   api_ebak_flag: number[]
   api_ecl_flag: number[]
@@ -102,7 +102,7 @@ export interface APIFlavorInfo {
   api_voice_id: string
 }
 
-export interface API {
+export interface APIHougeki {
   api_at_eflag: number[]
   api_at_list: number[]
   api_at_type: number[]
@@ -116,10 +116,10 @@ export interface APIInjectionKouku {
   api_plane_from: (number[] | null)[]
   api_stage1: APIStage
   api_stage2: APIStage
-  api_stage3: APIInjectionKoukuAPIStage3
+  api_stage3: APIInjectionKoukuAPIStage
 }
 
-export interface APIInjectionKoukuAPIStage3 {
+export interface APIInjectionKoukuAPIStage {
   api_e_sp_list?: null[]
   api_ebak_flag: number[]
   api_ecl_flag: number[]
@@ -136,7 +136,7 @@ export interface APIKouku {
   api_plane_from: (number[] | null)[]
   api_stage1: APIStage1
   api_stage2: APIStage | null
-  api_stage3: APIInjectionKoukuAPIStage3 | null
+  api_stage3: APIInjectionKoukuAPIStage | null
 }
 
 export interface APIOpeningAtack {
@@ -178,7 +178,7 @@ export interface APISupportAiratack {
   api_ship_id: number[]
   api_stage1: APIStage
   api_stage2: APIStage2
-  api_stage3: APIAirBaseAttackAPIStage3
+  api_stage3: APIAirBaseAttackAPIStage
   api_stage_flag: number[]
   api_undressing_flag: number[]
 }

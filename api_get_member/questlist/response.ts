@@ -15,7 +15,7 @@ export interface APIGetMemberQuestlistResponse {
   api_disp_page?: number
   api_exec_count: number
   api_exec_type: number
-  api_list: (APIListClass | number)[] | null
+  api_list: (APIList | number)[] | null
   api_page_count?: number
 }
 
@@ -26,7 +26,7 @@ export interface APICList {
   api_state: number
 }
 
-export interface APIListClass {
+export interface APIList {
   api_bonus_flag: number
   api_category: number
   api_detail: string

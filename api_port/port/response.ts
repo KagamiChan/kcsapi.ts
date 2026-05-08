@@ -16,7 +16,7 @@ export interface APIPortPortResponse {
   api_deck_port: APIDeckPort[]
   api_dest_ship_slot: number
   api_event_object?: APIEventObject
-  api_furniture_affect_items?: APIFurnitureAffectItems
+  api_furniture_affect_items?: APIFurnitureAffectItem
   api_log: APILog[]
   api_material: APIMaterial[]
   api_ndock: APINdock[]
@@ -78,7 +78,7 @@ export interface APIEventObject {
   api_m_flag2?: number
 }
 
-export interface APIFurnitureAffectItems {
+export interface APIFurnitureAffectItem {
   api_payitem_dict: APIPayitemDict
 }
 

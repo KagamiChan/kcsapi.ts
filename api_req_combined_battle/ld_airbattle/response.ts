@@ -36,7 +36,7 @@ export interface APIAirBaseAttack {
   api_base_id: number
   api_plane_from: (number[] | null)[]
   api_squadron_plane: APISquadronPlane[]
-  api_stage1: APIStage1
+  api_stage1: APIStage
   api_stage2: null
   api_stage3: null
   api_stage_flag: number[]
@@ -47,7 +47,7 @@ export interface APISquadronPlane {
   api_mst_id: number
 }
 
-export interface APIStage1 {
+export interface APIStage {
   api_disp_seiku: number
   api_e_count: number
   api_e_lostcount: number
@@ -58,7 +58,7 @@ export interface APIStage1 {
 
 export interface APIKouku {
   api_plane_from: number[][]
-  api_stage1: APIStage1
+  api_stage1: APIStage
   api_stage2: APIStage2
   api_stage3: APIStage3 | null
   api_stage3_combined: APIStage3Combined | null

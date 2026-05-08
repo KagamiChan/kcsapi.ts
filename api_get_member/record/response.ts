@@ -27,11 +27,11 @@ export interface APIGetMemberRecordResponse {
   api_nickname: string
   api_nickname_id: string
   api_photo_url: string
-  api_practice: API
+  api_practice: APIWar
   api_rank: number
   api_ship: number[]
   api_slotitem: number[]
-  api_war: API
+  api_war: APIWar
 }
 
 export interface APIAirBaseExpandedInfo {
@@ -45,7 +45,7 @@ export interface APIMission {
   api_success: string
 }
 
-export interface API {
+export interface APIWar {
   api_lose: string
   api_rate: string
   api_win: string

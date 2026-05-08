@@ -12,7 +12,7 @@ export interface APIReqMapStartResponse {
   api_airsearch: APIAirsearch
   api_bosscell_no: number
   api_bosscomp: number
-  api_cell_data: APICellDatum[]
+  api_cell_data: APICellData[]
   api_cell_flavor?: APICellFlavor
   api_color_no: number
   api_e_deck_info?: APIEDeckInfo[]
@@ -37,7 +37,7 @@ export interface APIAirsearch {
   api_result: number
 }
 
-export interface APICellDatum {
+export interface APICellData {
   api_color_no: number
   api_distance?: number
   api_id: number

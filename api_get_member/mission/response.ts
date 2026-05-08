@@ -8,12 +8,12 @@
 /**
  * type for API response at /kcsapi/api_get_member/mission
  */
-export interface API {
+export interface APIListItem {
   api_mission_id: number
   api_state: number
 }
 
 export interface APIGetMemberMissionResponse {
   api_limit_time: number[]
-  api_list_items: API[]
+  api_list_items: APIListItem[]
 }

@@ -10,11 +10,11 @@
  */
 export interface APIReqMapAnchorageRepairResponse {
   api_repair_ships: number[]
-  api_ship_data: APIShipDatum[]
+  api_ship_data: APIShipData[]
   api_used_ship: number
 }
 
-export interface APIShipDatum {
+export interface APIShipData {
   api_backs: number
   api_bull: number
   api_cond: number

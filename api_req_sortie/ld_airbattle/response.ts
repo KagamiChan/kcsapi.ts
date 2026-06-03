@@ -69,6 +69,7 @@ export interface APIAirFire {
 }
 
 export interface APIAirBaseAttackAPIStage {
+  api_e_sp_list?: null[]
   api_ebak_flag: number[]
   api_ecl_flag: number[]
   api_edam: number[]
@@ -88,7 +89,7 @@ export interface APIKoukuAPIStage {
   api_ecl_flag: number[]
   api_edam: number[]
   api_erai_flag: number[]
-  api_f_sp_list?: null[]
+  api_f_sp_list?: (number[] | null)[]
   api_fbak_flag: number[]
   api_fcl_flag: number[]
   api_fdam: number[]

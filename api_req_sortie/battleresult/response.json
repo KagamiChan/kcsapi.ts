@@ -259,10 +259,10 @@
       "additionalProperties": false,
       "properties": {
         "api_max_hp": {
-          "type": "string"
+          "$ref": "#/definitions/API"
         },
         "api_now_hp": {
-          "type": "string"
+          "$ref": "#/definitions/API"
         },
         "api_sub_value": {
           "$ref": "#/definitions/API"

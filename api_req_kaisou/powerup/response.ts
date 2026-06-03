@@ -12,6 +12,7 @@ export interface APIReqKaisouPowerupResponse {
   api_deck: APIDeck[]
   api_powerup_flag: number
   api_ship: APIShip
+  api_unset_list?: APIUnsetList[]
 }
 
 export interface APIDeck {
@@ -57,4 +58,9 @@ export interface APIShip {
   api_srate: number
   api_taiku: number[]
   api_taisen: number[]
+}
+
+export interface APIUnsetList {
+  api_slot_list: number[]
+  api_type3No: number
 }

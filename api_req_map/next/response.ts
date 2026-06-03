@@ -14,7 +14,7 @@ export interface APIReqMapNextResponse {
   api_bosscomp: number
   api_cell_flavor?: APICellFlavor
   api_color_no: number
-  api_comment_kind: number
+  api_comment_kind?: number
   api_destruction_battle?: APIDestructionBattle
   api_e_deck_info?: APIEDeckInfo[]
   api_event_id: number
@@ -26,12 +26,13 @@ export interface APIReqMapNextResponse {
   api_itemget_eo_comment?: APIItemgetEoResult
   api_itemget_eo_result?: APIItemgetEoResult
   api_limit_state?: number
+  api_m1?: number
   api_maparea_id: number
   api_mapinfo_no: number
   api_next: number
   api_no: number
   api_offshore_supply?: APIOffshoreSupply
-  api_production_kind: number
+  api_production_kind?: number
   api_rashin_flg: number
   api_rashin_id: number
   api_ration_flag?: number

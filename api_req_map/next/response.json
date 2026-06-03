@@ -63,6 +63,9 @@
         "api_limit_state": {
           "type": "integer"
         },
+        "api_m1": {
+          "type": "integer"
+        },
         "api_maparea_id": {
           "type": "integer"
         },
@@ -99,14 +102,12 @@
         "api_bosscell_no",
         "api_bosscomp",
         "api_color_no",
-        "api_comment_kind",
         "api_event_id",
         "api_event_kind",
         "api_maparea_id",
         "api_mapinfo_no",
         "api_next",
         "api_no",
-        "api_production_kind",
         "api_rashin_flg",
         "api_rashin_id"
       ],

@@ -17,5 +17,6 @@ export interface APIItem {
   api_getmes: string
   api_mode: number
   api_mst_id: number
+  api_slotitem_level?: number
   api_type: number
 }

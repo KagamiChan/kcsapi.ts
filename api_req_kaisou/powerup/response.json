@@ -20,6 +20,12 @@
         },
         "api_ship": {
           "$ref": "#/definitions/APIShip"
+        },
+        "api_unset_list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIUnsetList"
+          }
         }
       },
       "required": [
@@ -246,6 +252,26 @@
         "api_taisen"
       ],
       "title": "APIShip"
+    },
+    "APIUnsetList": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_slot_list": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_type3No": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_slot_list",
+        "api_type3No"
+      ],
+      "title": "APIUnsetList"
     }
   }
 }

@@ -27,7 +27,7 @@ export interface APIReqCombinedBattleEcBattleResponse {
   api_formation: number[]
   api_hougeki1: APIHougeki | null
   api_hougeki2: APIHougeki
-  api_hougeki3: APIHougeki
+  api_hougeki3?: APIHougeki
   api_hourai_flag: number[]
   api_kouku: APIKouku
   api_midnight_flag: number

@@ -37,6 +37,9 @@
         "api_mst_id": {
           "type": "integer"
         },
+        "api_slotitem_level": {
+          "type": "integer"
+        },
         "api_type": {
           "type": "integer"
         }

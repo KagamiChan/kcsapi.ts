@@ -313,6 +313,12 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "api_e_sp_list": {
+          "type": "array",
+          "items": {
+            "type": "null"
+          }
+        },
         "api_ebak_flag": {
           "type": "array",
           "items": {
@@ -428,7 +434,17 @@
         "api_f_sp_list": {
           "type": "array",
           "items": {
-            "type": "null"
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
           }
         },
         "api_fbak_flag": {

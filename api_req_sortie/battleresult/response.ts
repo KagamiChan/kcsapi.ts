@@ -70,7 +70,7 @@ export interface APIGetUseitem {
 }
 
 export interface APILandingHp {
-  api_max_hp: string
-  api_now_hp: string
+  api_max_hp: number | string
+  api_now_hp: number | string
   api_sub_value: number | string
 }

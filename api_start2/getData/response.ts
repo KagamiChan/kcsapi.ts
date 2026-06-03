@@ -16,7 +16,7 @@ export interface APIStart2GetDataResponse {
   api_mst_equip_limit_exslot: { [key: string]: number[] }
   api_mst_equip_ship: { [key: string]: APIMstEquipShip }
   api_mst_furniture: APIMstFurniture[]
-  api_mst_furnituregraph: APIMstFurnituregraph[]
+  api_mst_furnituregraph?: APIMstFurnituregraph[]
   api_mst_item_shop: APIMstItemShop
   api_mst_maparea: APIMstMaparea[]
   api_mst_mapbgm: APIMstMapbgm[]

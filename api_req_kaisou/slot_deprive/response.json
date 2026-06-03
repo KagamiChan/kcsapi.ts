@@ -223,6 +223,12 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "api_houg": {
+          "type": "integer"
+        },
+        "api_kaih": {
+          "type": "integer"
+        },
         "api_kind": {
           "type": "integer"
         },
@@ -234,9 +240,7 @@
         }
       },
       "required": [
-        "api_kind",
-        "api_raig",
-        "api_souk"
+        "api_kind"
       ],
       "title": "APISPEffectItem"
     },

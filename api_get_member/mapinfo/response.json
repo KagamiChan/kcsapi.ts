@@ -162,6 +162,9 @@
         "api_required_defeat_count": {
           "type": "integer"
         },
+        "api_s_no": {
+          "type": "integer"
+        },
         "api_sally_flag": {
           "type": "array",
           "items": {

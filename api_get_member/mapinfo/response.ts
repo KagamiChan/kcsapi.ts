@@ -51,6 +51,7 @@ export interface APIMapInfo {
   api_gauge_type?: number
   api_id: number
   api_required_defeat_count?: number
+  api_s_no?: number
   api_sally_flag?: number[]
 }
 

@@ -49,7 +49,9 @@ export interface APIShipData {
 }
 
 export interface APISPEffectItem {
+  api_houg?: number
+  api_kaih?: number
   api_kind: number
-  api_raig: number
-  api_souk: number
+  api_raig?: number
+  api_souk?: number
 }

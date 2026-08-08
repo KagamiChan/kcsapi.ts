@@ -137,8 +137,18 @@ const main = async (): Promise<void> => {
 
   const schemaToFilePaths: { [key: string]: string[] } = {}
 
+  const unreadable: string[] = []
+
   await bluebird.each(files, async file => {
-    const packet: PoiPacket = await fs.readJSON(file)
+    let packet: PoiPacket
+    try {
+      packet = await fs.readJSON(file)
+    } catch (e) {
+      // poi occasionally leaves an empty or half written packet behind,
+      // there is nothing to recover from it so just move on
+      unreadable.push(file)
+      return bluebird.resolve()
+    }
 
     packet.body = anonymize(packet.body)
     packet.postBody = anonymize(packet.postBody)
@@ -208,6 +218,10 @@ const main = async (): Promise<void> => {
       },
     )
   })
+
+  if (unreadable.length) {
+    console.info(chalk.yellow(`${unreadable.length} packet(s) skipped, not readable as JSON`))
+  }
 
   if (Object.keys(staging).length) {
     console.info(chalk.yellow('commiting'))

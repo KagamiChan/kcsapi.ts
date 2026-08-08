@@ -9,6 +9,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "api_discount_flag": {
+          "type": "string"
+        },
         "api_no": {
           "type": "string"
         },

@@ -284,6 +284,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "api_c_num": {
+          "type": "integer"
+        },
         "api_m_flag": {
           "type": "integer"
         },

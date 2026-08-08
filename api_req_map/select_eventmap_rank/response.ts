@@ -9,7 +9,9 @@
  * type for API response at /kcsapi/api_req_map/select_eventmap_rank
  */
 export interface APIReqMapSelectEventmapRankResponse {
+  api_air_base_decks?: number
   api_maphp: APIMaphp
+  api_s_no?: number
   api_sally_flag?: number[]
 }
 

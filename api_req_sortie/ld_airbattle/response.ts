@@ -17,6 +17,7 @@ export interface APIReqSortieLdAirbattleResponse {
   api_eSlot: number[][]
   api_e_maxhps: number[]
   api_e_nowhps: number[]
+  api_escape_idx?: number[]
   api_fParam: number[][]
   api_f_maxhps: number[]
   api_f_nowhps: number[]
@@ -79,7 +80,7 @@ export interface APIAirBaseAttackAPIStage {
 export interface APIKouku {
   api_plane_from: (number[] | null)[]
   api_stage1: APIStage
-  api_stage2: APIStage2
+  api_stage2: APIStage2 | null
   api_stage3: APIKoukuAPIStage | null
 }
 
@@ -90,8 +91,8 @@ export interface APIKoukuAPIStage {
   api_edam: number[]
   api_erai_flag: number[]
   api_f_sp_list?: (number[] | null)[]
-  api_fbak_flag: number[]
+  api_fbak_flag: (number | null)[]
   api_fcl_flag: number[]
   api_fdam: number[]
-  api_frai_flag: number[]
+  api_frai_flag: (number | null)[]
 }

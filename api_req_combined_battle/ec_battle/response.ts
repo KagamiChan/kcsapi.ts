@@ -33,7 +33,7 @@ export interface APIReqCombinedBattleEcBattleResponse {
   api_midnight_flag: number
   api_opening_atack: APIOpeningAtack | null
   api_opening_flag: number
-  api_opening_taisen: null
+  api_opening_taisen: APIOpeningTaisen | null
   api_opening_taisen_flag: number
   api_raigeki: APIRaigeki
   api_search: number[]
@@ -105,11 +105,11 @@ export interface APIHougeki {
 }
 
 export interface APIKouku {
-  api_plane_from: number[][]
+  api_plane_from: (number[] | null)[]
   api_stage1: APIStage
-  api_stage2: APIStage2
-  api_stage3: APIKoukuAPIStage
-  api_stage3_combined: APIKoukuAPIStage
+  api_stage2: APIStage2 | null
+  api_stage3: APIKoukuAPIStage | null
+  api_stage3_combined: APIKoukuAPIStage | null
 }
 
 export interface APIKoukuAPIStage {
@@ -140,6 +140,16 @@ export interface APIOpeningAtack {
   api_frai_list_items?: (number[] | null)[]
   api_fydam?: number[]
   api_fydam_list_items?: (number[] | null)[]
+}
+
+export interface APIOpeningTaisen {
+  api_at_eflag: number[]
+  api_at_list: number[]
+  api_at_type: number[]
+  api_cl_list: number[][]
+  api_damage: number[][]
+  api_df_list: number[][]
+  api_si_list: number[][]
 }
 
 export interface APIRaigeki {

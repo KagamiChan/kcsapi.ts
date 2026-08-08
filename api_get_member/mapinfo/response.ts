@@ -56,6 +56,7 @@ export interface APIMapInfo {
 }
 
 export interface APIEventmap {
+  api_limit_flag?: number
   api_max_maphp?: number
   api_now_maphp?: number
   api_selected_rank: number

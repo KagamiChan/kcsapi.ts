@@ -15,6 +15,12 @@
             "$ref": "#/definitions/APIAirBaseAttack"
           }
         },
+        "api_atoll_cell": {
+          "type": "integer"
+        },
+        "api_balloon_cell": {
+          "type": "integer"
+        },
         "api_deck_id": {
           "type": "integer"
         },
@@ -132,6 +138,9 @@
             "type": "integer"
           }
         },
+        "api_smoke_type": {
+          "type": "integer"
+        },
         "api_stage_flag": {
           "type": "array",
           "items": {
@@ -194,10 +203,24 @@
           "$ref": "#/definitions/APIStage1"
         },
         "api_stage2": {
-          "type": "null"
+          "anyOf": [
+            {
+              "$ref": "#/definitions/APIStage2"
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "api_stage3": {
-          "type": "null"
+          "anyOf": [
+            {
+              "$ref": "#/definitions/APIAirBaseAttackAPIStage3"
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "api_stage_flag": {
           "type": "array",
@@ -270,55 +293,6 @@
       ],
       "title": "APIStage1"
     },
-    "APIKouku": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "api_plane_from": {
-          "type": "array",
-          "items": {
-            "type": "array",
-            "items": {
-              "type": "integer"
-            }
-          }
-        },
-        "api_stage1": {
-          "$ref": "#/definitions/APIStage1"
-        },
-        "api_stage2": {
-          "$ref": "#/definitions/APIStage2"
-        },
-        "api_stage3": {
-          "anyOf": [
-            {
-              "$ref": "#/definitions/APIStage3"
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
-        "api_stage3_combined": {
-          "anyOf": [
-            {
-              "$ref": "#/definitions/APIStage3Combined"
-            },
-            {
-              "type": "null"
-            }
-          ]
-        }
-      },
-      "required": [
-        "api_plane_from",
-        "api_stage1",
-        "api_stage2",
-        "api_stage3",
-        "api_stage3_combined"
-      ],
-      "title": "APIKouku"
-    },
     "APIStage2": {
       "type": "object",
       "additionalProperties": false,
@@ -371,10 +345,16 @@
       ],
       "title": "APIAirFire"
     },
-    "APIStage3": {
+    "APIAirBaseAttackAPIStage3": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "api_e_sp_list": {
+          "type": "array",
+          "items": {
+            "type": "null"
+          }
+        },
         "api_ebak_flag": {
           "type": "array",
           "items": {
@@ -397,6 +377,115 @@
           "type": "array",
           "items": {
             "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_e_sp_list",
+        "api_ebak_flag",
+        "api_ecl_flag",
+        "api_edam",
+        "api_erai_flag"
+      ],
+      "title": "APIAirBaseAttackAPIStage3"
+    },
+    "APIKouku": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_plane_from": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "api_stage1": {
+          "$ref": "#/definitions/APIStage1"
+        },
+        "api_stage2": {
+          "$ref": "#/definitions/APIStage2"
+        },
+        "api_stage3": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/APIKoukuAPIStage3"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "api_stage3_combined": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/APIStage3Combined"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "api_plane_from",
+        "api_stage1",
+        "api_stage2",
+        "api_stage3",
+        "api_stage3_combined"
+      ],
+      "title": "APIKouku"
+    },
+    "APIKoukuAPIStage3": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_e_sp_list": {
+          "type": "array",
+          "items": {
+            "type": "null"
+          }
+        },
+        "api_ebak_flag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_ecl_flag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_edam": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_erai_flag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_f_sp_list": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
           }
         },
         "api_fbak_flag": {
@@ -434,12 +523,28 @@
         "api_fdam",
         "api_frai_flag"
       ],
-      "title": "APIStage3"
+      "title": "APIKoukuAPIStage3"
     },
     "APIStage3Combined": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "api_f_sp_list": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
         "api_fbak_flag": {
           "type": "array",
           "items": {

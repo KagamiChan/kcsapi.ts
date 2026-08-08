@@ -58,6 +58,7 @@ export interface APIDestructionBattle {
   api_f_nowhps: number[]
   api_formation: number[]
   api_lost_kind: number
+  api_m1?: number
   api_ship_ke: number[]
   api_ship_lv: number[]
 }

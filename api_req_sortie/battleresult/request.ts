@@ -22,5 +22,6 @@ export interface APIReqSortieBattleresultRequest {
   'api_l_value[3]'?: string
   'api_l_value[4]'?: string
   'api_l_value[5]'?: string
+  'api_l_value[6]'?: string
   api_verno: string
 }

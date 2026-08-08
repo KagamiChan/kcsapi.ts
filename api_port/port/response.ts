@@ -74,6 +74,7 @@ export interface APIDeckPort {
 }
 
 export interface APIEventObject {
+  api_c_num?: number
   api_m_flag?: number
   api_m_flag2?: number
 }

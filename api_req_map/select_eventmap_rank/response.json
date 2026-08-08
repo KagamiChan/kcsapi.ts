@@ -9,8 +9,14 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "api_air_base_decks": {
+          "type": "integer"
+        },
         "api_maphp": {
           "$ref": "#/definitions/APIMaphp"
+        },
+        "api_s_no": {
+          "type": "integer"
         },
         "api_sally_flag": {
           "type": "array",

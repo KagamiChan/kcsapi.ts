@@ -54,6 +54,12 @@
             "type": "integer"
           }
         },
+        "api_escape_idx": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
         "api_fParam": {
           "type": "array",
           "items": {
@@ -376,7 +382,14 @@
           "$ref": "#/definitions/APIStage1"
         },
         "api_stage2": {
-          "$ref": "#/definitions/APIStage2"
+          "anyOf": [
+            {
+              "$ref": "#/definitions/APIStage2"
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "api_stage3": {
           "anyOf": [
@@ -450,7 +463,14 @@
         "api_fbak_flag": {
           "type": "array",
           "items": {
-            "type": "integer"
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ]
           }
         },
         "api_fcl_flag": {
@@ -468,7 +488,14 @@
         "api_frai_flag": {
           "type": "array",
           "items": {
-            "type": "integer"
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ]
           }
         }
       },

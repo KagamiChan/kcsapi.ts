@@ -43,14 +43,14 @@
         "api_get_eventitem": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/APIGetEventitem"
+            "$ref": "#/definitions/APIGetEventitemElement"
           }
         },
         "api_get_exmap_rate": {
-          "$ref": "#/definitions/API"
+          "$ref": "#/definitions/APIGetExmapRateUnion"
         },
         "api_get_exmap_useitem_id": {
-          "$ref": "#/definitions/API"
+          "$ref": "#/definitions/APIGetExmapRateUnion"
         },
         "api_get_exp": {
           "type": "integer"
@@ -106,7 +106,7 @@
         "api_next_map_ids": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/API"
+            "$ref": "#/definitions/APIGetExmapRateUnion"
           }
         },
         "api_quest_level": {
@@ -114,6 +114,15 @@
         },
         "api_quest_name": {
           "type": "string"
+        },
+        "api_select_reward_dict": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/APIGetEventitemElement"
+            }
+          }
         },
         "api_ship_id": {
           "type": "array",
@@ -191,27 +200,6 @@
       ],
       "title": "APIEscape"
     },
-    "APIGetEventitem": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "api_id": {
-          "type": "integer"
-        },
-        "api_type": {
-          "type": "integer"
-        },
-        "api_value": {
-          "type": "integer"
-        }
-      },
-      "required": [
-        "api_id",
-        "api_type",
-        "api_value"
-      ],
-      "title": "APIGetEventitem"
-    },
     "APIGetShip": {
       "type": "object",
       "additionalProperties": false,
@@ -259,13 +247,13 @@
       "additionalProperties": false,
       "properties": {
         "api_max_hp": {
-          "$ref": "#/definitions/API"
+          "$ref": "#/definitions/APIGetExmapRateUnion"
         },
         "api_now_hp": {
-          "$ref": "#/definitions/API"
+          "$ref": "#/definitions/APIGetExmapRateUnion"
         },
         "api_sub_value": {
-          "$ref": "#/definitions/API"
+          "$ref": "#/definitions/APIGetExmapRateUnion"
         }
       },
       "required": [
@@ -275,7 +263,34 @@
       ],
       "title": "APILandingHP"
     },
-    "API": {
+    "APIGetEventitemElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_id": {
+          "type": "integer"
+        },
+        "api_item_no": {
+          "type": "integer"
+        },
+        "api_slot_level": {
+          "type": "integer"
+        },
+        "api_type": {
+          "type": "integer"
+        },
+        "api_value": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_id",
+        "api_type",
+        "api_value"
+      ],
+      "title": "APIGetEventitemElement"
+    },
+    "APIGetExmapRateUnion": {
       "anyOf": [
         {
           "type": "integer"
@@ -284,7 +299,7 @@
           "type": "string"
         }
       ],
-      "title": "API"
+      "title": "APIGetExmapRateUnion"
     }
   }
 }

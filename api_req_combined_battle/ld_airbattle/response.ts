@@ -10,6 +10,8 @@
  */
 export interface APIReqCombinedBattleLdAirbattleResponse {
   api_air_base_attack?: APIAirBaseAttack[]
+  api_atoll_cell?: number
+  api_balloon_cell?: number
   api_deck_id: number
   api_eParam: number[][]
   api_eSlot: number[][]
@@ -29,6 +31,7 @@ export interface APIReqCombinedBattleLdAirbattleResponse {
   api_search: number[]
   api_ship_ke: number[]
   api_ship_lv: number[]
+  api_smoke_type?: number
   api_stage_flag: number[]
 }
 
@@ -37,8 +40,8 @@ export interface APIAirBaseAttack {
   api_plane_from: (number[] | null)[]
   api_squadron_plane: APISquadronPlane[]
   api_stage1: APIStage
-  api_stage2: null
-  api_stage3: null
+  api_stage2: APIStage2 | null
+  api_stage3: APIAirBaseAttackAPIStage | null
   api_stage_flag: number[]
 }
 
@@ -56,14 +59,6 @@ export interface APIStage {
   api_touch_plane: number[]
 }
 
-export interface APIKouku {
-  api_plane_from: number[][]
-  api_stage1: APIStage
-  api_stage2: APIStage2
-  api_stage3: APIStage3 | null
-  api_stage3_combined: APIStage3Combined | null
-}
-
 export interface APIStage2 {
   api_air_fire?: APIAirFire
   api_e_count: number
@@ -78,11 +73,29 @@ export interface APIAirFire {
   api_use_items: number[]
 }
 
-export interface APIStage3 {
+export interface APIAirBaseAttackAPIStage {
+  api_e_sp_list: null[]
   api_ebak_flag: number[]
   api_ecl_flag: number[]
   api_edam: number[]
   api_erai_flag: number[]
+}
+
+export interface APIKouku {
+  api_plane_from: number[][]
+  api_stage1: APIStage
+  api_stage2: APIStage2
+  api_stage3: APIKoukuAPIStage | null
+  api_stage3_combined: APIStage3Combined | null
+}
+
+export interface APIKoukuAPIStage {
+  api_e_sp_list?: null[]
+  api_ebak_flag: number[]
+  api_ecl_flag: number[]
+  api_edam: number[]
+  api_erai_flag: number[]
+  api_f_sp_list?: (number[] | null)[]
   api_fbak_flag: number[]
   api_fcl_flag: number[]
   api_fdam: number[]
@@ -90,6 +103,7 @@ export interface APIStage3 {
 }
 
 export interface APIStage3Combined {
+  api_f_sp_list?: (number[] | null)[]
   api_fbak_flag: number[]
   api_fcl_flag: number[]
   api_fdam: number[]

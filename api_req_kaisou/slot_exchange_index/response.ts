@@ -35,6 +35,7 @@ export interface APIShipData {
   api_onslot: number[]
   api_raisou: number[]
   api_sakuteki: number[]
+  api_sally_area?: number
   api_ship_id: number
   api_slot: number[]
   api_slot_ex: number

@@ -37,6 +37,7 @@ export interface APIReqCombinedBattleBattleresultResponse {
   api_ope_suffix?: string
   api_quest_level: number
   api_quest_name: string
+  api_select_reward_dict?: { [key: string]: APIGetEventitem[] }
   api_ship_id: number[]
   api_win_rank: string
 }
@@ -49,11 +50,13 @@ export interface APIEnemyInfo {
 
 export interface APIEscape {
   api_escape_idx: number[]
-  api_tow_idx: number[]
+  api_escape_type?: number
+  api_tow_idx?: number[]
 }
 
 export interface APIGetEventitem {
   api_id: number
+  api_item_no?: number
   api_slot_level?: number
   api_type: number
   api_value: number

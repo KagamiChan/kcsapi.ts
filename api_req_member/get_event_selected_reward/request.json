@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqMemberGetEventSelectedRewardRequestElement"
+  },
+  "definitions": {
+    "APIReqMemberGetEventSelectedRewardRequestElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_selected_dict[141]": {
+          "type": "string"
+        },
+        "api_selected_dict[142]": {
+          "type": "string"
+        },
+        "api_selected_dict[143]": {
+          "type": "string"
+        },
+        "api_selected_dict[241]": {
+          "type": "string"
+        },
+        "api_selected_dict[341]": {
+          "type": "string"
+        },
+        "api_verno": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "api_verno"
+      ],
+      "title": "APIReqMemberGetEventSelectedRewardRequestElement"
+    }
+  }
+}

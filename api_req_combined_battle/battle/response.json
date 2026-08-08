@@ -15,6 +15,12 @@
             "$ref": "#/definitions/APIAirBaseAttack"
           }
         },
+        "api_atoll_cell": {
+          "type": "integer"
+        },
+        "api_balloon_cell": {
+          "type": "integer"
+        },
         "api_deck_id": {
           "type": "integer"
         },
@@ -39,13 +45,13 @@
         "api_e_maxhps": {
           "type": "array",
           "items": {
-            "type": "integer"
+            "$ref": "#/definitions/APIEMaxhpElement"
           }
         },
         "api_e_nowhps": {
           "type": "array",
           "items": {
-            "type": "integer"
+            "$ref": "#/definitions/APIEMaxhpElement"
           }
         },
         "api_escape_idx_combined": {
@@ -156,7 +162,7 @@
         "api_opening_atack": {
           "anyOf": [
             {
-              "$ref": "#/definitions/APIRaigekiClass"
+              "$ref": "#/definitions/APIOpeningAtack"
             },
             {
               "type": "null"
@@ -180,7 +186,14 @@
           "type": "integer"
         },
         "api_raigeki": {
-          "$ref": "#/definitions/APIRaigekiClass"
+          "anyOf": [
+            {
+              "$ref": "#/definitions/APIRaigeki"
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "api_search": {
           "type": "array",
@@ -199,6 +212,9 @@
           "items": {
             "type": "integer"
           }
+        },
+        "api_smoke_type": {
+          "type": "integer"
         },
         "api_stage_flag": {
           "type": "array",
@@ -429,6 +445,12 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "api_e_sp_list": {
+          "type": "array",
+          "items": {
+            "type": "null"
+          }
+        },
         "api_ebak_flag": {
           "type": "array",
           "items": {
@@ -561,7 +583,7 @@
           "items": {
             "type": "array",
             "items": {
-              "$ref": "#/definitions/APISiList"
+              "$ref": "#/definitions/APIEMaxhpElement"
             }
           }
         }
@@ -623,6 +645,12 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "api_e_sp_list": {
+          "type": "array",
+          "items": {
+            "type": "null"
+          }
+        },
         "api_ebak_flag": {
           "type": "array",
           "items": {
@@ -645,6 +673,12 @@
           "type": "array",
           "items": {
             "type": "integer"
+          }
+        },
+        "api_f_sp_list": {
+          "type": "array",
+          "items": {
+            "type": "null"
           }
         },
         "api_fbak_flag": {
@@ -688,6 +722,12 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "api_f_sp_list": {
+          "type": "array",
+          "items": {
+            "type": "null"
+          }
+        },
         "api_fbak_flag": {
           "type": "array",
           "items": {
@@ -763,7 +803,162 @@
       ],
       "title": "APIKouku"
     },
-    "APIRaigekiClass": {
+    "APIOpeningAtack": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_ecl": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_ecl_list_items": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "api_edam": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_erai": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_erai_list_items": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "api_eydam": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_eydam_list_items": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "api_fcl": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_fcl_list_items": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "api_fdam": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_frai": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_frai_list_items": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "api_fydam": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_fydam_list_items": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        }
+      },
+      "required": [
+        "api_edam",
+        "api_fdam"
+      ],
+      "title": "APIOpeningAtack"
+    },
+    "APIRaigeki": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -826,7 +1021,7 @@
         "api_frai",
         "api_fydam"
       ],
-      "title": "APIRaigekiClass"
+      "title": "APIRaigeki"
     },
     "APISupportInfo": {
       "type": "object",
@@ -886,7 +1081,7 @@
       ],
       "title": "APISupportHourai"
     },
-    "APISiList": {
+    "APIEMaxhpElement": {
       "anyOf": [
         {
           "type": "integer"
@@ -895,7 +1090,7 @@
           "type": "string"
         }
       ],
-      "title": "APISiList"
+      "title": "APIEMaxhpElement"
     }
   }
 }

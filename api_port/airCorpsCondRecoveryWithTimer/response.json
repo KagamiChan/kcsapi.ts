@@ -69,9 +69,6 @@
         }
       },
       "required": [
-        "api_cond",
-        "api_count",
-        "api_max_count",
         "api_slotid",
         "api_squadron_id",
         "api_state"

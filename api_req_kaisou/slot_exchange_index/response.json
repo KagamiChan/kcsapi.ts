@@ -116,6 +116,9 @@
             "type": "integer"
           }
         },
+        "api_sally_area": {
+          "type": "integer"
+        },
         "api_ship_id": {
           "type": "integer"
         },

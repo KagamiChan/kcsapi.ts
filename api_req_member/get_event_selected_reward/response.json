@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqMemberGetEventSelectedRewardResponseElement"
+  },
+  "definitions": {
+    "APIReqMemberGetEventSelectedRewardResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_get_item_list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/APIGetItemList"
+          }
+        }
+      },
+      "required": [
+        "api_get_item_list"
+      ],
+      "title": "APIReqMemberGetEventSelectedRewardResponseElement"
+    },
+    "APIGetItemList": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_id": {
+          "type": "integer"
+        },
+        "api_item_no": {
+          "type": "integer"
+        },
+        "api_type": {
+          "type": "integer"
+        },
+        "api_value": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "api_id",
+        "api_item_no",
+        "api_type",
+        "api_value"
+      ],
+      "title": "APIGetItemList"
+    }
+  }
+}

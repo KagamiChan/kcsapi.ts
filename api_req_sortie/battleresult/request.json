@@ -48,6 +48,9 @@
         "api_l_value[5]": {
           "type": "string"
         },
+        "api_l_value[6]": {
+          "type": "string"
+        },
         "api_verno": {
           "type": "string"
         }

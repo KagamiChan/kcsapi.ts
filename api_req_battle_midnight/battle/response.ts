@@ -16,6 +16,7 @@ export interface APIReqBattleMidnightBattleResponse {
   api_eSlot: number[][]
   api_e_maxhps: number[]
   api_e_nowhps: number[]
+  api_escape_idx?: number[]
   api_fParam: number[][]
   api_f_maxhps: number[]
   api_f_nowhps: number[]
@@ -29,12 +30,12 @@ export interface APIReqBattleMidnightBattleResponse {
 }
 
 export interface APIHougeki {
-  api_at_eflag: number[]
-  api_at_list: number[]
-  api_cl_list: number[][]
-  api_damage: number[][]
-  api_df_list: number[][]
-  api_n_mother_list: number[]
-  api_si_list: (number | string)[][]
-  api_sp_list: number[]
+  api_at_eflag: number[] | null
+  api_at_list: number[] | null
+  api_cl_list: number[][] | null
+  api_damage: number[][] | null
+  api_df_list: number[][] | null
+  api_n_mother_list: number[] | null
+  api_si_list: (number | string)[][] | null
+  api_sp_list: number[] | null
 }

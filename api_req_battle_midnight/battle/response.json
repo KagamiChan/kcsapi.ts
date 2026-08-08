@@ -48,6 +48,12 @@
             "type": "integer"
           }
         },
+        "api_escape_idx": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
         "api_fParam": {
           "type": "array",
           "items": {
@@ -129,64 +135,120 @@
       "additionalProperties": false,
       "properties": {
         "api_at_eflag": {
-          "type": "array",
-          "items": {
-            "type": "integer"
-          }
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "api_at_list": {
-          "type": "array",
-          "items": {
-            "type": "integer"
-          }
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "api_cl_list": {
-          "type": "array",
-          "items": {
-            "type": "array",
-            "items": {
-              "type": "integer"
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              }
+            },
+            {
+              "type": "null"
             }
-          }
+          ]
         },
         "api_damage": {
-          "type": "array",
-          "items": {
-            "type": "array",
-            "items": {
-              "type": "integer"
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              }
+            },
+            {
+              "type": "null"
             }
-          }
+          ]
         },
         "api_df_list": {
-          "type": "array",
-          "items": {
-            "type": "array",
-            "items": {
-              "type": "integer"
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              }
+            },
+            {
+              "type": "null"
             }
-          }
+          ]
         },
         "api_n_mother_list": {
-          "type": "array",
-          "items": {
-            "type": "integer"
-          }
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "api_si_list": {
-          "type": "array",
-          "items": {
-            "type": "array",
-            "items": {
-              "$ref": "#/definitions/API"
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/API"
+                }
+              }
+            },
+            {
+              "type": "null"
             }
-          }
+          ]
         },
         "api_sp_list": {
-          "type": "array",
-          "items": {
-            "type": "integer"
-          }
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
         }
       },
       "required": [

@@ -21,9 +21,9 @@ export interface APIDistance {
 }
 
 export interface APIPlaneInfo {
-  api_cond: number
-  api_count: number
-  api_max_count: number
+  api_cond?: number
+  api_count?: number
+  api_max_count?: number
   api_slotid: number
   api_squadron_id: number
   api_state: number

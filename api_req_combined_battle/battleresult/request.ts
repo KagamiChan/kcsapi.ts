@@ -19,9 +19,9 @@ export interface APIReqCombinedBattleBattleresultRequest {
   'api_l_value3[0]': string
   'api_l_value3[1]': string
   'api_l_value3[2]': string
-  'api_l_value3[3]': string
-  'api_l_value3[4]': string
-  'api_l_value3[5]': string
+  'api_l_value3[3]'?: string
+  'api_l_value3[4]'?: string
+  'api_l_value3[5]'?: string
   'api_l_value4[0]'?: string
   'api_l_value4[1]'?: string
   'api_l_value4[2]'?: string
@@ -34,5 +34,6 @@ export interface APIReqCombinedBattleBattleresultRequest {
   'api_l_value[3]': string
   'api_l_value[4]': string
   'api_l_value[5]': string
+  'api_l_value[6]'?: string
   api_verno: string
 }

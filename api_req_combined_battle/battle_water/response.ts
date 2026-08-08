@@ -10,6 +10,8 @@
  */
 export interface APIReqCombinedBattleBattleWaterResponse {
   api_air_base_attack?: APIAirBaseAttack[]
+  api_atoll_cell?: number
+  api_balloon_cell?: number
   api_deck_id: number
   api_eParam: number[][]
   api_eSlot: number[][]
@@ -30,14 +32,15 @@ export interface APIReqCombinedBattleBattleWaterResponse {
   api_hourai_flag: number[]
   api_kouku: APIKouku
   api_midnight_flag: number
-  api_opening_atack: APIRaigeki | null
+  api_opening_atack: APIOpeningAtack | null
   api_opening_flag: number
-  api_opening_taisen: APIOpeningTaisen | null
+  api_opening_taisen: APIHougeki | null
   api_opening_taisen_flag: number
   api_raigeki?: APIRaigeki
   api_search: number[]
   api_ship_ke: number[]
   api_ship_lv: number[]
+  api_smoke_type?: number
   api_stage_flag: number[]
   api_support_flag: number
   api_support_info: APISupportInfo | null
@@ -82,6 +85,7 @@ export interface APIAirFire {
 }
 
 export interface APIAirBaseAttackAPIStage {
+  api_e_sp_list?: null[]
   api_ebak_flag: number[]
   api_ecl_flag: number[]
   api_edam: number[]
@@ -107,10 +111,12 @@ export interface APIKouku {
 }
 
 export interface APIKoukuAPIStage {
+  api_e_sp_list?: null[]
   api_ebak_flag: number[]
   api_ecl_flag: number[]
   api_edam: number[]
   api_erai_flag: number[]
+  api_f_sp_list?: null[]
   api_fbak_flag: number[]
   api_fcl_flag: number[]
   api_fdam: number[]
@@ -118,10 +124,28 @@ export interface APIKoukuAPIStage {
 }
 
 export interface APIStage3Combined {
+  api_f_sp_list?: null[]
   api_fbak_flag: number[]
   api_fcl_flag: number[]
   api_fdam: number[]
   api_frai_flag: number[]
+}
+
+export interface APIOpeningAtack {
+  api_ecl?: number[]
+  api_ecl_list_items?: (number[] | null)[]
+  api_edam: number[]
+  api_erai?: number[]
+  api_erai_list_items?: (number[] | null)[]
+  api_eydam?: number[]
+  api_eydam_list_items?: (number[] | null)[]
+  api_fcl?: number[]
+  api_fcl_list_items?: (number[] | null)[]
+  api_fdam: number[]
+  api_frai?: number[]
+  api_frai_list_items?: (number[] | null)[]
+  api_fydam?: number[]
+  api_fydam_list_items?: (number[] | null)[]
 }
 
 export interface APIRaigeki {
@@ -133,16 +157,6 @@ export interface APIRaigeki {
   api_fdam: number[]
   api_frai: number[]
   api_fydam: number[]
-}
-
-export interface APIOpeningTaisen {
-  api_at_eflag: number[]
-  api_at_list: number[]
-  api_at_type: number[]
-  api_cl_list: number[][]
-  api_damage: number[][]
-  api_df_list: number[][]
-  api_si_list: string[][]
 }
 
 export interface APISupportInfo {

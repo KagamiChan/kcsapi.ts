@@ -182,6 +182,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "api_limit_flag": {
+          "type": "integer"
+        },
         "api_max_maphp": {
           "type": "integer"
         },

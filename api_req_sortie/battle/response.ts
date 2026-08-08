@@ -15,8 +15,8 @@ export interface APIReqSortieBattleResponse {
   api_deck_id: number
   api_eParam: number[][]
   api_eSlot: number[][]
-  api_e_maxhps: number[]
-  api_e_nowhps: number[]
+  api_e_maxhps: (number | string)[]
+  api_e_nowhps: (number | string)[]
   api_escape_idx?: number[]
   api_fParam: number[][]
   api_f_maxhps: number[]
@@ -42,6 +42,7 @@ export interface APIReqSortieBattleResponse {
   api_stage_flag: number[]
   api_support_flag: number
   api_support_info: APISupportInfo | null
+  api_xal01?: number
 }
 
 export interface APIAirBaseAttack {
@@ -120,12 +121,10 @@ export interface APIInjectionKouku {
 }
 
 export interface APIInjectionKoukuAPIStage {
-  api_e_sp_list?: null[]
   api_ebak_flag: number[]
   api_ecl_flag: number[]
   api_edam: number[]
   api_erai_flag: number[]
-  api_f_sp_list?: null[]
   api_fbak_flag: number[]
   api_fcl_flag: number[]
   api_fdam: number[]
@@ -136,7 +135,20 @@ export interface APIKouku {
   api_plane_from: (number[] | null)[]
   api_stage1: APIStage1
   api_stage2: APIStage | null
-  api_stage3: APIInjectionKoukuAPIStage | null
+  api_stage3: APIKoukuAPIStage | null
+}
+
+export interface APIKoukuAPIStage {
+  api_e_sp_list?: null[]
+  api_ebak_flag: number[]
+  api_ecl_flag: number[]
+  api_edam: number[]
+  api_erai_flag: number[]
+  api_f_sp_list?: null[]
+  api_fbak_flag: (number | null)[]
+  api_fcl_flag: number[]
+  api_fdam: number[]
+  api_frai_flag: (number | null)[]
 }
 
 export interface APIOpeningAtack {

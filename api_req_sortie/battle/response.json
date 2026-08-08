@@ -45,13 +45,13 @@
         "api_e_maxhps": {
           "type": "array",
           "items": {
-            "type": "integer"
+            "$ref": "#/definitions/APIEMaxhpElement"
           }
         },
         "api_e_nowhps": {
           "type": "array",
           "items": {
-            "type": "integer"
+            "$ref": "#/definitions/APIEMaxhpElement"
           }
         },
         "api_escape_idx": {
@@ -96,7 +96,7 @@
         "api_hougeki1": {
           "anyOf": [
             {
-              "$ref": "#/definitions/API"
+              "$ref": "#/definitions/APIHougeki1Class"
             },
             {
               "type": "null"
@@ -106,7 +106,7 @@
         "api_hougeki2": {
           "anyOf": [
             {
-              "$ref": "#/definitions/API"
+              "$ref": "#/definitions/APIHougeki1Class"
             },
             {
               "type": "null"
@@ -147,7 +147,7 @@
         "api_opening_taisen": {
           "anyOf": [
             {
-              "$ref": "#/definitions/API"
+              "$ref": "#/definitions/APIHougeki1Class"
             },
             {
               "type": "null"
@@ -206,6 +206,9 @@
               "type": "null"
             }
           ]
+        },
+        "api_xal01": {
+          "type": "integer"
         }
       },
       "required": [
@@ -466,7 +469,7 @@
       ],
       "title": "APIFlavorInfo"
     },
-    "API": {
+    "APIHougeki1Class": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -520,7 +523,7 @@
           "items": {
             "type": "array",
             "items": {
-              "$ref": "#/definitions/APISiList"
+              "$ref": "#/definitions/APIEMaxhpElement"
             }
           }
         }
@@ -534,7 +537,7 @@
         "api_df_list",
         "api_si_list"
       ],
-      "title": "API"
+      "title": "APIHougeki1Class"
     },
     "APIInjectionKouku": {
       "type": "object",
@@ -574,6 +577,71 @@
       ],
       "title": "APIInjectionKouku"
     },
+    "APIInjectionKoukuAPIStage3": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_ebak_flag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_ecl_flag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_edam": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_erai_flag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_fbak_flag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_fcl_flag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_fdam": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_frai_flag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_ebak_flag",
+        "api_ecl_flag",
+        "api_edam",
+        "api_erai_flag",
+        "api_fbak_flag",
+        "api_fcl_flag",
+        "api_fdam",
+        "api_frai_flag"
+      ],
+      "title": "APIInjectionKoukuAPIStage3"
+    },
     "APIKouku": {
       "type": "object",
       "additionalProperties": false,
@@ -610,7 +678,7 @@
         "api_stage3": {
           "anyOf": [
             {
-              "$ref": "#/definitions/APIInjectionKoukuAPIStage3"
+              "$ref": "#/definitions/APIKoukuAPIStage3"
             },
             {
               "type": "null"
@@ -654,7 +722,7 @@
       ],
       "title": "APIStage"
     },
-    "APIInjectionKoukuAPIStage3": {
+    "APIKoukuAPIStage3": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -697,7 +765,14 @@
         "api_fbak_flag": {
           "type": "array",
           "items": {
-            "type": "integer"
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ]
           }
         },
         "api_fcl_flag": {
@@ -715,7 +790,14 @@
         "api_frai_flag": {
           "type": "array",
           "items": {
-            "type": "integer"
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ]
           }
         }
       },
@@ -729,7 +811,7 @@
         "api_fdam",
         "api_frai_flag"
       ],
-      "title": "APIInjectionKoukuAPIStage3"
+      "title": "APIKoukuAPIStage3"
     },
     "APIOpeningAtack": {
       "type": "object",
@@ -1093,7 +1175,7 @@
       ],
       "title": "APISupportHourai"
     },
-    "APISiList": {
+    "APIEMaxhpElement": {
       "anyOf": [
         {
           "type": "integer"
@@ -1102,7 +1184,7 @@
           "type": "string"
         }
       ],
-      "title": "APISiList"
+      "title": "APIEMaxhpElement"
     }
   }
 }

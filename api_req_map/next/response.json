@@ -196,6 +196,9 @@
         "api_lost_kind": {
           "type": "integer"
         },
+        "api_m1": {
+          "type": "integer"
+        },
         "api_ship_ke": {
           "type": "array",
           "items": {

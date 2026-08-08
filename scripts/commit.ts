@@ -7,8 +7,12 @@
 
 /**
  * This script is to process and move json files into samples folder
- * All json files are put into staging folder at first
+ * The json files are read directly from the packet source folder, only those
+ * saved after `KCSAPI_LIMIT` are considered
  * They are saved to correct path in samples folder after being anonymized
+ *
+ * Pass `--advance` to move `KCSAPI_LIMIT` to the start of this run once it
+ * finishes without error, so that the next run only sees newer packets
  */
 
 import fs from 'fs-extra'
@@ -16,6 +20,7 @@ import glob from 'glob'
 import path from 'path'
 import bluebird from 'bluebird'
 import {
+  get,
   map,
   mapValues,
   isArray,
@@ -29,10 +34,21 @@ import {
 import assert from 'assert'
 import chalk from 'chalk'
 import Ajv from 'ajv'
+import mm from 'micromatch'
 import draft06Schema from 'ajv/lib/refs/json-schema-draft-06.json'
 
 import { PoiPacket } from './types'
-import { getType, getSchema } from './utils'
+import { getSchema } from './utils'
+import { getSource, getLimit, updateLimit, LIMIT_KEY } from './env'
+
+const IGNORED_PATTERNS = ['**/api_get_member/payitem/**', '**/api_req_ranking/**']
+
+/**
+ * glob only understands forward slashes, and its results always use them,
+ * so every path used as a glob pattern or as a lookup key has to go through this
+ * @param target a path built by `path.resolve` / `path.join`
+ */
+const slash = (target: string): string => target.replace(/\\/g, '/')
 
 const ajv = new Ajv({ validateSchema: false, addUsedSchema: false })
 ajv.addMetaSchema(draft06Schema)
@@ -65,8 +81,12 @@ const anonymize = (data: any): any => {
  * @returns [reqPath, respPath]
  */
 const buildPath = (data: PoiPacket, basename: string): string[] => [
-  path.resolve(__dirname, '../samples', data.path.replace('/kcsapi/', ''), 'request', basename),
-  path.resolve(__dirname, '../samples', data.path.replace('/kcsapi/', ''), 'response', basename),
+  slash(
+    path.resolve(__dirname, '../samples', data.path.replace('/kcsapi/', ''), 'request', basename),
+  ),
+  slash(
+    path.resolve(__dirname, '../samples', data.path.replace('/kcsapi/', ''), 'response', basename),
+  ),
 ]
 
 /**
@@ -75,21 +95,35 @@ const buildPath = (data: PoiPacket, basename: string): string[] => [
  * @returns [requestTypePath, responseTypePath]
  */
 const buildSchemaPath = (data: PoiPacket): string[] => [
-  path.resolve(__dirname, '../', data.path.replace('/kcsapi/', ''), 'request.json'),
-  path.resolve(__dirname, '../', data.path.replace('/kcsapi/', ''), 'response.json'),
+  slash(path.resolve(__dirname, '../', data.path.replace('/kcsapi/', ''), 'request.json')),
+  slash(path.resolve(__dirname, '../', data.path.replace('/kcsapi/', ''), 'response.json')),
 ]
 
-const diffInType = async (data: any, typePath: string): Promise<boolean> => {
-  const incoming = await getType(data, typePath)
-  const existing = await fs.readFile(typePath, 'utf8')
+/**
+ * lists the packets saved after the given limit, skipping the ignored endpoints
+ * @param source packet source folder
+ * @param limit timestamp, packets saved at or before it are skipped
+ */
+const collect = (source: string, limit: number): string[] =>
+  glob
+    .sync(slash(path.join(source, '**/*.json')))
+    .filter(file => {
+      const saved = get(/.*\/(.*)\.json$/.exec(file), 1, '')
+      return Boolean(saved) && +saved > limit
+    })
+    .filter(file => !IGNORED_PATTERNS.some(pattern => mm.isMatch(file, pattern)))
 
-  return incoming !== existing
-}
+const main = async (): Promise<void> => {
+  const shouldAdvance = process.argv.includes('--advance')
+  const limit = getLimit()
+  // taken before processing, so that packets saved while the script runs are not skipped next time
+  const startedAt = new Date()
 
-const main = async (): Promise<void | void[]> => {
-  const files = glob.sync(path.resolve(__dirname, '../staging/**/*.json'))
+  const files = collect(getSource(), limit)
 
-  const allschemas = glob.sync(path.resolve(__dirname, '../api_*/**/*.json'))
+  console.info(`${files.length} packet(s) to process`)
+
+  const allschemas = glob.sync(slash(path.resolve(__dirname, '../api_*/**/*.json')))
 
   const schemas = fromPairs(
     await bluebird.map(allschemas, async file => {
@@ -148,7 +182,9 @@ const main = async (): Promise<void | void[]> => {
           staging[filePath!] = data
 
           const existings = glob.sync(
-            path.resolve(__dirname, '../samples', packet.path.replace('/kcsapi/', ''), '*.json'),
+            slash(
+              path.resolve(__dirname, '../samples', packet.path.replace('/kcsapi/', ''), '*.json'),
+            ),
           )
 
           const incomings = map(schemaToFilePaths[schemaPath!], fp => staging[fp])
@@ -176,7 +212,21 @@ const main = async (): Promise<void | void[]> => {
   if (Object.keys(staging).length) {
     console.info(chalk.yellow('commiting'))
   }
-  return bluebird.map(Object.keys(staging), f => fs.outputJSON(f, staging[f], { spaces: 2 }))
+  await bluebird.map(Object.keys(staging), f => fs.outputJSON(f, staging[f], { spaces: 2 }))
+
+  if (!shouldAdvance) {
+    console.info(chalk.yellow(`${LIMIT_KEY} left untouched, pass --advance to move it`))
+    return
+  }
+  if (process.exitCode) {
+    console.info(chalk.red(`${LIMIT_KEY} left untouched because the run had errors`))
+    return
+  }
+  await updateLimit(startedAt)
 }
 
-main()
+main().catch(e => {
+  console.error(chalk.red(e))
+  console.error(chalk.red(`${LIMIT_KEY} left untouched because the run failed`))
+  process.exitCode = 1
+})

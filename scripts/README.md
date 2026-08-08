@@ -2,15 +2,18 @@
 
 ## Current workflow
 
-### Copy to staging folder with `copy-to-staging.ts`
+### Configuration
 
-Copy the saved game packets from a source folder to staging folder, according to the given start date.
+Copy `.env.example` to `.env` at the repository root and fill in:
 
-The script is expecting each files are in poi packet format defined in `types.ts`. And the script is not reading any parameters now, need to manually update in the source code.
+- `KCSAPI_SOURCE_PATH`, the folder holding the packets saved by poi, scanned recursively for `*.json`. Each file is expected to be in the poi packet format defined in `types.ts`
+- `KCSAPI_LIMIT`, a date, only packets saved after it are processed
 
 ### Commit changes with `commit.ts`
 
-This script will generate a typing for each staged file, and compare the generated result with current result, if any difference is observed, the staged file will be copied into samples folder and become part of new code base (That's why it is called commit).
+This script reads the packets saved after `KCSAPI_LIMIT` directly from `KCSAPI_SOURCE_PATH`, generates a typing for each of them, and compares the generated result with current result, if any difference is observed, the file will be copied into samples folder and become part of new code base (That's why it is called commit).
+
+Run it as `yarn commit` to keep `KCSAPI_LIMIT` where it is, which is handy while iterating over the same set of packets. Run it as `yarn commit --advance` to move `KCSAPI_LIMIT` to the time the run started, so that the next run only sees the newly saved packets. The limit is only moved when the run finished without error.
 
 ### Generate new typings with `generate.ts`
 

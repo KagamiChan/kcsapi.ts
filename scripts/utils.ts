@@ -49,7 +49,14 @@ const addSentinel = (data: any): any => {
 
 const stripClassSuffix = (content: string): string => {
   const names = Array.from(content.matchAll(/\bexport interface (\w+)Class\b/g), m => m[1])
-  return names.reduce((acc, name) => acc.split(`${name}Class`).join(name), content)
+  return names.reduce((acc, name) => {
+    // quicktype appends `Class` on collision, so `Foo` may already be taken,
+    // in which case dropping the suffix would declare `Foo` twice
+    if (new RegExp(`\\bexport interface ${name}\\b`).test(acc)) {
+      return acc
+    }
+    return acc.split(`${name}Class`).join(name)
+  }, content)
 }
 
 const retainTopLevelName = (content: string, topLevel: string): string => {

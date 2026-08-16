@@ -11,6 +11,7 @@
 export interface APIReqCombinedBattleEachBattleRequest {
   api_formation: string
   api_recovery_type: string
+  api_smoke_flag?: string
   api_supply_flag?: string
   api_verno: string
 }

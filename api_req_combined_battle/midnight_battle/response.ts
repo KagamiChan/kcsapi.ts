@@ -9,11 +9,14 @@
  * type for API response at /kcsapi/api_req_combined_battle/midnight_battle
  */
 export interface APIReqCombinedBattleMidnightBattleResponse {
+  api_atoll_cell?: number
+  api_balloon_cell?: number
   api_deck_id: number
   api_eParam: number[][]
   api_eSlot: number[][]
   api_e_maxhps: number[]
   api_e_nowhps: number[]
+  api_escape_idx?: number[]
   api_escape_idx_combined?: number[]
   api_fParam: number[][]
   api_fParam_combined: number[][]
@@ -26,6 +29,7 @@ export interface APIReqCombinedBattleMidnightBattleResponse {
   api_hougeki: APIHougeki
   api_ship_ke: number[]
   api_ship_lv: number[]
+  api_smoke_type?: number
   api_touch_plane: (number | string)[]
 }
 

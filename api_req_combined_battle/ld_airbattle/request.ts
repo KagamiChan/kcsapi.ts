@@ -11,6 +11,7 @@
 export interface APIReqCombinedBattleLdAirbattleRequest {
   api_formation: string
   api_recovery_type: string
+  api_smoke_flag?: string
   api_start?: string
   api_verno: string
 }

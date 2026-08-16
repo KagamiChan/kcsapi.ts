@@ -54,6 +54,12 @@
             "$ref": "#/definitions/APIEMaxhpElement"
           }
         },
+        "api_escape_idx": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
         "api_escape_idx_combined": {
           "type": "array",
           "items": {
@@ -641,6 +647,69 @@
       ],
       "title": "APIInjectionKouku"
     },
+    "APIKouku": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_plane_from": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "api_stage1": {
+          "$ref": "#/definitions/APIStage1"
+        },
+        "api_stage2": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/APIStage"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "api_stage3": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/APIInjectionKoukuAPIStage3"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "api_stage3_combined": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/APIStage3Combined"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "api_plane_from",
+        "api_stage1",
+        "api_stage2",
+        "api_stage3",
+        "api_stage3_combined"
+      ],
+      "title": "APIKouku"
+    },
     "APIInjectionKoukuAPIStage3": {
       "type": "object",
       "additionalProperties": false,
@@ -760,48 +829,6 @@
         "api_frai_flag"
       ],
       "title": "APIStage3Combined"
-    },
-    "APIKouku": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "api_plane_from": {
-          "type": "array",
-          "items": {
-            "anyOf": [
-              {
-                "type": "array",
-                "items": {
-                  "type": "integer"
-                }
-              },
-              {
-                "type": "null"
-              }
-            ]
-          }
-        },
-        "api_stage1": {
-          "$ref": "#/definitions/APIStage1"
-        },
-        "api_stage2": {
-          "$ref": "#/definitions/APIStage"
-        },
-        "api_stage3": {
-          "$ref": "#/definitions/APIInjectionKoukuAPIStage3"
-        },
-        "api_stage3_combined": {
-          "$ref": "#/definitions/APIStage3Combined"
-        }
-      },
-      "required": [
-        "api_plane_from",
-        "api_stage1",
-        "api_stage2",
-        "api_stage3",
-        "api_stage3_combined"
-      ],
-      "title": "APIKouku"
     },
     "APIOpeningAtack": {
       "type": "object",

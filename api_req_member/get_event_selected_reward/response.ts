@@ -15,6 +15,7 @@ export interface APIReqMemberGetEventSelectedRewardResponse {
 export interface APIGetItemList {
   api_id: number
   api_item_no: number
+  api_slot_level?: number
   api_type: number
   api_value: number
 }

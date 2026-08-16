@@ -18,6 +18,7 @@ export interface APIReqMapSelectEventmapRankResponse {
 export interface APIMaphp {
   api_gauge_num: number
   api_gauge_type: number | string
+  api_gauge_type_e?: number
   api_max_maphp: number
   api_now_maphp: number
 }

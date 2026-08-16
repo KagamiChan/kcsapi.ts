@@ -40,6 +40,9 @@
         "api_gauge_type": {
           "$ref": "#/definitions/APIGaugeType"
         },
+        "api_gauge_type_e": {
+          "type": "integer"
+        },
         "api_max_maphp": {
           "type": "integer"
         },

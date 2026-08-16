@@ -49,6 +49,7 @@ export interface APIMapInfo {
   api_eventmap?: APIEventmap
   api_gauge_num?: number
   api_gauge_type?: number
+  api_gauge_type_e?: number
   api_id: number
   api_required_defeat_count?: number
   api_s_no?: number

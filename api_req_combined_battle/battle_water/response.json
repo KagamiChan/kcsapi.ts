@@ -622,7 +622,17 @@
         "api_f_sp_list": {
           "type": "array",
           "items": {
-            "type": "null"
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
           }
         },
         "api_fbak_flag": {
@@ -669,7 +679,17 @@
         "api_f_sp_list": {
           "type": "array",
           "items": {
-            "type": "null"
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
           }
         },
         "api_fbak_flag": {

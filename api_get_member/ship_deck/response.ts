@@ -43,6 +43,7 @@ export interface APIShipData {
   api_ndock_time: number
   api_nowhp: number
   api_onslot: number[]
+  api_onslot_max?: number[]
   api_raisou: number[]
   api_sakuteki: number[]
   api_sally_area?: number

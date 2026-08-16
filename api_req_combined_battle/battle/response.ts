@@ -17,6 +17,7 @@ export interface APIReqCombinedBattleBattleResponse {
   api_eSlot: number[][]
   api_e_maxhps: (number | string)[]
   api_e_nowhps: (number | string)[]
+  api_escape_idx?: number[]
   api_escape_idx_combined?: number[]
   api_fParam: number[][]
   api_fParam_combined: number[][]
@@ -147,9 +148,9 @@ export interface APIStage3Combined {
 export interface APIKouku {
   api_plane_from: (number[] | null)[]
   api_stage1: APIStage1
-  api_stage2: APIStage
-  api_stage3: APIInjectionKoukuAPIStage
-  api_stage3_combined: APIStage3Combined
+  api_stage2: APIStage | null
+  api_stage3: APIInjectionKoukuAPIStage | null
+  api_stage3_combined: APIStage3Combined | null
 }
 
 export interface APIOpeningAtack {

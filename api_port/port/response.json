@@ -540,6 +540,12 @@
             "type": "integer"
           }
         },
+        "api_onslot_max": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
         "api_raisou": {
           "type": "array",
           "items": {

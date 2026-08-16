@@ -31,6 +31,9 @@
         "api_item_no": {
           "type": "integer"
         },
+        "api_slot_level": {
+          "type": "integer"
+        },
         "api_type": {
           "type": "integer"
         },

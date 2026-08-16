@@ -160,7 +160,14 @@
           "type": "integer"
         },
         "api_opening_atack": {
-          "$ref": "#/definitions/APIOpeningAtack"
+          "anyOf": [
+            {
+              "$ref": "#/definitions/APIOpeningAtack"
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "api_opening_flag": {
           "type": "integer"
@@ -256,7 +263,6 @@
         "api_opening_flag",
         "api_opening_taisen",
         "api_opening_taisen_flag",
-        "api_raigeki",
         "api_search",
         "api_ship_ke",
         "api_ship_ke_combined",
@@ -313,7 +319,7 @@
         "api_stage3": {
           "anyOf": [
             {
-              "$ref": "#/definitions/APIAirBaseAttackAPIStage3"
+              "$ref": "#/definitions/APIStage3CombinedClass"
             },
             {
               "type": "null"
@@ -323,7 +329,7 @@
         "api_stage3_combined": {
           "anyOf": [
             {
-              "$ref": "#/definitions/APIAirBaseAttackAPIStage3"
+              "$ref": "#/definitions/APIStage3CombinedClass"
             },
             {
               "type": "null"
@@ -454,14 +460,24 @@
       ],
       "title": "APIAirFire"
     },
-    "APIAirBaseAttackAPIStage3": {
+    "APIStage3CombinedClass": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "api_e_sp_list": {
           "type": "array",
           "items": {
-            "type": "null"
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
           }
         },
         "api_ebak_flag": {
@@ -495,7 +511,7 @@
         "api_edam",
         "api_erai_flag"
       ],
-      "title": "APIAirBaseAttackAPIStage3"
+      "title": "APIStage3CombinedClass"
     },
     "APIFlavorInfo": {
       "type": "object",
@@ -619,17 +635,31 @@
         "api_plane_from": {
           "type": "array",
           "items": {
-            "type": "array",
-            "items": {
-              "type": "integer"
-            }
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
           }
         },
         "api_stage1": {
           "$ref": "#/definitions/APIStage1"
         },
         "api_stage2": {
-          "$ref": "#/definitions/APIStage2"
+          "anyOf": [
+            {
+              "$ref": "#/definitions/APIStage2"
+            },
+            {
+              "type": "null"
+            }
+          ]
         },
         "api_stage3": {
           "anyOf": [
@@ -644,7 +674,7 @@
         "api_stage3_combined": {
           "anyOf": [
             {
-              "$ref": "#/definitions/APIKoukuAPIStage3"
+              "$ref": "#/definitions/APIStage3Combined"
             },
             {
               "type": "null"
@@ -662,6 +692,93 @@
       "title": "APIKouku"
     },
     "APIKoukuAPIStage3": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_e_sp_list": {
+          "type": "array",
+          "items": {
+            "type": "null"
+          }
+        },
+        "api_ebak_flag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_ecl_flag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_edam": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_erai_flag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_f_sp_list": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "api_fbak_flag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_fcl_flag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_fdam": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "api_frai_flag": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_ebak_flag",
+        "api_ecl_flag",
+        "api_edam",
+        "api_erai_flag",
+        "api_fbak_flag",
+        "api_fcl_flag",
+        "api_fdam",
+        "api_frai_flag"
+      ],
+      "title": "APIKoukuAPIStage3"
+    },
+    "APIStage3Combined": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -736,7 +853,7 @@
         "api_fdam",
         "api_frai_flag"
       ],
-      "title": "APIKoukuAPIStage3"
+      "title": "APIStage3Combined"
     },
     "APIOpeningAtack": {
       "type": "object",
@@ -751,7 +868,17 @@
         "api_ecl_list_items": {
           "type": "array",
           "items": {
-            "type": "null"
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
           }
         },
         "api_edam": {
@@ -769,7 +896,17 @@
         "api_erai_list_items": {
           "type": "array",
           "items": {
-            "type": "null"
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
           }
         },
         "api_eydam": {
@@ -781,7 +918,17 @@
         "api_eydam_list_items": {
           "type": "array",
           "items": {
-            "type": "null"
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
           }
         },
         "api_fcl": {

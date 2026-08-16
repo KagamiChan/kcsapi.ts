@@ -15,6 +15,9 @@
         "api_recovery_type": {
           "type": "string"
         },
+        "api_smoke_flag": {
+          "type": "string"
+        },
         "api_verno": {
           "type": "string"
         }

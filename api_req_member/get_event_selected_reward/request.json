@@ -24,6 +24,21 @@
         "api_selected_dict[341]": {
           "type": "string"
         },
+        "api_selected_dict[441]": {
+          "type": "string"
+        },
+        "api_selected_dict[442]": {
+          "type": "string"
+        },
+        "api_selected_dict[541]": {
+          "type": "string"
+        },
+        "api_selected_dict[542]": {
+          "type": "string"
+        },
+        "api_selected_dict[543]": {
+          "type": "string"
+        },
         "api_verno": {
           "type": "string"
         }

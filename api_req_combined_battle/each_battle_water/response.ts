@@ -35,11 +35,11 @@ export interface APIReqCombinedBattleEachBattleWaterResponse {
   api_hourai_flag: number[]
   api_kouku: APIKouku
   api_midnight_flag: number
-  api_opening_atack: APIOpeningAtack
+  api_opening_atack: APIOpeningAtack | null
   api_opening_flag: number
   api_opening_taisen: null
   api_opening_taisen_flag: number
-  api_raigeki: APIRaigeki
+  api_raigeki?: APIRaigeki
   api_search: number[]
   api_ship_ke: number[]
   api_ship_ke_combined: number[]
@@ -58,8 +58,8 @@ export interface APIAirBaseAttack {
   api_squadron_plane: APISquadronPlane[]
   api_stage1: APIStage
   api_stage2: APIStage2 | null
-  api_stage3: APIAirBaseAttackAPIStage | null
-  api_stage3_combined: APIAirBaseAttackAPIStage | null
+  api_stage3: APIStage3CombinedClass | null
+  api_stage3_combined: APIStage3CombinedClass | null
   api_stage_flag: number[]
 }
 
@@ -91,8 +91,8 @@ export interface APIAirFire {
   api_use_items: number[]
 }
 
-export interface APIAirBaseAttackAPIStage {
-  api_e_sp_list?: null[]
+export interface APIStage3CombinedClass {
+  api_e_sp_list?: (number[] | null)[]
   api_ebak_flag: number[]
   api_ecl_flag: number[]
   api_edam: number[]
@@ -122,14 +122,27 @@ export interface APIHougeki {
 }
 
 export interface APIKouku {
-  api_plane_from: number[][]
+  api_plane_from: (number[] | null)[]
   api_stage1: APIStage
-  api_stage2: APIStage2
+  api_stage2: APIStage2 | null
   api_stage3: APIKoukuAPIStage | null
-  api_stage3_combined: APIKoukuAPIStage | null
+  api_stage3_combined: APIStage3Combined | null
 }
 
 export interface APIKoukuAPIStage {
+  api_e_sp_list?: null[]
+  api_ebak_flag: number[]
+  api_ecl_flag: number[]
+  api_edam: number[]
+  api_erai_flag: number[]
+  api_f_sp_list?: (number[] | null)[]
+  api_fbak_flag: number[]
+  api_fcl_flag: number[]
+  api_fdam: number[]
+  api_frai_flag: number[]
+}
+
+export interface APIStage3Combined {
   api_e_sp_list?: null[]
   api_ebak_flag: number[]
   api_ecl_flag: number[]
@@ -144,12 +157,12 @@ export interface APIKoukuAPIStage {
 
 export interface APIOpeningAtack {
   api_ecl?: number[]
-  api_ecl_list_items?: null[]
+  api_ecl_list_items?: (number[] | null)[]
   api_edam: number[]
   api_erai?: number[]
-  api_erai_list_items?: null[]
+  api_erai_list_items?: (number[] | null)[]
   api_eydam?: number[]
-  api_eydam_list_items?: null[]
+  api_eydam_list_items?: (number[] | null)[]
   api_fcl?: number[]
   api_fcl_list_items?: (number[] | null)[]
   api_fdam: number[]

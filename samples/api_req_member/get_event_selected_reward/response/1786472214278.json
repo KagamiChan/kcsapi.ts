@@ -1,0 +1,11 @@
+{
+  "api_get_item_list": [
+    {
+      "api_item_no": 1,
+      "api_type": 1,
+      "api_id": 1,
+      "api_value": 1,
+      "api_slot_level": 1
+    }
+  ]
+}

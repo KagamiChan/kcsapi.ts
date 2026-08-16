@@ -25,6 +25,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "api_atp_value": {
+          "$ref": "#/definitions/APIAtpValue"
+        },
         "api_seiku_value": {
           "type": "integer"
         },
@@ -37,6 +40,19 @@
         "api_tp_value"
       ],
       "title": "APIDeckParam"
+    },
+    "APIAtpValue": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "625": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "625"
+      ],
+      "title": "APIAtpValue"
     }
   }
 }

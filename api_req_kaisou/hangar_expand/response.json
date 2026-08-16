@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/APIReqKaisouHangarExpandResponseElement"
+  },
+  "definitions": {
+    "APIReqKaisouHangarExpandResponseElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "api_onslot_max": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "api_onslot_max"
+      ],
+      "title": "APIReqKaisouHangarExpandResponseElement"
+    }
+  }
+}

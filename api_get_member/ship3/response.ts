@@ -44,6 +44,7 @@ export interface APIShipData {
   api_ndock_time: number
   api_nowhp: number
   api_onslot: number[]
+  api_onslot_max?: number[]
   api_raisou: number[]
   api_sakuteki: number[]
   api_sally_area?: number
@@ -101,6 +102,7 @@ export interface APISlotData {
   api_slottype38?: number[]
   api_slottype39: number[]
   api_slottype4: number[]
+  api_slottype40?: number[]
   api_slottype41: number[]
   api_slottype42?: number[]
   api_slottype43: number[]

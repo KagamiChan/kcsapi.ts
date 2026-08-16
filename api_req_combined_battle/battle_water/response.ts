@@ -116,7 +116,7 @@ export interface APIKoukuAPIStage {
   api_ecl_flag: number[]
   api_edam: number[]
   api_erai_flag: number[]
-  api_f_sp_list?: null[]
+  api_f_sp_list?: (number[] | null)[]
   api_fbak_flag: number[]
   api_fcl_flag: number[]
   api_fdam: number[]
@@ -124,7 +124,7 @@ export interface APIKoukuAPIStage {
 }
 
 export interface APIStage3Combined {
-  api_f_sp_list?: null[]
+  api_f_sp_list?: (number[] | null)[]
   api_fbak_flag: number[]
   api_fcl_flag: number[]
   api_fdam: number[]

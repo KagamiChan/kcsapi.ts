@@ -1,0 +1,32 @@
+{
+  "api_deck_param": [
+    {
+      "api_seiku_value": 1,
+      "api_tp_value": 1,
+      "api_atp_value": {
+        "625": 1
+      }
+    },
+    {
+      "api_seiku_value": 1,
+      "api_tp_value": 1,
+      "api_atp_value": {
+        "625": 1
+      }
+    },
+    {
+      "api_seiku_value": 1,
+      "api_tp_value": 1,
+      "api_atp_value": {
+        "625": 1
+      }
+    },
+    {
+      "api_seiku_value": 1,
+      "api_tp_value": 1,
+      "api_atp_value": {
+        "625": 1
+      }
+    }
+  ]
+}

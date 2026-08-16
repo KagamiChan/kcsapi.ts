@@ -27,6 +27,7 @@ export interface APIReqCombinedBattleBattleresultResponse {
   api_get_ship?: APIGetShip
   api_get_ship_exp: number[]
   api_get_ship_exp_combined: number[] | null
+  api_landing_hp?: APILandingHp
   api_m1?: number
   api_m_suffix?: string
   api_member_exp: number
@@ -67,4 +68,10 @@ export interface APIGetShip {
   api_ship_id: number
   api_ship_name: string
   api_ship_type: string
+}
+
+export interface APILandingHp {
+  api_max_hp: string
+  api_now_hp: string
+  api_sub_value: number | string
 }

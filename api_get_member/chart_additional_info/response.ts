@@ -13,6 +13,11 @@ export interface APIGetMemberChartAdditionalInfoResponse {
 }
 
 export interface APIDeckParam {
+  api_atp_value?: APIAtpValue
   api_seiku_value: number
   api_tp_value: number
+}
+
+export interface APIAtpValue {
+  '625': number
 }

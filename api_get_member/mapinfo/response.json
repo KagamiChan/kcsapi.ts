@@ -156,6 +156,9 @@
         "api_gauge_type": {
           "type": "integer"
         },
+        "api_gauge_type_e": {
+          "type": "integer"
+        },
         "api_id": {
           "type": "integer"
         },
